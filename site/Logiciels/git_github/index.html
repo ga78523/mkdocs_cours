@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Les outils git et github - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Logiciels <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Les outils git et github</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../.." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#les-outils-git-et-github" class="nav-link">Les outils git et github</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#introduction-wikipedia" class="nav-link">Introduction (wikipedia)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#sur-votre-ordinateur-git" class="nav-link">Sur votre ordinateur : git</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#les-commandes-git-de-bases-wikipedia" class="nav-link">Les commandes git de bases (wikipedia)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="les-outils-git-et-github">Les outils git et github</h1>
+<h2 id="introduction-wikipedia">Introduction (wikipedia)</h2>
+<p>Git est un logiciel de gestion de versions décentralisé. C’est un logiciel libre créé par Linus Torvalds,
+auteur du noyau Linux, et distribué selon les termes de la licence publique générale GNU version 2. En 2016,
+il s’agit du logiciel de gestion de versions le plus populaire.
+GitHub exploité sous le nom de GitHub, Inc.) est un service web d’hébergement et de gestion de développement de logiciels, utilisant le logiciel de gestion de versions Git. Ce site est développé en Ruby on Rails
+et Erlang par Chris Wanstrath, PJ Hyett et Tom Preston-Werner. GitHub propose des comptes professionnels payants, ainsi que des comptes gratuits pour les projets de logiciels libres. Le site assure également un
+contrôle d’accès et des fonctionnalités destinées à la collaboration comme le suivi des bugs, les demandes de
+fonctionnalités, la gestion de tâches et un wiki pour chaque projet.
+En avril 2016, GitHub a annoncé avoir dépassé les 14 millions d’utilisateurs et plus de 35 millions de
+dépôts de projets le plaçant comme le plus grand hébergeur de code source au monde.</p>
+<h2 id="sur-votre-ordinateur-git">Sur votre ordinateur : git</h2>
+<h3 id="telechargement-installation-et-configuration">Téléchargement, installation et configuration</h3>
+<ol>
+<li>Se rendre sur le site : <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></li>
+<li>Télécharger le logiciel pour le système d’exploitation que vous avez ;</li>
+<li>Se rendre dans la console et taper : <code>git --version</code> pour vous assurer que cela a bien fonctionner.</li>
+</ol>
+<h3 id="configurer-git">Configurer git :</h3>
+<pre><code class="language-console">git config --global user.email &quot;you@example.com &quot;
+git config --global user.name &quot;your Name&quot;
+</code></pre>
+<h3 id="utilisation">Utilisation</h3>
+<ol>
+<li>On crée un dossier. Par exemple : Hello ;</li>
+<li>Dans ce dossier, on crée la page hello.html suivante :</li>
+</ol>
+<p>``` html linenums="1"</p>
+<!DOCTYPE html>
+<p><html>
+    <head>
+        <meta charset="utf8">
+        <title>essai git et github</title>
+    </head>
+    <body>
+        <h1>Bonjour tout le monde</h1>
+    </body>
+</html></p>
+<pre><code>
+1. On l’enregistre ;
+2. Avec la console, se rendre dans le dossier Hello en ligne de commande ;
+3. Dans le dossier Hello, taper : `git init` pour commencer à versionner le projet ;
+4. Pour faire une &quot;photo&quot; de votre projet à un instant t, il faut en faire un commit. Cela se déroule en
+deux étapes :
+   * Vérifier que tout est en ordre. Pour cela taper : `git add .`
+   * Faire la &quot;photo&quot;. Taper : `git commit -m &quot;Premier commit&quot;` pour &quot;pousser&quot; votre projet sur le serveur.
+
+!!! example &quot;Exercice 1 :&quot;
+    Faire un modification du fichier `hello.html` puis en faire un commit.
+
+## Sur internet : GitHub
+
+### Préalable
+
+1. Se rendre sur github : [https://github.com/](https://github.com/) ;
+2. S’inscrire ;
+
+### Pour le projet Hello
+
+1. Aller sur new repository ;
+2. Taper le nom : `Hello` ;
+3. Github vous donne ensuite la démarche à suivre. Dans notre cas, il faut recopier les lignes suivantes dans la console pour indiquer à votre ordinateur le serveur git qui va recevoir votre projet ;
+
+```  html
+git remote add origin https://github.com/yourLogin/hello.git 
+git push -u origin master
+</code></pre>
+<h3 id="pour-obtenir-lhebergement-de-sa-page-html">Pour obtenir l’hébergement de sa page html</h3>
+<p><strong>1</strong> Une fois dans votre projet, se rendre sur settings.</p>
+<p><strong>2</strong> Descendre, jusqu’à :</p>
+<figure markdown>
+![if](img_git/img2.png){width=400px}
+</figure>
+
+<p><strong>3</strong> Cliquer dans source sur <code>None</code> et choisir <code>Master</code>.</p>
+<p><strong>4</strong> Vous devriez obtenir un écran du type :</p>
+<figure markdown>
+![if](img_git/img3.png){width=400px}
+</figure>
+
+<p><strong>5</strong> Au prochain "push", votre site sera visible à l’adresse indiquée.</p>
+<h3 id="inviter-des-personnes">Inviter des personnes</h3>
+<ol>
+<li>Dans votre projet, se rendre sur <code>settings</code> ;</li>
+<li>Aller dans <code>manage access</code> et rentrer le nom de la personne. Vous devriez obtenir cette fenetre :</li>
+</ol>
+<figure markdown>
+![if](img_git/img4.png){width=400px}
+</figure>
+
+<h2 id="les-commandes-git-de-bases-wikipedia">Les commandes git de bases (wikipedia)</h2>
+<ul>
+<li><code>git init</code> : crée un nouveau dépôt ;</li>
+<li><code>git clone</code> : clone un dépôt distant ;</li>
+<li><code>git add</code>: ajoute de nouveaux objets blobs dans la base des objets pour chaque fichier modifié depuis
+le dernier commit. Les objets précédents restent inchangés ;</li>
+<li><code>git commit</code> : intègre la somme de contrôle SHA*1 d’un objet tree et les sommes de contrôle des
+objets commits parents pour créer un nouvel objet commit ;</li>
+<li><code>git branch</code> : liste les branches ;</li>
+<li><code>git merge</code> : fusionne une branche dans une autre ; git rebase déplace les commits de la branche
+courante devant les nouveaux commits d’une autre branche ;</li>
+<li><code>git log</code> : affiche la liste des commits effectués sur une branche ;</li>
+<li><code>git push</code> : publie les nouvelles révisions sur le remote. (La commande prend différents paramètres) ;</li>
+<li><code>git pull</code> : récupère les dernières modifications distantes du projet (depuis le Remote) et les fusionne
+dans la branche courante ;</li>
+<li><code>git stash</code> : stocke de côté un état non commité afin d’effectuer d’autres tâches</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
