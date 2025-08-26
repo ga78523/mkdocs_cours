@@ -1,1 +1,121 @@
-site_name: My Docs
+site_name: Site de cours
+site_url: https://example.com/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+    - scheme: slate 
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  features:
+    - content.code.copy
+  search:
+        indexing: 'full'
+
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
+      smart_dollar: false
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.tabbed:
+      alternate_style: true
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - toc:                          # Table des matières générée automatiquement à partir des titres du niveau 2
+        permalink: "&num;"          # Ajoute un symbole lien hypertexte vers l'ancre du titre #le-titre 
+        toc_depth: 5
+  - tables
+  - pymdownx.arithmatex:
+      generic: true
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+
+extra_css:
+  - stylesheets/extra.css 
+  
+  
+nav:
+    - Home: index.md
+    - About: about.md
+    - 'Physique':
+      - Seconde :
+        - TP vitesse : Physique/Seconde/TP_vitesse.md
+        - TP verrerie : Physique/Seconde/TPver_eleve.md
+    - 'Première':
+      - Données :
+        - Représentation des entiers : Premiere/Donnees/representation_entier.md
+        - Données en table : Premiere/Donnees/donnees_table.md
+      - Langage Python:
+        - Les bases : Premiere/Langage/Bases_Python.md
+        - Contrôle du flux d'exécution : Premiere/Langage/ControleFlux_Python.md
+        - Les fonctions en Python : Premiere/Langage/fonction_python.md
+        - Tuples et listes en Python : Premiere/Langage/tuples_listes.md
+        - Dictionnaires : Premiere/Langage/dico.md
+      - IHM:
+        - web : Premiere/IHM/html_css.md
+        - Frameworks : Premiere/IHM/frameworks.md
+        - Formulaire : Premiere/IHM/formulaires.md
+        - Javascript : Premiere/IHM/js.md
+      - Architecture Matérielle:
+        - Von Neumann : Premiere/ArchitectureMaterielle/von_neumann.md
+        - OS : Premiere/ArchitectureMaterielle/OS.md
+      - Algorithmique :
+        - Outils : Premiere/Algorithmique/outils.md
+        - Tris : Premiere/Algorithmique/tris.md
+        - Recherche : Premiere/Algorithmique/algo_recherche.md
+        - Gloutons : Premiere/Algorithmique/algo_gloutons.md
+        - kppv : Premiere/Algorithmique/kppv.md
+    - 'Terminale':
+      - Programmation :
+        - Calculabilité, décidabilité : Terminale/Programmation/decidabilite.md
+        - Sécurisation des données : Terminale/Programmation/crypto.md
+        - Arbres algos : Terminale/Programmation/algos_arbre.md
+        - Graphes algos : Terminale/Programmation/graphes.md
+        - Recherche textuelle : Terminale/Programmation/recherche_textuelle.md
+        - Diviser pour régner : Terminale/Programmation/diviser_regner.md
+        - Programmation dynamique : Terminale/Programmation/prog_dynamique.md
+        - Plus court chemin : Terminale/Programmation/dijkstra.md
+        - Modularité : Terminale/Programmation/API.md
+      - Structures de Données: 
+        - Graphes : Terminale/Struct_donnees/graphe.md
+      - BDD :
+        - Introduction BDD :  Terminale/BDD/bdd.md
+        - SQL avec SQLITE :  Terminale/BDD/sql_sqlite.md
+        - SQL et Python : Terminale/BDD/sql_python.md
+      - Architecture Matérielle :
+        - Routage : Terminale/ArchitectureMaterielle/reseau_routage.md
+        - Linux : Terminale/ArchitectureMaterielle/commande_linux.md
+        - processus : Terminale/ArchitectureMaterielle/processus.md
+        - SoC : Terminale/ArchitectureMaterielle/soc.md
+      - Algorithmes :
+        - Algorithmes : Terminale/Algo.md
+    - 'Logiciels':
+      - git : Logiciels/git_github.md
