@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Photo de Mars</title>
+</head>
+<body>
+  <h1>Photo prise par le rover Curiosity</h1>
+  <div id="photo"></div>
+
+  <script>
+    fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=50&camera=NAVCAM&api_key=DEMO_KEY")
+      .then(response => response.json())
+      .then(data => {
+        if (data.photos.length > 0) {
+          const img = document.createElement("img");
+          img.src = data.photos[0].img_src;
+          img.alt = "Photo de Mars";
+          document.getElementById("photo").appendChild(img);
+        } 
+      });
+  </script>
+</body>
+</html>
+
