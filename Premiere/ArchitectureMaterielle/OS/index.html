@@ -1,0 +1,1882 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://example.com/Premiere/ArchitectureMaterielle/OS/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+    
+    
+      
+        <title>OS - Site de cours</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e8d9bf0c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#systeme-dexploitation-operating-systeme-ou-os" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Site de cours" class="md-header__button md-logo" aria-label="Site de cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Site de cours
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              OS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Site de cours" class="md-nav__button md-logo" aria-label="Site de cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Site de cours
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about.md" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Physique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Physique" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Physique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Seconde
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seconde" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Seconde
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Physique/Seconde/TP_vitesse/" class="md-nav__link">
+        TP vitesse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Physique/Seconde/TPver_eleve/" class="md-nav__link">
+        TP verrerie
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Première
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Première" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Première
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Donnees/representation_entier/" class="md-nav__link">
+        Représentation des entiers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Donnees/donnees_table/" class="md-nav__link">
+        Données en table
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Langage Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Langage Python" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Langage Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Langage/Bases_Python/" class="md-nav__link">
+        Les bases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Langage/ControleFlux_Python/" class="md-nav__link">
+        Contrôle du flux d'exécution
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Langage/fonction_python/" class="md-nav__link">
+        Les fonctions en Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Langage/tuples_listes/" class="md-nav__link">
+        Tuples et listes en Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Langage/dico/" class="md-nav__link">
+        Dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          IHM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="IHM" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          IHM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/html_css/" class="md-nav__link">
+        web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/frameworks/" class="md-nav__link">
+        Frameworks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/formulaires/" class="md-nav__link">
+        Formulaire
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/js/" class="md-nav__link">
+        Javascript
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Architecture Matérielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture Matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../von_neumann/" class="md-nav__link">
+        Von Neumann
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          OS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        OS
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-aux-systemes-dexploitation" class="md-nav__link">
+    Introduction aux systèmes d'exploitation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arborescence-chemin-absolu-et-relatif" class="md-nav__link">
+    Arborescence, chemin absolu et relatif
+  </a>
+  
+    <nav class="md-nav" aria-label="Arborescence, chemin absolu et relatif">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#larborescence" class="md-nav__link">
+    L'arborescence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chemin-absolu-et-relatif" class="md-nav__link">
+    Chemin absolu et relatif
+  </a>
+  
+    <nav class="md-nav" aria-label="Chemin absolu et relatif">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chemin-absolu" class="md-nav__link">
+    Chemin absolu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chemin-relatif" class="md-nav__link">
+    Chemin relatif
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminalconsole-et-shell" class="md-nav__link">
+    Terminal/console et shell
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unix-et-linux" class="md-nav__link">
+    UNIX et Linux
+  </a>
+  
+    <nav class="md-nav" aria-label="UNIX et Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-differentes-commandes-linux-utiles" class="md-nav__link">
+    Les différentes commandes linux utiles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-permissions" class="md-nav__link">
+    Les permissions
+  </a>
+  
+    <nav class="md-nav" aria-label="Les permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voir-les-droits" class="md-nav__link">
+    Voir les droits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changer-les-droits" class="md-nav__link">
+    Changer les droits
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice" class="md-nav__link">
+    Exercice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    Exercices
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice-1" class="md-nav__link">
+    Exercice 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-2" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Algorithmique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithmique" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithmique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algorithmique/outils/" class="md-nav__link">
+        Outils
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algorithmique/tris/" class="md-nav__link">
+        Tris
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algorithmique/algo_recherche/" class="md-nav__link">
+        Recherche
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algorithmique/algo_gloutons/" class="md-nav__link">
+        Gloutons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algorithmique/kppv/" class="md-nav__link">
+        kppv
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Terminale
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Terminale" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Terminale
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1">
+          Programmation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Programmation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/decidabilite/" class="md-nav__link">
+        Calculabilité, décidabilité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/crypto/" class="md-nav__link">
+        Sécurisation des données
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/algos_arbre/" class="md-nav__link">
+        Arbres algos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/graphes/" class="md-nav__link">
+        Graphes algos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/recherche_textuelle/" class="md-nav__link">
+        Recherche textuelle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/diviser_regner/" class="md-nav__link">
+        Diviser pour régner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/prog_dynamique/" class="md-nav__link">
+        Programmation dynamique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/dijkstra/" class="md-nav__link">
+        Plus court chemin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/API/" class="md-nav__link">
+        Modularité
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          Structures de Données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Structures de Données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Structures de Données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Struct_donnees/graphe/" class="md-nav__link">
+        Graphes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          BDD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="BDD" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          BDD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/BDD/bdd/" class="md-nav__link">
+        Introduction BDD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/BDD/sql_sqlite/" class="md-nav__link">
+        SQL avec SQLITE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/BDD/sql_python/" class="md-nav__link">
+        SQL et Python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          Architecture Matérielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture Matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/ArchitectureMaterielle/reseau_routage/" class="md-nav__link">
+        Routage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/ArchitectureMaterielle/commande_linux/" class="md-nav__link">
+        Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/ArchitectureMaterielle/processus/" class="md-nav__link">
+        processus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/ArchitectureMaterielle/soc/" class="md-nav__link">
+        SoC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5">
+          Algorithmes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithmes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithmes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Algo/" class="md-nav__link">
+        Algorithmes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Logiciels
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Logiciels" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Logiciels
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Logiciels/git_github/" class="md-nav__link">
+        git
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-aux-systemes-dexploitation" class="md-nav__link">
+    Introduction aux systèmes d'exploitation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arborescence-chemin-absolu-et-relatif" class="md-nav__link">
+    Arborescence, chemin absolu et relatif
+  </a>
+  
+    <nav class="md-nav" aria-label="Arborescence, chemin absolu et relatif">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#larborescence" class="md-nav__link">
+    L'arborescence
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chemin-absolu-et-relatif" class="md-nav__link">
+    Chemin absolu et relatif
+  </a>
+  
+    <nav class="md-nav" aria-label="Chemin absolu et relatif">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chemin-absolu" class="md-nav__link">
+    Chemin absolu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chemin-relatif" class="md-nav__link">
+    Chemin relatif
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminalconsole-et-shell" class="md-nav__link">
+    Terminal/console et shell
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unix-et-linux" class="md-nav__link">
+    UNIX et Linux
+  </a>
+  
+    <nav class="md-nav" aria-label="UNIX et Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-differentes-commandes-linux-utiles" class="md-nav__link">
+    Les différentes commandes linux utiles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-permissions" class="md-nav__link">
+    Les permissions
+  </a>
+  
+    <nav class="md-nav" aria-label="Les permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voir-les-droits" class="md-nav__link">
+    Voir les droits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changer-les-droits" class="md-nav__link">
+    Changer les droits
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice" class="md-nav__link">
+    Exercice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    Exercices
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice-1" class="md-nav__link">
+    Exercice 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-2" class="md-nav__link">
+    Exercice 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="systeme-dexploitation-operating-systeme-ou-os">Système d'exploitation (Operating Systeme ou OS)<a class="headerlink" href="#systeme-dexploitation-operating-systeme-ou-os" title="Permanent link">&num;</a></h1>
+<h2 id="introduction-aux-systemes-dexploitation">Introduction aux systèmes d'exploitation<a class="headerlink" href="#introduction-aux-systemes-dexploitation" title="Permanent link">&num;</a></h2>
+<p>Le système UNIX est un système dit "propriétaire", c'est-à-dire un système non libre. Mais plus généralement, qu'est-ce qu'un logiciel libre ?</p>
+<p>D'après Wikipédia : "Un logiciel libre est un logiciel dont l'utilisation, l'étude,  la modification et la duplication par autrui en vue de sa diffusion sont permises, techniquement et légalement, ceci afin de garantir certaines libertés induites, dont le contrôle du programme par l'utilisateur et la possibilité de partage entre individus". </p>
+<p>Le système UNIX ne respecte pas ces droits (par exemple le code source d'UNIX n'est pas disponible, l'étude d'UNIX est donc impossible), UNIX est donc un système "propriétaire" (le contraire de "libre"). Attention qui dit logiciel libre ne veut pas  forcement dire logiciel gratuit (même si c'est souvent le cas), la confusion entre "libre" et "gratuit"
+vient de l'anglais puisque "free" veut à la fois dire "libre", mais aussi gratuit.</p>
+<p>En 1991, un étudiant finlandais, Linus Torvalds, décide de créer un clone libre d'UNIX en ne partant 
+de rien (on dit "from scratch" en anglais) puisque le code source d'UNIX n'est pas public. Ce clone
+d'UNIX va s'appeler Linux (Linus+UNIX). </p>
+<p>Difficile de parler des systèmes d'exploitation sans parler de Microsoft !</p>
+<p>Microsoft a été créée par Bill Gates et Paul Allen en 1975. Microsoft est surtout connue pour son
+système d'exploitation Windows. Windows est un système d'exploitation "propriétaire", la première 
+version de Windows date 1983, mais à cette date Windows n'est qu'un ajout sur un autre système 
+d'exploitation nommé MS-DOS. Aujourd'hui Windows reste le système d'exploitation le plus utilisé
+au monde sur les ordinateurs grand public, il faut dire que l'achat de Windows est quasiment imposé 
+lorsque l'on achète un ordinateur dans le commerce, car quand vous achetez un ordinateur neuf,
+une partie de la somme de l'ordinateur sert à payer le système d'exploitation Windows.</p>
+<p>Enfin pour terminer, quelques mots sur le système d'exploitation des ordinateurs de marque Apple :
+tous les ordinateurs d'Apple sont livrés avec le système d'exploitation macOS. Ce système macOS est
+un système d'exploitation UNIX, c'est donc un système d'exploitation propriétaire.</p>
+<h2 id="arborescence-chemin-absolu-et-relatif">Arborescence, chemin absolu et relatif<a class="headerlink" href="#arborescence-chemin-absolu-et-relatif" title="Permanent link">&num;</a></h2>
+<h3 id="larborescence">L'arborescence<a class="headerlink" href="#larborescence" title="Permanent link">&num;</a></h3>
+<p>En informatique, les contenus sont généralement stockés dans des fichiers.</p>
+<p>Comme ceux-ci sont vite très nombreux, pour s'y retrouver on a conçu les systèmes de fichiers comme des arborescences : les fichiers sont stockés dans des répertoires, et en plus des fichiers chacun de ces répertoires peut lui-même contenir plusieurs autres répertoires.</p>
+<p>L’arborescence d’un système GNU/Linux se présente sous la forme représentée ci-dessous.</p>
+<figure>
+<p><img alt="arbo" src="../img_OS/arse2_arbo.png" width="400px" /></p>
+</figure>
+<p><strong>Remarque :</strong> tous les systèmes UNIX accordent une grande importance aux fichiers. UNIX et LINUX VOIENT leurs périphériques et leurs processus comme des fichiers.</p>
+<p>Par exemple, dans cette arborescence :</p>
+<ul>
+<li>/ le dossier racine de l’arborescence</li>
+<li>Tous les dossiers qui se terminent par bin contiennent des exécutables en binaire.</li>
+<li><code>home</code> : dossiers des utilisateurs</li>
+<li><code>dev</code> : le matériel</li>
+<li><code>etc</code> : les reglages</li>
+<li><code>root</code> : dossier de l’utilisateur root</li>
+<li><code>mnt</code> et <code>media</code> : les points de montage des disques et partitions externes (là où apparaissent les clés usb etc.)</li>
+</ul>
+<h3 id="chemin-absolu-et-relatif">Chemin absolu et relatif<a class="headerlink" href="#chemin-absolu-et-relatif" title="Permanent link">&num;</a></h3>
+<p>La référence à une ressource (fichier ou répertoire) s'appelle un chemin d'accès (en anglais : path). Dans ce chemin, sous Linux, les noms des répertoires et éventuel fichier sont séparés par un slash / (alors qu'on utilise un antislash \ sous Windows).</p>
+<p>Il existe deux types de chemin : <strong>absolu</strong> et <strong>relatif</strong>.</p>
+<h4 id="chemin-absolu">Chemin absolu<a class="headerlink" href="#chemin-absolu" title="Permanent link">&num;</a></h4>
+<p>Un chemin absolu se base sur la racine de l'arborescence et commence par <code>/</code>, par ex. : <code>/home/utilisateur/&lt;dossier&gt;/&lt;fichier&gt;</code>. Il reste valable quel que soit le contexte (à condition quand même d'être sur le même système d'une même machine).</p>
+<p><code>/</code> au tout début d'un chemin est donc à peu près l'équivalent du <code>C:\</code>sous Windows.</p>
+<h4 id="chemin-relatif">Chemin relatif<a class="headerlink" href="#chemin-relatif" title="Permanent link">&num;</a></h4>
+<p>Un chemin relatif est a priori relatif au répertoire courant où se trouve l'utilisateur. Un chemin qui commence par autre chose que <code>/</code> ou <code>~</code> est un chemin relatif. Cette notion de positionnement dépend du contexte, mais sous Linux on se trouve généralement par défaut dans son répertoire personnel qui est <code>/home/&lt;nom d'utilisateur&gt;</code>. Dans un terminal on peut naviguer d'un répertoire à l'autre avec la commande <code>cd</code> .</p>
+<p>On peut aussi utiliser ce type de chemin pour indiquer où se trouvent les ressources les unes par rapport aux autres, indépendamment de la racine du système, par exemple pour que les fichiers d'un site web susceptibles d'être déplacés ensemble puissent se retrouver les uns les autres.</p>
+<h2 id="terminalconsole-et-shell">Terminal/console et shell<a class="headerlink" href="#terminalconsole-et-shell" title="Permanent link">&num;</a></h2>
+<p>Plutôt que d'intéragir avec le système via une interface graphique, il possible aussi d'intéragir avec le système via un terminal (ou console).  Voici un exemple de terminal sous une distribution Linux (Kali):</p>
+<figure>
+<p><img alt="arbo" src="../img_OS/capture_kali.png" width="400px" /></p>
+</figure>
+<p><strong>Le Shell est l’interpréteur en ligne de commande</strong>, il permet à un utilisateur de s’identifier sur une console ou un terminal.</p>
+<p>Il fournit un certaines nombres de commandes pour interagir avec le système d’exploitation.
+En général, il permet aussi de créer des fichiers script que l’on nomme script pour exécuter plusieurs commandes l’une après l’autre. C’est donc aussi un langage de programmation.</p>
+<ul>
+<li>Sur Linux : Bourne shell (sh), KornShell (ksh), C shell (csh), tcsh ,bash, Z shell (zsh)</li>
+<li>Sur Windows : PowerShell</li>
+</ul>
+<h2 id="unix-et-linux">UNIX et Linux<a class="headerlink" href="#unix-et-linux" title="Permanent link">&num;</a></h2>
+<h3 id="les-differentes-commandes-linux-utiles">Les différentes commandes linux utiles<a class="headerlink" href="#les-differentes-commandes-linux-utiles" title="Permanent link">&num;</a></h3>
+<ul>
+<li>La commande <code>pwd</code> permet d'afficher le répertoire où l’on se trouve exactement ;</li>
+<li>La commande <code>cd</code> permet de changer le répertoire courant. Il suffit d'indiquer le chemin (relatif ou absolu) qui permet d'atteindre le nouveau répertoire. La commande <code>cd ..</code> permet de remonter d'un étage dans l'arborescence ;</li>
+<li>La commande <code>ls</code>permet de lister tous les fichiers et les dossiers présents dans un répertoire ;</li>
+<li>La commande <code>mkdir</code> permet de créer un répertoire dans le répertoire courant. La commande est de la forme <code>mkdir nom_du_répertoire</code> ;</li>
+<li>La commande <code>touch</code> permet de créer un fichier vide. La commande est de la forme <code>touch nom_du_fichier_à_créer</code>;</li>
+<li>la commande <code>cat</code> permet d'afficher dans la console le contenu d'un fichier. La commande est de la forme 'cat nom_du_fichier`;</li>
+<li>La commande <code>cp</code> permet de copier un fichier. La commande est de la forme <code>cp /répertoire_source/nom_fichier_à_copier /répertoire_destination/nom_fichier</code></li>
+<li>la commande <code>mv</code> permet de déplacer un fichier dans un dossier. Par exemple un <code>mv toto.txt titi</code> déplacera le fichier <code>toto.txt</code> dans le répertoire <code>titi</code> ;</li>
+<li>la commande <code>man</code> permet de connaitre toutes les options d'une commande.</li>
+<li>
+<p>Pour trouver un fichier, nous pouvons utiliser les commandes :</p>
+<ul>
+<li><code>find</code> : recherche pointue !</li>
+<li><code>locate</code> : Recherche accélérée de fichiers ou répertoire.</li>
+<li><code>which</code> : Chemin d’une commande déterminée.</li>
+</ul>
+</li>
+</ul>
+<h3 id="les-permissions">Les permissions<a class="headerlink" href="#les-permissions" title="Permanent link">&num;</a></h3>
+<h4 id="voir-les-droits">Voir les droits<a class="headerlink" href="#voir-les-droits" title="Permanent link">&num;</a></h4>
+<p>La sécurité sous unix est gérée par la notion de permission.</p>
+<p>Un utilisateur ne peut pas faire ce qu’il veut. </p>
+<p>Le super utilisteur root peut tout faire. Devenir root avec <code>$ su</code>, exécuter une commande comme root avec <code>$ sudo commande</code>.</p>
+<p>L’affichage détaillé d’un fichier (<code>ls -lah</code>) montre :</p>
+<ul>
+<li>les permissions de l’utilisateur courant</li>
+<li>de son groupe ;</li>
+<li>de tout le monde.</li>
+</ul>
+<p><strong>Exemple :</strong></p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>-rwxr-xr-x <span class="m">1</span> eric eric  <span class="m">324</span>  <span class="m">2</span> déc.  <span class="m">21</span>:45 deploy.sh
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>-rw-r--r-- <span class="m">1</span> eric eric <span class="m">3</span>,6M  <span class="m">5</span> déc.  <span class="m">08</span>:32 inside.log
+</span></code></pre></div>
+<p>traduction :</p>
+<ul>
+<li>
+<ul>
+<li>: pas activé</li>
+</ul>
+</li>
+<li>d : directory</li>
+<li>r : droit de lecture</li>
+<li>w : droit d'écritude</li>
+<li>x : droit d'exécution</li>
+</ul>
+<h4 id="changer-les-droits">Changer les droits<a class="headerlink" href="#changer-les-droits" title="Permanent link">&num;</a></h4>
+<p>On change les permissions avec <code>chmod</code> soit en ajoutant ou retirant un flag : <code>$ chmod +x inside.log</code> rendra ce fichier exécutable soit en décrivant la permission par 3 chiffres :</p>
+<ul>
+<li>1 : possibilité d'exécution ;</li>
+<li>2 : possibilité d'écriture ;</li>
+<li>4 : possibilité de lecture.</li>
+</ul>
+<p>Il est également possible d'en faire la somme : Ex 7 = 1 + 2 + 4 = tous les droits. Et en fonction de la place de ce chiffre, la permission s'applique à l'utilisateur courant, au groupe, ou à tout le monde.</p>
+<p><strong>Exemple :</strong> <code>$ chmod 764 inside.log</code>. Avec le premier 7 je sais que je peux tout faire (lire, écrire et exécuter), le deuxième 6, je sais que mon groupe ne peut pas exécuter mais il peut lire et écrire dessus. Et enfin le dernier 4, je sais que tout le monde peut lire mais pas lire ni l'exécuter.</p>
+<h3 id="exercice">Exercice<a class="headerlink" href="#exercice" title="Permanent link">&num;</a></h3>
+<p>Rendez-vous à l'adresse <a href="http://luffah.xyz/bidules/Terminus/">http://luffah.xyz/bidules/Terminus/</a>.</p>
+<p>Noter sur un papier chaque nouvelle commande que vous apprenez. Ces notes peuvent prendre la forme suivante :</p>
+<figure>
+<p><img alt="exercice" src="../img_OS/tab.png" /></p>
+</figure>
+<p>Écrire un plan du jeu au fur et à mesure que vous avancez dans votre quête. Par exemple :</p>
+<figure>
+<p><img alt="exercice" src="../img_OS/tab2.png" /></p>
+</figure>
+<h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">&num;</a></h2>
+<h3 id="exercice-1">Exercice 1<a class="headerlink" href="#exercice-1" title="Permanent link">&num;</a></h3>
+<p>Soit l'arborescence ci-dessous :</p>
+<figure>
+<p><img alt="arbo" src="../img_OS/arbo_exo2.png" width="300px" /></p>
+</figure>
+<ol>
+<li>Pour connaitre le répertoire dans lequel je me trouve, quelle commande dois-je utiliser ?</li>
+<li>La commande précédente renvoie <code>/home/Zoé</code> et je suis Zoé. Pour créer un fichier <code>chat.txt</code>, quelle commande dois-je utiliser ?</li>
+<li>Pour créer un répertoire <code>Photos</code> puis un fichier <code>listePhotos</code> dans ce répertoire, quelles commandes dois-je utiliser ?</li>
+<li>Zoé a voulu faire cela, mais voici ce qu'elle à fait :
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mkdir Films
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>cd Films
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>touch listePhotos
+</span></code></pre></div>
+Comme vous le voyez, elle s'est trompée, et veut maintenant déplacer le fichier <code>listePhotos</code> dans le répertoire <code>Photos</code>.
+Pour déplacer ce fichier sans le renommer, quelle commande Zoé doit-elle utiliser ?</li>
+<li>Zoé est donc toujours dans le répertoire <code>Film</code> et elle saisit <code>mkdir 2020</code>
+Elle veut maintenant copier le fichier <code>listePhotos</code> dans ce nouveau répertoire mais sous un nouveau nom : <code>listeFilms2020</code>. Quelle commande Zoé doit-elle utiliser ?</li>
+<li>Malheureusement Zoé s'est trompée et elle a tapé : <code>cp ../Photos/listePhotos ~</code>. Ou a-t-elle copié le fichier ? Donner le chemin absolu.</li>
+<li>Comment peut elle effacer ce fichier maintenant (elle est toujours dans le répertoire Film) ? Donner le chemin relatif.</li>
+</ol>
+<h3 id="exercice-2">Exercice 2<a class="headerlink" href="#exercice-2" title="Permanent link">&num;</a></h3>
+<p>Hubert travaille et le prompt indique : ~$. il tape <code>ls -l</code> et obtient cette réponse :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>-rw-rw-r-- 1 user 0 Apr 15 09:35 toto
+</span></code></pre></div>
+<ol>
+<li>Peut-il lire ce fichier ? le modifier ? l'exécuter ?</li>
+<li>Son amie Zoé qui n'est pas dans son groupe d'utilisateurs peut elle lire ce fichier ? modifier son contenu ?</li>
+<li>Hubert veux exécuter toto, il tape ./toto et obtient ce message -sh: ./toto: Permission denied. Que s'est-il passé ?</li>
+<li>Pour que toto devienne exécutable pour lui même, quelle commande Hubert doit-il utiliser ?</li>
+</ol>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../von_neumann/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Von Neumann" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Von Neumann
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../Algorithmique/outils/" class="md-footer__link md-footer__link--next" aria-label="Next: Outils" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Outils
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8aa65030.min.js"></script>
+      
+        <script src="../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

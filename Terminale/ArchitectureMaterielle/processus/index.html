@@ -1,0 +1,1869 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://example.com/Terminale/ArchitectureMaterielle/processus/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+    
+    
+      
+        <title>processus - Site de cours</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e8d9bf0c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gestion-des-processus-et-ressources" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Site de cours" class="md-header__button md-logo" aria-label="Site de cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Site de cours
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              processus
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Site de cours" class="md-nav__button md-logo" aria-label="Site de cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Site de cours
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about.md" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Physique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Physique" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Physique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Seconde
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seconde" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Seconde
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Physique/Seconde/TP_vitesse/" class="md-nav__link">
+        TP vitesse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Physique/Seconde/TPver_eleve/" class="md-nav__link">
+        TP verrerie
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Première
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Première" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Première
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Donnees/representation_entier/" class="md-nav__link">
+        Représentation des entiers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Donnees/donnees_table/" class="md-nav__link">
+        Données en table
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Langage Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Langage Python" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Langage Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Langage/Bases_Python/" class="md-nav__link">
+        Les bases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Langage/ControleFlux_Python/" class="md-nav__link">
+        Contrôle du flux d'exécution
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Langage/fonction_python/" class="md-nav__link">
+        Les fonctions en Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Langage/tuples_listes/" class="md-nav__link">
+        Tuples et listes en Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Langage/dico/" class="md-nav__link">
+        Dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          IHM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="IHM" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          IHM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/IHM/html_css/" class="md-nav__link">
+        web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/IHM/frameworks/" class="md-nav__link">
+        Frameworks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/IHM/formulaires/" class="md-nav__link">
+        Formulaire
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/IHM/js/" class="md-nav__link">
+        Javascript
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Architecture Matérielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture Matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/ArchitectureMaterielle/von_neumann/" class="md-nav__link">
+        Von Neumann
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/ArchitectureMaterielle/OS/" class="md-nav__link">
+        OS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Algorithmique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithmique" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithmique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Algorithmique/outils/" class="md-nav__link">
+        Outils
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Algorithmique/tris/" class="md-nav__link">
+        Tris
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Algorithmique/algo_recherche/" class="md-nav__link">
+        Recherche
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Algorithmique/algo_gloutons/" class="md-nav__link">
+        Gloutons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Algorithmique/kppv/" class="md-nav__link">
+        kppv
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Terminale
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Terminale" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Terminale
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1">
+          Programmation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Programmation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/decidabilite/" class="md-nav__link">
+        Calculabilité, décidabilité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/crypto/" class="md-nav__link">
+        Sécurisation des données
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/algos_arbre/" class="md-nav__link">
+        Arbres algos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/graphes/" class="md-nav__link">
+        Graphes algos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/recherche_textuelle/" class="md-nav__link">
+        Recherche textuelle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/diviser_regner/" class="md-nav__link">
+        Diviser pour régner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/prog_dynamique/" class="md-nav__link">
+        Programmation dynamique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/dijkstra/" class="md-nav__link">
+        Plus court chemin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/API/" class="md-nav__link">
+        Modularité
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          Structures de Données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Structures de Données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Structures de Données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Struct_donnees/graphe/" class="md-nav__link">
+        Graphes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          BDD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="BDD" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          BDD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BDD/bdd/" class="md-nav__link">
+        Introduction BDD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BDD/sql_sqlite/" class="md-nav__link">
+        SQL avec SQLITE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BDD/sql_python/" class="md-nav__link">
+        SQL et Python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          Architecture Matérielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture Matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reseau_routage/" class="md-nav__link">
+        Routage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../commande_linux/" class="md-nav__link">
+        Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          processus
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        processus
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programme-et-processus" class="md-nav__link">
+    Programme et processus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-de-processus" class="md-nav__link">
+    Exemple de processus
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemple de processus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#avec-windows" class="md-nav__link">
+    Avec windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avec-linux-ou-un-systeme-unix" class="md-nav__link">
+    Avec Linux ou un système UNIX
+  </a>
+  
+    <nav class="md-nav" aria-label="Avec Linux ou un système UNIX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-commande-ps" class="md-nav__link">
+    La commande ps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-commande-top" class="md-nav__link">
+    La commande top
+  </a>
+  
+    <nav class="md-nav" aria-label="La commande top">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-commande-pstree" class="md-nav__link">
+    La commande pstree
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-commande-kill" class="md-nav__link">
+    La commande kill
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lordonnancement-des-processus" class="md-nav__link">
+    L'ordonnancement des processus
+  </a>
+  
+    <nav class="md-nav" aria-label="L'ordonnancement des processus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#differents-types-dordonnancement" class="md-nav__link">
+    Différents types d'ordonnancement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-etats-dun-processus" class="md-nav__link">
+    Les états d'un processus
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interblocage" class="md-nav__link">
+    Interblocage
+  </a>
+  
+    <nav class="md-nav" aria-label="Interblocage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-et-exemple" class="md-nav__link">
+    Définition et exemple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#representation-schematique" class="md-nav__link">
+    Représentation schématique
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../soc/" class="md-nav__link">
+        SoC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5">
+          Algorithmes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithmes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithmes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algo/" class="md-nav__link">
+        Algorithmes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Logiciels
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Logiciels" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Logiciels
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Logiciels/git_github/" class="md-nav__link">
+        git
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programme-et-processus" class="md-nav__link">
+    Programme et processus
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple-de-processus" class="md-nav__link">
+    Exemple de processus
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemple de processus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#avec-windows" class="md-nav__link">
+    Avec windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avec-linux-ou-un-systeme-unix" class="md-nav__link">
+    Avec Linux ou un système UNIX
+  </a>
+  
+    <nav class="md-nav" aria-label="Avec Linux ou un système UNIX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-commande-ps" class="md-nav__link">
+    La commande ps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-commande-top" class="md-nav__link">
+    La commande top
+  </a>
+  
+    <nav class="md-nav" aria-label="La commande top">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-commande-pstree" class="md-nav__link">
+    La commande pstree
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-commande-kill" class="md-nav__link">
+    La commande kill
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lordonnancement-des-processus" class="md-nav__link">
+    L'ordonnancement des processus
+  </a>
+  
+    <nav class="md-nav" aria-label="L'ordonnancement des processus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#differents-types-dordonnancement" class="md-nav__link">
+    Différents types d'ordonnancement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-etats-dun-processus" class="md-nav__link">
+    Les états d'un processus
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interblocage" class="md-nav__link">
+    Interblocage
+  </a>
+  
+    <nav class="md-nav" aria-label="Interblocage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-et-exemple" class="md-nav__link">
+    Définition et exemple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#representation-schematique" class="md-nav__link">
+    Représentation schématique
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="gestion-des-processus-et-ressources">Gestion des processus et ressources<a class="headerlink" href="#gestion-des-processus-et-ressources" title="Permanent link">&num;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&num;</a></h2>
+<p>Le système d'exploitation permet :</p>
+<ul>
+<li>aux applications et programmes de s'exécuter en bonne intelligence sur un ordinateur.</li>
+<li>la prise en charge de périphériques comme le clavier, l'écran ;</li>
+<li>la prise en charge de la mémoire.</li>
+</ul>
+<p>L'exécution des programmes est prise en charge par les processus et les périphériques identifiés comme des ressources dont la disponibilité est gérée par le système.</p>
+<p>Ce chapitre a pour but de présenter ce qu'est un processus et de présenter le mécanisme d'ordonnancement du système d'exploitation pour partager l'utilisation du ou des processeurs entre l'ensemble des processus.</p>
+<h2 id="programme-et-processus">Programme et processus<a class="headerlink" href="#programme-et-processus" title="Permanent link">&num;</a></h2>
+<p>Un <strong>programme</strong> est composé d'une suite d'instructions. Ces instructions sont généralement stockées dans un fichier. L'exécution de ce programme consiste en l'exécution, les unes après les autres des instructions composant ce programme.</p>
+<p>Cette exécution est prise en charge par un processus crée par le système d'exploitation. Celui-ci va :</p>
+<ul>
+<li>charger les instructions du programme en mémoire ;</li>
+<li>écrire l'adresse mémoire de la première instruction dans le compteur de programme (CP).</li>
+</ul>
+<p>Le cycle d'exécution du processeur permet l'exécution une à une des instructions du programme par le microprocesseur.</p>
+<p>La notion de processus se distingue donc de la notion de programme. Un programme est une description statique des intructions tandis qu'un processus correspnd à une exécution effective de ces instructions. Un même programme peut être exécuté plusieurs fois, chaque exécution est prise en charge par un processus différent. On dit qu'un processus est un <strong>instance d'exécution</strong> du programme.</p>
+<p>Un processus est donc un entité qui évolue dans le temps. Dans un premier temps, il est crée par l'utilisateur (on dit  qu'il lance le programme). Le processus est actif, c'est-à-dire qu'il exécute les intructions qui compose son programme. Le processus opère des variables (celles définies dans le programme) et manipule des ressources (telles que des fichiers, des fenêtres, etc...). Ces éléments constitue le contexte d'exécution du processus. Enfin, un processus peut se terminer . Les ressources présentes dans son contexte d'exécution sont alors libérées (les fenêtres fermées, les variables supprimées, etc...).</p>
+<h2 id="exemple-de-processus">Exemple de processus<a class="headerlink" href="#exemple-de-processus" title="Permanent link">&num;</a></h2>
+<h3 id="avec-windows">Avec windows<a class="headerlink" href="#avec-windows" title="Permanent link">&num;</a></h3>
+<p>Microsoft Windows est architecturé en services (processus) fonctionnant en arrière-plan. Il est possible d'afficher facilement la liste des processus en cours dans le gestionnaire des tâches en appuyant simultanément sur CTRL+SCHIFT+ESC, ou en exécutant directement taskmgr.exe dans la barre de recherche</p>
+<p>Si vous lancez le gestionnaire de tache pour la première fois, vous serez peut-être amené à cliquer sur "Plus de détails " en bas à Gauche de la fenêtre.</p>
+<p>Vous verrez alors une fenêtre avec six onglets.</p>
+<p>Dans l'onglet Processus, vous verrez tous ceux s'exécutant sur votre machine, ainsi que les ressources qu'ils consomment. On distingue trois catégories:</p>
+<ul>
+<li>Applications ;</li>
+<li>Processus en arrière-plan ;</li>
+<li>Processus Windows.</li>
+</ul>
+<figure>
+<p><img alt="processus_windows" src="../img_processus/windows_processus.png" /></p>
+</figure>
+<p>Par un simple clic droit sur son nom, suivi de fin de tâche on peut facilement tuer un processus, c'est très pratique lorsqu'un programme ne répond plus.</p>
+<p>Dans l'onglet <em>Performance</em>, nous pouvons voir graphiquement les ressources utilisé.</p>
+<figure>
+<p><img alt="processus_windows" src="../img_processus/performance.png" /></p>
+</figure>
+<p>Dans l’onglet <em>Historique des applications</em>, nous pouvons voir les ressources utilisées par application.</p>
+<figure>
+<p><img alt="processus_windows" src="../img_processus/historique.png" /></p>
+</figure>
+<p>Dans l’onglet <em>Démarrage</em>, nous pouvons voir toutes les applications qui se lancent au démarrage de Windows.</p>
+<p>Dans l’onglet <em>Détails</em>, nous pouvons voir le PID (Processus IDentifier) des processus et leurs statuts.</p>
+<figure>
+<p><img alt="processus_windows" src="../img_processus/details.png" /></p>
+</figure>
+<h3 id="avec-linux-ou-un-systeme-unix">Avec Linux ou un système UNIX<a class="headerlink" href="#avec-linux-ou-un-systeme-unix" title="Permanent link">&num;</a></h3>
+<h4 id="la-commande-ps">La commande ps<a class="headerlink" href="#la-commande-ps" title="Permanent link">&num;</a></h4>
+<p>La commande <code>ps</code> (penser à ProcessuS) est utilisée pour afficher des informations sur un processus.</p>
+<p>L’option u permet de préciser le propriétaire, l’option l permet d’afficher plus d’attributs (long).</p>
+<p>Par exemple, pour connaître les processus appartenant à l’utilisateur :</p>
+<table class="language-shell highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span></pre></div></td><td class="code"><div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>% ps -lu ericgaland
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>UID PID PPID F CPU PRI NI SZ RSS WCHAN S ADDR TTY TIME CMD
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="m">502</span> <span class="m">441</span> <span class="m">1</span> <span class="m">4004</span> <span class="m">0</span> <span class="m">37</span> <span class="m">0</span> <span class="m">33665772</span> <span class="m">3752</span> - S <span class="m">0</span> ?? <span class="m">1</span>:19.89 /usr/sbin/distnoted ag
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="m">502</span> <span class="m">442</span> <span class="m">1</span> <span class="m">4004</span> <span class="m">0</span> <span class="m">4</span> <span class="m">0</span> <span class="m">33730640</span> <span class="m">4252</span> - S <span class="m">0</span> ?? <span class="m">0</span>:23.41 /usr/sbin/cfprefsd age
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="m">502</span> <span class="m">444</span> <span class="m">1</span> <span class="m">40004004</span> <span class="m">0</span> <span class="m">31</span> <span class="m">0</span> <span class="m">33761664</span> <span class="m">12568</span> - S <span class="m">0</span> ?? <span class="m">0</span>:07.38 /usr/libexec/UserEvent
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="m">502</span> <span class="m">447</span> <span class="m">1</span> <span class="m">4004</span> <span class="m">0</span> <span class="m">4</span> <span class="m">0</span> <span class="m">33765408</span> <span class="m">9420</span> - S <span class="m">0</span> ?? <span class="m">0</span>:00.46 /System/Library/Privat
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="m">502</span> <span class="m">449</span> <span class="m">1</span> <span class="m">4004</span> <span class="m">0</span> <span class="m">4</span> <span class="m">0</span> <span class="m">33773364</span> <span class="m">27668</span> - S <span class="m">0</span> ?? <span class="m">0</span>:15.94 /usr/libexec/knowledge
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="m">502</span> <span class="m">451</span> <span class="m">1</span> <span class="m">4004</span> <span class="m">0</span> <span class="m">4</span> <span class="m">0</span> <span class="m">33729300</span> <span class="m">3500</span> - S <span class="m">0</span> ?? <span class="m">0</span>:00.52 /usr/libexec/WiFiVeloc
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="m">502</span> <span class="m">452</span> <span class="m">1</span> <span class="m">4004</span> <span class="m">0</span> <span class="m">4</span> <span class="m">0</span> <span class="m">33767788</span> <span class="m">12048</span> - S <span class="m">0</span> ?? <span class="m">0</span>:05.87 /usr/libexec/lsd
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="m">502</span> <span class="m">453</span> <span class="m">1</span> <span class="m">4004</span> <span class="m">0</span> <span class="m">31</span> <span class="m">0</span> <span class="m">33768668</span> <span class="m">12676</span> - S <span class="m">0</span> ?? <span class="m">0</span>:01.93 /usr/sbin/usernoted
+</span></code></pre></div>
+</td></tr></table>
+<ul>
+<li>La colonne S indique l’état (state) du processus : S pour stopped, R pour Running et Z pour Zombie</li>
+<li>PID est le processus identifier : un identifiant sous forme d’entier donné par le système.</li>
+<li>PPID est le parent processus identifier qui donne l’identifiant du parent qui a engendré le processus</li>
+<li>CMD est le nom de la commande</li>
+</ul>
+<h3 id="la-commande-top">La commande <code>top</code><a class="headerlink" href="#la-commande-top" title="Permanent link">&num;</a></h3>
+<figure>
+<p><img alt="processus" src="../img_processus/top.png" /></p>
+</figure>
+<h4 id="la-commande-pstree">La commande <code>pstree</code><a class="headerlink" href="#la-commande-pstree" title="Permanent link">&num;</a></h4>
+<p>À noter que la commande <code>pstree</code> permet d'afficher les processus sous forme d'arborescence :</p>
+<h4 id="la-commande-kill">La commande <code>kill</code><a class="headerlink" href="#la-commande-kill" title="Permanent link">&num;</a></h4>
+<p>Il n’est parfois pas possible de fermer un processus graphique en cliquant par exemple sur la croix prévue pourtant à cet effet.On peut utiliser la commande kill si on connait le PID du processus à "tuer".</p>
+<h2 id="lordonnancement-des-processus">L'ordonnancement des processus<a class="headerlink" href="#lordonnancement-des-processus" title="Permanent link">&num;</a></h2>
+<h3 id="differents-types-dordonnancement">Différents types d'ordonnancement<a class="headerlink" href="#differents-types-dordonnancement" title="Permanent link">&num;</a></h3>
+<p>Si on vous donne 4 tâches A, B, C et D à accomplir, vous pouvez décider :</p>
+<ul>
+<li>de faire la tâche prioritaire d'abord ;</li>
+<li>de faire la tâche la plus rapide d'abord ;</li>
+<li>de faire la tâche la plus longue d'abord ;</li>
+<li>de les faire dans l'ordre où elles vous ont été données ;</li>
+<li>de faire à tour de rôle chaque tâche pendant un temps fixe jusqu'à ce qu'elles soient toutes terminées;</li>
+<li>...</li>
+</ul>
+<p>Plusieurs stratégies peuvent être appliquées :</p>
+<p>Le schéma ci-dessous (issu de ce <a href="https://medium.com/@sheenam.mca17.du/process-scheduling-b86975413079">site</a>) présente quelques politiques d'ordonnancement :</p>
+<figure>
+<p><img alt="différents_ordonnancements" src="../img_processus/1_5PiB5W4fvWEAGp56F5e8ag.webp" /></p>
+</figure>
+<p>C'est la partie du système d'exploitation appelée <strong>ordonnanceur</strong> qui est en charge de ce choix.</p>
+<p>Généralement, l'ordonnanceur applique une politique de <strong>temps partagé</strong>. Le principe de fonctionnement est le suivant. Un algorithme d'ordonnancement choisit un processus parmi l'ensemble des processus en attente d'exécution. Ce choix est guidé par différents critères qui dépendent du système d'exploitation. Ce processus élu s'exécute alors pendant une certaine tranche de temps appelée <strong>quantum d'ordonnancement</strong>. A l'issue de ce quantum, l'ordonnanceur interromp l'exécution de ce processus et sollicite l'algorithme d'ordonancement pour procéder à un nouveau choix.</p>
+<h3 id="les-etats-dun-processus">Les états d'un processus<a class="headerlink" href="#les-etats-dun-processus" title="Permanent link">&num;</a></h3>
+<p>Selon que l'ordonnanceur aura décidé de le confier ou non au processeur pour son exécution, un processus peut donc se trouver dans 3 états :</p>
+<ul>
+<li><strong>Prêt</strong> : il attend qu'arrive le moment de son exécution.</li>
+<li><strong>Élu ou actif</strong> : il est en cours d'exécution par le processeur.</li>
+<li><strong>Bloqué</strong> : pendant son exécution (état Élu), le processus réclame une ressource qui n'est pas immédiatement disponible. Son exécution s'interrompt.Lorsque la ressource sera disponible, le processus repassera par l'état Prêt et attendra à nouveau son tour.</li>
+</ul>
+<p>Il existe aussi un état <strong>zombie</strong>. Il s'agit d'un processus qui s'est terminé, mais qui n'est pas entièrement retiré immédiatement de la mémoire.</p>
+<figure>
+<p><img alt="différents_ordonnancements" src="../img_processus/cycle_etat_processus.png" /></p>
+</figure>
+<h2 id="interblocage">Interblocage<a class="headerlink" href="#interblocage" title="Permanent link">&num;</a></h2>
+<h3 id="definition-et-exemple">Définition et exemple<a class="headerlink" href="#definition-et-exemple" title="Permanent link">&num;</a></h3>
+<p>Comme nous venons de le voir, un processus peut être dans l'état bloqué dans l'attente de la libération d'une ressource.</p>
+<p>Ces ressources (l'accès en écriture à un fichier, à un registre de la mémoire...) ne peuvent être données à deux processus à la fois. Des processus souhaitant accéder à cette ressource sont donc en concurrence sur cette ressource. Un processus peut donc devoir attendre qu'une ressource se libère avant de pouvoir y accéder (et ainsi passer de l'état Bloqué à l'état Prêt).</p>
+<p><strong>Problème :</strong> Et si deux processus se bloquent mutuellement la ressource dont ils ont besoin ?</p>
+<p><strong>Exemple :</strong> Considérons 2 processus A et B, et deux ressources R et S. L'action des processus A et B est décrite ci-dessous :</p>
+<figure>
+<p><img alt="interbloquage" src="../img_processus/tab_proc.png" /></p>
+</figure>
+<p>Déroulement des processus A et B :</p>
+<ul>
+<li>A et B sont créés et passent à l'état Prêt.</li>
+<li>L'ordonnanceur déclare Élu le processus A (ou bien B, cela ne change rien).</li>
+<li>L'étape A1 de A est réalisée : la ressource R est donc affectée à A.</li>
+<li>L'ordonnanceur déclare maintenant Élu le processus B. A est donc passé à Prêt en attendant que son tour revienne.</li>
+<li>L'étape B1 de B est réalisée : la ressource S est donc affectée à B.</li>
+<li>L'ordonnanceur déclare à nouveau Élu le processus A. B est donc passé à Prêt en attendant que son tour revienne.</li>
+<li>L'étape A2 de A est donc enclenchée : problème, il faut pour cela pouvoir accèder à la ressource S, qui n'est pas disponible. L'ordonnanceur va donc passer A à Bloqué et va revenir au processus B qui redevient Élu.</li>
+<li>L'étape B2 de B est donc enclenchée : problème, il faut pour cela pouvoir accèder à la ressource R, qui n'est pas disponible. L'ordonnanceur va donc passer B à Bloqué.</li>
+</ul>
+<p>Les deux processus A et B sont donc dans l'état Bloqué, chacun en attente de la libération d'une ressource bloquée par l'autre : ils se bloquent mutuellement.</p>
+<p>Cette situation (critique) est appelée <strong>interblocage ou deadlock</strong>.</p>
+<h3 id="representation-schematique">Représentation schématique<a class="headerlink" href="#representation-schematique" title="Permanent link">&num;</a></h3>
+<ul>
+<li>Les processus seront représentés par des cercles, les ressources par des carrés.</li>
+<li>Si à l'étape A1 le processus A a demandé et reçu la ressource R, la représentation sera :</li>
+</ul>
+<figure>
+<p><img alt="representation1" src="../img_processus/A1.png" width="150px" /></p>
+</figure>
+<ul>
+<li>Si à l'étape A2 le processus A est en attente de la ressource S, la représentation sera :</li>
+</ul>
+<figure>
+<p><img alt="representation2" src="../img_processus/A2.png" width="150px" /></p>
+</figure>
+<ul>
+<li>Avec ces conventions, la situation précédente peut donc se schématiser par :</li>
+</ul>
+<figure>
+<p><img alt="representation3" src="../img_processus/schema.png" width="150px" /></p>
+</figure>
+<p>Ce type de schéma fait apparaître un cycle d'interdépendance, qui caractérise ici la situation de deadlock.</p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../commande_linux/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Linux" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Linux
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../soc/" class="md-footer__link md-footer__link--next" aria-label="Next: SoC" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              SoC
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8aa65030.min.js"></script>
+      
+        <script src="../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

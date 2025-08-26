@@ -1,0 +1,3114 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://example.com/Terminale/Programmation/graphes/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+    
+    
+      
+        <title>Graphes algos - Site de cours</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e8d9bf0c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#algorithmes-sur-les-graphes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Site de cours" class="md-header__button md-logo" aria-label="Site de cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Site de cours
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Graphes algos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Site de cours" class="md-nav__button md-logo" aria-label="Site de cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Site de cours
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about.md" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Physique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Physique" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Physique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Seconde
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seconde" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Seconde
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Physique/Seconde/TP_vitesse/" class="md-nav__link">
+        TP vitesse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Physique/Seconde/TPver_eleve/" class="md-nav__link">
+        TP verrerie
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Première
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Première" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Première
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Donnees/representation_entier/" class="md-nav__link">
+        Représentation des entiers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Donnees/donnees_table/" class="md-nav__link">
+        Données en table
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Langage Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Langage Python" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Langage Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Langage/Bases_Python/" class="md-nav__link">
+        Les bases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Langage/ControleFlux_Python/" class="md-nav__link">
+        Contrôle du flux d'exécution
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Langage/fonction_python/" class="md-nav__link">
+        Les fonctions en Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Langage/tuples_listes/" class="md-nav__link">
+        Tuples et listes en Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Langage/dico/" class="md-nav__link">
+        Dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          IHM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="IHM" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          IHM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/IHM/html_css/" class="md-nav__link">
+        web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/IHM/frameworks/" class="md-nav__link">
+        Frameworks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/IHM/formulaires/" class="md-nav__link">
+        Formulaire
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/IHM/js/" class="md-nav__link">
+        Javascript
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Architecture Matérielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture Matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/ArchitectureMaterielle/von_neumann/" class="md-nav__link">
+        Von Neumann
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/ArchitectureMaterielle/OS/" class="md-nav__link">
+        OS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Algorithmique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithmique" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithmique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Algorithmique/outils/" class="md-nav__link">
+        Outils
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Algorithmique/tris/" class="md-nav__link">
+        Tris
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Algorithmique/algo_recherche/" class="md-nav__link">
+        Recherche
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Algorithmique/algo_gloutons/" class="md-nav__link">
+        Gloutons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Algorithmique/kppv/" class="md-nav__link">
+        kppv
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Terminale
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Terminale" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Terminale
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1">
+          Programmation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Programmation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../decidabilite/" class="md-nav__link">
+        Calculabilité, décidabilité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crypto/" class="md-nav__link">
+        Sécurisation des données
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algos_arbre/" class="md-nav__link">
+        Arbres algos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Graphes algos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Graphes algos
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#representations-dun-graphe" class="md-nav__link">
+    Représentations d'un graphe
+  </a>
+  
+    <nav class="md-nav" aria-label="Représentations d'un graphe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rappels-et-exemple" class="md-nav__link">
+    Rappels et exemple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#representation-a-laide-dun-dictionnaire" class="md-nav__link">
+    Représentation à l'aide d'un dictionnaire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-laide-dune-liste-de-liste" class="md-nav__link">
+    A l'aide d'une liste de liste
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-laide-dune-bibliotheque" class="md-nav__link">
+    À l'aide d'une bibliothèque
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principe-des-differents-parcours" class="md-nav__link">
+    Principe des différents parcours
+  </a>
+  
+    <nav class="md-nav" aria-label="Principe des différents parcours">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-parcours-en-largeur-breadth-first-search-ou-bfs" class="md-nav__link">
+    Le parcours en largeur (Breadth First Search ou BFS)
+  </a>
+  
+    <nav class="md-nav" aria-label="Le parcours en largeur (Breadth First Search ou BFS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principe" class="md-nav__link">
+    Principe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple" class="md-nav__link">
+    Exemple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-du-bfs-en-python" class="md-nav__link">
+    Implémentation du BFS en Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bfs-version-recursive" class="md-nav__link">
+    BFS - version récursive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-un-chemin-entre-deux-sommets" class="md-nav__link">
+    Application : un chemin entre deux sommets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-parcours-en-profondeurdepth-first-search-ou-dfs" class="md-nav__link">
+    Le parcours en profondeur(Depth First Search ou DFS)
+  </a>
+  
+    <nav class="md-nav" aria-label="Le parcours en profondeur(Depth First Search ou DFS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principe_1" class="md-nav__link">
+    Principe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_1" class="md-nav__link">
+    Exemple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dfs-version-1" class="md-nav__link">
+    DFS version 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dfs-version-2" class="md-nav__link">
+    DFS version 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dfs-version-3-recursive" class="md-nav__link">
+    DFS  version 3 (récursive)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-un-chemin-entre-deux-sommets_1" class="md-nav__link">
+    Application : un chemin entre deux sommets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recherche-de-cycle" class="md-nav__link">
+    Recherche de cycle
+  </a>
+  
+    <nav class="md-nav" aria-label="Recherche de cycle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rappels" class="md-nav__link">
+    Rappels
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithme-de-la-presence-dun-cycle" class="md-nav__link">
+    Algorithme de la présence d'un cycle
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliographie" class="md-nav__link">
+    Bibliographie
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recherche_textuelle/" class="md-nav__link">
+        Recherche textuelle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diviser_regner/" class="md-nav__link">
+        Diviser pour régner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prog_dynamique/" class="md-nav__link">
+        Programmation dynamique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dijkstra/" class="md-nav__link">
+        Plus court chemin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API/" class="md-nav__link">
+        Modularité
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          Structures de Données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Structures de Données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Structures de Données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Struct_donnees/graphe/" class="md-nav__link">
+        Graphes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          BDD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="BDD" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          BDD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BDD/bdd/" class="md-nav__link">
+        Introduction BDD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BDD/sql_sqlite/" class="md-nav__link">
+        SQL avec SQLITE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BDD/sql_python/" class="md-nav__link">
+        SQL et Python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          Architecture Matérielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture Matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArchitectureMaterielle/reseau_routage/" class="md-nav__link">
+        Routage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArchitectureMaterielle/commande_linux/" class="md-nav__link">
+        Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArchitectureMaterielle/processus/" class="md-nav__link">
+        processus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArchitectureMaterielle/soc/" class="md-nav__link">
+        SoC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5">
+          Algorithmes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithmes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithmes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algo/" class="md-nav__link">
+        Algorithmes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Logiciels
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Logiciels" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Logiciels
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Logiciels/git_github/" class="md-nav__link">
+        git
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#representations-dun-graphe" class="md-nav__link">
+    Représentations d'un graphe
+  </a>
+  
+    <nav class="md-nav" aria-label="Représentations d'un graphe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rappels-et-exemple" class="md-nav__link">
+    Rappels et exemple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#representation-a-laide-dun-dictionnaire" class="md-nav__link">
+    Représentation à l'aide d'un dictionnaire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-laide-dune-liste-de-liste" class="md-nav__link">
+    A l'aide d'une liste de liste
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-laide-dune-bibliotheque" class="md-nav__link">
+    À l'aide d'une bibliothèque
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principe-des-differents-parcours" class="md-nav__link">
+    Principe des différents parcours
+  </a>
+  
+    <nav class="md-nav" aria-label="Principe des différents parcours">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-parcours-en-largeur-breadth-first-search-ou-bfs" class="md-nav__link">
+    Le parcours en largeur (Breadth First Search ou BFS)
+  </a>
+  
+    <nav class="md-nav" aria-label="Le parcours en largeur (Breadth First Search ou BFS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principe" class="md-nav__link">
+    Principe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple" class="md-nav__link">
+    Exemple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-du-bfs-en-python" class="md-nav__link">
+    Implémentation du BFS en Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bfs-version-recursive" class="md-nav__link">
+    BFS - version récursive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-un-chemin-entre-deux-sommets" class="md-nav__link">
+    Application : un chemin entre deux sommets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-parcours-en-profondeurdepth-first-search-ou-dfs" class="md-nav__link">
+    Le parcours en profondeur(Depth First Search ou DFS)
+  </a>
+  
+    <nav class="md-nav" aria-label="Le parcours en profondeur(Depth First Search ou DFS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principe_1" class="md-nav__link">
+    Principe
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple_1" class="md-nav__link">
+    Exemple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dfs-version-1" class="md-nav__link">
+    DFS version 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dfs-version-2" class="md-nav__link">
+    DFS version 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dfs-version-3-recursive" class="md-nav__link">
+    DFS  version 3 (récursive)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-un-chemin-entre-deux-sommets_1" class="md-nav__link">
+    Application : un chemin entre deux sommets
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recherche-de-cycle" class="md-nav__link">
+    Recherche de cycle
+  </a>
+  
+    <nav class="md-nav" aria-label="Recherche de cycle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rappels" class="md-nav__link">
+    Rappels
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithme-de-la-presence-dun-cycle" class="md-nav__link">
+    Algorithme de la présence d'un cycle
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliographie" class="md-nav__link">
+    Bibliographie
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="algorithmes-sur-les-graphes">Algorithmes sur les graphes<a class="headerlink" href="#algorithmes-sur-les-graphes" title="Permanent link">&num;</a></h1>
+<h2 id="representations-dun-graphe">Représentations d'un graphe<a class="headerlink" href="#representations-dun-graphe" title="Permanent link">&num;</a></h2>
+<h3 id="rappels-et-exemple">Rappels et exemple<a class="headerlink" href="#rappels-et-exemple" title="Permanent link">&num;</a></h3>
+<p>Un graphe est un objet mathématique (très utilisé, notamment en informatique) constitué de sommets reliés entre eux par des arêtes (ou des arcs).</p>
+<p>Exemple de graphe :</p>
+<figure>
+<pre class="mermaid"><code>flowchart LR
+    title[Graphe1]
+    B((b)) &lt;--&gt; A((a))
+    A &lt;--&gt; C((c))
+    B &lt;--&gt; D((d))
+    C &lt;--&gt; D
+    B &lt;--&gt; E((e))
+    D &lt;--&gt; E
+    E &lt;--&gt; G((g))
+    E &lt;--&gt; F((f))
+    G&lt;--&gt; F
+    G&lt;--&gt;H((h))</code></pre>
+</figure>
+<p>Mathématiquement, on peut définir un graphe 𝐺 par un couple <span class="arithmatex">\(G = (V, E)\)</span> avec :</p>
+<ul>
+<li><span class="arithmatex">\(V\)</span> un ensemble de sommets (vertices) (on dit aussi nœuds ou points)</li>
+<li><em>E</em> un ensemble d’arêtes (edges) (on dit aussi arcs, liens ou lignes)</li>
+<li>Chaque arête est définie par une paire de deux sommets distincts :</li>
+</ul>
+<p><span class="arithmatex">\(E \subset \{\{x,y\}|(x,y) \in V^2 ∧ x \neq 𝑦\}\)</span></p>
+<p><em>Remarque</em> : Cette expression mathématique signifie que E est un sous-ensemble de l'ensemble de toutes les paires non ordonnées d'éléments distincts de V. Plus précisément :</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(V^2\)</span> représente le produit cartésien de V avec lui-même, c'est-à-dire l'ensemble de tous les couples (x,y) où x et y sont des éléments de V.</p>
+</li>
+<li>
+<p>La condition <span class="arithmatex">\(x \neq y\)</span> exclut les paires où les deux éléments sont identiques.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\{\{x,y\}|(x,y) \in V^2 ∧ x \neq y\}\)</span> est l'ensemble de toutes les paires non ordonnées <span class="arithmatex">\(\{x,y\}\)</span> telles que x et y sont des éléments distincts de V.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(E \subset\)</span> indique que E est un sous-ensemble de cet ensemble de paires.</p>
+</li>
+</ol>
+<p>En termes simples, E est un ensemble de paires d'éléments distincts de V, où l'ordre des éléments dans chaque paire n'est pas important. Cette notation est souvent utilisée pour décrire les arêtes d'un graphe non orienté, où V serait l'ensemble des sommets et E l'ensemble des arêtes .</p>
+<!-- 
+![Graphe exemple](img_graphes/img1.png) -->
+
+<h3 id="representation-a-laide-dun-dictionnaire">Représentation à l'aide d'un dictionnaire<a class="headerlink" href="#representation-a-laide-dun-dictionnaire" title="Permanent link">&num;</a></h3>
+<p>On peut implémenter ce graphe en Python par un dictionnaire :</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">G</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">G</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">]</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">G</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">G</span><span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">]</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">G</span><span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">G</span><span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">]</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">G</span><span class="p">[</span><span class="s1">&#39;f&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">]</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">G</span><span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">]</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="n">G</span><span class="p">[</span><span class="s1">&#39;h&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">]</span>
+</span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 1</p>
+<p>Après avoir implémenter le graphe G. Écrire des fonctions pour obtenir :</p>
+<ul>
+<li>Nombre de sommets </li>
+<li>Nombre d'arêtes</li>
+<li>Degré d'un sommet</li>
+<li>Sommet de plus haut degré</li>
+<li>Voisins d'un sommet</li>
+</ul>
+</div>
+<p>Si on le désire, nous pouvons à partir du dictionnaire G générer également la matrice d'adjacence :</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">]</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">A</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>        <span class="k">if</span> <span class="n">liste</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="ow">in</span> <span class="n">G</span><span class="p">[</span><span class="n">liste</span><span class="p">[</span><span class="n">i</span><span class="p">]]:</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>            <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+</span></code></pre></div>
+</td></tr></table>
+<h3 id="a-laide-dune-liste-de-liste">A l'aide d'une liste de liste<a class="headerlink" href="#a-laide-dune-liste-de-liste" title="Permanent link">&num;</a></h3>
+<p>Nous avons vu précédement que un graphe pouvait être représenté par une matrice d'adjacence.</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span>
+<span class="normal"><a href="#__codelineno-2-7">7</a></span>
+<span class="normal"><a href="#__codelineno-2-8">8</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">A</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+</span></code></pre></div>
+</td></tr></table>
+<div class="admonition example">
+<p class="admonition-title">Exercice 2</p>
+<p>Implémenter le graphe G avec cette matrice.
+Écrire les mêmes fonctions que précédemment.</p>
+<ul>
+<li>Nombre de sommets </li>
+<li>Nombre d'arêtes</li>
+<li>Degré d'un sommet</li>
+<li>Sommet de plus haut degré</li>
+<li>Voisins d'un sommet</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 3</p>
+<p>Implémenter le graphe du réseau social suivant et determiner celui qui a le plus d’amis.</p>
+<p>Un réseau social comporte 6 abonnés (A, B, C, D, E et F) où :</p>
+<ul>
+<li>A est ami avec B, C et D</li>
+<li>B est ami avec A et D</li>
+<li>C est ami avec A, E et D</li>
+<li>D est ami avec tous les autres abonnés</li>
+<li>E est ami avec C, D et F</li>
+<li>F est ami avec E et D</li>
+</ul>
+</div>
+<figure>
+<p><img alt="Graphe exemple" src="../img_graphes/img2.png" width="250px" /></p>
+</figure>
+<h3 id="a-laide-dune-bibliotheque">À l'aide d'une bibliothèque<a class="headerlink" href="#a-laide-dune-bibliotheque" title="Permanent link">&num;</a></h3>
+<p>La bibliothèque <code>networkX</code>  permet de manipuler des graphes.</p>
+<p>Pour implémenter le graphe G, on commence par importer le module.</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>On crée un graphe vide.</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1">#création du graphe</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">g1</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>On ajoute les sommets (appelés node ou vertex)</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span>
+<span class="normal"><a href="#__codelineno-5-8">8</a></span>
+<span class="normal"><a href="#__codelineno-5-9">9</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1">#création des sommets</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="n">g1</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">g1</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="n">g1</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="n">g1</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">)</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="n">g1</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">)</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="n">g1</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="n">g1</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="n">g1</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>On ajoute les arêtes (appelés edge)</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1">#Création des arêtes</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">g1</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">)</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">g1</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">)</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="n">g1</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">)</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="n">g1</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">)</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="n">g1</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">)</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="n">g1</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">)</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="n">g1</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">)</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="n">g1</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">)</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="n">g1</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">)</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="n">g1</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">)</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>On peut visualiser le graphe grâce à matplotlib et la fonction draw. Ici on a de plus configuré l’affichage pour que les étiquettes des sommets soient affichées, la taille des sommets soit de 800, la couleur de fond des sommets gris clair.</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span>
+<span class="normal"><a href="#__codelineno-7-7">7</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">g1</span><span class="p">,</span> <span class="n">with_labels</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> 
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a>        <span class="n">font_weight</span> <span class="o">=</span> <span class="s1">&#39;bold&#39;</span><span class="p">,</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a>        <span class="n">node_size</span> <span class="o">=</span> <span class="mi">800</span><span class="p">,</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6"></a>        <span class="n">node_color</span> <span class="o">=</span> <span class="s1">&#39;lightgrey&#39;</span><span class="p">)</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>On peut également le faire avec des listes de sommets et d’arêtes :</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span>
+<span class="normal"><a href="#__codelineno-8-13">13</a></span>
+<span class="normal"><a href="#__codelineno-8-14">14</a></span>
+<span class="normal"><a href="#__codelineno-8-15">15</a></span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span> 
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="c1">#création des sommets</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="n">liste1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">]</span> 
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="n">g2</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="n">g2</span><span class="o">.</span><span class="n">add_nodes_from</span><span class="p">(</span><span class="n">liste1</span><span class="p">)</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="c1">#création des arêtes</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="n">liste2</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">),(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">),(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">),(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">),(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">),(</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">),(</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">),(</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">),(</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">),(</span><span class="s1">&#39;g&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">)]</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="n">g2</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">(</span><span class="n">liste2</span><span class="p">)</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12"></a>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="c1">#création du graphique</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">g2</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15"></a>        <span class="n">font_weight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16"></a>        <span class="n">node_size</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17"></a>        <span class="n">node_color</span><span class="o">=</span><span class="s1">&#39;lightgrey&#39;</span><span class="p">)</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>Pour la matrice d’adjacence : <strong>networkx</strong> propose une méthode <code>nx.adjacency_matrix(g2)</code> qui stocke les coefficient saij de la matrice d’adjacence. Il suffit alors de remplir un tableau avec ces coefficients</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">B</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">adjacency_matrix</span><span class="p">(</span><span class="n">g2</span><span class="p">)</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)])</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">liste1</span><span class="p">)</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="n">A</span><span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">n</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6"></a>    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7"></a>        <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span> <span class="n">B</span><span class="p">[(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">)]</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8"></a>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9"></a>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>La documentation de NetworkX est divisée en sections. Il existe notamment :</p>
+<ul>
+<li>une section pour obtenir les méthodes sur <a href="les sommets et les arêtes">https://networkx.org/documentation/stable/reference/functions.html</a> ;</li>
+<li>une section pour obtenir les <a href="algorithmes disponibles">https://networkx.org/documentation/stable/reference/algorithms/index.html</a> ;</li>
+<li>on pourra aussi consulter le <a href="tutoriel">https://networkx.org/documentation/stable/tutorial.html</a> de <strong>NetworkX</strong></li>
+</ul>
+<p>Voici quelques fonctions  :</p>
+<ul>
+<li>degrés d’un sommet du graphe g : <code>g.degree('a')</code></li>
+<li>nombre de sommets du graphe g : <code>g.number_of_nodes()</code></li>
+<li>nombre d’arcs du graphe g : <code>g.number_of_edges()</code></li>
+<li><code>g.predecessors(i)</code> : liste des prédecesseurs du sommet <span class="arithmatex">\(i\)</span></li>
+<li>`g.successors(i) : liste des successeurs du sommet <span class="arithmatex">\(i\)</span></li>
+<li><code>g.neighbors(i)</code> : liste des voisins du sommet <span class="arithmatex">\(i\)</span></li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exercice 4</p>
+<p>Tester ces différents programmes.
+Écrire des fonctions permettant d’obtenir les informations suivantes sur le graphe G :</p>
+<ul>
+<li>le nombre de sommets du graphe ;</li>
+<li>le nombre d’arêtes du graphe ;</li>
+<li>le degré d’un sommet ;</li>
+<li>le sommet de plus haut degré ;</li>
+<li>les voisins d’un sommet</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 5</p>
+<p>Implémenter le graphe du réseau social suivant et faire afficher celui qui a le plus d’amis un réseau social comporte 6 abonnés (A, B, C, D, E et F) où :</p>
+<ul>
+<li>A est ami avec B, C et D</li>
+<li>B est ami avec A et D</li>
+<li>C est ami avec A, E et D</li>
+<li>D est ami avec tous les autres abonnés</li>
+<li>E est ami avec C, D et F</li>
+<li>F est ami avec E et D</li>
+</ul>
+</div>
+<figure>
+<p><img alt="img2" src="../img_graphes/img2.png" width="250px" /></p>
+</figure>
+<h2 id="principe-des-differents-parcours">Principe des différents parcours<a class="headerlink" href="#principe-des-differents-parcours" title="Permanent link">&num;</a></h2>
+<p>Un parcours de graphe est un algorithme consistant à explorer tous les sommets d'un graphe de proche en proche à partir d'un sommet initial. Ces parcours sont notamment utilisés pour rechercher un plus court chemin (et donc dans les GPS) ou pour trouver la sortie d'un labyrinthe...</p>
+<p>Tous les parcours suivent plus ou moins le même algorithme de base :</p>
+<ul>
+<li>On visite un sommet A. On crée une structure <span class="arithmatex">\(S\)</span> qui contiendra au départ l'ensemble des voisins de <span class="arithmatex">\(A\)</span> .</li>
+<li>
+<p>Tant que <span class="arithmatex">\(S\)</span> n’est pas vide :</p>
+<ul>
+<li>on choisit un sommet s de <span class="arithmatex">\(S\)</span></li>
+<li>on visite s</li>
+<li>on ajoute à <span class="arithmatex">\(S\)</span> tous les voisins de s pas encore visités</li>
+</ul>
+</li>
+</ul>
+<p>Le choix de la structure de l'ensemble <span class="arithmatex">\(S\)</span> est prépondérant:</p>
+<ul>
+<li>Si on choisit une file (FIFO): on visitera les sommets dans l'ordre d'arrivée, donc les plus proches du sommet précédent. On obtient donc un parcours en largeur nommé Breadth First Search ou  BFS.</li>
+<li>Si on choisit une pile (LIFO): on visitera d'abord les derniers sommets arrivés, donc on parcourt le graphe en visitant à chaque étape un voisin du précédent. On obtient donc un parcours en profondeur nommé Depth First Search ou DFS.</li>
+</ul>
+<p><strong>Remarque  :</strong>   parcourir simplement le dictionnaire ou la matrice d’un graphe n’est pas considéré comme un parcours de graphe.</p>
+<h3 id="le-parcours-en-largeur-breadth-first-search-ou-bfs">Le parcours en largeur (Breadth First Search ou BFS)<a class="headerlink" href="#le-parcours-en-largeur-breadth-first-search-ou-bfs" title="Permanent link">&num;</a></h3>
+<h4 id="principe">Principe<a class="headerlink" href="#principe" title="Permanent link">&num;</a></h4>
+<p>Parcourir un graphe en largeur à partir d'un sommet consiste à visiter le sommet puis ses enfants, puis les enfants de ses enfants....</p>
+<p>Comme nous l'avons vu dans le chapitre précédent, nous allons utiliser une file et une liste pour marquer les sommets visités.</p>
+<h4 id="exemple">Exemple<a class="headerlink" href="#exemple" title="Permanent link">&num;</a></h4>
+<figure>
+<pre class="mermaid"><code>flowchart LR
+    B((b)) &lt;--&gt; A((a))
+    A &lt;--&gt; C((c))
+    B &lt;--&gt; D((d))
+    C &lt;--&gt; D
+    B &lt;--&gt; E((e))
+    D &lt;--&gt; E
+    E &lt;--&gt; G((g))
+    E &lt;--&gt; F((f))
+    G&lt;--&gt; F
+    G&lt;--&gt;H((h))</code></pre>
+</figure>
+<p>Voici le code pour créer le dictionnaire qui représente le graphe  précédent et une fonction qui nous retourne la liste des voisins.</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">G</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">G</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">]</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="n">G</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="n">G</span><span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">]</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="n">G</span><span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="n">G</span><span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">]</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="n">G</span><span class="p">[</span><span class="s1">&#39;f&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">]</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="n">G</span><span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;h&#39;</span><span class="p">]</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="n">G</span><span class="p">[</span><span class="s1">&#39;h&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">]</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10"></a>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="k">def</span> <span class="nf">voisins</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">sommet</span><span class="p">):</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12"></a>    <span class="k">return</span> <span class="n">G</span><span class="p">[</span><span class="n">sommet</span><span class="p">]</span>
+</span></code></pre></div>
+</td></tr></table>
+<div class="admonition example">
+<p class="admonition-title">Exercice 1</p>
+<p>Implémenter ce graphe et tester la fonction voisins}</p>
+</div>
+<p>Pour réaliser le parcours en largeur, on dispose d'un graphe (<code>G</code>, d'une liste (<code>sommet_visite</code>) et d'une file <code>f</code>. </p>
+<p>On prend <code>b</code> comme sommet de départ. On l'enfile.</p>
+<p>Puis, tant que la file n'est pas vide (boucle <code>while</code>) :</p>
+<ul>
+<li>On défile <code>f</code> dans une variable <code>tmp</code>  ;</li>
+<li>Si <code>tmp</code> n'est pas dans <code>sommet_visite</code>, alors on l'ajoute à <code>sommet_visite</code>.</li>
+<li>Pour chaque voisin de <code>tmp</code> : s'il n'est ni dans <code>sommet_visite</code> ni dans la file, on l'enfile.</li>
+<li>On renvoie <code>sommet_visite</code>.</li>
+</ul>
+<p>Voici l'évolution des contenus des variables pour les deux premiers tours de la boucle <code>while</code> :</p>
+<p><strong>ÉTAPE 1 :</strong></p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">tmp</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="n">sommet_visite</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">]</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="n">f</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span>
+</span></code></pre></div>
+</td></tr></table>
+<!-- <figure markdown>
+<pre class="mermaid"><code>flowchart LR
+    B((b))--&gt;A((a))
+    A &lt;--&gt; C((c))
+    B --&gt; D((d))
+    C &lt;--&gt; D
+    B --&gt; E((e))
+    D &lt;--&gt; E
+    E &lt;--&gt; G((g))
+    E &lt;--&gt; F((f))
+    G&lt;--&gt; F
+    G&lt;--&gt;H((h))
+
+style B fill:#ccffcc,color:black;</code></pre>
+</figure> -->
+
+<figure>
+<p><img alt="etape1" src="../img_graphes/etape1.png" /></p>
+</figure>
+<p><strong>ÉTAPE 2 :</strong>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">tmp</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="n">sommet_visite</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">]</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="n">f</span> <span class="o">=</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span>
+</span></code></pre></div>
+</td></tr></table></p>
+<!-- 
+<figure markdown>
+<pre class="mermaid"><code>flowchart LR
+    B((b))--&gt;A((a))
+    A --&gt; C((c))
+    B --&gt; D((d))
+    C &lt;--&gt; D
+    B --&gt; E((e))
+    D &lt;--&gt; E
+    E &lt;--&gt; G((g))
+    E &lt;--&gt; F((f))
+    G&lt;--&gt; F
+    G&lt;--&gt;H((h))
+
+style B fill:#ccffcc,color:black;
+style A fill:#ccffcc,color:black;</code></pre>
+</figure>
+ -->
+<figure>
+<p><img alt="etape1" src="../img_graphes/etape2.png" /></p>
+</figure>
+<div class="admonition example">
+<p class="admonition-title">Exercice 2</p>
+<p>Compléter le contenu des variables <code>tmp</code>, <code>sommet_visite</code> et <code>file</code>.</p>
+</div>
+<p><strong>ÉTAPE 3 :</strong>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="n">tmp</span> <span class="o">=</span> 
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="n">sommet_visite</span> <span class="o">=</span> 
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="n">f</span> <span class="o">=</span> 
+</span></code></pre></div></p>
+<figure>
+<p><img alt="etape1" src="../img_graphes/etape3.png" /></p>
+</figure>
+<p><strong>ÉTAPE 4 :</strong></p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">tmp</span> <span class="o">=</span> 
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">sommet_visite</span> <span class="o">=</span> 
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="n">f</span> <span class="o">=</span> 
+</span></code></pre></div>
+<figure>
+<p><img alt="etape1" src="../img_graphes/etape4.png" /></p>
+</figure>
+<p><strong>ÉTAPE 5 :</strong></p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">tmp</span> <span class="o">=</span> 
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="n">sommet_visite</span> <span class="o">=</span> 
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="n">f</span> <span class="o">=</span> 
+</span></code></pre></div>
+<figure>
+<p><img alt="etape1" src="../img_graphes/etape5.png" /></p>
+</figure>
+<p><strong>ÉTAPE 6 :</strong></p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="n">tmp</span> <span class="o">=</span> 
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="n">sommet_visite</span> <span class="o">=</span> 
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="n">f</span> <span class="o">=</span> 
+</span></code></pre></div>
+<figure>
+<p><img alt="etape1" src="../img_graphes/etape6png.png" /></p>
+</figure>
+<p><strong>ÉTAPE 7 :</strong>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="n">tmp</span> <span class="o">=</span> 
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">sommet_visite</span> <span class="o">=</span> 
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="n">f</span> <span class="o">=</span> 
+</span></code></pre></div></p>
+<figure>
+<p><img alt="etape1" src="../img_graphes/etape7.png" /></p>
+</figure>
+<p><strong>ÉTAPE 8 :</strong></p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">tmp</span> <span class="o">=</span> 
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="n">sommet_visite</span> <span class="o">=</span> 
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="n">f</span> <span class="o">=</span> 
+</span></code></pre></div>
+<figure>
+<p><img alt="etape1" src="../img_graphes/etape8.png" /></p>
+</figure>
+<p>Au final, l'arborescence associée au parcours peut donc être modélisée de la façon suivante :</p>
+<figure>
+<p><img alt="etape1" src="../img_graphes/resultat_graphe.png" width="250px" /></p>
+</figure>
+<p>Le parcours en largeur nous donne donc : ['b', 'a', 'd', 'e', 'c','f', 'g', 'h']</p>
+<h4 id="implementation-du-bfs-en-python">Implémentation du BFS en Python<a class="headerlink" href="#implementation-du-bfs-en-python" title="Permanent link">&num;</a></h4>
+<p>Voici une classe <code>File</code> dans laquelle on a rajouté une méthode <code>present(self,x)</code> qui renvoie vrai si x est dans la file.</p>
+<p><strong>Remarque :</strong> Vous pouvez aussi utiliser votre propre classe <code>File</code></p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-19-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-19-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-19-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-19-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-19-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-19-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-19-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-19-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-19-10">10</a></span>
+<span class="normal"><a href="#__codelineno-19-11">11</a></span>
+<span class="normal"><a href="#__codelineno-19-12">12</a></span>
+<span class="normal"><a href="#__codelineno-19-13">13</a></span>
+<span class="normal"><a href="#__codelineno-19-14">14</a></span>
+<span class="normal"><a href="#__codelineno-19-15">15</a></span>
+<span class="normal"><a href="#__codelineno-19-16">16</a></span>
+<span class="normal"><a href="#__codelineno-19-17">17</a></span>
+<span class="normal"><a href="#__codelineno-19-18">18</a></span>
+<span class="normal"><a href="#__codelineno-19-19">19</a></span>
+<span class="normal"><a href="#__codelineno-19-20">20</a></span>
+<span class="normal"><a href="#__codelineno-19-21">21</a></span>
+<span class="normal"><a href="#__codelineno-19-22">22</a></span>
+<span class="normal"><a href="#__codelineno-19-23">23</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="k">class</span> <span class="nc">File</span><span class="p">:</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2"></a>    <span class="sd">&#39;&#39;&#39; classe File &#39;&#39;&#39;</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5"></a>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6"></a>    <span class="k">def</span> <span class="nf">vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">==</span> <span class="p">[]</span>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8"></a>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9"></a>    <span class="k">def</span> <span class="nf">defiler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10"></a>        <span class="k">assert</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">vide</span><span class="p">(),</span> <span class="s1">&#39;file vide&#39;</span>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12"></a>
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13"></a>    <span class="k">def</span> <span class="nf">enfiler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15"></a>
+</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16"></a>    <span class="k">def</span> <span class="nf">taille</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-19-17"><a id="__codelineno-19-17" name="__codelineno-19-17"></a>        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="p">)</span>
+</span><span id="__span-19-18"><a id="__codelineno-19-18" name="__codelineno-19-18"></a>
+</span><span id="__span-19-19"><a id="__codelineno-19-19" name="__codelineno-19-19"></a>    <span class="k">def</span> <span class="nf">sommet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-19-20"><a id="__codelineno-19-20" name="__codelineno-19-20"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span><span id="__span-19-21"><a id="__codelineno-19-21" name="__codelineno-19-21"></a>
+</span><span id="__span-19-22"><a id="__codelineno-19-22" name="__codelineno-19-22"></a>    <span class="k">def</span> <span class="nf">present</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+</span><span id="__span-19-23"><a id="__codelineno-19-23" name="__codelineno-19-23"></a>        <span class="k">return</span> <span class="n">x</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>Et voici l'algorithme du BFS :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>fonction parcours_largeur(G, sommet):
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>    sommet_visite ← []
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>    f ← File()
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>    f.enfiler(sommet)
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>    Tant que f n’est pas vide faire :
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>        tmp ← f.defiler()
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>        afficher tmp
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>        Si tmp n’est pas dans sommet_visite alors
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>            ajouter tmp à sommet_visite
+</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>        Pour chaque voisin de tmp faire
+</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>            Si voisin n&#39;est pas dans sommet_visite et n&#39;est pas dans la file alors :
+</span><span id="__span-20-14"><a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a>                    f.enfiler(voisin)
+</span><span id="__span-20-15"><a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a>    Fin Tant que
+</span><span id="__span-20-16"><a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a>
+</span><span id="__span-20-17"><a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a>    renvoyer sommet_visite
+</span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 3</p>
+<p>Implémenter cet algorithme en Python et tester le sur notre Graphe G</p>
+</div>
+<h4 id="bfs-version-recursive">BFS - version récursive<a class="headerlink" href="#bfs-version-recursive" title="Permanent link">&num;</a></h4>
+<p>La présence d’une boucle while nous suggère la version récursive de cet algorithme. On dispose
+d’un graphe, d’une file contenant le sommet de départ, d’une liste, contenant le sommet de départ
+et qui nous servira à marquer les sommets visités.
+Le processus :</p>
+<ol>
+<li>on défile la file dans une variable tmp (on l’affiche)</li>
+<li>pour chaque voisin non déjà visité de tmp</li>
+<li>on le note comme visité</li>
+<li>on l’enfile</li>
+<li>on recommence à partir de l’étape 1
+Le processus s’arrête quand la file est vide.
+Voici le programme :</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>def bfs_rec(G, f, sommets_visites):
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>    if f.vide():
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>        return None
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>    tmp = f.defiler()
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>    print(tmp, end=&#39;&#39;)
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>    for u in voisins(G, tmp):
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>        if u not in sommets_visites:
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>            sommets_visites.append(u)
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>            f.enfiler(u)
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>            bfs_recur(G, f,sommets_visites)
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>f = File()
+</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>sommets_visites = []
+</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>sommet = &#39;b&#39;
+</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>f.enfiler(sommet)
+</span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>sommets_visites.append(sommet)
+</span><span id="__span-21-17"><a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>bfs_recur(G, f, sommmets_visites)
+</span></code></pre></div>
+<p>Exercice 4 :
+    Faire fonctionner ce programme pour notre graphe.</p>
+<h4 id="application-un-chemin-entre-deux-sommets">Application : un chemin entre deux sommets<a class="headerlink" href="#application-un-chemin-entre-deux-sommets" title="Permanent link">&num;</a></h4>
+<p>L’algorithme BFS découvre les sommets «par cercles concentriques» autour du point de départ.
+On découvre d’abord tous les sommets à la distance 1 du point de départ, puis à la distance 2, puis
+3, etc.</p>
+<p>Un sommet situé à la distance 5 sera découvert en tant que voisin d’un sommet à la distance 4,
+qui lui-même aura été découvert grâce à un sommet à la distance 3, qui lui-même...
+On reprend notre graphe.</p>
+<figure>
+<pre class="mermaid"><code>flowchart LR
+    B((b)) &lt;--&gt; A((a))
+    A &lt;--&gt; C((c))
+    B &lt;--&gt; D((d))
+    C &lt;--&gt; D
+    B &lt;--&gt; E((e))
+    D &lt;--&gt; E
+    E &lt;--&gt; G((g))
+    E &lt;--&gt; F((f))
+    G&lt;--&gt; F
+    G&lt;--&gt;H((h))</code></pre>
+</figure>
+<p>Par exemple : a-b-e-g-h est l’un des chemins possibles entre a et h.</p>
+<p>La méthode consiste à mémoriser les sommets voisins du sommet visité comme clé d’un dictionnaire et ayant pour valeur son parent (le sommet visité).</p>
+<p>Le sommet de départ n’aura pas de parent (None).</p>
+<p>A la fin, notre dictionnaire sera : '{’a’ : None, ’b’ : ’a’, ’c’ : ’a’, ’d’ : ’b’, ’e’ : ’b’, ’f’ : ’e’, ’g’ : ’e’, ’h’ : ’g’}'</p>
+<p>Il nous faudra lire ce dictionnaire pour pouvoir établir le chemin entre a et h. h a pour parent e
+qui a pour parent b et qui a pour parent a. D’où le chemin : a - b - e - g - h.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>fonction parcours_largeur(G_depart):
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>    parents &lt;- dict()
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>    sommet_visite &lt;- []
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>    f &lt;- File()
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>    f.enfiler(depart)
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>    parents[depart] &lt;- None
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>    tant que f n&#39;est pas vide faire :
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>        on défile f dans tmp
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>        Si tmp n&#39;est pas dans sommet_visite alors
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a>            l&#39;ajouter à sommet_visite
+</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>        Pour chaque voisin de tmp faire :
+</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a>            Si il n&#39;est pas dans sommet_visite et pas dans la file alors :
+</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>                l&#39;enfiler
+</span><span id="__span-22-14"><a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a>                parents[el] &lt;- tmp
+</span><span id="__span-22-15"><a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a>    fin tant que
+</span><span id="__span-22-16"><a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a>    renvoyer parents
+</span></code></pre></div>
+<p>Cette fonction renvoie un dictionnaire qui contient les sommets visités (clés) et leurs parents
+(valeurs).</p>
+<p>Il faut maintenant exploiter ce dictionnaire pour faire afficher un chemin entre deux sommets.
+C’est ce que réalise cette fonction qui prend en paramètre le sommet d’arrivée et le dictionnaire
+parent.</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span>
+<span class="normal"><a href="#__codelineno-23-3">3</a></span>
+<span class="normal"><a href="#__codelineno-23-4">4</a></span>
+<span class="normal"><a href="#__codelineno-23-5">5</a></span>
+<span class="normal"><a href="#__codelineno-23-6">6</a></span>
+<span class="normal"><a href="#__codelineno-23-7">7</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">end</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2"></a>    <span class="n">chemin</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3"></a>    <span class="n">courant</span> <span class="o">=</span> <span class="n">end</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4"></a>    <span class="k">while</span> <span class="n">courant</span> <span class="o">!=</span> <span class="kc">None</span> <span class="p">:</span>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5"></a>        <span class="n">chemin</span> <span class="o">=</span> <span class="p">[</span><span class="n">courant</span><span class="p">]</span> <span class="o">+</span> <span class="n">chemin</span>
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6"></a>        <span class="n">courant</span> <span class="o">=</span> <span class="n">parent</span><span class="p">[</span><span class="n">courant</span><span class="p">]</span>
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7"></a>    <span class="k">return</span> <span class="n">chemin</span>
+</span></code></pre></div>
+</td></tr></table>
+<div class="admonition example">
+<p class="admonition-title">Exercice 5</p>
+<p>Implémenter l’alogorithme en Python et la fonction pour afficher un chemin entre les sommets
+b et h de notre graphe.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 6</p>
+<p>Reprendre ce travail en utilisant la version récursive du BFS.
+Il faudra ensuite une fonction pour recréer le chemin.</p>
+</div>
+<p><strong>Remarque :</strong> Si le graphe est connexe, tout parcours BFS au départ de A va parcourir l’intégralité du graphe, et donc passera par B à un moment. Un chemin sera donc forcément trouvé entre A et B.</p>
+<p>Comment est-on sûr que ce chemin trouvé est le plus court ?</p>
+<p>La découverte des sommets par cercles concentriques entre A et B nous assure qu’on ne peut pas
+rater le point B : s’il est à la distance k de A, il sera forcément visité puisque tous les sommets à la distance k vont passer par la liste d’attente, après les sommets de distance k-1 et avant les sommets de distance k+1.</p>
+<p>Lorsqu’on remontera de B vers A en passant par les sommets parents successifs, il ne peut y
+avoir qu’un seul sommet par «couche» : le chemin sera donc exactement de longueur k, il sera donc
+minimal.</p>
+<h3 id="le-parcours-en-profondeurdepth-first-search-ou-dfs">Le parcours en profondeur(Depth First Search ou DFS)<a class="headerlink" href="#le-parcours-en-profondeurdepth-first-search-ou-dfs" title="Permanent link">&num;</a></h3>
+<h4 id="principe_1">Principe<a class="headerlink" href="#principe_1" title="Permanent link">&num;</a></h4>
+<p>Parcourir un graphe en profondeur à partir d’un sommet, consiste à explorer le graphe en suivant
+un chemin. Lorsqu’on arrive sur un sommet qui n’a plus de voisins non visités, on le marque. Puis
+on remonte dans le chemin pour explorer les voisins non visités d’un autre sommet...On utilise une
+pile et deux listes.</p>
+<h4 id="exemple_1">Exemple<a class="headerlink" href="#exemple_1" title="Permanent link">&num;</a></h4>
+<p>Prenons en exemple ce graphe :</p>
+<figure>
+<pre class="mermaid"><code>flowchart LR
+    B((b)) &lt;--&gt; A((a))
+    A &lt;--&gt; C((c))
+    B &lt;--&gt; D((d))
+    C &lt;--&gt; D
+    B &lt;--&gt; E((e))
+    D &lt;--&gt; E
+    E &lt;--&gt; G((g))
+    E &lt;--&gt; F((f))
+    G&lt;--&gt; F
+    G&lt;--&gt;H((h))</code></pre>
+</figure>
+<p>On dispose d’un graphe(G), de deux listes (sommets_visités , sommets_fermés) et d’une pile
+(p). Le sommet de départ est par exemple ’g’, on l’empile. On met le sommet de départ dans la liste
+sommets_visités. Puis tant que la pile n’est pas vide :</p>
+<ul>
+<li>On récupère le sommet de la pile dans une variable tmp</li>
+<li>voisins reçoit la liste des voisins de tmp non déjà visités</li>
+<li>
+<p>Si voisins n’est pas vide :</p>
+<ul>
+<li>v←un voisin choisi au hasard</li>
+<li>sommets_visités←v</li>
+<li>On empile v</li>
+</ul>
+</li>
+<li>
+<p>Sinon :`</p>
+<ul>
+<li>sommets_fermés ← tmp</li>
+<li>On dépile p</li>
+</ul>
+</li>
+</ul>
+<p>Voici les contenus des variables au premier tour de la boucle tant que :</p>
+<div style="text-align:center;font-size :x-large;font-style:bold"> Premier tour </div>
+
+<ul>
+<li>tmp : <code>g</code></li>
+<li>voisins : <code>[’e’, ’f’, ’h’]</code></li>
+<li>v : <code>e</code></li>
+<li>sommets_visités : <code>[’g’, ’e’]</code></li>
+<li>pile : <code>[’g’, ’e’]</code></li>
+<li>sommets_fermés : <code>[]</code></li>
+</ul>
+<figure>
+<p><img alt="etape1_dfs" src="../img_graphes/step1_dfs.png" width="500px" /></p>
+</figure>
+<div style="text-align:center;font-size :x-large;font-style:bold"> Deuxième tour </div>
+
+<ul>
+<li>tmp : <code>e</code></li>
+<li>voisins : <code>[’b’, ’d’, ’f’]</code></li>
+<li>v : <code>b</code></li>
+<li>sommets_visités : <code>[’g’, ’e’, ’b’]</code></li>
+<li>pile : <code>[’g’, ’e’, ’b’]</code></li>
+<li>sommets_fermés : <code>[]</code></li>
+</ul>
+<figure>
+<p><img alt="etape1_dfs" src="../img_graphes/step2_dfs.png" width="500px" /></p>
+</figure>
+<div class="admonition example">
+<p class="admonition-title">Exercice 7</p>
+<p>Compléter les contenus des variables</p>
+</div>
+<div style="text-align:center;font-size :x-large;font-style:bold"> 3 eme tour </div>
+
+<ul>
+<li>tmp :</li>
+<li>voisins :</li>
+<li>v : </li>
+<li>sommets_visités : </li>
+<li>pile : </li>
+<li>sommets_fermés : </li>
+</ul>
+<figure>
+<p><img alt="etape1_dfs" src="../img_graphes/step4_dfs.png" width="400px" /></p>
+</figure>
+<div style="text-align:center;font-size :x-large;font-style:bold"> 4eme tour </div>
+
+<ul>
+<li>tmp :</li>
+<li>voisins :</li>
+<li>v : </li>
+<li>sommets_visités : </li>
+<li>pile : </li>
+<li>sommets_fermés : </li>
+</ul>
+<figure>
+<p><img alt="etape1_dfs" src="../img_graphes/step5_dfs.png" width="400px" /></p>
+</figure>
+<div style="text-align:center;font-size :x-large;font-style:bold"> 5eme tour </div>
+
+<ul>
+<li>tmp :</li>
+<li>voisins :</li>
+<li>v : </li>
+<li>sommets_visités : </li>
+<li>pile : </li>
+<li>sommets_fermés : </li>
+</ul>
+<figure>
+<p><img alt="etape1_dfs" src="../img_graphes/step6_dfs.png" width="400px" /></p>
+</figure>
+<div style="text-align:center;font-size :x-large;font-style:bold"> 6eme tour </div>
+
+<ul>
+<li>tmp : []</li>
+<li>voisins : d</li>
+<li>v :  </li>
+<li>sommets_visités : <code>[’g’, ’e’, ’b’, ’a’, ’c’, ’d’]</code></li>
+<li>pile : <code>[’g’, ’e’, ’b’, ’a’, ’c’]</code></li>
+<li>sommets_fermés :  <code>[’d’]</code></li>
+</ul>
+<figure>
+<p><img alt="etape1_dfs" src="../img_graphes/step7_dfs.png" width="400px" /></p>
+</figure>
+<div class="admonition example">
+<p class="admonition-title">Exercice 8</p>
+<p>Poursuivez</p>
+</div>
+<div style="text-align:center;font-size :x-large;font-style:bold"> 7eme tour </div>
+
+<ul>
+<li>tmp : </li>
+<li>voisins : </li>
+<li>v :  </li>
+<li>sommets_visités : </li>
+<li>pile : </li>
+<li>sommets_fermés :  </li>
+</ul>
+<figure>
+<p><img alt="etape1_dfs" src="../img_graphes/step8_dfs.png" width="400px" /></p>
+</figure>
+<div style="text-align:center;font-size :x-large;font-style:bold"> 8eme tour </div>
+
+<ul>
+<li>tmp : </li>
+<li>voisins : </li>
+<li>v :  </li>
+<li>sommets_visités : </li>
+<li>pile : </li>
+<li>sommets_fermés :  </li>
+</ul>
+<figure>
+<p><img alt="etape1_dfs" src="../img_graphes/step9_dfs.png" width="400px" /></p>
+</figure>
+<div style="text-align:center;font-size :x-large;font-style:bold"> 9eme tour </div>
+
+<ul>
+<li>tmp : </li>
+<li>voisins : </li>
+<li>v :  </li>
+<li>sommets_visités : </li>
+<li>pile : </li>
+<li>sommets_fermés :  </li>
+</ul>
+<figure>
+<p><img alt="etape1_dfs" src="../img_graphes/step10_dfs.png" width="400px" /></p>
+</figure>
+<div style="text-align:center;font-size :x-large;font-style:bold"> 10eme tour </div>
+
+<ul>
+<li>tmp : </li>
+<li>voisins :</li>
+<li>v :  </li>
+<li>sommets_visités : </li>
+<li>pile : </li>
+<li>sommets_fermés :  </li>
+</ul>
+<figure>
+<p><img alt="etape1_dfs" src="../img_graphes/step11_dfs.png" width="400px" /></p>
+</figure>
+<div style="text-align:center;font-size :x-large;font-style:bold"> 11eme tour </div>
+<ul>
+<li>tmp : </li>
+<li>voisins :</li>
+<li>v :  </li>
+<li>sommets_visités : </li>
+<li>pile : </li>
+<li>sommets_fermés :  </li>
+</ul>
+<figure>
+<p><img alt="etape1_dfs" src="../img_graphes/step12_dfs.png" width="400px" /></p>
+</figure>
+<div style="text-align:center;font-size :x-large;font-style:bold"> 12eme tour </div>
+
+<ul>
+<li>tmp : </li>
+<li>voisins : </li>
+<li>v :  </li>
+<li>sommets_visités : </li>
+<li>pile : </li>
+<li>sommets_fermés :  </li>
+</ul>
+<figure>
+<p><img alt="etape1_dfs" src="../img_graphes/step13_dfs.png" width="400px" /></p>
+</figure>
+<div style="text-align:center;font-size :x-large;font-style:bold"> 13eme tour </div>
+
+<ul>
+<li>tmp : </li>
+<li>voisins : </li>
+<li>v :  </li>
+<li>sommets_visités : </li>
+<li>pile :</li>
+<li>sommets_fermés :  </li>
+</ul>
+<figure>
+<p><img alt="etape1_dfs" src="../img_graphes/step14_dfs.png" width="400px" /></p>
+</figure>
+<div style="text-align:center;font-size :x-large;font-style:bold"> 14eme tour </div>
+
+<ul>
+<li>tmp : </li>
+<li>voisins :</li>
+<li>v :  </li>
+<li>sommets_visités :</li>
+<li>pile :</li>
+<li>sommets_fermés :  </li>
+</ul>
+<figure>
+<p><img alt="etape1_dfs" src="../img_graphes/step15_dfs.png" width="400px" /></p>
+</figure>
+<div style="text-align:center;font-size :x-large;font-style:bold"> 15eme tour </div>
+
+<ul>
+<li>tmp : </li>
+<li>voisins :</li>
+<li>v :  </li>
+<li>sommets_visités : </li>
+<li>pile : </li>
+<li>sommets_fermés :  </li>
+</ul>
+<figure>
+<p><img alt="etape1_dfs" src="../img_graphes/step16_dfs.png" width="400px" /></p>
+</figure>
+<p><strong>Remarque :</strong> Comme les choix dans la liste des voisins sont aléatoires, il y a plusieurs parcours possibles.</p>
+<p>Au final l’arborescence associée au parcours peut  donc  être  modélisée  de  la  façon  suivante :</p>
+<p><code>[’d’, ’c’, ’a’, ’b’, ’f’, ’e’, ’h’, ’g’]</code></p>
+<figure>
+<p><img alt="etape1_dfs" src="../img_graphes/dfs_final.png" width="400px" /></p>
+</figure>
+<h4 id="dfs-version-1">DFS version 1<a class="headerlink" href="#dfs-version-1" title="Permanent link">&num;</a></h4>
+<p>Voici une classe Pile :</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-24-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-24-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-24-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-24-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-24-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-24-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-24-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-24-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-24-10">10</a></span>
+<span class="normal"><a href="#__codelineno-24-11">11</a></span>
+<span class="normal"><a href="#__codelineno-24-12">12</a></span>
+<span class="normal"><a href="#__codelineno-24-13">13</a></span>
+<span class="normal"><a href="#__codelineno-24-14">14</a></span>
+<span class="normal"><a href="#__codelineno-24-15">15</a></span>
+<span class="normal"><a href="#__codelineno-24-16">16</a></span>
+<span class="normal"><a href="#__codelineno-24-17">17</a></span>
+<span class="normal"><a href="#__codelineno-24-18">18</a></span>
+<span class="normal"><a href="#__codelineno-24-19">19</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="k">class</span> <span class="nc">Pile</span><span class="p">:</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2"></a>    <span class="sd">&quot;&quot;&quot;classe Pile : création d’une instance Pile avec une liste&quot;&quot;&quot;</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3"></a>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6"></a>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7"></a>    <span class="k">def</span> <span class="nf">vide</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span> <span class="o">==</span> <span class="p">[]</span>
+</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9"></a>
+</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10"></a>    <span class="k">def</span> <span class="nf">depiler</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-24-11"><a id="__codelineno-24-11" name="__codelineno-24-11"></a>        <span class="k">assert</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">vide</span><span class="p">(),</span> <span class="s2">&quot;Pile vide&quot;</span>
+</span><span id="__span-24-12"><a id="__codelineno-24-12" name="__codelineno-24-12"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+</span><span id="__span-24-13"><a id="__codelineno-24-13" name="__codelineno-24-13"></a>
+</span><span id="__span-24-14"><a id="__codelineno-24-14" name="__codelineno-24-14"></a>    <span class="k">def</span> <span class="nf">sommet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-24-15"><a id="__codelineno-24-15" name="__codelineno-24-15"></a>        <span class="k">assert</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">vide</span><span class="p">(),</span> <span class="s2">&quot;Pile vide&quot;</span>
+</span><span id="__span-24-16"><a id="__codelineno-24-16" name="__codelineno-24-16"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</span><span id="__span-24-17"><a id="__codelineno-24-17" name="__codelineno-24-17"></a>
+</span><span id="__span-24-18"><a id="__codelineno-24-18" name="__codelineno-24-18"></a>    <span class="k">def</span> <span class="nf">empiler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+</span><span id="__span-24-19"><a id="__codelineno-24-19" name="__codelineno-24-19"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">L</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>Vous pouvez également utiliser votre propre classe Pile.Voici le code pour la création du dictionnaire qui représente le graphe G et une fonction qui renvoie les voisins d’un sommet.</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-25-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-25-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-25-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-25-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-25-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-25-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-25-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-25-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-25-10">10</a></span>
+<span class="normal"><a href="#__codelineno-25-11">11</a></span>
+<span class="normal"><a href="#__codelineno-25-12">12</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="n">G</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="n">G</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">]</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="n">G</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="n">G</span><span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">]</span>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5"></a><span class="n">G</span><span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]</span>
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6"></a><span class="n">G</span><span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">]</span>
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7"></a><span class="n">G</span><span class="p">[</span><span class="s1">&#39;f&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">]</span>
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8"></a><span class="n">G</span><span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;e&#39;</span><span class="p">,</span><span class="s1">&#39;f&#39;</span><span class="p">,</span><span class="s1">&#39;h&#39;</span><span class="p">]</span>
+</span><span id="__span-25-9"><a id="__codelineno-25-9" name="__codelineno-25-9"></a><span class="n">G</span><span class="p">[</span><span class="s1">&#39;h&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">]</span>
+</span><span id="__span-25-10"><a id="__codelineno-25-10" name="__codelineno-25-10"></a>
+</span><span id="__span-25-11"><a id="__codelineno-25-11" name="__codelineno-25-11"></a><span class="k">def</span> <span class="nf">voisin</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">sommet</span><span class="p">):</span>
+</span><span id="__span-25-12"><a id="__codelineno-25-12" name="__codelineno-25-12"></a>    <span class="k">return</span> <span class="n">G</span><span class="p">[</span><span class="n">sommet</span><span class="p">]</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>Voici une ligne de code qui permet de récupérer les voisins de tmp non déjà visités :</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="n">voisins</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">voisin</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">tmp</span><span class="p">)</span> <span class="k">if</span> <span class="n">y</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sommets_visites</span><span class="p">]</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>La bibliothèque <code>random</code>  permet un choix aléatoire dans une liste :</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
+<span class="normal"><a href="#__codelineno-27-2">2</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="kn">import</span> <span class="nn">random</span> 
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="n">v</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">voisins</span><span class="p">)</span>
+</span></code></pre></div>
+</td></tr></table>
+<div class="language-text highlight"><span class="filename">Algorithme DFS</span><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>fonction parcours_profondeur(G,sommet):
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>    sommets_visites &lt;- []
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>    sommet_fermes &lt;- []
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>    p &lt;- Pile()
+</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>    sommets_visites &lt;- sommet
+</span><span id="__span-28-6"><a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>    on empile le sommet dans p
+</span><span id="__span-28-7"><a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>    Tant que p n&#39;est pas vide faire
+</span><span id="__span-28-8"><a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>        tmp &lt;- le sommet de la pile
+</span><span id="__span-28-9"><a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>        voisins &lt;- la liste des voisins de tmp non déjà visites
+</span><span id="__span-28-10"><a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a>        Si voisins n&#39;est pas vide alors
+</span><span id="__span-28-11"><a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a>            v &lt;- un voisin au hasard
+</span><span id="__span-28-12"><a id="__codelineno-28-12" name="__codelineno-28-12" href="#__codelineno-28-12"></a>            sommets_visites &lt;- v
+</span><span id="__span-28-13"><a id="__codelineno-28-13" name="__codelineno-28-13" href="#__codelineno-28-13"></a>            on empile v
+</span><span id="__span-28-14"><a id="__codelineno-28-14" name="__codelineno-28-14" href="#__codelineno-28-14"></a>        Sinon
+</span><span id="__span-28-15"><a id="__codelineno-28-15" name="__codelineno-28-15" href="#__codelineno-28-15"></a>            sommets_fermes &lt;- tmp
+</span><span id="__span-28-16"><a id="__codelineno-28-16" name="__codelineno-28-16" href="#__codelineno-28-16"></a>            on depile p
+</span><span id="__span-28-17"><a id="__codelineno-28-17" name="__codelineno-28-17" href="#__codelineno-28-17"></a>    fin tant que 
+</span><span id="__span-28-18"><a id="__codelineno-28-18" name="__codelineno-28-18" href="#__codelineno-28-18"></a>    renvoyer sommets_fermes
+</span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 9</p>
+<p>Implémenter cet algorithme en Python et tester le sur notre graphe G. </p>
+</div>
+<p><strong>Remarque :</strong> Comme les choix dans la liste des voisins sont aléatoires, il y a plusieurs parcours possibles.</p>
+<h4 id="dfs-version-2">DFS version 2<a class="headerlink" href="#dfs-version-2" title="Permanent link">&num;</a></h4>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-29-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-29-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-29-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-29-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-29-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-29-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-29-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-29-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-29-10">10</a></span>
+<span class="normal"><a href="#__codelineno-29-11">11</a></span>
+<span class="normal"><a href="#__codelineno-29-12">12</a></span>
+<span class="normal"><a href="#__codelineno-29-13">13</a></span>
+<span class="normal"><a href="#__codelineno-29-14">14</a></span>
+<span class="normal"><a href="#__codelineno-29-15">15</a></span>
+<span class="normal"><a href="#__codelineno-29-16">16</a></span>
+<span class="normal"><a href="#__codelineno-29-17">17</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="k">def</span> <span class="nf">dfs_bis</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">sommet</span><span class="p">):</span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2"></a>    <span class="n">p</span> <span class="o">=</span> <span class="n">Pile</span><span class="p">()</span>
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3"></a>    <span class="n">sommets_visites</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4"></a>    <span class="n">p</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="n">sommet</span><span class="p">)</span>
+</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5"></a>    <span class="k">while</span> <span class="n">p</span><span class="o">.</span><span class="n">vide</span><span class="p">()</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+</span><span id="__span-29-6"><a id="__codelineno-29-6" name="__codelineno-29-6"></a>        <span class="n">tmp</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">depiler</span><span class="p">()</span>
+</span><span id="__span-29-7"><a id="__codelineno-29-7" name="__codelineno-29-7"></a>        <span class="k">if</span> <span class="n">tmp</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sommets_visites</span><span class="p">:</span>                         
+</span><span id="__span-29-8"><a id="__codelineno-29-8" name="__codelineno-29-8"></a>            <span class="n">sommets_visites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
+</span><span id="__span-29-9"><a id="__codelineno-29-9" name="__codelineno-29-9"></a>            <span class="c1">#print(tmp, end=&quot; &quot;)</span>
+</span><span id="__span-29-10"><a id="__codelineno-29-10" name="__codelineno-29-10"></a>            <span class="n">voisins</span> <span class="o">=</span> <span class="p">[</span><span class="n">y</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">voisin</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">tmp</span><span class="p">)</span> <span class="k">if</span> <span class="n">y</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sommets_visites</span><span class="p">]</span>
+</span><span id="__span-29-11"><a id="__codelineno-29-11" name="__codelineno-29-11"></a>        <span class="k">for</span> <span class="n">vois</span> <span class="ow">in</span> <span class="n">voisins</span><span class="p">:</span>
+</span><span id="__span-29-12"><a id="__codelineno-29-12" name="__codelineno-29-12"></a>            <span class="n">p</span><span class="o">.</span><span class="n">empiler</span><span class="p">(</span><span class="n">vois</span><span class="p">)</span> 
+</span><span id="__span-29-13"><a id="__codelineno-29-13" name="__codelineno-29-13"></a>    <span class="k">return</span> <span class="n">sommets_visites</span>
+</span><span id="__span-29-14"><a id="__codelineno-29-14" name="__codelineno-29-14"></a>
+</span><span id="__span-29-15"><a id="__codelineno-29-15" name="__codelineno-29-15"></a><span class="n">c</span> <span class="o">=</span> <span class="n">dfs_bis</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">)</span> 
+</span><span id="__span-29-16"><a id="__codelineno-29-16" name="__codelineno-29-16"></a><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</span><span id="__span-29-17"><a id="__codelineno-29-17" name="__codelineno-29-17"></a><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</span></code></pre></div>
+</td></tr></table>
+<div class="admonition example">
+<p class="admonition-title">Exercice 10</p>
+<p>Tester cette version sur notre graphe G.</p>
+</div>
+<h4 id="dfs-version-3-recursive">DFS  version 3 (récursive)<a class="headerlink" href="#dfs-version-3-recursive" title="Permanent link">&num;</a></h4>
+<p>On peut utiliser un algorithme récursif pour parcourir un graphe en profondeur. En voici la description :</p>
+<ol>
+<li>On part d’un nœud du graphe.</li>
+<li>On le marque comme visité s’il ne l’est pas déjà.</li>
+<li>Pour chacun de ses voisins non visités, on reprend à partir du 1.</li>
+</ol>
+<p>Il y a une "boucle" du 3. au 1. Cela présage une méthode récursive. Voici l’algorithme davantage détaillé :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>Données :
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>G est un graphe
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>sommet est un sommet du graphe
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>sommets_visites est une liste
+</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>
+</span><span id="__span-30-6"><a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a>fonction dfs(G,sommet):
+</span><span id="__span-30-7"><a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a>    Si le sommet n&#39;est pas dans la liste sommets_visites alors
+</span><span id="__span-30-8"><a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a>        on le met dans la liste
+</span><span id="__span-30-9"><a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a>    voisins &lt;- la liste des voisins de sommet non deja visites
+</span><span id="__span-30-10"><a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a>    Pour chaque voisin dans voisins faire 
+</span><span id="__span-30-11"><a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a>        dfs(G,voisin)
+</span><span id="__span-30-12"><a id="__codelineno-30-12" name="__codelineno-30-12" href="#__codelineno-30-12"></a>    renvoyer sommets_visites
+</span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 11</p>
+<p>Écrire la fonction dfs et la faire fonctionner avec notre graphe avec comme sommet de départ ’g’.</p>
+</div>
+<p><strong>Remarque :</strong> Le choix du premier voisin est le premier de la liste voisins qui correspond à celle implantée lors de la création du graphe: <code>G['g'] = ['e', 'f', 'h']</code>, en la modifiant par <code>G['g'] = ['f', 'e', 'h']</code>, vous obtiendrez un autre parcours...</p>
+<h3 id="application-un-chemin-entre-deux-sommets_1">Application : un chemin entre deux sommets<a class="headerlink" href="#application-un-chemin-entre-deux-sommets_1" title="Permanent link">&num;</a></h3>
+<p>L’objectif est de faire afficher un chemin entre deux sommets d’un graphe.</p>
+<figure>
+<pre class="mermaid"><code>flowchart LR
+    B((b)) &lt;--&gt; A((a))
+    A &lt;--&gt; C((c))
+    B &lt;--&gt; D((d))
+    C &lt;--&gt; D
+    B &lt;--&gt; E((e))
+    D &lt;--&gt; E
+    E &lt;--&gt; G((g))
+    E &lt;--&gt; F((f))
+    G&lt;--&gt; F
+    G&lt;--&gt;H((h))</code></pre>
+</figure>
+<p>Par exemple : <code>a - b - e - g - h</code> est l’un des chemins possible entre a et h</p>
+<p>La méthode consiste à mémoriser les sommets voisins du sommet visité comme clés d’un dictionnaire et ayant pour valeur son parent(le sommet visité).Le sommet de départ n’aura bien entendu pas de parent (None).</p>
+<table class="language-text highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Algorithme DFS modifié</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-31-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-31-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-31-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-31-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-31-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-31-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-31-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-31-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-31-10">10</a></span>
+<span class="normal"><a href="#__codelineno-31-11">11</a></span>
+<span class="normal"><a href="#__codelineno-31-12">12</a></span>
+<span class="normal"><a href="#__codelineno-31-13">13</a></span>
+<span class="normal"><a href="#__codelineno-31-14">14</a></span>
+<span class="normal"><a href="#__codelineno-31-15">15</a></span>
+<span class="normal"><a href="#__codelineno-31-16">16</a></span></pre></div></td><td class="code"><div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1"></a>Données :
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2"></a>G est un graphe
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3"></a>depart : un sommet du graphe
+</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4"></a>arrivee : un sommet du graphe
+</span><span id="__span-31-5"><a id="__codelineno-31-5" name="__codelineno-31-5"></a>sommets_visites est une liste
+</span><span id="__span-31-6"><a id="__codelineno-31-6" name="__codelineno-31-6"></a>parents est un dictionnaire
+</span><span id="__span-31-7"><a id="__codelineno-31-7" name="__codelineno-31-7"></a>parents[depart] = None
+</span><span id="__span-31-8"><a id="__codelineno-31-8" name="__codelineno-31-8"></a>
+</span><span id="__span-31-9"><a id="__codelineno-31-9" name="__codelineno-31-9"></a>fonction dfs(G,depart):
+</span><span id="__span-31-10"><a id="__codelineno-31-10" name="__codelineno-31-10"></a>    Si depart n&#39;est pas dans la liste sommets_visites alors
+</span><span id="__span-31-11"><a id="__codelineno-31-11" name="__codelineno-31-11"></a>        on le met dans la liste
+</span><span id="__span-31-12"><a id="__codelineno-31-12" name="__codelineno-31-12"></a>    voisins &lt;- la liste des voisins de depart non deja visites
+</span><span id="__span-31-13"><a id="__codelineno-31-13" name="__codelineno-31-13"></a>    Pour chaque voisin dans voisins faire 
+</span><span id="__span-31-14"><a id="__codelineno-31-14" name="__codelineno-31-14"></a>        parents[voisin] = depart
+</span><span id="__span-31-15"><a id="__codelineno-31-15" name="__codelineno-31-15"></a>        dfs(G,voisin)
+</span><span id="__span-31-16"><a id="__codelineno-31-16" name="__codelineno-31-16"></a>    renvoyer parents
+</span></code></pre></div>
+</td></tr></table>
+<p>Cette fonction renvoie un dictionnaire qui contient les sommets visités(clés) et leurs parents(valeurs).Il faut maintenant exploiter ce dictionnaire pour faire afficher un chemin entre deux sommets. C’est ce que réalise cette fonction qui prend en paramètre l’arrivée et le dictionnaire parents.</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
+<span class="normal"><a href="#__codelineno-32-2">2</a></span>
+<span class="normal"><a href="#__codelineno-32-3">3</a></span>
+<span class="normal"><a href="#__codelineno-32-4">4</a></span>
+<span class="normal"><a href="#__codelineno-32-5">5</a></span>
+<span class="normal"><a href="#__codelineno-32-6">6</a></span>
+<span class="normal"><a href="#__codelineno-32-7">7</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">end</span><span class="p">,</span> <span class="n">parents</span><span class="p">):</span>
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2"></a>    <span class="n">chemin</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3"></a>    <span class="n">courant</span> <span class="o">=</span> <span class="n">end</span>
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4"></a>    <span class="k">while</span> <span class="n">courant</span> <span class="o">!=</span><span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5"></a>        <span class="n">chemin</span> <span class="o">=</span> <span class="p">[</span><span class="n">courant</span><span class="p">]</span> <span class="o">+</span> <span class="n">chemin</span>
+</span><span id="__span-32-6"><a id="__codelineno-32-6" name="__codelineno-32-6"></a>        <span class="n">courant</span> <span class="o">=</span> <span class="n">parents</span><span class="p">[</span><span class="n">courant</span><span class="p">]</span>
+</span><span id="__span-32-7"><a id="__codelineno-32-7" name="__codelineno-32-7"></a>    <span class="k">return</span> <span class="n">chemin</span>
+</span></code></pre></div>
+</td></tr></table>
+<div class="admonition example">
+<p class="admonition-title">Exercice 12</p>
+<p>Implémenter l’algorithme en Python et la fonction Solution pour faire afficher un chemin entre les sommets b et h de notre graphe G.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 13</p>
+<p>Reprendre ce dernier travail en utilisant et modifiant la fonction <code>dfs_bis</code>.</p>
+</div>
+<h2 id="recherche-de-cycle">Recherche de cycle<a class="headerlink" href="#recherche-de-cycle" title="Permanent link">&num;</a></h2>
+<h3 id="rappels">Rappels<a class="headerlink" href="#rappels" title="Permanent link">&num;</a></h3>
+<p>Une chaîne est une suite d’arêtes consécutives dans un graphe, un peu comme si on se promenait sur le graphe. On la désigne par les lettres des sommets qu’elle comporte. On utilise le terme de chaîne pour les graphes non orientés et le terme de chemin pour les graphes orientés.</p>
+<p>Un cycle est une chaîne qui commence et se termine au même sommet.</p>
+<figure>
+<p><img alt="img1" src="../img_graphes/cycle_img1.png" width="350px" /></p>
+</figure>
+<p>a - b - e - d - c - a est un cycle</p>
+<p>L’existence de cycle dans un graphe permet d'effectuer un trajet en revenant à son point de départ sans faire demi-tour...</p>
+<figure>
+<p><img alt="img1" src="../img_graphes/cycle_img2.png" width="350px" /></p>
+</figure>
+<h3 id="algorithme-de-la-presence-dun-cycle">Algorithme de la présence d'un cycle<a class="headerlink" href="#algorithme-de-la-presence-dun-cycle" title="Permanent link">&num;</a></h3>
+<p>Voici un programme qui détecte la présence d’un cycle dans un graphe connexe non-orienté:</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-33-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-33-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-33-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-33-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-33-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-33-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-33-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-33-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-33-10">10</a></span>
+<span class="normal"><a href="#__codelineno-33-11">11</a></span>
+<span class="normal"><a href="#__codelineno-33-12">12</a></span>
+<span class="normal"><a href="#__codelineno-33-13">13</a></span>
+<span class="normal"><a href="#__codelineno-33-14">14</a></span>
+<span class="normal"><a href="#__codelineno-33-15">15</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="k">def</span> <span class="nf">detection_cycle</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">sommet</span><span class="p">):</span>
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2"></a>    <span class="n">sommets_visites</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3"></a>    <span class="n">f</span> <span class="o">=</span> <span class="n">File</span><span class="p">()</span>
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4"></a>    <span class="n">sommets_visites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sommet</span><span class="p">)</span>
+</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5"></a>    <span class="n">f</span><span class="o">.</span><span class="n">enfiler</span><span class="p">((</span><span class="n">sommet</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+</span><span id="__span-33-6"><a id="__codelineno-33-6" name="__codelineno-33-6"></a>    <span class="k">while</span> <span class="ow">not</span> <span class="n">f</span><span class="o">.</span><span class="n">vide</span><span class="p">():</span>
+</span><span id="__span-33-7"><a id="__codelineno-33-7" name="__codelineno-33-7"></a>        <span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="n">parent</span><span class="p">)</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">defiler</span><span class="p">()</span>
+</span><span id="__span-33-8"><a id="__codelineno-33-8" name="__codelineno-33-8"></a>        <span class="n">voisins</span> <span class="o">=</span> <span class="n">voisin</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">tmp</span><span class="p">)</span>
+</span><span id="__span-33-9"><a id="__codelineno-33-9" name="__codelineno-33-9"></a>        <span class="k">for</span> <span class="n">vois</span> <span class="ow">in</span> <span class="n">voisins</span><span class="p">:</span>
+</span><span id="__span-33-10"><a id="__codelineno-33-10" name="__codelineno-33-10"></a>            <span class="k">if</span> <span class="n">vois</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">sommets_visites</span><span class="p">:</span>
+</span><span id="__span-33-11"><a id="__codelineno-33-11" name="__codelineno-33-11"></a>                <span class="n">sommets_visites</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vois</span><span class="p">)</span>
+</span><span id="__span-33-12"><a id="__codelineno-33-12" name="__codelineno-33-12"></a>                <span class="n">f</span><span class="o">.</span><span class="n">enfiler</span><span class="p">((</span><span class="n">vois</span><span class="p">,</span> <span class="n">tmp</span><span class="p">))</span>
+</span><span id="__span-33-13"><a id="__codelineno-33-13" name="__codelineno-33-13"></a>            <span class="k">elif</span> <span class="n">vois</span> <span class="o">!=</span> <span class="n">parent</span><span class="p">:</span>
+</span><span id="__span-33-14"><a id="__codelineno-33-14" name="__codelineno-33-14"></a>                <span class="k">return</span> <span class="kc">True</span>
+</span><span id="__span-33-15"><a id="__codelineno-33-15" name="__codelineno-33-15"></a>    <span class="k">return</span> <span class="kc">False</span>
+</span></code></pre></div>
+</td></tr></table>
+<div class="admonition example">
+<p class="admonition-title">Exercice 1</p>
+<ol>
+<li>Quel type de parcours utilise ce programme ?</li>
+<li>Quel est le type des éléments placés dans la file ?</li>
+</ol>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 2</p>
+<p>Faire fonctionner ce programme à la main sur ce graphe en partant du sommet 'a' :</p>
+<p><figure markdown>
+<img alt="img1" src="../img_graphes/cycle_img3.png" width="350px" />
+</figure></p>
+<p><strong> <div style="font-size=x-large">   1  tour<div></strong></p>
+<ul>
+<li>tmp :  </li>
+<li>parent : </li>
+<li>f : </li>
+<li>voisins :</li>
+<li>sommets_visites :</li>
+<li>f :</li>
+</ul>
+<p><strong> <div style="font-size=x-large">   2&lt;&gt;  tour<div></strong></p>
+<ul>
+<li>tmp :  </li>
+<li>parent : </li>
+<li>f : </li>
+<li>voisins :</li>
+<li>sommets_visites :</li>
+<li>f :</li>
+</ul>
+<p><strong> <div style="font-size=x-large">   3  tour<div></strong></p>
+<ul>
+<li>tmp :  </li>
+<li>parent : </li>
+<li>f : </li>
+<li>voisins :</li>
+<li>sommets_visites :</li>
+<li>f :</li>
+</ul>
+<p><strong> <div style="font-size=x-large">   4  tour<div></strong></p>
+<ul>
+<li>tmp :</li>
+<li>parent : </li>
+<li>f : </li>
+<li>voisins :</li>
+<li>sommets_visites :</li>
+<li>f :</li>
+</ul>
+<p><strong> <div style="font-size=x-large">   6  tour<div></strong></p>
+<ul>
+<li>tmp :  </li>
+<li>parent : </li>
+<li>f : </li>
+<li>voisins :</li>
+<li>sommets_visites :</li>
+<li>f :</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 3</p>
+<p>Pour finir de vous convaincre...Faire  fonctionner  ce  programme  à  la  main  pour  le  graphe  ci-dessous  en  partant  du sommet 'a'. Noter les contenus des variables au dernier tour.</p>
+</div>
+<figure>
+<p><img alt="img1" src="../img_graphes/cycle_img4.png" width="350px" /></p>
+</figure>
+<h2 id="bibliographie">Bibliographie<a class="headerlink" href="#bibliographie" title="Permanent link">&num;</a></h2>
+<ul>
+<li><a href="pixees">https://informatique-lycee.forge.apps.education.fr/terminale_nsi/cours-terminale/</a></li>
+<li><a href="Site de G.Lassus">https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.4_Graphes/cours/</a></li>
+<li><a href="site très intéressant pour dessiner, et coder un graphe. A voir !">https://frederic-zinelli.gitlab.io/algographe/</a></li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../algos_arbre/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Arbres algos" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Arbres algos
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../recherche_textuelle/" class="md-footer__link md-footer__link--next" aria-label="Next: Recherche textuelle" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Recherche textuelle
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8aa65030.min.js"></script>
+      
+        <script src="../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

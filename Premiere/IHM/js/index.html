@@ -1,0 +1,2270 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://example.com/Premiere/IHM/js/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+    
+    
+      
+        <title>Javascript - Site de cours</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e8d9bf0c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#les-bases-en-javascript" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Site de cours" class="md-header__button md-logo" aria-label="Site de cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Site de cours
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Javascript
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Site de cours" class="md-nav__button md-logo" aria-label="Site de cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Site de cours
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about.md" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Physique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Physique" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Physique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Seconde
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seconde" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Seconde
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Physique/Seconde/TP_vitesse/" class="md-nav__link">
+        TP vitesse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Physique/Seconde/TPver_eleve/" class="md-nav__link">
+        TP verrerie
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Première
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Première" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Première
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Donnees/representation_entier/" class="md-nav__link">
+        Représentation des entiers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Donnees/donnees_table/" class="md-nav__link">
+        Données en table
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Langage Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Langage Python" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Langage Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Langage/Bases_Python/" class="md-nav__link">
+        Les bases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Langage/ControleFlux_Python/" class="md-nav__link">
+        Contrôle du flux d'exécution
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Langage/fonction_python/" class="md-nav__link">
+        Les fonctions en Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Langage/tuples_listes/" class="md-nav__link">
+        Tuples et listes en Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Langage/dico/" class="md-nav__link">
+        Dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          IHM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="IHM" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          IHM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../html_css/" class="md-nav__link">
+        web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../frameworks/" class="md-nav__link">
+        Frameworks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formulaires/" class="md-nav__link">
+        Formulaire
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Javascript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Javascript
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#presentation-du-javascript" class="md-nav__link">
+    Présentation du Javascript
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#premier-programme" class="md-nav__link">
+    Premier Programme
+  </a>
+  
+    <nav class="md-nav" aria-label="Premier Programme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observations-et-changements-par-rapport-a-python" class="md-nav__link">
+    Observations et changements par rapport à Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-javascript-un-langage-comme-python" class="md-nav__link">
+    Le javascript : un langage comme Python
+  </a>
+  
+    <nav class="md-nav" aria-label="Le javascript : un langage comme Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ou-ecrire-son-code" class="md-nav__link">
+    Où écrire son code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-variables" class="md-nav__link">
+    Les variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-conversion-de-types" class="md-nav__link">
+    Les conversion de types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#affichage-avec-la-fonction-prompt" class="md-nav__link">
+    Affichage avec la fonction prompt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-operations-arithmetiques" class="md-nav__link">
+    Les opérations arithmétiques
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-instructions-conditionnelles-et-les-boucles" class="md-nav__link">
+    Les instructions conditionnelles et les boucles
+  </a>
+  
+    <nav class="md-nav" aria-label="Les instructions conditionnelles et les boucles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#condition-avec-if" class="md-nav__link">
+    Condition avec if
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-operateurs-de-conditions-et-les-operateurs-logiques" class="md-nav__link">
+    Les opérateurs de conditions et les opérateurs logiques
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#while-et-le-for" class="md-nav__link">
+    While et le for
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-fonctions" class="md-nav__link">
+    Les fonctions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-evenements" class="md-nav__link">
+    Les évènements
+  </a>
+  
+    <nav class="md-nav" aria-label="Les évènements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fonctionnement-dun-navigateur-web" class="md-nav__link">
+    Fonctionnement d’un navigateur web
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differentes-possibilites-de-selection-des-elements" class="md-nav__link">
+    Différentes possibilités de sélection des éléments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detection-des-evenements-du-dom-dom-events" class="md-nav__link">
+    Détection des évènements du DOM : DOM events
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lignes-a-tester" class="md-nav__link">
+    Lignes à tester
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Architecture Matérielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture Matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArchitectureMaterielle/von_neumann/" class="md-nav__link">
+        Von Neumann
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArchitectureMaterielle/OS/" class="md-nav__link">
+        OS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Algorithmique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithmique" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithmique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algorithmique/outils/" class="md-nav__link">
+        Outils
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algorithmique/tris/" class="md-nav__link">
+        Tris
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algorithmique/algo_recherche/" class="md-nav__link">
+        Recherche
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algorithmique/algo_gloutons/" class="md-nav__link">
+        Gloutons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algorithmique/kppv/" class="md-nav__link">
+        kppv
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Terminale
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Terminale" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Terminale
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1">
+          Programmation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Programmation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/decidabilite/" class="md-nav__link">
+        Calculabilité, décidabilité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/crypto/" class="md-nav__link">
+        Sécurisation des données
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/algos_arbre/" class="md-nav__link">
+        Arbres algos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/graphes/" class="md-nav__link">
+        Graphes algos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/recherche_textuelle/" class="md-nav__link">
+        Recherche textuelle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/diviser_regner/" class="md-nav__link">
+        Diviser pour régner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/prog_dynamique/" class="md-nav__link">
+        Programmation dynamique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/dijkstra/" class="md-nav__link">
+        Plus court chemin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/API/" class="md-nav__link">
+        Modularité
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          Structures de Données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Structures de Données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Structures de Données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Struct_donnees/graphe/" class="md-nav__link">
+        Graphes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          BDD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="BDD" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          BDD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/BDD/bdd/" class="md-nav__link">
+        Introduction BDD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/BDD/sql_sqlite/" class="md-nav__link">
+        SQL avec SQLITE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/BDD/sql_python/" class="md-nav__link">
+        SQL et Python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          Architecture Matérielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture Matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/ArchitectureMaterielle/reseau_routage/" class="md-nav__link">
+        Routage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/ArchitectureMaterielle/commande_linux/" class="md-nav__link">
+        Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/ArchitectureMaterielle/processus/" class="md-nav__link">
+        processus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/ArchitectureMaterielle/soc/" class="md-nav__link">
+        SoC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5">
+          Algorithmes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithmes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithmes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Algo/" class="md-nav__link">
+        Algorithmes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Logiciels
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Logiciels" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Logiciels
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Logiciels/git_github/" class="md-nav__link">
+        git
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#presentation-du-javascript" class="md-nav__link">
+    Présentation du Javascript
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#premier-programme" class="md-nav__link">
+    Premier Programme
+  </a>
+  
+    <nav class="md-nav" aria-label="Premier Programme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code" class="md-nav__link">
+    Code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#observations-et-changements-par-rapport-a-python" class="md-nav__link">
+    Observations et changements par rapport à Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-javascript-un-langage-comme-python" class="md-nav__link">
+    Le javascript : un langage comme Python
+  </a>
+  
+    <nav class="md-nav" aria-label="Le javascript : un langage comme Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ou-ecrire-son-code" class="md-nav__link">
+    Où écrire son code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-variables" class="md-nav__link">
+    Les variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-conversion-de-types" class="md-nav__link">
+    Les conversion de types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#affichage-avec-la-fonction-prompt" class="md-nav__link">
+    Affichage avec la fonction prompt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-operations-arithmetiques" class="md-nav__link">
+    Les opérations arithmétiques
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-instructions-conditionnelles-et-les-boucles" class="md-nav__link">
+    Les instructions conditionnelles et les boucles
+  </a>
+  
+    <nav class="md-nav" aria-label="Les instructions conditionnelles et les boucles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#condition-avec-if" class="md-nav__link">
+    Condition avec if
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-operateurs-de-conditions-et-les-operateurs-logiques" class="md-nav__link">
+    Les opérateurs de conditions et les opérateurs logiques
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#while-et-le-for" class="md-nav__link">
+    While et le for
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-fonctions" class="md-nav__link">
+    Les fonctions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-evenements" class="md-nav__link">
+    Les évènements
+  </a>
+  
+    <nav class="md-nav" aria-label="Les évènements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fonctionnement-dun-navigateur-web" class="md-nav__link">
+    Fonctionnement d’un navigateur web
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differentes-possibilites-de-selection-des-elements" class="md-nav__link">
+    Différentes possibilités de sélection des éléments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detection-des-evenements-du-dom-dom-events" class="md-nav__link">
+    Détection des évènements du DOM : DOM events
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lignes-a-tester" class="md-nav__link">
+    Lignes à tester
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="les-bases-en-javascript">Les bases en Javascript<a class="headerlink" href="#les-bases-en-javascript" title="Permanent link">&num;</a></h1>
+<h2 id="presentation-du-javascript">Présentation du Javascript<a class="headerlink" href="#presentation-du-javascript" title="Permanent link">&num;</a></h2>
+<p>Le langage HTML (ou Hypertext Markup Language) permet de créer la structure d’une page internet. Grâce à un jeu de balises, il permet de décomposer la page comme un traitement de texte : titre, sous-titre, section,...</p>
+<p>Le CSS (ou Cascade Style Sheets) permet la mise en forme des différents éléments HTML.</p>
+<p>On peut ainsi modifier la couleur ou la police des éléments précédents.</p>
+<p>Les pages ainsi créées sont statiques c’est-à-dire que l’interaction avec l’utilisateur est réduite à la possibilité de cliquer sur un lien hypertexte présent dans la page.</p>
+<p>On peut dynamiser la page internet de deux manières :</p>
+<ul>
+<li>soit du côté serveur avec PHP (ou Hypertext Preprocessor) qui peut, par exemple, ajouter le
+résultat d’une requête à une base de données dans la page qui sera fournie au navigateur ;</li>
+<li>soit du côté client avec JavaScript qui peut, par exemple, faire apparaître des info-bulles contextuelles ou réaliser des animations.</li>
+</ul>
+<p>JavaScript est un langage qui a été créé en 1995 par Brendan Eich. Ce dernier a travaillé chez Netscape Communication Corporation principal concurrent à l’époque d’Internet Explorer.</p>
+<h2 id="premier-programme">Premier Programme<a class="headerlink" href="#premier-programme" title="Permanent link">&num;</a></h2>
+<h3 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&num;</a></h3>
+<p>Ne dérogeons pas à la règle traditionnelle qui veut que tous les tutoriels de programmation
+commencent par afficher le texte « Hello World ! »</p>
+<p>Voici un code HTML simple contenant une instruction (nous allons y revenir) JavaScript, placée au
+sein d’un élément <code>&lt;script&gt;</code>:</p>
+<table class="language-html highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span></pre></div></td><td class="code"><div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span> <span class="p">/&gt;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>            <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hello World!<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>        <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a>    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>    <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">);</span> <span class="c1">// affichage</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></code></pre></div>
+</td></tr></table>
+<h3 id="observations-et-changements-par-rapport-a-python">Observations et changements par rapport à Python<a class="headerlink" href="#observations-et-changements-par-rapport-a-python" title="Permanent link">&num;</a></h3>
+<ul>
+<li>Un élément <code>&lt;script&gt;</code> est présent dans la page HTML : c’est cet élément qui contient le code
+Javascript ;</li>
+<li>Le code Javascript ne contient qu’une seule instruction : l’instruction <code>alert()</code>. Cette instruction
+permet d’afficher une boîte de dialogue contenant un message. Le message en question est placé
+entre apostrophes.</li>
+<li>La sortie avec la fonction <code>alert()</code> peut être remplacé par une sortie sur la console grâce à
+l’instruction <code>console.log('Hello world!')</code>. Il faut se rendre sur la console du navigateur (en
+général : menu puis développement web puis console web) ou encore sur le corps de la page
+web avec l’instruction <code>document.write('Hello world!')</code></li>
+<li>Chaque instruction doit se terminer par un point virgule ;</li>
+<li>Le Javascript, contrairement au Python n’est sensible ni à l’indentation, ni aux espaces ;</li>
+<li>Les commentaires monolignes commencent par deux slashs <code>//</code>(tandis qu’en Python ils commencent par #) et les commentaires multilignes se font par <code>/*</code> et se termine par <code>*/</code> .</li>
+</ul>
+<p><strong>Remarque :</strong> on peut aussi placer un commentaire multiligne sur une seule ligne</p>
+<p>Exemple :</p>
+<table class="language-html highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span>
+<span class="normal"><a href="#__codelineno-1-9">9</a></span></pre></div></td><td class="code"><div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a>/* Ce script comporte 3 instructions :
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>- Instruction 1 qui fait telle chose
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>- Instruction 2 qui fait autre chose
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>- Instruction 3 qui termine le script
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>*/
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>instruction_1;
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>instruction_2; /*Commentaire */
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a>instruction_3; // Fin du script
+</span></code></pre></div>
+</td></tr></table>
+<div class="admonition exercice">
+<p class="admonition-title">Exercice 1 :</p>
+<p>Afficher son prénom sur une boite de dialogue puis dans la console. Puis y placer un commentaire monoligne et un commentaire multiligne.</p>
+</div>
+<h2 id="le-javascript-un-langage-comme-python">Le javascript : un langage comme Python<a class="headerlink" href="#le-javascript-un-langage-comme-python" title="Permanent link">&num;</a></h2>
+<h3 id="ou-ecrire-son-code">Où écrire son code<a class="headerlink" href="#ou-ecrire-son-code" title="Permanent link">&num;</a></h3>
+<p>Il est possible, et même conseillé, d’écrire le code JavaScript dans un fichier externe, portant
+l’extension .js. Ce fichier est ensuite appelé depuis la page Web au moyen de l’élément <code>&lt;script&gt;</code> et
+de son attribut src qui contient l’URL du fichier.js. Ce code fichier.js s’insère dans l’HTML de la
+manière suivante :</p>
+<table class="language-html highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div class="language-html highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;hello.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>Dans votre éditeur web, taper le code suivant :</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">html</label><label for="__tabbed_1_2">js</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table class="language-html highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span></pre></div></td><td class="code"><div class="language-html highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Hello World!<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a>    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> Lorem ipsum dolor sit amet.<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a>    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;hello.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></code></pre></div>
+</td></tr></table>
+</div>
+<div class="tabbed-block">
+<table class="language-javascript highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div class="language-javascript highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Hello world!&#39;</span><span class="p">);</span> <span class="c1">// affichage</span>
+</span></code></pre></div>
+</td></tr></table>
+</div>
+</div>
+</div>
+<h3 id="les-variables">Les variables<a class="headerlink" href="#les-variables" title="Permanent link">&num;</a></h3>
+<p>Contrairement à python, les variables utilisées en JavaScript doivent être déclarées.</p>
+<table class="language-JavaScript highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div class="language-JavaScript highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">var</span> <span class="nx">variable1</span><span class="p">,</span> <span class="nx">variable2</span> <span class="o">=</span> <span class="s2">&quot;exemple&quot;</span><span class="p">;</span>   <span class="c1">// domaine d&#39;existence limité à la fonction où elle sont déclarées.</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="kd">let</span> <span class="nx">variable3</span><span class="p">;</span>                          <span class="c1">// domaine d&#39;existence limité au bloc où elle est déclarée.</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="kd">const</span> <span class="nx">vitesseLumiere</span> <span class="o">=</span> <span class="mf">3e8</span><span class="p">;</span>             <span class="c1">// définit une constante (qu&#39;on ne peut pas modifier par la suite).</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="nx">variable2</span> <span class="o">=</span> <span class="s2">&quot;exemple2&quot;</span><span class="p">;</span>                 <span class="c1">// affectation d&#39;une nouvelle valeur à variable2</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>Sachez seulement que :</p>
+<ul>
+<li>let définit des variables dont la portée (l'ensemble des lignes où la variable est connue et utilisable) est celle du bloc ;</li>
+<li>var définit des variables dont la portée est celle de la fonction.</li>
+</ul>
+<p>En JavaScript, il existe 7 types de valeurs différents. Chaque valeur qu’on va pouvoir créer et manipuler en JavaScript va obligatoirement appartenir à l’un de ces types. Ces types peuvent être notamment :</p>
+<ul>
+<li>String ou « chaine de caractères » en français ;</li>
+<li>Number ou « nombre » en français ;</li>
+<li>Boolean ou « booléen » en français.</li>
+</ul>
+<h3 id="les-conversion-de-types">Les conversion de types<a class="headerlink" href="#les-conversion-de-types" title="Permanent link">&num;</a></h3>
+<p>Comme en Python, on peut avoir besoin de convertir une variable d’un type vers un autre. En Javascript, il existe de nombreuses manière de réaliser cette tâche mais les plus simples sont ces fonctions :</p>
+<ul>
+<li><code>parseInt(variableAConvertir, base)</code> ; Cette fonction se charge de convertir en entier (et
+dans une certaine base) la <code>variableAConvertir</code></li>
+<li><code>parseFloat(variableAConvertir ;</code> Cette fonction se charge de convertir en flottant <code>la variableAConvertir</code> ;</li>
+<li><code>parseString(variableAConvertir) ;</code> Cette fonction se charge de convertir en chaîne de caractère la <code>variableAConvertir</code> ;</li>
+</ul>
+<h3 id="affichage-avec-la-fonction-prompt">Affichage avec la fonction <code>prompt</code><a class="headerlink" href="#affichage-avec-la-fonction-prompt" title="Permanent link">&num;</a></h3>
+<p>La fonction <code>prompt("Question")</code> crée une fenêtre où apparaît la Question et où l’utilisateur dispose d’un champ pour y répondre. La réponse tapée est considérée par Javascript comme un chaîne de caractère.</p>
+<p>Exemples :</p>
+<div class="language-Javascript highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Quel est votre prénom&quot;</span><span class="p">);</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nx">alert</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;Tapez un valeur x?&quot;</span><span class="p">),</span><span class="mf">10</span><span class="p">);</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nx">alert</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">;</span>
+</span></code></pre></div>
+<h3 id="les-operations-arithmetiques">Les opérations arithmétiques<a class="headerlink" href="#les-operations-arithmetiques" title="Permanent link">&num;</a></h3>
+<p>Les opérateurs arithmétiques vont nous permettre d’effectuer toutes sortes d’opérations mathématiques entre les valeurs de type Number contenues dans différentes variables.</p>
+<p>Nous allons pouvoir utiliser les opérateurs arithmétiques du tableau 1 en JavaScript :</p>
+<figure>
+<table>
+<thead>
+<tr>
+<th>Opérateur</th>
+<th>Nom de l'opération associée</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>Addition</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Soustraction</td>
+</tr>
+<tr>
+<td>*</td>
+<td>Multiplication</td>
+</tr>
+<tr>
+<td>/</td>
+<td>Division</td>
+</tr>
+<tr>
+<td>%</td>
+<td>Modulo (reste d’une division)</td>
+</tr>
+<tr>
+<td>**</td>
+<td>Puissance</td>
+</tr>
+</tbody>
+</table>
+<p><em>Tableau 1 – Opérateurs</em></p>
+</figure>
+<div class="admonition example">
+<p class="admonition-title">Exercice 2</p>
+</div>
+<p>1)  Écrire un script qui demande une somme en dollars, qui la convertit en euros et qui affiche la somme en euros à l’aide la fonction <code>alert</code> ;
+  2) Écrire un script dans lequel vous afficherez la valeur de <span class="arithmatex">\(x^2 + 3y × z\)</span>. Il faudra déclarer quatre variables et afficher le résultat à l’aide de la fonction <code>alert</code></p>
+<h3 id="les-instructions-conditionnelles-et-les-boucles">Les instructions conditionnelles et les boucles<a class="headerlink" href="#les-instructions-conditionnelles-et-les-boucles" title="Permanent link">&num;</a></h3>
+<h4 id="condition-avec-if">Condition avec if<a class="headerlink" href="#condition-avec-if" title="Permanent link">&num;</a></h4>
+<p><strong>Syntaxe</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>if(condition)
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>{
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>instruction1;
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>}
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>else
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>{
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>instruction2;
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>}
+</span></code></pre></div>
+<p><strong>Exemple :</strong></p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">let</span> <span class="nx">x</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">prompt</span><span class="p">(</span><span class="s2">&quot;x?&quot;</span><span class="p">),</span><span class="mf">10</span><span class="p">);</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">if</span><span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="mf">1</span><span class="p">){</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;x est strictement supérieure à 1&#39;</span><span class="p">);</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="p">}</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="k">else</span><span class="p">{</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;x est inférieure ou égale à 1&#39;</span><span class="p">);</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<h4 id="les-operateurs-de-conditions-et-les-operateurs-logiques">Les opérateurs de conditions et les opérateurs logiques<a class="headerlink" href="#les-operateurs-de-conditions-et-les-operateurs-logiques" title="Permanent link">&num;</a></h4>
+<figure>
+<table>
+<thead>
+<tr>
+<th>Opérateur</th>
+<th>Définition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>==</td>
+<td>Permet de tester l’égalité sur les valeurs</td>
+</tr>
+<tr>
+<td>===</td>
+<td>Permet de tester l’égalité en termes de valeurs et de types</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>Permet de tester la différence en valeurs</td>
+</tr>
+<tr>
+<td>&lt;&gt;</td>
+<td>Permet également de tester la différence en valeurs</td>
+</tr>
+<tr>
+<td>!==</td>
+<td>Permet de tester la différence en valeurs et en types</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>Permet de tester si une valeur est strictement inférieure à une autre</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>Permet de tester si une valeur est strictement supérieure à une autre</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>Permet de tester si une valeur est inférieure ou égale à une autre</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>Permet de tester si une valeur est supérieure ou égale à une autre</td>
+</tr>
+</tbody>
+</table>
+<p><em>Tableau 2 – Les opérateurs de comparaison</em></p>
+</figure>
+<figure>
+<table>
+<thead>
+<tr>
+<th>Opérateur</th>
+<th>Opérateur logique</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&amp;&amp;</td>
+<td>et</td>
+</tr>
+<tr>
+<td>||</td>
+<td>ou</td>
+</tr>
+<tr>
+<td>!</td>
+<td>non</td>
+</tr>
+</tbody>
+</table>
+<p><em>Tableau 3 – Les opérateurs logiques</em></p>
+</figure>
+<div class="admonition example">
+<p class="admonition-title">Exercice 3</p>
+<p>Reprendre l’exercice avec la conversion euro/dollars et ajouter une condition. Si la somme
+excède 15 euros, afficher "trop cher" et si elle est en dessous ou égale, afficher "on prend" .</p>
+</div>
+<h4 id="while-et-le-for">While et le for<a class="headerlink" href="#while-et-le-for" title="Permanent link">&num;</a></h4>
+<p>La synatxe de la boucle <code>while</code> s’écrit ainsi en Javascript :</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>while (condition) {
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>instruction_1;
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>instruction_2;
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>}
+</span></code></pre></div>
+<p>Et la boucle <code>for</code> s’écrit ainsi en Javascript :</p>
+<p><strong>Modèle</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>for (initialisation; condition; incrémentation)
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>{
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>instruction_1;
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>instruction_2;
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>}
+</span></code></pre></div>
+<p><strong>Exemple</strong></p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">let</span> <span class="nx">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mf">9</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="nx">str</span> <span class="o">=</span> <span class="nx">str</span> <span class="o">+</span> <span class="nx">i</span><span class="p">;</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">}</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span>
+</span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 4</p>
+<p>Écrivez une boucle <code>while</code> qui se répète 10 fois. Vous ferez le même exercice avec une boucle <code>for</code>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 5</p>
+<p>Écrire un script Javascript qui tente de faire deviner un entier de votre choix et affiche, plus petit, ou plus grand jusqu’à la victoire. Vous pourrez utiliser la fonction suivante :</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">function</span> <span class="nx">getRandomInt</span><span class="p">(</span><span class="nx">max</span><span class="p">)</span> <span class="p">{</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">max</span><span class="p">);</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">}</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getRandomInt</span><span class="p">(</span><span class="mf">3</span><span class="p">));</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="c1">// Expected output: 0, 1 or 2</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">getRandomInt</span><span class="p">(</span><span class="mf">1</span><span class="p">));</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="c1">// Expected output: 0</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">());</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="c1">// Expected output: a number from 0 to &lt;1</span>
+</span></code></pre></div>
+</div>
+<h3 id="les-fonctions">Les fonctions<a class="headerlink" href="#les-fonctions" title="Permanent link">&num;</a></h3>
+<p>La définition d’une fonction est introduite par le mot clé function suivi de ses arguments, puis du code de la fonction entre accolades Le résultat de la fonction est indiqué par le mot-clé <code>return</code>.</p>
+<p><strong>Modèle</strong></p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">function</span> <span class="nx">maFonction</span><span class="p">(</span><span class="nx">arguments</span><span class="p">)</span> <span class="p">{</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="c1">// Le code à executer</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><strong>Exemple :</strong></p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kd">function</span> <span class="nx">carre</span><span class="p">(</span><span class="nx">i</span><span class="p">){</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">return</span><span class="p">(</span><span class="nx">i</span><span class="o">*</span><span class="nx">i</span><span class="p">);</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="p">}</span> 
+</span></code></pre></div>
+<p>Pour appeler cette fonction, deux manières sont possibles : soit dans le fichier js soit dans le fichier js.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">js</label><label for="__tabbed_2_2">html</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-Javascript highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">carre</span><span class="p">(</span><span class="mf">3</span><span class="p">));</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-html highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;Le résultat : &quot;</span><span class="o">+</span><span class="nx">carre</span><span class="p">(</span><span class="mf">3</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;.&quot;</span><span class="p">);</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 6</p>
+</div>
+<p>1) Écrire une fonction calculant le discriminant <span class="arithmatex">\(b^2 + 4\times a\times c\)</span> d'un polynôme de degré 2 . Cette fonction prendra trois arguments : a,b, et c et retournera la valeur du discriminant.
+  2) Appeler cette fonction dans le fichier html puis dans le js.</p>
+<h2 id="les-evenements">Les évènements<a class="headerlink" href="#les-evenements" title="Permanent link">&num;</a></h2>
+<p>De manière générale, on préfère l'utilisation de let ou const à l'utilisation de var qui date des tous débuts de JavaScript.</p>
+<h3 id="fonctionnement-dun-navigateur-web">Fonctionnement d’un navigateur web<a class="headerlink" href="#fonctionnement-dun-navigateur-web" title="Permanent link">&num;</a></h3>
+<p>L’un des principaux attraits de l’interpréteur Javascript d’un navigateur est la possibilité de modifier dynamiquement et en temps réel le rendu d’une page web.</p>
+<p>Le navigateur commence par télécharger le fichier HTML correspondant à l’URL visitée. Une fois récupérée, la page est transformée en une structure de donnée d’arbre.</p>
+<figure>
+<p><img alt="dom" src="../img_event/DOM.png" width="400px" /></p>
+</figure>
+<p>Une fois l’arbre construit, ses noeuds (les éléments du document HTML) sont parcourus, les règles CSS sont appliquées et le rendu graphique de la page est effectué.</p>
+<p>Dans un même temps, les scripts Javascript présents dans la page sont exécutés. L’une de leur
+activité principale est la définition de gestionnaires d’évènements.</p>
+<p>Ces gestionnaires d’évènements peuvent modifier librement l’arbre représentant le document.</p>
+<p>Ajouter ou supprimer des nœuds dans l’arbre correspond à ajouter ou supprimer les balises correspondant dans le document (encore une fois le fichier original, qu’il soit stocké localement ou sur un serveur n’est pas modifié). Les attributs des balises peuvent aussi être modifiés. Parmi ces attributs, la modification de l’attribut style permet de changer le rendu graphique de l’élément.</p>
+<p>Ces changements sont immédiatement répercutés sur l’affichage.</p>
+<h3 id="differentes-possibilites-de-selection-des-elements">Différentes possibilités de sélection des éléments<a class="headerlink" href="#differentes-possibilites-de-selection-des-elements" title="Permanent link">&num;</a></h3>
+<ul>
+<li>
+<p>Sélection d'un élément par l'arborescence du DOM .</p>
+<div class="language-Javascript highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="s2">&quot;Le JavaScript&quot;</span><span class="p">;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Sélection d'un élément par l'attribut <code>id</code>. Par définition un id n'est associé qu'à un seul élément.</p>
+<div class="language-Javascript highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;bloc_page&#39;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="s1">&#39;250px&#39;</span><span class="p">;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Sélection de tous les éléments par l'attribut class. Le résultat est un tableau1 des différents éléments.</p>
+<div class="language-JavaScript highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kd">let</span> <span class="nx">imagesflottantes</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s2">&quot;imagesflottantes&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Sélection de tous les éléments par le nom de balise. Le résultat est un tableau1 des différents éléments.</p>
+<div class="language-Javascript highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kd">let</span> <span class="nx">paragraphes</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">);</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Sélection d'un élément (le 1er si il y en a plusieurs) en reprenant la syntaxe des sélecteurs CSS.</p>
+<div class="language-Javascript highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;#bloc_page&quot;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="s1">&#39;lightgrey&#39;</span><span class="p">;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Sélection de plusieurs éléments en reprenant la syntaxe des sélecteurs CSS : le résultat est dans un tableau1.</p>
+<div class="language-Javascript highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;p.important&quot;</span><span class="p">)[</span><span class="mf">0</span><span class="p">].</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="s1">&#39;gold&#39;</span><span class="p">;</span>
+</span></code></pre></div>
+</li>
+</ul>
+<h3 id="detection-des-evenements-du-dom-dom-events">Détection des évènements du DOM : DOM events<a class="headerlink" href="#detection-des-evenements-du-dom-dom-events" title="Permanent link">&num;</a></h3>
+<p>Quelques exemples de détection d'évènements.</p>
+<ul>
+<li>
+<p><code>onclick</code> : Le clic de la souris sur un élément</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="o">&lt;</span><span class="nx">h1</span> <span class="nx">onclick</span><span class="o">=</span><span class="s2">&quot;this.innerHTML = &#39;Ooops!&#39;&quot;</span><span class="o">&gt;</span><span class="nx">Click</span> <span class="nx">on</span> <span class="k">this</span> <span class="nx">text</span><span class="o">!&lt;</span><span class="err">/h1&gt;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><code>ondblclick</code>: le double-clic de la souris sur un élément</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="o">&lt;</span><span class="nx">h1</span> <span class="nx">onclick</span><span class="o">=</span><span class="s2">&quot;this.innerHTML = &#39;Ooops! Ooops!&#39;&quot;</span><span class="o">&gt;</span><span class="nx">Click</span> <span class="nx">on</span> <span class="k">this</span> <span class="nx">text</span><span class="o">!&lt;</span><span class="err">/h1&gt;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><code>onmouseover</code> : le survol de la souris sur un élément.</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">onmouseover</span><span class="o">=</span><span class="s2">&quot;this.style.backgroundColor = &#39;lightblue&#39;&quot;</span><span class="o">&gt;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><code>onmouseout</code> : la sortie de la souris d'un élément.</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">onmouseout</span><span class="o">=</span><span class="s2">&quot;this.style.backgroundColor = &#39;yellow&#39;&quot;</span><span class="o">&gt;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><code>onmousedown</code> : le maintien du clic appuyé sur un élément.</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">onmousedown</span><span class="o">=</span><span class="s2">&quot;this.style.color = &#39;white&#39;&quot;</span><span class="o">&gt;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p><code>onmouseup</code> : le relachement du clic de souris.</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="o">&lt;</span><span class="nx">div</span> <span class="nx">onmouseup</span><span class="o">=</span><span class="s2">&quot;this.style.color = &#39;blue&#39;&quot;</span><span class="o">&gt;</span>
+</span></code></pre></div>
+</li>
+</ul>
+<h3 id="lignes-a-tester">Lignes à tester<a class="headerlink" href="#lignes-a-tester" title="Permanent link">&num;</a></h3>
+<ul>
+<li>
+<p>changement de la couleur de fond de la page :</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">background</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>réinitialisation de la couleur par défaut :</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">background</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>récupération d'un élément <span class="arithmatex">\(d\)</span>. Cette instruction qui peut remplacer querySelector doit être faite une fois pour que d soit définie, avant de tester les instructions suivantes.</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="kd">let</span> <span class="nx">d</span><span class="o">=</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;valeur&quot;</span><span class="p">);</span> <span class="c1">//pour id=&quot;valeur&quot;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>changement de style de l'élément <span class="arithmatex">\(d\)</span> :</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="nx">d</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">;</span>
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="nx">d</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">fontWeight</span><span class="o">=</span><span class="s2">&quot;bold&quot;</span><span class="p">;</span>
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="nx">d</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">border</span><span class="o">=</span><span class="s2">&quot;1 pt dashed green&quot;</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>Changement de contenu de l'élément <span class="arithmatex">\(d\)</span> :</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="nx">d</span><span class="p">.</span><span class="nx">innerHTML</span><span class="o">=</span><span class="s2">&quot;Salut, tu vas bien&quot;</span><span class="p">;</span>
+</span></code></pre></div>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exercice 7</p>
+<p>Tester les différentes instructions précédentes dans des fonctions.</p>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../formulaires/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Formulaire" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Formulaire
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../ArchitectureMaterielle/von_neumann/" class="md-footer__link md-footer__link--next" aria-label="Next: Von Neumann" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Von Neumann
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8aa65030.min.js"></script>
+      
+        <script src="../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

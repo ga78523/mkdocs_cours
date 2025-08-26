@@ -1,0 +1,2214 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://example.com/Terminale/Programmation/decidabilite/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+    
+    
+      
+        <title>Calculabilité, décidabilité - Site de cours</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e8d9bf0c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#calculabilite-decidabilite" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Site de cours" class="md-header__button md-logo" aria-label="Site de cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Site de cours
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Calculabilité, décidabilité
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Site de cours" class="md-nav__button md-logo" aria-label="Site de cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Site de cours
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about.md" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Physique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Physique" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Physique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Seconde
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seconde" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Seconde
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Physique/Seconde/TP_vitesse/" class="md-nav__link">
+        TP vitesse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Physique/Seconde/TPver_eleve/" class="md-nav__link">
+        TP verrerie
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Première
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Première" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Première
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Donnees/representation_entier/" class="md-nav__link">
+        Représentation des entiers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Donnees/donnees_table/" class="md-nav__link">
+        Données en table
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Langage Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Langage Python" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Langage Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Langage/Bases_Python/" class="md-nav__link">
+        Les bases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Langage/ControleFlux_Python/" class="md-nav__link">
+        Contrôle du flux d'exécution
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Langage/fonction_python/" class="md-nav__link">
+        Les fonctions en Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Langage/tuples_listes/" class="md-nav__link">
+        Tuples et listes en Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Langage/dico/" class="md-nav__link">
+        Dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          IHM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="IHM" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          IHM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/IHM/html_css/" class="md-nav__link">
+        web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/IHM/frameworks/" class="md-nav__link">
+        Frameworks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/IHM/formulaires/" class="md-nav__link">
+        Formulaire
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/IHM/js/" class="md-nav__link">
+        Javascript
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Architecture Matérielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture Matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/ArchitectureMaterielle/von_neumann/" class="md-nav__link">
+        Von Neumann
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/ArchitectureMaterielle/OS/" class="md-nav__link">
+        OS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Algorithmique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithmique" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithmique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Algorithmique/outils/" class="md-nav__link">
+        Outils
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Algorithmique/tris/" class="md-nav__link">
+        Tris
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Algorithmique/algo_recherche/" class="md-nav__link">
+        Recherche
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Algorithmique/algo_gloutons/" class="md-nav__link">
+        Gloutons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Algorithmique/kppv/" class="md-nav__link">
+        kppv
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Terminale
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Terminale" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Terminale
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1">
+          Programmation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Programmation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Calculabilité, décidabilité
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Calculabilité, décidabilité
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quelques-reperes-historiques" class="md-nav__link">
+    Quelques repères historiques
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#machine-de-turing" class="md-nav__link">
+    Machine de Turing
+  </a>
+  
+    <nav class="md-nav" aria-label="Machine de Turing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple" class="md-nav__link">
+    Exemple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagramme" class="md-nav__link">
+    Diagramme
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculabilite-et-decidabilite" class="md-nav__link">
+    Calculabilité et décidabilité
+  </a>
+  
+    <nav class="md-nav" aria-label="Calculabilité et décidabilité">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calculabilite" class="md-nav__link">
+    Calculabilité
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decidabilite" class="md-nav__link">
+    Décidabilité
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-probleme-de-larret" class="md-nav__link">
+    Le problème de l'arrêt
+  </a>
+  
+    <nav class="md-nav" aria-label="Le problème de l'arrêt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#un-programme-comme-parametre-dun-programme" class="md-nav__link">
+    Un programme comme paramètre d'un programme
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#un-exemple" class="md-nav__link">
+    Un exemple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#est-ce-quun-programme-danalyse-de-programmes-aurait-pu-faire-cela-a-ma-place" class="md-nav__link">
+    Est-ce qu'un programme d'analyse de programmes aurait pu faire cela à ma place ?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crypto/" class="md-nav__link">
+        Sécurisation des données
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algos_arbre/" class="md-nav__link">
+        Arbres algos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graphes/" class="md-nav__link">
+        Graphes algos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recherche_textuelle/" class="md-nav__link">
+        Recherche textuelle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diviser_regner/" class="md-nav__link">
+        Diviser pour régner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prog_dynamique/" class="md-nav__link">
+        Programmation dynamique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dijkstra/" class="md-nav__link">
+        Plus court chemin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API/" class="md-nav__link">
+        Modularité
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          Structures de Données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Structures de Données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Structures de Données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Struct_donnees/graphe/" class="md-nav__link">
+        Graphes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          BDD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="BDD" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          BDD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BDD/bdd/" class="md-nav__link">
+        Introduction BDD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BDD/sql_sqlite/" class="md-nav__link">
+        SQL avec SQLITE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BDD/sql_python/" class="md-nav__link">
+        SQL et Python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          Architecture Matérielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture Matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArchitectureMaterielle/reseau_routage/" class="md-nav__link">
+        Routage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArchitectureMaterielle/commande_linux/" class="md-nav__link">
+        Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArchitectureMaterielle/processus/" class="md-nav__link">
+        processus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArchitectureMaterielle/soc/" class="md-nav__link">
+        SoC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5">
+          Algorithmes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithmes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithmes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algo/" class="md-nav__link">
+        Algorithmes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Logiciels
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Logiciels" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Logiciels
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Logiciels/git_github/" class="md-nav__link">
+        git
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quelques-reperes-historiques" class="md-nav__link">
+    Quelques repères historiques
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#machine-de-turing" class="md-nav__link">
+    Machine de Turing
+  </a>
+  
+    <nav class="md-nav" aria-label="Machine de Turing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple" class="md-nav__link">
+    Exemple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagramme" class="md-nav__link">
+    Diagramme
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculabilite-et-decidabilite" class="md-nav__link">
+    Calculabilité et décidabilité
+  </a>
+  
+    <nav class="md-nav" aria-label="Calculabilité et décidabilité">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calculabilite" class="md-nav__link">
+    Calculabilité
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decidabilite" class="md-nav__link">
+    Décidabilité
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-probleme-de-larret" class="md-nav__link">
+    Le problème de l'arrêt
+  </a>
+  
+    <nav class="md-nav" aria-label="Le problème de l'arrêt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#un-programme-comme-parametre-dun-programme" class="md-nav__link">
+    Un programme comme paramètre d'un programme
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#un-exemple" class="md-nav__link">
+    Un exemple
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#est-ce-quun-programme-danalyse-de-programmes-aurait-pu-faire-cela-a-ma-place" class="md-nav__link">
+    Est-ce qu'un programme d'analyse de programmes aurait pu faire cela à ma place ?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="calculabilite-decidabilite">Calculabilité décidabilité<a class="headerlink" href="#calculabilite-decidabilite" title="Permanent link">&num;</a></h1>
+<h2 id="quelques-reperes-historiques">Quelques repères historiques<a class="headerlink" href="#quelques-reperes-historiques" title="Permanent link">&num;</a></h2>
+<ul>
+<li>Wilhelm Schickard (1592 – 1635), professeur à l’Université de Tübingen (Allemagne), aurait dessiné les plans de la première machine à calculer (mécanique), mais elle n'a pas été construite.
+Blaise Pascal (1623 – 1662), mathématicien et philosophe, construit à 19 ans la Pascaline, première machine à calculer opérationnelle.</li>
+<li>Gottfried Wilhelm Leibniz (1646 – 1716), développe une machine à calculer et propose des idées modernes : la machine universelle, le schéma "entrée-calcul-sortie", et la base 2 pour la représentation des nombres.</li>
+<li>Joseph Marie Jacquard (1752 – 1834), avec son métier à tisser basé sur les cartes perforées, inspire les premiers programmes de calcul.</li>
+<li>Charles Babbage (1791 – 1871), professeur à Cambridge, conçoit la machine analytique, ancêtre des ordinateurs modernes.</li>
+<li>Ada Lovelace (1815 – 1852), réalise le premier véritable programme informatique pour la machine analytique de Babbage. Elle est considérée comme la première programmeuse.</li>
+</ul>
+<figure>
+<p><img alt="tete1" src="../img_calculabilite_decidabilite/pascal_lovelace.png" width="300px" /></p>
+</figure>
+<ul>
+<li>David Hilbert (1862 – 1943), mathématicien, propose des problèmes dont certains restent irrésolus. En 1920, il énonce l’"Entscheidungsproblem", questionnant la décidabilité en mathématiques.</li>
+<li>Kurt Gödel (1906 – 1978), démontre en 1931 que tout système formel suffisamment puissant est soit incomplet soit incohérent.</li>
+<li>Alan Turing (1912 – 1954) et Alonzo Church (1903 – 1995), montrent en 1936 que l'"Entscheidungsproblem" est indécidable, proposant la machine de Turing et le lambda-calcul.</li>
+</ul>
+<figure>
+<p><img alt="tete2" src="../img_calculabilite_decidabilite/hilbert_godel_turing.png" width="400px" /></p>
+</figure>
+<p>Pour en savoir plus sur la vie de Turing :</p>
+<figure>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/7dpFeXV_hqs?si=TcB179GQSH7Wlpid" title="YouTube video player" width="560"></iframe>
+</figure>
+<h2 id="machine-de-turing">Machine de Turing<a class="headerlink" href="#machine-de-turing" title="Permanent link">&num;</a></h2>
+<h3 id="definition">Définition<a class="headerlink" href="#definition" title="Permanent link">&num;</a></h3>
+<p>Il s'agit d'une machine imaginaire inventée par Alan Turing en 1936 pour expliquer la notion de "procédure mécanique" : l'équivalent de d'un algorithme. Cette machine est la plus élémentaire possible destinée à mettre en oeuvre ces mécanismes de calcul, numériques ou symboliques, comme le font notamment les ordinateurs.</p>
+<p>Une machine de Turing est un appareil disposant :</p>
+<ul>
+<li>d'un ruban infiniment long divisé en cases, dans lesquels la machine peut écrire des symboles ;</li>
+<li>d'une tête qui peut lire et écrire sur ce ruban ;</li>
+<li>d'une table de transition. Chacune des lignes de cette table est associée à un état et spécifie les actions à effectuer quand la machine est dans cet état, en fonction du symbole présent sous la tête de lecture. Ces actions peuvent être l'écriture d'un symbole (ici un 0 ou un 1) et le déplacement du ruban d'une case à droite ou à gauche. La table spécifie également le nouvel état après exécution de ces actions. La machine s'arrête quand un état marqué comme final est atteint.</li>
+</ul>
+<p>Cette machine fonctionne comme une machine à calculer en binaire. Turing envisage le cas particulier où les symboles utilisés sont 0 et 1.</p>
+<p>L'entrée du programme est un liste de symboles binaires. Une fois effectué, c'est sur ce même ruban que sera écrit la sortie du programme.</p>
+<p><strong>Remarque 1 :</strong> En 2012, pour célébrer le centenaire de la naissance d'Alan Turing, huit étudiant en master de l'École Normale Supérieure (ENS) de Lyon ont fabriqué en LEGO la première machine réelle (purement mécanique) du modèle de Turing. Voici le site du projet : <a href="http://rubens.ens-lyon.fr/fr/">lien</a>.</p>
+<h3 id="exemple">Exemple<a class="headerlink" href="#exemple" title="Permanent link">&num;</a></h3>
+<p>La machine peut être dans deux états e1 et e2. Si la machine est dans l'état e1 et contient un blanc, elle écrit un blanc. Le rubanc se déplace vers la gauche et la machine est dans l'état e2. Si la machine est dans l'état e2 et qu'elle lit un 0, elle écrit un 1 et si elle lit un 1 elle écrit un 0. Dans les deux cas, le ruban se déplace vers la gauche et la machine reste dans l'état e2. Enfin, si elle lit un blanc, elle écrit un blanc et la machine s'arrête.</p>
+<p>Ce qui nous donne table de transition suivante :</p>
+<figure>
+<table>
+<thead>
+<tr>
+<th><strong>État</strong></th>
+<th><strong>Lecture</strong></th>
+<th><strong>Écriture</strong></th>
+<th><strong>Déplacement</strong></th>
+<th><strong>État suivant</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>e1</td>
+<td>blanc</td>
+<td>blanc</td>
+<td>gauche</td>
+<td>e2</td>
+</tr>
+<tr>
+<td>e2</td>
+<td>0</td>
+<td>1</td>
+<td>gauche</td>
+<td>e2</td>
+</tr>
+<tr>
+<td>e2</td>
+<td>1</td>
+<td>0</td>
+<td>gauche</td>
+<td>e2</td>
+</tr>
+<tr>
+<td>e2</td>
+<td>blanc</td>
+<td>blanc</td>
+<td>gauche</td>
+<td>Fin</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<p>Les étapes successives sont représentées ci-dessous. Initialement la machine se trouve dans l'état e1.</p>
+<figure>
+<p><img alt="etape1" src="../img_calculabilite_decidabilite/etape1.png" /></p>
+</figure>
+<p>La machine lit un blanc, passe dans l'état e2 et le ruban se déplace vers la gauche.</p>
+<figure>
+<p><img alt="etape2" src="../img_calculabilite_decidabilite/etape2.png" /></p>
+</figure>
+<p>La machine lit un 1, donc écrit un 0, reste dans l'état e2 et ruban se déplace vers la gauche</p>
+<figure>
+<p><img alt="etape3" src="../img_calculabilite_decidabilite/etape3.png" /></p>
+</figure>
+<p>La machine lit un 0, donc écrit un 1, reste dans l'état e2 et le ruban se déplace vers la gauche.</p>
+<figure>
+<p><img alt="etape4" src="../img_calculabilite_decidabilite/etape4.png" /></p>
+</figure>
+<p>La machine lit un 1 donc écrit un 0, reste toujours dans l'état e2 et le ruban se déplace vers la gauche.</p>
+<figure>
+<p><img alt="etape5" src="../img_calculabilite_decidabilite/etape5.png" /></p>
+</figure>
+<p>La machine lit un blanc, écrit un blanc, le ruban se déplace encore vers la gauche et la machine s'arrête.</p>
+<figure>
+<p><img alt="etape6" src="../img_calculabilite_decidabilite/etape6.png" /></p>
+</figure>
+<p><strong>Remarque 2 :</strong> Voici un émulateur de cette machine de <a href="https://interstices.info/comment-fonctionne-une-machine-de-turing/">Turing</a></p>
+<div class="admonition example">
+<p class="admonition-title">Exercice 1:</p>
+<p>Considérons une machine de Turing se promenant sur un ruban constitué d’une suite de cases pouvant être vierges ("V") ou contenir une information binaire ("0" ou "1").  </p>
+<p>Elle possède la faculté de se déplacer d’une case vers la gauche ou vers la droite, de lire le caractère inscrit sur le ruban et d’écrire un caractère sur le ruban (remplaçant le précédent).  </p>
+<p>De plus, elle possède un certain nombre d’états qui vont déterminer son comportement. Ces états sont précisés dans la table des transitions ci-dessous :</p>
+<table>
+<thead>
+<tr>
+<th><strong>État</strong></th>
+<th><strong>Caractère lu</strong></th>
+<th><strong>Écrire</strong></th>
+<th><strong>Déplacement</strong></th>
+<th><strong>Nouvel état</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E₀</td>
+<td>V</td>
+<td>V</td>
+<td>droite</td>
+<td>E₀</td>
+</tr>
+<tr>
+<td>E₀</td>
+<td>1</td>
+<td>0</td>
+<td>droite</td>
+<td>E₁</td>
+</tr>
+<tr>
+<td>E₀</td>
+<td>0</td>
+<td>1</td>
+<td>droite</td>
+<td>E₁</td>
+</tr>
+<tr>
+<td>E₁</td>
+<td>V</td>
+<td>Arrêt</td>
+<td>Arrêt</td>
+<td>Arrêt</td>
+</tr>
+<tr>
+<td>E₁</td>
+<td>1</td>
+<td>0</td>
+<td>droite</td>
+<td>E₁</td>
+</tr>
+<tr>
+<td>E₁</td>
+<td>0</td>
+<td>1</td>
+<td>droite</td>
+<td>E₁</td>
+</tr>
+</tbody>
+</table>
+<p>Au commencement, la tête de lecture/écriture est positionnée dans l’état <strong>E₀</strong> sur une des cases vierges située à gauche du nombre binaire.</p>
+<ol>
+<li>Faire fonctionner cette machine de Turing sur le ruban suivant :
+... | V | V | 0 | 1 | 0 | 0 | 1 | 1 | V | V | ...</li>
+<li>Quelle est l’opération effectuée par cette machine de Turing ?</li>
+</ol>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 2</p>
+<p>Prenons maintenant une nouvelle machine de Turing avec 9 états et dont la table de transition est la suivante :</p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>État</strong></th>
+<th align="center"><strong>Caractère lu</strong></th>
+<th align="center"><strong>Écrire</strong></th>
+<th align="center"><strong>Déplacement</strong></th>
+<th align="center"><strong> Nouvel état</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">E₀</td>
+<td align="center">V</td>
+<td align="center">arrêt</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">E₀</td>
+<td align="center">0</td>
+<td align="center">V</td>
+<td align="center">droite</td>
+<td align="center">E₁</td>
+</tr>
+<tr>
+<td align="center">E₀</td>
+<td align="center">1</td>
+<td align="center">V</td>
+<td align="center">droite</td>
+<td align="center">E₅</td>
+</tr>
+<tr>
+<td align="center">E₁</td>
+<td align="center">V</td>
+<td align="center">V</td>
+<td align="center">droite</td>
+<td align="center">E₂</td>
+</tr>
+<tr>
+<td align="center">E₁</td>
+<td align="center">0-1</td>
+<td align="center">inchangé</td>
+<td align="center">droite</td>
+<td align="center">E₁</td>
+</tr>
+<tr>
+<td align="center">E₂</td>
+<td align="center">V</td>
+<td align="center">0</td>
+<td align="center">gauche</td>
+<td align="center">E₃</td>
+</tr>
+<tr>
+<td align="center">E₂</td>
+<td align="center">0-1</td>
+<td align="center">inchangé</td>
+<td align="center">droite</td>
+<td align="center">E₂</td>
+</tr>
+<tr>
+<td align="center">E₃</td>
+<td align="center">V</td>
+<td align="center">V</td>
+<td align="center">gauche</td>
+<td align="center">E₄</td>
+</tr>
+<tr>
+<td align="center">E₃</td>
+<td align="center">0-1</td>
+<td align="center">inchangé</td>
+<td align="center">gauche</td>
+<td align="center">E₃</td>
+</tr>
+<tr>
+<td align="center">E₄</td>
+<td align="center">V</td>
+<td align="center">0</td>
+<td align="center">droite</td>
+<td align="center">E₀</td>
+</tr>
+<tr>
+<td align="center">E₄</td>
+<td align="center">0-1</td>
+<td align="center">inchangé</td>
+<td align="center">gauche</td>
+<td align="center">E₄</td>
+</tr>
+<tr>
+<td align="center">E₅</td>
+<td align="center">V</td>
+<td align="center">V</td>
+<td align="center">droite</td>
+<td align="center">E₆</td>
+</tr>
+<tr>
+<td align="center">E₅</td>
+<td align="center">0-1</td>
+<td align="center">inchangé</td>
+<td align="center">droite</td>
+<td align="center">E₅</td>
+</tr>
+<tr>
+<td align="center">E₆</td>
+<td align="center">V</td>
+<td align="center">1</td>
+<td align="center">gauche</td>
+<td align="center">E₇</td>
+</tr>
+<tr>
+<td align="center">E₆</td>
+<td align="center">0-1</td>
+<td align="center">inchangé</td>
+<td align="center">droite</td>
+<td align="center">E₆</td>
+</tr>
+<tr>
+<td align="center">E₇</td>
+<td align="center">V</td>
+<td align="center">V</td>
+<td align="center">gauche</td>
+<td align="center">E₈</td>
+</tr>
+<tr>
+<td align="center">E₇</td>
+<td align="center">0-1</td>
+<td align="center">inchangé</td>
+<td align="center">gauche</td>
+<td align="center">E₇</td>
+</tr>
+<tr>
+<td align="center">E₈</td>
+<td align="center">V</td>
+<td align="center">1</td>
+<td align="center">droite</td>
+<td align="center">E₀</td>
+</tr>
+<tr>
+<td align="center">E₈</td>
+<td align="center">0-1</td>
+<td align="center">inchangé</td>
+<td align="center">gauche</td>
+<td align="center">E₈</td>
+</tr>
+</tbody>
+</table>
+<p>Au départ, la tête de lecture/écriture est positionnée dans l’état <strong>E₀</strong> sur le symbole binaire de gauche du nombre inscrit sur le ruban qui, comme dans l’exercice précédent contient une suite continue de symboles binaires, les autres cases étant vierges.</p>
+<ol>
+<li>Faire fonctionner cette machine de Turing sur le ruban suivant :<br />
+    ... V V 0 1 1 0 V V ...</li>
+<li>Quelle est l’opération effectuée par cette machine de Turing ?</li>
+<li>Que faudrait-il changer dans l'algorithme pour que le nombre inscrit sur le ruban soit recopié avec une inversion des symboles binaires (c'est-à-dire que le ruban V01101VVV ... devienne V01101V10010VV..)?</li>
+</ol>
+</div>
+<h3 id="diagramme">Diagramme<a class="headerlink" href="#diagramme" title="Permanent link">&num;</a></h3>
+<p>On peut construire un diagramme de la machine (on parle aussi d'automate).</p>
+<p>Pour définir un diagramme, il faut :</p>
+<ul>
+<li>un alphabet utilisé par la machine (liste des caractères utilisés). Exemple {'0','1','b'}.</li>
+<li>des états sont symbolisés par des cercles et écrits sous la forme e1, e2, etc (ou encore q1, q2, etc).</li>
+<li>un état final représenté par ef (ou qf) mais parfois indiqué par une chaine de caractères ou un caractère particulier ("final").</li>
+<li>représenter les déplacements par les lettres L et R (left et right).</li>
+<li>utiliser des triplets (lecture; écriture; déplacement) et des flèches qui indiquent l'état suivant.</li>
+</ul>
+<p><strong>Exemple 1 :</strong></p>
+<p>Liste des caractères possiblement présents sur le ruban <span class="arithmatex">\(\{'0';'1;'b'\}\)</span></p>
+<ul>
+<li>A l'état <span class="arithmatex">\(e1\)</span>, si la tête lit un 0 alors elle écrit 1, se déplace à droite et reste à l'état e1.</li>
+<li>A l'état e1, si la tête lit un 1 alors elle écrit 0, se déplace à droite et reste à l'état e1.</li>
+<li>A l'état e1, si la tête lit un blanc alors elle n'écrit rien et passe à l'état <span class="arithmatex">\(ef\)</span> (elle s'arrête).</li>
+</ul>
+<p>Ce qui nous donne la table de transition suivante :</p>
+<figure>
+<table>
+<thead>
+<tr>
+<th><strong>État</strong></th>
+<th><strong>Lecture</strong></th>
+<th><strong>Écriture</strong></th>
+<th><strong>Déplacement</strong></th>
+<th><strong>État suivant</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>e1</td>
+<td>0</td>
+<td>1</td>
+<td>droite</td>
+<td>e1</td>
+</tr>
+<tr>
+<td>e1</td>
+<td>1</td>
+<td>0</td>
+<td>droite</td>
+<td>e1</td>
+</tr>
+<tr>
+<td>e1</td>
+<td>blanc</td>
+<td>rien</td>
+<td>droite</td>
+<td>ef</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<figure>
+<p><img alt="exemple1" src="../img_calculabilite_decidabilite/graphe_exemple1.png" width="350px" /></p>
+</figure>
+<p><strong>Exemple 2 :</strong></p>
+<p>Liste des caractères possiblement présents sur le ruban <span class="arithmatex">\(\{'0';'1;'b'\}\)</span></p>
+<ul>
+<li>si la tête lit un blanc alors elle n'écrit rien et se déplace à droite en restant à l'état e0.</li>
+<li>A l'état e0, si la tête lit un 0 alors elle n'écrit rien, ne se déplace pas et passe à l'état e1.</li>
+<li>A l'état e0, si la tête lit un 1 alors elle n'écrit rien, ne se déplace pas et passe à l'état e1.</li>
+<li>A l'état e1, si la tête lit un 0 alors elle écrit 1, se déplace à droite et reste à l'état e1.</li>
+<li>A l'état e1, si la tête lit un 1 alors elle écrit 0, se déplace à droite et reste à l'état e1.</li>
+</ul>
+<p>Ce qui nous donne la table de transition suivante :</p>
+<figure>
+<table>
+<thead>
+<tr>
+<th align="center">État</th>
+<th align="center">Lecture</th>
+<th align="center">Écriture</th>
+<th align="center">Déplacement</th>
+<th align="center">État suivant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">e0</td>
+<td align="center">b</td>
+<td align="center">rien</td>
+<td align="center">droite</td>
+<td align="center">e0</td>
+</tr>
+<tr>
+<td align="center">e0</td>
+<td align="center">0</td>
+<td align="center">rien</td>
+<td align="center">pas de dplt</td>
+<td align="center">e1</td>
+</tr>
+<tr>
+<td align="center">e0</td>
+<td align="center">1</td>
+<td align="center">rien</td>
+<td align="center">pas de dplt</td>
+<td align="center">e1</td>
+</tr>
+<tr>
+<td align="center">e1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">droite</td>
+<td align="center">e1</td>
+</tr>
+<tr>
+<td align="center">e1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">droite</td>
+<td align="center">e1</td>
+</tr>
+</tbody>
+</table>
+</figure>
+<figure>
+<p><img alt="exemple2" src="../img_calculabilite_decidabilite/graphe_exemple2.png" /></p>
+</figure>
+<h2 id="calculabilite-et-decidabilite">Calculabilité et décidabilité<a class="headerlink" href="#calculabilite-et-decidabilite" title="Permanent link">&num;</a></h2>
+<h3 id="calculabilite">Calculabilité<a class="headerlink" href="#calculabilite" title="Permanent link">&num;</a></h3>
+<p>Une fonction <span class="arithmatex">\(f:x-&gt;f(x)\)</span> est dite calculable, lorsqu’il existe une algorithme permettant de calculer 
+ pour n’importe quelle valeur de x.</p>
+<p>Par exemple la fonction qui permet de déterminer la longueur du plus court chemin dans un graphe est calculable (voir l’algorithme de Djikstra)</p>
+<p>Le problème de la calculabilité d’une fonction ne dépend pas du langage de programmation.</p>
+<h3 id="decidabilite">Décidabilité<a class="headerlink" href="#decidabilite" title="Permanent link">&num;</a></h3>
+<p>Un problème de décision est un problème auquel on peut répondre par oui ou non</p>
+<p>Par exemples : un nombre donné est-il pair ? un graphe contient-il un cycle ? Un problème est dit indécidable lorsqu’il n’existe pas d’algorithme permettant d’y répondre.</p>
+<p>Par exemple, le problème de savoir si un nombre donné est pair n’est pas indécidable. On peut écrire un algorithme qui répond oui ou non à ce problème. On appelle problème de l’arrêt le problème de décision qui consiste à savoir si oui ou non un programme s’arrête.</p>
+<h2 id="le-probleme-de-larret">Le problème de l'arrêt<a class="headerlink" href="#le-probleme-de-larret" title="Permanent link">&num;</a></h2>
+<h3 id="un-programme-comme-parametre-dun-programme">Un programme comme paramètre d'un programme<a class="headerlink" href="#un-programme-comme-parametre-dun-programme" title="Permanent link">&num;</a></h3>
+<p>Les codes que nous manipulons ressemblent souvent à cela :</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">def</span> <span class="nf">bonjour</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>Ce programme qui s'appelle <code>bonjour</code> a besoin d'un paramètre, qui sera ici un nombre entier <code>n</code>.</p>
+<p>Quand nous l'exécutons avec <code>n=5</code>, sa sortie donnera 5 «bonjour».</p>
+<p>Maintenant, enregistrons le code suivant dans un fichier <code>test.py</code> :</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">def</span> <span class="nf">bonjour</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">)</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">bonjour</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>Pour exécuter ce code, nous devons taper dans un terminal l'instruction suivante : <code>python3 test.py</code>, ce qui donnera :</p>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ericgaland@MacBook-Pro-2 desktop % python3 test.py
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>bonjour
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>bonjour
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>bonjour
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>bonjour
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>bonjour
+</span></code></pre></div>
+<p>Le programme utilisé est alors python3, qui prend comme paramètre le programme <code>test.py</code>. Ce paramètre <code>test.py</code> est un ensemble de caractères qui contient les instructions que le programme python3 va interpréter.</p>
+<p>Mais nous pouvons aller encore plus loin : l'instruction <code>python3 test.py</code> peut être tapée dans un Terminal, qui lui-même est un programme appelé Terminal.</p>
+<p><strong>Conclusion :</strong></p>
+<p>Il n'y a donc aucun obstacle à considérer un programme comme une simple donnée, pouvant être reçue en paramètre par un autre programme. (voire par lui-même !)</p>
+<h3 id="un-exemple">Un exemple<a class="headerlink" href="#un-exemple" title="Permanent link">&num;</a></h3>
+<p>Considérons le programme suivant :</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">def</span> <span class="nf">countdown</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="k">while</span> <span class="n">n</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fini&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>En l'observant attentivement, je peux prévoir que <code>countdown(10)</code> affichera les nombres de 10 à 1 avant d'écrire "fini". Puis le programme s'arrêtera.</p>
+<p>Mais que va provoquer <code>countdown(10.8)</code> ?</p>
+<p>Comme la variable <code>n</code> ne sera jamais égale à 0, le programme va rentrer dans une boucle infinie, il ne s'arrêtera jamais. Mauvaise nouvelle. J'ai pu prévoir ceci en regardant attentivement le code de mon programme. J'ai «remarqué» qu'une variable <code>n</code> non entière provoquerait une boucle infinie.</p>
+<h3 id="est-ce-quun-programme-danalyse-de-programmes-aurait-pu-faire-cela-a-ma-place">Est-ce qu'un programme d'analyse de programmes aurait pu faire cela à ma place ?<a class="headerlink" href="#est-ce-quun-programme-danalyse-de-programmes-aurait-pu-faire-cela-a-ma-place" title="Permanent link">&num;</a></h3>
+<p>Supponsons qu'il existe une fonction Python <code>arret(prog, x)</code> qui termine toujours son exécution et qui retourne <code>True</code>si la fonction Python <code>prog</code> s'arrête lorsqu'on lui passe en argument <code>x</code>. Nous pouvons donc construire une nouvelle fonction <code>diag(x)</code> de la manière suivante :</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">def</span> <span class="nf">diag</span><span class="p">(</span><span class="n">entree</span><span class="p">):</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="k">if</span> <span class="n">arret</span><span class="p">(</span><span class="n">entree</span><span class="p">,</span><span class="n">entree</span><span class="p">):</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>            <span class="k">pass</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a>        <span class="k">return</span> <span class="kc">True</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>Quel est le résultat de l'appel <code>diag(diag)</code>?</p>
+<p>Cet appel s'arrête si et seulement si <code>arret(diag, diag)</code>retourne <code>False</code> c'est-à-dire si et seulement si <code>diag(diag)</code> ne s'arrête pas. Nous sommes donc face à une contradiction !</p>
+<p>Notre hypothèse est qu'un tel programme existe est donc erronée : <strong>le problème de l'arrêt est donc indécidable</strong>.</p>
+<!-- 
+Une machine pour prédire l'arrêt ou non d'un programme
+
+On suppose qu'on dispose d'un programme appelé `teste_arre`t qui prend en entrée un programme `P` et des données `X ` et renvoie `True` ou `False` selon que `P` s'arrête ou non avec les données `X` comme cela est schématisé ci-dessous :
+
+<figure markdown>
+![HALT1](img_calculabilite_decidabilite/halt3.png)
+</figure>
+
+**exemple2**
+
+On considère le programme suivant :
+
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">def</span> <span class="nf">Q</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="n">X</span><span class="p">):</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>    <span class="k">if</span> <span class="n">teste_arret</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="n">X</span><span class="p">):</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a>        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>            <span class="k">pass</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a>        <span class="k">return</span> <span class="mi">1</span>
+</span></code></pre></div>
+</td></tr></table>
+
+1. Que dire des lignes 3 et 4 (on rappelle que l'instruction pass ne fait rien)
+2. Si `P` s'arrête avec les données `X`, que fait ce programme ?
+3. Si P ne s'arrête pas avec les données X, que fait ce programme ?
+Le programme Q prend en entrée un programme P et des données X, il peut donc se prendre lui-même en entrée avec lui-même comme donnée ! On cherche à déterminer le résultat de l'appel : Q(Q,Q). Pour cela, recopier et compléter le schéma suivant :
+
+<figure markdown>
+![halt2](img_calculabilite_decidabilite/halt4.png)
+</figure>
+
+4. D'après ce schéma, que se passe-t-il si Q s'arrête avec lui même comme donnée ? Et dans le cas contraire ? Que peut-on en conclure sur l'existence du programme teste_arret ?
+
+Nous avons prouvé que le programme `teste_arret` ne peut pas exister, on dit que le problème de l'arrêt est indécidable c'est à dire qu'il n'existe pas d'algorithme permettant de résoudre ce problème. -->
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../../Premiere/Algorithmique/kppv/" class="md-footer__link md-footer__link--prev" aria-label="Previous: kppv" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              kppv
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../crypto/" class="md-footer__link md-footer__link--next" aria-label="Next: Sécurisation des données" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Sécurisation des données
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8aa65030.min.js"></script>
+      
+        <script src="../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

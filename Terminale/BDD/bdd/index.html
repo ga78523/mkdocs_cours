@@ -1,0 +1,1892 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://example.com/Terminale/BDD/bdd/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+    
+    
+      
+        <title>Introduction BDD - Site de cours</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e8d9bf0c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction-aux-bases-de-donnees" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Site de cours" class="md-header__button md-logo" aria-label="Site de cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Site de cours
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction BDD
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Site de cours" class="md-nav__button md-logo" aria-label="Site de cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Site de cours
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about.md" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Physique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Physique" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Physique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Seconde
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seconde" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Seconde
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Physique/Seconde/TP_vitesse/" class="md-nav__link">
+        TP vitesse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Physique/Seconde/TPver_eleve/" class="md-nav__link">
+        TP verrerie
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Première
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Première" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Première
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Donnees/representation_entier/" class="md-nav__link">
+        Représentation des entiers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Donnees/donnees_table/" class="md-nav__link">
+        Données en table
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Langage Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Langage Python" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Langage Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Langage/Bases_Python/" class="md-nav__link">
+        Les bases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Langage/ControleFlux_Python/" class="md-nav__link">
+        Contrôle du flux d'exécution
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Langage/fonction_python/" class="md-nav__link">
+        Les fonctions en Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Langage/tuples_listes/" class="md-nav__link">
+        Tuples et listes en Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Langage/dico/" class="md-nav__link">
+        Dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          IHM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="IHM" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          IHM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/IHM/html_css/" class="md-nav__link">
+        web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/IHM/frameworks/" class="md-nav__link">
+        Frameworks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/IHM/formulaires/" class="md-nav__link">
+        Formulaire
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/IHM/js/" class="md-nav__link">
+        Javascript
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Architecture Matérielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture Matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/ArchitectureMaterielle/von_neumann/" class="md-nav__link">
+        Von Neumann
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/ArchitectureMaterielle/OS/" class="md-nav__link">
+        OS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Algorithmique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithmique" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithmique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Algorithmique/outils/" class="md-nav__link">
+        Outils
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Algorithmique/tris/" class="md-nav__link">
+        Tris
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Algorithmique/algo_recherche/" class="md-nav__link">
+        Recherche
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Algorithmique/algo_gloutons/" class="md-nav__link">
+        Gloutons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/Algorithmique/kppv/" class="md-nav__link">
+        kppv
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Terminale
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Terminale" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Terminale
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1">
+          Programmation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Programmation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/decidabilite/" class="md-nav__link">
+        Calculabilité, décidabilité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/crypto/" class="md-nav__link">
+        Sécurisation des données
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/algos_arbre/" class="md-nav__link">
+        Arbres algos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/graphes/" class="md-nav__link">
+        Graphes algos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/recherche_textuelle/" class="md-nav__link">
+        Recherche textuelle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/diviser_regner/" class="md-nav__link">
+        Diviser pour régner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/prog_dynamique/" class="md-nav__link">
+        Programmation dynamique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/dijkstra/" class="md-nav__link">
+        Plus court chemin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Programmation/API/" class="md-nav__link">
+        Modularité
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          Structures de Données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Structures de Données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Structures de Données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Struct_donnees/graphe/" class="md-nav__link">
+        Graphes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          BDD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="BDD" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          BDD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Introduction BDD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Introduction BDD
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-aux-bases-de-donnees_1" class="md-nav__link">
+    Introduction aux bases de données
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction aux bases de données">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definition-dune-base-de-donnees-bdd" class="md-nav__link">
+    Définition d’une base de données (BDD)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definition-dun-systeme-de-base-de-donnees-sgbd" class="md-nav__link">
+    Définition d’un système de base de données (SGBD)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historique" class="md-nav__link">
+    Historique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pourquoi-ne-pas-utiliser-un-tableur-pour-realiser-une-base-de-donnees" class="md-nav__link">
+    Pourquoi ne pas utiliser un tableur pour réaliser une base de données
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vocabulaire-des-bases-de-donnees" class="md-nav__link">
+    Vocabulaire des bases de données
+  </a>
+  
+    <nav class="md-nav" aria-label="Vocabulaire des bases de données">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notion-de-relation-dattribut-et-de-domaine-dattribut" class="md-nav__link">
+    Notion de relation, d’attribut et de domaine d’attribut
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resume" class="md-nav__link">
+    Résumé
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-modele-relationnel" class="md-nav__link">
+    Le modèle relationnel
+  </a>
+  
+    <nav class="md-nav" aria-label="Le modèle relationnel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notion-de-cle-primaire" class="md-nav__link">
+    Notion de clé primaire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notion-de-cle-etrangere" class="md-nav__link">
+    Notion de clé étrangère
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-contraintes-dintegrite" class="md-nav__link">
+    Les contraintes d’intégrité
+  </a>
+  
+    <nav class="md-nav" aria-label="Les contraintes d’intégrité">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contraintes-dentite" class="md-nav__link">
+    Contraintes d’entité
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contraintes-de-domaine" class="md-nav__link">
+    Contraintes de domaine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contraintes-de-reference" class="md-nav__link">
+    Contraintes de référence
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schema-dune-relation-schema-relationnel" class="md-nav__link">
+    Schéma d’une relation (schéma relationnel)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql_sqlite/" class="md-nav__link">
+        SQL avec SQLITE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql_python/" class="md-nav__link">
+        SQL et Python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          Architecture Matérielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture Matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArchitectureMaterielle/reseau_routage/" class="md-nav__link">
+        Routage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArchitectureMaterielle/commande_linux/" class="md-nav__link">
+        Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArchitectureMaterielle/processus/" class="md-nav__link">
+        processus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArchitectureMaterielle/soc/" class="md-nav__link">
+        SoC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5">
+          Algorithmes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithmes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithmes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algo/" class="md-nav__link">
+        Algorithmes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Logiciels
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Logiciels" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Logiciels
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Logiciels/git_github/" class="md-nav__link">
+        git
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-aux-bases-de-donnees_1" class="md-nav__link">
+    Introduction aux bases de données
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction aux bases de données">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definition-dune-base-de-donnees-bdd" class="md-nav__link">
+    Définition d’une base de données (BDD)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definition-dun-systeme-de-base-de-donnees-sgbd" class="md-nav__link">
+    Définition d’un système de base de données (SGBD)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historique" class="md-nav__link">
+    Historique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pourquoi-ne-pas-utiliser-un-tableur-pour-realiser-une-base-de-donnees" class="md-nav__link">
+    Pourquoi ne pas utiliser un tableur pour réaliser une base de données
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vocabulaire-des-bases-de-donnees" class="md-nav__link">
+    Vocabulaire des bases de données
+  </a>
+  
+    <nav class="md-nav" aria-label="Vocabulaire des bases de données">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notion-de-relation-dattribut-et-de-domaine-dattribut" class="md-nav__link">
+    Notion de relation, d’attribut et de domaine d’attribut
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resume" class="md-nav__link">
+    Résumé
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#le-modele-relationnel" class="md-nav__link">
+    Le modèle relationnel
+  </a>
+  
+    <nav class="md-nav" aria-label="Le modèle relationnel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notion-de-cle-primaire" class="md-nav__link">
+    Notion de clé primaire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notion-de-cle-etrangere" class="md-nav__link">
+    Notion de clé étrangère
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-contraintes-dintegrite" class="md-nav__link">
+    Les contraintes d’intégrité
+  </a>
+  
+    <nav class="md-nav" aria-label="Les contraintes d’intégrité">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contraintes-dentite" class="md-nav__link">
+    Contraintes d’entité
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contraintes-de-domaine" class="md-nav__link">
+    Contraintes de domaine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contraintes-de-reference" class="md-nav__link">
+    Contraintes de référence
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schema-dune-relation-schema-relationnel" class="md-nav__link">
+    Schéma d’une relation (schéma relationnel)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="introduction-aux-bases-de-donnees">Introduction aux bases de données<a class="headerlink" href="#introduction-aux-bases-de-donnees" title="Permanent link">&num;</a></h1>
+<h2 id="introduction-aux-bases-de-donnees_1">Introduction aux bases de données<a class="headerlink" href="#introduction-aux-bases-de-donnees_1" title="Permanent link">&num;</a></h2>
+<h3 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&num;</a></h3>
+<p>Selon les dernières estimations, le volume de données numériques créées ou répliquées à l’échelle
+mondiale a été multiplié par plus de trente au cours de la dernière décennie, passant de 2 zettaoctets(Unité de mesure de quantité d’information numérique, valant <span class="arithmatex">\(10^{21}\)</span> octets, et dont le symbole est Zo) en 2010 à 64 zettaoctets en 2020. Mais cette quantité apparaît peu élevée en comparaison avec ce qui est attendu dans les prochaines années.</p>
+<figure>
+<p><img alt="if" src="../data_voc/statistica.png" width="400px" /></p>
+</figure>
+<p>Comme le révèlent les prévisions, le volume de données générées dans le monde devrait dépasser 180 zettaoctets à l’horizon 2025, soit une croissance annuelle moyenne de près de 40 % sur cinq ans. La démocratisation croissante des objets connectés et le développement de la 5G constituent les principaux moteurs de ce "Big Bang" de la donnée. Les données, la gestion et le contrôle des données sont devenues des enjeux très importants.</p>
+<p>(source : Statistica)</p>
+<p>Depuis quelques années, pour stocker ces données et les rendre disponibles au plus grand nombre. l’utilisation des bases de données relationnelles est la solution.</p>
+<h3 id="definition-dune-base-de-donnees-bdd">Définition d’une base de données (BDD)<a class="headerlink" href="#definition-dune-base-de-donnees-bdd" title="Permanent link">&num;</a></h3>
+<p>Une base de données stocke des informations en rapport avec une activité. Ces informations peuvent être de natures très hétérogènes.</p>
+<p>Les informations sont contenues dans une structure qui permet d’insérer, de supprimer, de mettre à jour et d’interroger les informations contenues.</p>
+<p><strong>Exemple 1 :</strong>
+Vous avez un de nombreux livres et vous voulez stocker des informations à propos de ces livres (auteur, pays, date, édition, etc....)</p>
+<p><strong>Exemple 2 :</strong>
+Vous disposez chez vous de nombreuses cartes Arduino, capteurs, composants électroniques diverses et variés et vous voulez avoir un inventaire précis de ce que vous avez.</p>
+<h3 id="definition-dun-systeme-de-base-de-donnees-sgbd">Définition d’un système de base de données (SGBD)<a class="headerlink" href="#definition-dun-systeme-de-base-de-donnees-sgbd" title="Permanent link">&num;</a></h3>
+<p>Un Système de gestion de Base de Données (SGBD) peut être vu comme le logiciel qui prend en charge la structuration, le stockage, la mise à jour et la maintenance des données. C’est en fait l’interface entre la base de données et les multiples utilisateurs (ou leurs programmes).</p>
+<h3 id="historique">Historique<a class="headerlink" href="#historique" title="Permanent link">&num;</a></h3>
+<p>Quasiment toutes les bases de données que nous utilisons aujourd’hui sont basées sur les travaux de Edgar Frank Codd(1970. C’est le point essentiel dans l’histoire des bases de données.</p>
+<p>On peut établir la chronologie suivante.</p>
+<figure>
+<p><img alt="if" src="../data_voc/frise.png" width="600px" /></p>
+</figure>
+<p>Nous pouvons d'ailleurs regarder la vidéo suivante pour plus d'information. </p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lZ2JPNDCjq8?si=7vzS8WYcKALJwnLi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h3 id="pourquoi-ne-pas-utiliser-un-tableur-pour-realiser-une-base-de-donnees">Pourquoi ne pas utiliser un tableur pour réaliser une base de données<a class="headerlink" href="#pourquoi-ne-pas-utiliser-un-tableur-pour-realiser-une-base-de-donnees" title="Permanent link">&num;</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Exercice 1 :</p>
+<p>Regarder la vidéo suivante et en déduire les avantages et les inconvénients du tableur pour réaliser une base de données.</p>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Q1Mt6re8Q-8?si=WUM0c3fdy-YWpQxo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
+
+<h2 id="vocabulaire-des-bases-de-donnees">Vocabulaire des bases de données<a class="headerlink" href="#vocabulaire-des-bases-de-donnees" title="Permanent link">&num;</a></h2>
+<h3 id="notion-de-relation-dattribut-et-de-domaine-dattribut">Notion de relation, d’attribut et de domaine d’attribut<a class="headerlink" href="#notion-de-relation-dattribut-et-de-domaine-dattribut" title="Permanent link">&num;</a></h3>
+<p>La notion de relation est au cœur des bases de données relationnelles. Une relation (ou table) peut être vue comme un tableau à 2 dimensions, composé d’une en-tête et d’un corps. Le corps est lui-même composé de t-uplets (lignes) et d’attributs (colonnes). L’en-tête contient les intitulés des attributs de l’entité LIVRE. Le corps contient les données proprement dites.</p>
+<p>Un exemple de relation peut se voir sur la figure suivante.</p>
+<figure>
+<p><img alt="if" src="../data_voc/table.png" width="600px" /></p>
+</figure>
+<p>Le t-uplet encadré en jaune sur le schéma ci-dessus contient les valeurs (ou éléments) suivantes :</p>
+<ul>
+<li>11 ;</li>
+<li>La Planète des singe ;</li>
+<li>Boulle ;</li>
+<li>1963 ;</li>
+<li>8.</li>
+</ul>
+<p>L’attribut "titre" est composé des valeurs suivantes :</p>
+<ul>
+<li>1984 ;</li>
+<li>Dune ;</li>
+<li>Fondation ;</li>
+<li>Le meilleur des mondes ;</li>
+<li>Fahrenheit 451 ;</li>
+<li>Ubik ;</li>
+<li>Chroniques martiennes ;</li>
+<li>La nuit des temps ;</li>
+<li>Blade Runner ;</li>
+<li>Les Robots ;</li>
+<li>La Planète des singes ;</li>
+<li>Ravage ;</li>
+<li>Le Maître du Haut Château ;</li>
+<li>Le monde des A ; ¯</li>
+<li>La Fin de l’éternité ;</li>
+<li>De la Terre à la Lune.</li>
+</ul>
+<p>Pour chaque attribut d’une relation, il est nécessaire de définir un domaine : Le domaine d’un attribut donné correspond à un ensemble fini ou infini de valeurs admissibles.</p>
+<p><strong>Par exemple :</strong> le domaine de l’attribut "id" correspond à l’ensemble des entiers (la colonne "id" devra obligatoirement contenir des entiers).</p>
+<p><strong>Autre exemple :</strong> le domaine de l’attribut "titre" correspond à l’ensemble des chaînes de caractères (noté TEXT en
+général).</p>
+<p><strong>Dernier exemple :</strong> le domaine de l’attribut "note" correspond à l’ensemble des entiers positifs (notés INT en général)</p>
+<h3 id="resume">Résumé<a class="headerlink" href="#resume" title="Permanent link">&num;</a></h3>
+<ul>
+<li>Relation (ou table) : c’est l’ensemble des enregistrements qui existent sur les données ;</li>
+<li>Enregistrement (t*uplet, éléments ou encore ligne) sont les données elles-mêmes. Le nombre d’enregistrements d’une relation R est appelé cardinal de R ou #R.</li>
+<li>Attribut (champs ou colonne) : les différents champs à remplir ;</li>
+<li>Domaine : un ensemble de valeur que peut prendre une donnée. La notion de domaine est à rapprocher de la notion de type en Python. Ce domaine peut être infini (chaîne de caractère pour caractériser un nom) ou fini
+(date de sortie d’un film de 1900 à nos jours ...)</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exercice 2 :</p>
+<p>Dans une médiathèque, les livres sont répertoriés sous forme de base de données. Un extrait sous forme de tableau est représentée ci-dessous. Répondre au questions suivantes.</p>
+<ol>
+<li>Quels sont les attributs de ce tableau ?</li>
+<li>Combien y a-t-il d’enregistrements ?</li>
+<li>Quel est le domaine de chaque attribut ? Précisez s’il est fini ou non.</li>
+</ol>
+</div>
+<figure>
+<p><img alt="if" src="../data_voc/exercice_voc.png" width="600px" /></p>
+</figure>
+<h2 id="le-modele-relationnel">Le modèle relationnel<a class="headerlink" href="#le-modele-relationnel" title="Permanent link">&num;</a></h2>
+<h3 id="notion-de-cle-primaire">Notion de clé primaire<a class="headerlink" href="#notion-de-cle-primaire" title="Permanent link">&num;</a></h3>
+<p>Afin de ne pas avoir deux t-uplets identiques, on définit la notion de "clé primaire" (ou Primary Key).</p>
+<p>Dans une base de données relationnelle, une clé primaire est la donnée qui permet d'identifier de manière unique un enregistrement dans une table</p>
+<p>Autrement dit, si un attribut est considéré comme cléprimaire, on ne doit pas trouver dans toute la relation 2 fois la même valeur pour cet attribut.</p>
+<p>Exemple : Dans la relation précédente, l’attribut auteur ne peut pas être une clé primaire ni l’année de publication.
+Par contre, il n’est pas inconcevable que le titre du livre soit une clé primaire mais en général, on crée un attribut
+particulier pour jouer le rôle de clé primaire.</p>
+<p><strong>Remarques :</strong></p>
+<ul>
+<li>Une clé primaire peut être composée d’une ou plusieurs colonnes.</li>
+<li>De plus, une clé primaire ne peut jamais avoir la valeur NULL.</li>
+<li>En général, on rajoute un attribut (colonne) nommé id unique pour chaque enregistrement pour jouer le rôle
+de clé primaire</li>
+</ul>
+<h3 id="notion-de-cle-etrangere">Notion de clé étrangère<a class="headerlink" href="#notion-de-cle-etrangere" title="Permanent link">&num;</a></h3>
+<p>Revenons à notre relation "LIVRES". Nous désirons maintenant un peu enrichir cette relation en ajoutant des
+informations supplémentaires sur les auteurs, nous obtenons alors la relation de la Figure suivante.</p>
+<figure>
+<p><img alt="if" src="../data_voc/tableLivreAuteur.png" width="600px" /></p>
+</figure>
+<p>Nous avons ajouté 3 attributs ("prenom_auteur","date_nai_auteur" et "langue_ecriture_auteur"). Nous avons aussi renommé l’attribut "auteur" en "nom_auteur".</p>
+<p>Comme vous l’avez peut-être remarqué, il y a pas mal d’informations dupliquées, par exemple, on retrouve 3 fois "K.Dick Philip 1928 anglais", même chose pour "Asimov Isaac 1920 anglais"...Cette duplication est-elle indispensable ?</p>
+<p>Non ! Est-elle souhaitable ? Non plus ! En effet, dans une base de données, on évite autant que possible de dupliquer l’information (sauf à des fins de sauvegarde, mais ici c’est toute autre chose). Si nous dupliquons autant de données inutilement c’est que notre structure ne doit pas être la bonne ! Mais alors, comment faire pour avoir aussi des informations sur les auteurs des livres ?</p>
+<p>La solution est relativement simple : travailler avec 2 relations au lieu d’une seule et créer un "lien" entre ces 2 relations (voir Figure ci-dessous).</p>
+<p>Nous avons créé une relation AUTEURS et nous avons modifié la relation LIVRES : nous avons remplacé l’attribut "auteur" par un attribut "id_auteur".</p>
+<p>Comme vous l’avez sans doute remarqué, l’attribut "id_auteur" de la relation LIVRES permet de créer un lien avec la relation AUTEURS. "id_auteur" correspond à l’attribut "id" de la relation AUTEURS. L’introduction d’une relation AUTEURS et la mise en place de liens entre cette relation et la relation LIVRES permettent d’éviter la redondance d’informations.</p>
+<p>Pour établir un lien entre 2 relations RA et RB, on ajoute à RA un attribut x qui prendra les valeurs de la clé primaire de RB. Cet attribut x est appelé clé étrangère (ou Foreign Key). Cet attribut correspond à la clé primaire d’une autre table, d’où le nom.</p>
+<figure>
+<p><img alt="if" src="../data_voc/2tables.png" width="600px" /></p>
+</figure>
+<p>Dans l’exemple ci-dessus, l’attribut "id_auteur" de la relation LIVRES permet bien d’établir un lien entre la
+relation LIVRES et la relation AUTEURS, "id_auteur" correspond bien à la clé primaire de la relation AUTEURS,
+conclusion : "id_auteur" est une clé étrangère.</p>
+<h3 id="les-contraintes-dintegrite">Les contraintes d’intégrité<a class="headerlink" href="#les-contraintes-dintegrite" title="Permanent link">&num;</a></h3>
+<p>Il existe un certain nombres de règles à respecter pour respecter l’intégrité d’une base de données. Ces règles visent
+à préserver la cohérence des données et garantir une stabilité de notre base dans le temps.
+Il existe des catégories de contraintes d’intégrité à respecter :</p>
+<ul>
+<li>contrainte d’entité :</li>
+<li>contrainte de domaine</li>
+<li>contrainte de référence</li>
+</ul>
+<h4 id="contraintes-dentite">Contraintes d’entité<a class="headerlink" href="#contraintes-dentite" title="Permanent link">&num;</a></h4>
+<p>Par définition, une relation est un ensemble d’enregistrement. Un ensemble n’ayant pas d’éléments en double, il ne peut pas exister deux fois le même enregistrement dans une relation. Toute relation doit donc posséder une clé unique (clé primaire).</p>
+<h4 id="contraintes-de-domaine">Contraintes de domaine<a class="headerlink" href="#contraintes-de-domaine" title="Permanent link">&num;</a></h4>
+<p>Les données que nous souhaitons stocker dans notre base de données ont des formats différents. On parle alors de domaine. On peut s’inspirer des types de données des langages de programmation que nous avons étudiés (integer, booléens, float, char, string).
+Les contraintes de domaine doivent permettre de :</p>
+<ul>
+<li>représenter les données sans perte d’information ;</li>
+<li>d’éviter les erreurs de saisies.</li>
+</ul>
+<h4 id="contraintes-de-reference">Contraintes de référence<a class="headerlink" href="#contraintes-de-reference" title="Permanent link">&num;</a></h4>
+<p>Correctement construite, une base de données fait appel à des données situées dans différentes relations. Pour que les données restent utilisables et cohérentes, il ne faut pas que l’on puisse détruire des données qui dépendent les une des autres. C’est le rôle de l’intégrité référentielle de protéger ces relations. Autrement dit, l’intégrité référentielle vérifie qu’une valeur de clé étrangère existe bien en tant que valeur de clé primaire dans une autre table.</p>
+<h3 id="schema-dune-relation-schema-relationnel">Schéma d’une relation (schéma relationnel)<a class="headerlink" href="#schema-dune-relation-schema-relationnel" title="Permanent link">&num;</a></h3>
+<p>On appelle schéma relationnel l’ensemble des relations présentes dans une base de données. C’est à dire qu’il faut fournir :</p>
+<ul>
+<li>les noms des relations</li>
+<li>la liste des attributs et de leurs domaines</li>
+<li>la clé primaire (on la souligne)</li>
+<li>les clés étrangères (précédées d’un #)</li>
+</ul>
+<p>Pour notre exemple cela donne :</p>
+<ul>
+<li>LIVRES (id : entiers positifs, titre : str , #id_auteur : entiers positifs, ann_publi : entiers positifs, note : entiers positifs)</li>
+<li>AUTEURS (id : entiers positifs, nom : str, prenom : str, ann_naissance : entiers positifs, langue_ecriture : str )</li>
+</ul>
+<p>On peut aussi représenter ce schéma relationnel par :</p>
+<figure>
+<p><img alt="if" src="../data_voc/schem.png" width="600px" /></p>
+</figure>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../Struct_donnees/graphe/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Graphes" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Graphes
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../sql_sqlite/" class="md-footer__link md-footer__link--next" aria-label="Next: SQL avec SQLITE" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              SQL avec SQLITE
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8aa65030.min.js"></script>
+      
+        <script src="../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2096 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://example.com/Premiere/Donnees/representation_entier/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+    
+    
+      
+        <title>Représentation des entiers - Site de cours</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e8d9bf0c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#representation-des-entiers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Site de cours" class="md-header__button md-logo" aria-label="Site de cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Site de cours
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Représentation des entiers
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Site de cours" class="md-nav__button md-logo" aria-label="Site de cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Site de cours
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about.md" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Physique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Physique" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Physique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Seconde
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seconde" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Seconde
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Physique/Seconde/TP_vitesse/" class="md-nav__link">
+        TP vitesse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Physique/Seconde/TPver_eleve/" class="md-nav__link">
+        TP verrerie
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Première
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Première" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Première
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Représentation des entiers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Représentation des entiers
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#representation-binaire-de-linformation" class="md-nav__link">
+    Représentation binaire de l'information
+  </a>
+  
+    <nav class="md-nav" aria-label="Représentation binaire de l'information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-bases-de-calcul" class="md-nav__link">
+    Les bases de calcul
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pourquoi-le-bit-est-il-lunite-de-base-du-codage-des-informations-dans-les-systemes-informatiques" class="md-nav__link">
+    Pourquoi le bit est-il l’unité de base du codage des informations dans les systèmes informatiques ?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unite-elementaire" class="md-nav__link">
+    Unité élémentaire
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principe-de-la-numeration-binaire-et-hexadecimal" class="md-nav__link">
+    Principe de la numération binaire et hexadécimal
+  </a>
+  
+    <nav class="md-nav" aria-label="Principe de la numération binaire et hexadécimal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principe-de-la-representation-dun-nombre-en-binaire" class="md-nav__link">
+    Principe de la représentation d’un nombre en binaire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversion-decimal-vers-binaire" class="md-nav__link">
+    Conversion décimal vers binaire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vers-le-decimal-a-partir-des-autres-bases" class="md-nav__link">
+    Vers le décimal à partir des autres bases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lhexadecimal-au-secours-de-la-manipulation-des-nombres-binaires" class="md-nav__link">
+    L'hexadécimal au secours de la manipulation des nombres binaires
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-au-codage-de-la-couleur" class="md-nav__link">
+    Application au codage de la couleur
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-a-lencodage-dun-texte" class="md-nav__link">
+    Application à l'encodage d'un texte
+  </a>
+  
+    <nav class="md-nav" aria-label="Application à l'encodage d'un texte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#probleme" class="md-nav__link">
+    Problème
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-code" class="md-nav__link">
+    Le code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-codes-iso-8859-1-et-ansi-utilise-par-windows" class="md-nav__link">
+    Les codes ISO 8859-1 et ANSI utilisé par WINDOWS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codage-unicode" class="md-nav__link">
+    Codage Unicode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../donnees_table/" class="md-nav__link">
+        Données en table
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Langage Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Langage Python" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Langage Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Langage/Bases_Python/" class="md-nav__link">
+        Les bases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Langage/ControleFlux_Python/" class="md-nav__link">
+        Contrôle du flux d'exécution
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Langage/fonction_python/" class="md-nav__link">
+        Les fonctions en Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Langage/tuples_listes/" class="md-nav__link">
+        Tuples et listes en Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Langage/dico/" class="md-nav__link">
+        Dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          IHM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="IHM" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          IHM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/html_css/" class="md-nav__link">
+        web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/frameworks/" class="md-nav__link">
+        Frameworks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/formulaires/" class="md-nav__link">
+        Formulaire
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/js/" class="md-nav__link">
+        Javascript
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Architecture Matérielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture Matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArchitectureMaterielle/von_neumann/" class="md-nav__link">
+        Von Neumann
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArchitectureMaterielle/OS/" class="md-nav__link">
+        OS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Algorithmique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithmique" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithmique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algorithmique/outils/" class="md-nav__link">
+        Outils
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algorithmique/tris/" class="md-nav__link">
+        Tris
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algorithmique/algo_recherche/" class="md-nav__link">
+        Recherche
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algorithmique/algo_gloutons/" class="md-nav__link">
+        Gloutons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algorithmique/kppv/" class="md-nav__link">
+        kppv
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Terminale
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Terminale" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Terminale
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1">
+          Programmation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Programmation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/decidabilite/" class="md-nav__link">
+        Calculabilité, décidabilité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/crypto/" class="md-nav__link">
+        Sécurisation des données
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/algos_arbre/" class="md-nav__link">
+        Arbres algos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/graphes/" class="md-nav__link">
+        Graphes algos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/recherche_textuelle/" class="md-nav__link">
+        Recherche textuelle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/diviser_regner/" class="md-nav__link">
+        Diviser pour régner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/prog_dynamique/" class="md-nav__link">
+        Programmation dynamique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/dijkstra/" class="md-nav__link">
+        Plus court chemin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/API/" class="md-nav__link">
+        Modularité
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          Structures de Données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Structures de Données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Structures de Données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Struct_donnees/graphe/" class="md-nav__link">
+        Graphes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          BDD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="BDD" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          BDD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/BDD/bdd/" class="md-nav__link">
+        Introduction BDD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/BDD/sql_sqlite/" class="md-nav__link">
+        SQL avec SQLITE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/BDD/sql_python/" class="md-nav__link">
+        SQL et Python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          Architecture Matérielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture Matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/ArchitectureMaterielle/reseau_routage/" class="md-nav__link">
+        Routage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/ArchitectureMaterielle/commande_linux/" class="md-nav__link">
+        Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/ArchitectureMaterielle/processus/" class="md-nav__link">
+        processus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/ArchitectureMaterielle/soc/" class="md-nav__link">
+        SoC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5">
+          Algorithmes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithmes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithmes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Algo/" class="md-nav__link">
+        Algorithmes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Logiciels
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Logiciels" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Logiciels
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Logiciels/git_github/" class="md-nav__link">
+        git
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#representation-binaire-de-linformation" class="md-nav__link">
+    Représentation binaire de l'information
+  </a>
+  
+    <nav class="md-nav" aria-label="Représentation binaire de l'information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-bases-de-calcul" class="md-nav__link">
+    Les bases de calcul
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pourquoi-le-bit-est-il-lunite-de-base-du-codage-des-informations-dans-les-systemes-informatiques" class="md-nav__link">
+    Pourquoi le bit est-il l’unité de base du codage des informations dans les systèmes informatiques ?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unite-elementaire" class="md-nav__link">
+    Unité élémentaire
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principe-de-la-numeration-binaire-et-hexadecimal" class="md-nav__link">
+    Principe de la numération binaire et hexadécimal
+  </a>
+  
+    <nav class="md-nav" aria-label="Principe de la numération binaire et hexadécimal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principe-de-la-representation-dun-nombre-en-binaire" class="md-nav__link">
+    Principe de la représentation d’un nombre en binaire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversion-decimal-vers-binaire" class="md-nav__link">
+    Conversion décimal vers binaire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vers-le-decimal-a-partir-des-autres-bases" class="md-nav__link">
+    Vers le décimal à partir des autres bases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lhexadecimal-au-secours-de-la-manipulation-des-nombres-binaires" class="md-nav__link">
+    L'hexadécimal au secours de la manipulation des nombres binaires
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-au-codage-de-la-couleur" class="md-nav__link">
+    Application au codage de la couleur
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-a-lencodage-dun-texte" class="md-nav__link">
+    Application à l'encodage d'un texte
+  </a>
+  
+    <nav class="md-nav" aria-label="Application à l'encodage d'un texte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#probleme" class="md-nav__link">
+    Problème
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-code" class="md-nav__link">
+    Le code
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-codes-iso-8859-1-et-ansi-utilise-par-windows" class="md-nav__link">
+    Les codes ISO 8859-1 et ANSI utilisé par WINDOWS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codage-unicode" class="md-nav__link">
+    Codage Unicode
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="representation-des-entiers">Représentation des entiers<a class="headerlink" href="#representation-des-entiers" title="Permanent link">&num;</a></h1>
+<h2 id="representation-binaire-de-linformation">Représentation binaire de l'information<a class="headerlink" href="#representation-binaire-de-linformation" title="Permanent link">&num;</a></h2>
+<h3 id="les-bases-de-calcul">Les bases de calcul<a class="headerlink" href="#les-bases-de-calcul" title="Permanent link">&num;</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Exercice 1</p>
+<p>Reproduire et compléter le tableau ci-dessous :</p>
+<figure markdown>
+<table>
+<thead>
+<tr>
+<th align="center">Base</th>
+<th align="center">Système</th>
+<th align="center">Utilisation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">2</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">16</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">20</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">60</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></figure></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="pourquoi-le-bit-est-il-lunite-de-base-du-codage-des-informations-dans-les-systemes-informatiques">Pourquoi le bit est-il l’unité de base du codage des informations dans les systèmes informatiques ?<a class="headerlink" href="#pourquoi-le-bit-est-il-lunite-de-base-du-codage-des-informations-dans-les-systemes-informatiques" title="Permanent link">&num;</a></h3>
+<p>Il est simple de représenter deux états physiques grâce à :</p>
+<ul>
+<li>La lumière (exemple : la fibre) ;</li>
+<li>La tension (exemple : le processeur en 0 ou 5V ou en 3,5V) ;</li>
+<li>Le champ magnétique (exemple : le disque dur).</li>
+</ul>
+<h3 id="unite-elementaire">Unité élémentaire<a class="headerlink" href="#unite-elementaire" title="Permanent link">&num;</a></h3>
+<p>L’unité élémentaire utilisée en informatique pour coder l’information est appelée bit, contraction de <em>Binary digit</em>.</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice 2</p>
+<p>Application au codage d’une couleur : Supposons que l’on souhaite coder des couleurs en binaire :</p>
+<ol>
+<li>Combien de couleurs peut-on coder sur un bit ? </li>
+<li>Si l’on souhaite coder davantage de couleurs, il va falloir utiliser une séquence de plusieurs bits appelée mot binaire (ou nombre binaire). Quelles sont les deux manières de nommer un mot de 8 bits. </li>
+<li>Combien de couleurs peuvent coder des mots de 2 bits, 3 bits ... n bits, 1 octet ? </li>
+</ol>
+</div>
+<h2 id="principe-de-la-numeration-binaire-et-hexadecimal">Principe de la numération binaire et hexadécimal<a class="headerlink" href="#principe-de-la-numeration-binaire-et-hexadecimal" title="Permanent link">&num;</a></h2>
+<h3 id="principe-de-la-representation-dun-nombre-en-binaire">Principe de la représentation d’un nombre en binaire<a class="headerlink" href="#principe-de-la-representation-dun-nombre-en-binaire" title="Permanent link">&num;</a></h3>
+<p>Le texte de Leibnitz (en figure 1) datant du début du XVIII siècle nous explique le principe de la numération en binaire (base 2) :</p>
+<figure>
+<p><img alt="leibniz" src="../img_entiers/entiers1.png" /></p>
+</figure>
+<div class="admonition example">
+<p class="admonition-title">Exercice 3</p>
+<p>A partir de ce texte, recopier et compléter le tableau suivant (ne pas tenir compte de la dernière colonne pour l’instant) :</p>
+<figure markdown>
+<table>
+<thead>
+<tr>
+<th align="center">Décimal</th>
+<th align="center">Binaire (4 bits)</th>
+<th align="center">Hexadécimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">12</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">14</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">15</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">16</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+</figure>
+</div>
+<h3 id="conversion-decimal-vers-binaire">Conversion décimal vers binaire<a class="headerlink" href="#conversion-decimal-vers-binaire" title="Permanent link">&num;</a></h3>
+<p>Pour effectuer cette conversion, on effectue une suite de divisions euclidiennes par 2 jusqu'à obtenir un quotient nul. Il suffit ensuite de lister les restes des diverses divisions en commençant par la dernière effectuée.</p>
+<p>Exemple :</p>
+<div class="arithmatex">\[
+\begin{array}{r|l}
+14 &amp; 2 \\
+\hline
+0 &amp;  \begin{array}{r|l}
+7 &amp; 2 \\
+\hline
+1 &amp; \begin{array}{r|l}
+3 &amp; 2 \\
+\hline
+1 &amp;\begin{array}{r|l}
+1 &amp; 2 \\
+\hline
+1 &amp; 0
+\end{array}
+\end{array}
+\end{array}
+\end{array}
+\]</div>
+<p><span class="arithmatex">\((14)_{10} = (1110)_2\)</span></p>
+<div class="admonition example">
+<p class="admonition-title">Exercice 4</p>
+<ol>
+<li>Convertir <span class="arithmatex">\((4)_{10}\)</span> en base 2 ;</li>
+<li>Convertir <span class="arithmatex">\((35)_{10}\)</span> en base 2 ;</li>
+<li>Convertir <span class="arithmatex">\((255)_{10}\)</span> en base 2.</li>
+</ol>
+</div>
+<h3 id="vers-le-decimal-a-partir-des-autres-bases">Vers le décimal à partir des autres bases<a class="headerlink" href="#vers-le-decimal-a-partir-des-autres-bases" title="Permanent link">&num;</a></h3>
+<p>Pour convertir un nombre <span class="arithmatex">\(N\)</span> d’une base <span class="arithmatex">\(b\)</span> dans la base <span class="arithmatex">\(10\)</span>, on décompose ce nombre dans l’ordre des puissances décroissantes de la base. Le nombre <span class="arithmatex">\(N\)</span> s’écrit de façon unique sous la forme :</p>
+<div class="arithmatex">\[
+N = a_n\times b^{n} + ....+ a_2\times b_2 + a_1\times b_1 + a_0 \times b_0\ avec 
+    \begin{cases}
+     n  : \text{ un entier naturel ;}  \\
+     b : \text{la base de numération ;}\\
+     a_i : \text{les chiffres associés à  }\\ \text{la base tels que } 0 \le a_i &lt; b.
+    \end{cases}
+\]</div>
+<p>Exemple : <span class="arithmatex">\((1101)_2 = 1 \times 2^3 + 1 \times 2^2 + 0 \times 2^1 + 1 \times 2^0 = 1 \times 8 + 1 \times 4 + 0 \times 2 + 1 \times 1\)</span>
+            <span class="arithmatex">\((1101)_2 = 13\)</span></p>
+<div class="admonition example">
+<p class="admonition-title">Exercice 5</p>
+<ol>
+<li>Convertir <span class="arithmatex">\((1111)_2\)</span> en base 10 ;</li>
+<li>Convertir <span class="arithmatex">\((10110)_2\)</span> en base 10 ;</li>
+</ol>
+</div>
+<p><strong>Remarque :</strong> afin d'effectuer des conversions binaires vers décimal ou décimal vers binaire, il est également possible d'utiliser le tableau ci-dessous : </p>
+<figure>
+<table>
+<thead>
+<tr>
+<th align="center">1 octet</th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(2^8=256\)</span></td>
+<td align="center"><span class="arithmatex">\(2^7=128\)</span></td>
+<td align="center"><span class="arithmatex">\(2^6=64\)</span></td>
+<td align="center"><span class="arithmatex">\(2^5=32\)</span></td>
+<td align="center"><span class="arithmatex">\(2^4=16\)</span></td>
+<td align="center"><span class="arithmatex">\(2^3=8\)</span></td>
+<td align="center"><span class="arithmatex">\(2^2=4\)</span></td>
+<td align="center"><span class="arithmatex">\(2^1=2\)</span></td>
+<td align="center"><span class="arithmatex">\(2^0=1\)</span></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+</figure>
+<div class="admonition example">
+<p class="admonition-title">Exercice 6</p>
+<p>Coder en utilisant le tableau <span class="arithmatex">\((1010100)_2\)</span> en décimal</p>
+</div>
+<h3 id="lhexadecimal-au-secours-de-la-manipulation-des-nombres-binaires">L'hexadécimal au secours de la manipulation des nombres binaires<a class="headerlink" href="#lhexadecimal-au-secours-de-la-manipulation-des-nombres-binaires" title="Permanent link">&num;</a></h3>
+<p>La manipulation de nombres binaire est très laborieuse. Pour cette raison, les informaticiens travaillent en hexadécimal (base 16). Dans cette base, 16 caractères sont nécessaires : 0, 1, 2, 3…9, A, B, C,..., F.</p>
+<div class="admonition example">
+<p class="admonition-title"> Exercice 7</p>
+<p>Compléter le tableau du paragraphe précédent.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title"> Exercice 8</p>
+<p>Sur combien de bits peut-on coder un chiffre hexadécimal ?</p>
+</div>
+<p>Afin de convertir un nombre binaire en nombre hexadécimal, il suffit de "découper" ce nombre en paquets de 4 bits en partant du bit de poids faible (bit le plus à droite), puis d'attribuer le chiffre hexadécimal correspondant à chaque paquet de 4 bits. La conversion hexadécimale vers binaire est intuitive et encore plus simple.</p>
+<div class="admonition example">
+<p class="admonition-title"> Exercice 9</p>
+<ol>
+<li>Coder <span class="arithmatex">\((11111111)_2\)</span>, <span class="arithmatex">\((1000101)_2\)</span> et (<span class="arithmatex">\(1110100011)_2\)</span> en hexadécimal</li>
+<li>Coder <span class="arithmatex">\((12)_{16}\)</span> et <span class="arithmatex">\((1AF)_{16}\)</span> en binaire.</li>
+</ol>
+</div>
+<h2 id="application-au-codage-de-la-couleur">Application au codage de la couleur<a class="headerlink" href="#application-au-codage-de-la-couleur" title="Permanent link">&num;</a></h2>
+<p>Nous allons étudier le codage de la couleur d’un pixel à l’aide de Gimp.</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice 10</p>
+<ul>
+<li>Lancer Gimp et ouvrir une image ;</li>
+<li>Sélectionner l’outil pipette puis cliquer sur un pixel de l’image ;</li>
+<li>composantes Rouge Vert Bleu s’affichent alors</li>
+</ul>
+</div>
+<p>Il est possible de modifier manuellement la valeur des composantes RVB du pixel et de visualiser la couleur correspondante.</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice 11</p>
+<ol>
+<li>Qu’appelle-t-on "composantes RVB" (en français) ou « RGB » (en anglais) ?</li>
+<li>Quelle sont les valeurs minimales et maximales qui peuvent être attribuées à chaque composante RVB ?</li>
+<li>Sur combien d’octets chaque composante RVB est-elle codée ?</li>
+<li>Sur combien d’octets est codée chaque couleur de pixel ?</li>
+<li>Combien de couleurs le logiciel peut-il gérer ?</li>
+<li>Prévoir les couleurs dont les composantes RVB sont : <span class="arithmatex">\((FF; FF; FF )_{16}\)</span> et <span class="arithmatex">\((255; 255; 0)_{10}\)</span>. Vérifier avec GIMP.</li>
+<li>Donner le codage RVB en binaire de la couleur cyan. Vérifier avec GIMP.</li>
+</ol>
+</div>
+<h2 id="application-a-lencodage-dun-texte">Application à l'encodage d'un texte<a class="headerlink" href="#application-a-lencodage-dun-texte" title="Permanent link">&num;</a></h2>
+<h3 id="probleme">Problème<a class="headerlink" href="#probleme" title="Permanent link">&num;</a></h3>
+<p>En recherchant un extrait du « seigneur des anneaux », nous sommes tombés sur la page web représentée sur la figure ci-dessous :</p>
+<figure>
+<p><img alt="anneaux" src="../img_entiers/anneaux.png" width="400px" /></p>
+</figure>
+<p>Nous allons essayer de comprendre pourquoi une partie du texte n’est pas compréhensible.</p>
+<h3 id="le-code">Le code<a class="headerlink" href="#le-code" title="Permanent link">&num;</a></h3>
+<p>Le code ASCII (American Standart Code for Information Interchange), défini aux Etats-Unis en 1963 est basé sur un tableau contenant les caractères les plus utilisés en langue anglaise. Dans cette table, il existe 128 caractères.</p>
+<figure>
+<p><img alt="" src="../img_entiers/ascii.png" width="400px" /></p>
+</figure>
+<p><strong>Exemples :</strong></p>
+<ul>
+<li>Le caractère "A" est codé en ASCII par 0x41 en hexadécimal (65 en décimal ou 0100 0001 en binaire) ;</li>
+<li>Le caractère "1" est codé en ASCII par 0x31en hexadécimal (49 en décimal ou 0110 0101 en binaire) ;</li>
+<li>En fait, les codes compris entre 0x00 et 0x1F ne représentent pas des caractères, ils ne sont pas affichables. Ces codes, souvent nommés caractères de contrôles sont utilisés pour indiquer des actions comme :<ul>
+<li>passer à la ligne (CR Carriage Return qui se traduit en français par retour charriot)  codé 0x0D</li>
+<li>sauter une ligne (LF Line Feed – LF) <span class="arithmatex">\(\rightarrow\)</span> codé 0x0A</li>
+</ul>
+</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exercice 12</p>
+<ol>
+<li>Sur combien de bits est-il possible de coder la totalité des codes ASCII ?</li>
+<li>Les ordinateurs travaillant avec des cases mémoires de 1 octet, quelle pouvaient être l’utilité du rajout d’un 8ième bit à une époque où les erreurs de mémoire et de transmission étaient fréquentes ?</li>
+<li>Encoder en hexadécimal à l’aide de la table ASCII : « les Rois Elfes ».</li>
+<li>Retrouver le texte correspondant au code ASCII suivant : (46 72 6F 6E 64 6F 20 6C 65 20 47 6F 62 62 69 74 <span class="arithmatex">\()_16\)</span>.</li>
+<li>Justifier, pourquoi il n’est pas possible d’encoder correctement le texte « les ténèbres » à l’aide du code ASCII. Comment peut-on palier à cet inconvénient ?</li>
+</ol>
+</div>
+<h3 id="les-codes-iso-8859-1-et-ansi-utilise-par-windows">Les codes ISO 8859-1 et ANSI utilisé par WINDOWS<a class="headerlink" href="#les-codes-iso-8859-1-et-ansi-utilise-par-windows" title="Permanent link">&num;</a></h3>
+<p>La nécessité de représenter des caractères non présents dans la table ASCII tels que ceux de l’alphabet latin comme le « à », le « é », le « ç »... impose l’utilisation d’un autre code. Ces codes sont des extensions du code ASCII. Pour cela, le 8ème bit est utilisé. On parle de code ASCII étendu. L’ISO, organisation internationale de normalisation, propose plusieurs variantes de ce code, adaptées aux différentes langues. Il existe la norme ISO-8859-1 nommée aussi ISO- latin-1.</p>
+<figure>
+<p><img alt="" src="../img_entiers/latin.png" /></p>
+</figure>
+<p>Microsoft propose le codage Windows-1252 appelé aussi code ANSI (American National Standard Institute). Ce code ne diffère de l’ISO-8859-1 que pour quelques caractères tels que le signe e, la ligature o-e ou certains guillemets. Il propose des extensions différentes selon le code page retenu. Ce code est choisi lors de la configuration du système et permet de définir le jeu de caractères qui va être employé avec la machine.</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice 13</p>
+<ol>
+<li>Quel est le code hexadécimal, binaire et décimal de la lettre A dans chacune des 2 normes ?</li>
+<li>En ANSI, encoder 70 € en hexadécimal. Est-ce compatible avec le codage ISO-8859-1 ?</li>
+<li>Répondre à la question posée en début de paragraphe : pourquoi une partie du texte extrait du « seigneur des anneaux » n’est elle pas compréhensible ?</li>
+</ol>
+</div>
+<h3 id="codage-unicode">Codage Unicode<a class="headerlink" href="#codage-unicode" title="Permanent link">&num;</a></h3>
+<p>La généralisation de l’utilisation d’internet dans le monde a ainsi nécessité une prise en compte d’un nombre beaucoup plus important de caractère. Pour cela, en 1991 une nouvelle norme a vu le jour : Unicode. Unicode a pour ambition de rassembler tous les caractères existant afin qu’une personne utilisant Unicode puisse, sans changer la configuration de son traitement de texte, à la fois lire des textes en français ou en japonais. Unicode est uniquement une table qui regroupe
+tous les caractères existant au monde, il ne s’occupe pas de la façon dont les caractères sont codés dans la machine.</p>
+<p>Unicode accepte plusieurs systèmes de codage : UTF-8, UTF-16, UTF-32.</p>
+<p>Le plus utilisé, notamment sur le Web, est UTF-8. Pour encoder les caractères Unicode, UTF-8 utilise un nombre variable d’octets : les caractères "classiques" (les plus couramment utilisés) sont codés sur un octet, alors que des caractères "moins classiques" sont codés sur un nombre d’octets plus important (jusqu’à 4 octets). Un des avantages d’UTF-8 c’est qu’il est totalement compatible avec la norme ASCII : les caractères classiques Unicode codés avec UTF-8 ont exactement
+le même code que les mêmes caractères en ASCII.</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice 14</p>
+<p>Quel est le code du "b" minuscule Unicode codé avec UTF-8 ? et du caractère "€" ?</p>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../../Physique/Seconde/TPver_eleve/" class="md-footer__link md-footer__link--prev" aria-label="Previous: TP verrerie" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              TP verrerie
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../donnees_table/" class="md-footer__link md-footer__link--next" aria-label="Next: Données en table" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Données en table
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8aa65030.min.js"></script>
+      
+        <script src="../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

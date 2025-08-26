@@ -1,0 +1,2438 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://example.com/Premiere/ArchitectureMaterielle/von_neumann/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+    
+    
+      
+        <title>Von Neumann - Site de cours</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e8d9bf0c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#des-portes-logiques-a-lordinateur" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Site de cours" class="md-header__button md-logo" aria-label="Site de cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Site de cours
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Von Neumann
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Site de cours" class="md-nav__button md-logo" aria-label="Site de cours" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Site de cours
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about.md" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Physique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Physique" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Physique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Seconde
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Seconde" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Seconde
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Physique/Seconde/TP_vitesse/" class="md-nav__link">
+        TP vitesse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Physique/Seconde/TPver_eleve/" class="md-nav__link">
+        TP verrerie
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Première
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Première" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Première
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1">
+          Données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Donnees/representation_entier/" class="md-nav__link">
+        Représentation des entiers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Donnees/donnees_table/" class="md-nav__link">
+        Données en table
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Langage Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Langage Python" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Langage Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Langage/Bases_Python/" class="md-nav__link">
+        Les bases
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Langage/ControleFlux_Python/" class="md-nav__link">
+        Contrôle du flux d'exécution
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Langage/fonction_python/" class="md-nav__link">
+        Les fonctions en Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Langage/tuples_listes/" class="md-nav__link">
+        Tuples et listes en Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Langage/dico/" class="md-nav__link">
+        Dictionnaires
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          IHM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="IHM" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          IHM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/html_css/" class="md-nav__link">
+        web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/frameworks/" class="md-nav__link">
+        Frameworks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/formulaires/" class="md-nav__link">
+        Formulaire
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IHM/js/" class="md-nav__link">
+        Javascript
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Architecture Matérielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture Matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Von Neumann
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Von Neumann
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#les-portes-logiques" class="md-nav__link">
+    Les portes logiques
+  </a>
+  
+    <nav class="md-nav" aria-label="Les portes logiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contexte" class="md-nav__link">
+    Contexte
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#porte-not" class="md-nav__link">
+    Porte NOT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#porte-and" class="md-nav__link">
+    Porte AND
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#porte-nand-not-and" class="md-nav__link">
+    Porte NAND (Not AND)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#porte-or" class="md-nav__link">
+    Porte OR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#porte-nor" class="md-nav__link">
+    Porte NOR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-porte-xor" class="md-nav__link">
+    La porte XOR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#une-application-des-portes-logiques-les-masques-de-sous-reseau" class="md-nav__link">
+    Une application des portes logiques : les masques de sous-réseau
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#travaux-pratiques-sur-les-portes-logiques" class="md-nav__link">
+    Travaux pratiques sur les portes logiques
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#circuit-combinatoire-et-circuit-sequentiel" class="md-nav__link">
+    Circuit combinatoire et circuit séquentiel
+  </a>
+  
+    <nav class="md-nav" aria-label="Circuit combinatoire et circuit séquentiel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#un-exemple-de-circuit-combinatoire-logique-ladditionneur" class="md-nav__link">
+    Un exemple de circuit combinatoire logique : l’additionneur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-memoires" class="md-nav__link">
+    Les mémoires
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-de-von-neumann" class="md-nav__link">
+    Architecture de Von Neumann
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture de Von Neumann">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vue-globale" class="md-nav__link">
+    Vue globale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principaux-composants-du-modele-de-neumann" class="md-nav__link">
+    Principaux composants du modèle de Neumann
+  </a>
+  
+    <nav class="md-nav" aria-label="Principaux composants du modèle de Neumann">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memoires" class="md-nav__link">
+    Mémoires
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lunite-arithmetique-et-logique-ual-ou-alu" class="md-nav__link">
+    L’unité arithmétique et logique UAL (ou ALU)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unite-de-controle" class="md-nav__link">
+    Unité de contrôle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolutions-et-limitations" class="md-nav__link">
+    Évolutions et limitations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assembleur" class="md-nav__link">
+    Assembleur
+  </a>
+  
+    <nav class="md-nav" aria-label="Assembleur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-simulateur" class="md-nav__link">
+    Le simulateur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-instructions" class="md-nav__link">
+    Les instructions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-et-exercices" class="md-nav__link">
+    Exemples et exercices
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemples et exercices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-1" class="md-nav__link">
+    Exemple 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    Exercices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-2" class="md-nav__link">
+    Exemple 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ressources" class="md-nav__link">
+    Ressources
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OS/" class="md-nav__link">
+        OS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Algorithmique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithmique" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithmique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algorithmique/outils/" class="md-nav__link">
+        Outils
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algorithmique/tris/" class="md-nav__link">
+        Tris
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algorithmique/algo_recherche/" class="md-nav__link">
+        Recherche
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algorithmique/algo_gloutons/" class="md-nav__link">
+        Gloutons
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algorithmique/kppv/" class="md-nav__link">
+        kppv
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Terminale
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Terminale" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Terminale
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1">
+          Programmation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Programmation" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Programmation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/decidabilite/" class="md-nav__link">
+        Calculabilité, décidabilité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/crypto/" class="md-nav__link">
+        Sécurisation des données
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/algos_arbre/" class="md-nav__link">
+        Arbres algos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/graphes/" class="md-nav__link">
+        Graphes algos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/recherche_textuelle/" class="md-nav__link">
+        Recherche textuelle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/diviser_regner/" class="md-nav__link">
+        Diviser pour régner
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/prog_dynamique/" class="md-nav__link">
+        Programmation dynamique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/dijkstra/" class="md-nav__link">
+        Plus court chemin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Programmation/API/" class="md-nav__link">
+        Modularité
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          Structures de Données
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Structures de Données" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Structures de Données
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Struct_donnees/graphe/" class="md-nav__link">
+        Graphes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          BDD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="BDD" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          BDD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/BDD/bdd/" class="md-nav__link">
+        Introduction BDD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/BDD/sql_sqlite/" class="md-nav__link">
+        SQL avec SQLITE
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/BDD/sql_python/" class="md-nav__link">
+        SQL et Python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          Architecture Matérielle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture Matérielle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/ArchitectureMaterielle/reseau_routage/" class="md-nav__link">
+        Routage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/ArchitectureMaterielle/commande_linux/" class="md-nav__link">
+        Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/ArchitectureMaterielle/processus/" class="md-nav__link">
+        processus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/ArchitectureMaterielle/soc/" class="md-nav__link">
+        SoC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5">
+          Algorithmes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algorithmes" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithmes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Terminale/Algo/" class="md-nav__link">
+        Algorithmes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Logiciels
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Logiciels" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Logiciels
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Logiciels/git_github/" class="md-nav__link">
+        git
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#les-portes-logiques" class="md-nav__link">
+    Les portes logiques
+  </a>
+  
+    <nav class="md-nav" aria-label="Les portes logiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contexte" class="md-nav__link">
+    Contexte
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#porte-not" class="md-nav__link">
+    Porte NOT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#porte-and" class="md-nav__link">
+    Porte AND
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#porte-nand-not-and" class="md-nav__link">
+    Porte NAND (Not AND)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#porte-or" class="md-nav__link">
+    Porte OR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#porte-nor" class="md-nav__link">
+    Porte NOR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-porte-xor" class="md-nav__link">
+    La porte XOR
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#une-application-des-portes-logiques-les-masques-de-sous-reseau" class="md-nav__link">
+    Une application des portes logiques : les masques de sous-réseau
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#travaux-pratiques-sur-les-portes-logiques" class="md-nav__link">
+    Travaux pratiques sur les portes logiques
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#circuit-combinatoire-et-circuit-sequentiel" class="md-nav__link">
+    Circuit combinatoire et circuit séquentiel
+  </a>
+  
+    <nav class="md-nav" aria-label="Circuit combinatoire et circuit séquentiel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#un-exemple-de-circuit-combinatoire-logique-ladditionneur" class="md-nav__link">
+    Un exemple de circuit combinatoire logique : l’additionneur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-memoires" class="md-nav__link">
+    Les mémoires
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-de-von-neumann" class="md-nav__link">
+    Architecture de Von Neumann
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture de Von Neumann">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vue-globale" class="md-nav__link">
+    Vue globale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principaux-composants-du-modele-de-neumann" class="md-nav__link">
+    Principaux composants du modèle de Neumann
+  </a>
+  
+    <nav class="md-nav" aria-label="Principaux composants du modèle de Neumann">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memoires" class="md-nav__link">
+    Mémoires
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lunite-arithmetique-et-logique-ual-ou-alu" class="md-nav__link">
+    L’unité arithmétique et logique UAL (ou ALU)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unite-de-controle" class="md-nav__link">
+    Unité de contrôle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolutions-et-limitations" class="md-nav__link">
+    Évolutions et limitations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assembleur" class="md-nav__link">
+    Assembleur
+  </a>
+  
+    <nav class="md-nav" aria-label="Assembleur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-simulateur" class="md-nav__link">
+    Le simulateur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-instructions" class="md-nav__link">
+    Les instructions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-et-exercices" class="md-nav__link">
+    Exemples et exercices
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemples et exercices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-1" class="md-nav__link">
+    Exemple 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    Exercices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemple-2" class="md-nav__link">
+    Exemple 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ressources" class="md-nav__link">
+    Ressources
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="des-portes-logiques-a-lordinateur">Des portes logiques à l’ordinateur<a class="headerlink" href="#des-portes-logiques-a-lordinateur" title="Permanent link">&num;</a></h1>
+<h2 id="les-portes-logiques">Les portes logiques<a class="headerlink" href="#les-portes-logiques" title="Permanent link">&num;</a></h2>
+<h3 id="contexte">Contexte<a class="headerlink" href="#contexte" title="Permanent link">&num;</a></h3>
+<p>Les circuits d’un ordinateur manipulent uniquement des chiffres binaires 0 ou 1 qui sont simplement représentés par des tensions électriques (0 ou +V). On peut réaliser des opérations sur ces nombres binaires à l’aide de circuits logiques qui sont concrètement construits à partir de transistors. Ces transistors peuvent se comporter comme des interrupteurs à la manière de l’exemple suivant.</p>
+<figure>
+<p><img alt="transistor" src="../img/transistor.png" width="200px" /></p>
+</figure>
+<p>Lorsque la broche B est sous tension (+V), un courant peut s’établir entre E et la masse . Le sens du courant est indiqué par la petite flèche. Le transistor peut alors être considéré comme un interrupteur fermé.</p>
+<p>Inversement, quand B est à 0 V, la broche E reste sous tension haute et le transistor peut être considéré comme un interrupteur ouvert.</p>
+<figure>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/n9fb6F1MWHc?si=ADZzfyoemW9Q4MF3" title="YouTube video player" width="560"></iframe>
+</figure>
+<h3 id="porte-not">Porte NOT<a class="headerlink" href="#porte-not" title="Permanent link">&num;</a></h3>
+<p>La porte NOT implantée par un seul transistor est la plus simple de toutes les portes. Elle n’a qu’un seul bit en entrée (E) et sa sortie (S) vaut 1 quand l’entrée vaut 0 et inversement.
+Elle peut la représenter comme ceci :</p>
+<figure>
+<p><img alt="porte NOT" src="../img/porte_NOT.png" width="300px" />
+<caption>Représentation de la porte not</caption></p>
+</figure>
+<p>La fonction logique s'écrit <span class="arithmatex">\(S = \overline{E}\)</span>. Nous pouvons rassembler tous les états logiques de la sortie en fonction des états logiques des entrées dans ce qui s'appelle la table de vérité. Cette dernière s'écrit de la manière suivante pour la porte NOT.</p>
+<figure>
+<table>
+<thead>
+<tr>
+<th align="center">Entrée (E)</th>
+<th align="center">Sortie (S)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+<p><caption>Table de vérité</caption></p>
+</figure>
+<p><strong>Exemple de réalisation de porte NOT avec des transistors</strong></p>
+<figure>
+<p><img alt="circuit porte NOT" src="../img/circuit_porte_NOT.png" width="500px" /></p>
+</figure>
+<h3 id="porte-and">Porte AND<a class="headerlink" href="#porte-and" title="Permanent link">&num;</a></h3>
+<p>Avec deux transistors, nous pouvons réaliser une porte AND. Cette porte peut se représenter comme ceci :</p>
+<figure>
+<p><img alt="porte AND" src="../img/porte_AND.png" width="300px" />
+<caption>Représentation de la porte AND</caption></p>
+</figure>
+<p>La fonction s'écrit <span class="arithmatex">\(S = A.B\)</span> et la table de vérité s'écrit :</p>
+<figure>
+<table>
+<thead>
+<tr>
+<th align="center">Entrée (A)</th>
+<th align="center">Entrée (B)</th>
+<th align="center">Sortie (S)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<p><caption>Table de vérité</caption></p>
+</figure>
+<h3 id="porte-nand-not-and">Porte NAND (Not AND)<a class="headerlink" href="#porte-nand-not-and" title="Permanent link">&num;</a></h3>
+<figure>
+<p><img alt="porte NAND" src="../img/porte_NAND.png" width="300px" />
+<caption>Représentation de la porte NAND</caption></p>
+</figure>
+<p>La fonction s'écrit : <span class="arithmatex">\(S = \overline{A.B}\)</span></p>
+<figure>
+<table>
+<thead>
+<tr>
+<th align="center">Entrée (A)</th>
+<th align="center">Entrée (B)</th>
+<th align="center">Sortie (S)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+<p><caption>Table de vérité</caption></p>
+</figure>
+<p><strong>Un exemple de réalisation avec des transistors :</strong></p>
+<figure>
+<p><img alt="circuit NAND" src="../img/circuit_porte_nand.png" width="300px" /></p>
+</figure>
+<h3 id="porte-or">Porte OR<a class="headerlink" href="#porte-or" title="Permanent link">&num;</a></h3>
+<figure>
+<p><img alt="circuit OR" src="../img/porte_OR.png" width="300px" />
+<caption>Représentation de la porte NAND</caption></p>
+</figure>
+<p>La fonction OR peut s'écrire : <span class="arithmatex">\(S = A + B\)</span></p>
+<figure>
+<table>
+<thead>
+<tr>
+<th align="center">Entrée (A)</th>
+<th align="center">Entrée (B)</th>
+<th align="center">Sortie (S)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<p><caption>Représentation de la porte NOR</caption></p>
+</figure>
+<h3 id="porte-nor">Porte NOR<a class="headerlink" href="#porte-nor" title="Permanent link">&num;</a></h3>
+<figure>
+<p><img alt="circuit NOR" src="../img/porte_NOR.png" width="300px" />
+<caption>Représentation de la porte NOR</caption></p>
+</figure>
+<p>La fonction s'écrit <span class="arithmatex">\(S = \overline{A + B}\)</span>.</p>
+<figure>
+<table>
+<thead>
+<tr>
+<th align="center">Entrée (A)</th>
+<th align="center">Entrée (B)</th>
+<th align="center">Sortie (S)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+<p><caption>Table de vérité</caption></p>
+</figure>
+<p><strong>Un exemple de réalisation de porte NOR avec des transistors</strong></p>
+<figure>
+<p><img alt="circuit NOR" src="../img/circuit_porte_nor.png" width="500px" /></p>
+</figure>
+<h3 id="la-porte-xor">La porte XOR<a class="headerlink" href="#la-porte-xor" title="Permanent link">&num;</a></h3>
+<figure>
+<p><img alt="circuit XOR" src="../img/porte_XOR.png" width="300px" /></p>
+</figure>
+<figure>
+<table>
+<thead>
+<tr>
+<th align="center">Entrée (A)</th>
+<th align="center">Entrée (B)</th>
+<th align="center">Sortie (S)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+<p><caption> Table de vérité</p>
+</figure>
+</figure>
+<h3 id="une-application-des-portes-logiques-les-masques-de-sous-reseau">Une application des portes logiques : les masques de sous-réseau<a class="headerlink" href="#une-application-des-portes-logiques-les-masques-de-sous-reseau" title="Permanent link">&num;</a></h3>
+<p>Dans un réseau TCP/IP, un ordinateur a une adresse IP qui l’identifie de manière unique (comme un numéro de téléphone), ainsi qu’un masque de sous-réseau.</p>
+<p>L’adresse IP et le masque de sous-réseau sont des groupes de 4 entiers positifs, codés tous les deux sur 4 octets. Le masque identifie à quel sous réseau d’Internet il fait partie, et permet d’obtenir l’adresse IP du sous-réseau à l’aide d’une opération booléenne.</p>
+<p>Exemple : un ordinateur a pour adresse IP 192.168.0.42 et son masque de sous-réseau est 255.255.255.0.</p>
+<p>Pour obtenir l’adresse du sous-réseau de l’ordinateur, on effectue alors un AND entre les octets de l’adresse IP et les octets du masque. En représentation binaire, cela donne :</p>
+<table>
+<thead>
+<tr>
+<th align="left">IP</th>
+<th align="left">11000000101010000000000000101010</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Masque</td>
+<td align="left">11111111111111111111111100000000</td>
+</tr>
+<tr>
+<td align="left">AND</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Adresse du sous-réseau</td>
+<td align="left">11000000101010000000000000000000</td>
+</tr>
+</tbody>
+</table>
+<p>Tableau 1 – Détermination de l’adresse du sous-réseau</p>
+<p>Sur un processeur 32 bits, le AND est une opération primitive du processeur, donc l’opération de détermination du sous-masque réseau se fait en une opération.</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice 1 :</p>
+<p>Cherchez l’adresse IP de votre ordinateur et le masque de sous-réseau. Sous Windows, il faut taper ipconfig et sous Linux , la commande est ifconfig. Écrire l’adresse du sous-réseau trouvé.</p>
+</div>
+<h2 id="travaux-pratiques-sur-les-portes-logiques">Travaux pratiques sur les portes logiques<a class="headerlink" href="#travaux-pratiques-sur-les-portes-logiques" title="Permanent link">&num;</a></h2>
+<p>Le TP sur les portes logiques est disponible <a href="../TP_logic_gates/">ici</a>.</p>
+<h2 id="circuit-combinatoire-et-circuit-sequentiel">Circuit combinatoire et circuit séquentiel<a class="headerlink" href="#circuit-combinatoire-et-circuit-sequentiel" title="Permanent link">&num;</a></h2>
+<p>D’une manière générale, les circuits électroniques possèdent plusieurs entrées et plusieurs sorties. Quand
+les sorties dépendent directement et uniquement des entrées, on parle de cicuits combinatoires. Il existe
+d’autres types de circuit qui s’appellent circuits séquentiels. Les sorties de ces circuits dépendent d’un état antérieur du circuit. C’est ce type de cicuit qu’on utilise pour réaliser des mémoires (RAM, registres,etc...).</p>
+<h3 id="un-exemple-de-circuit-combinatoire-logique-ladditionneur">Un exemple de circuit combinatoire logique : l’additionneur<a class="headerlink" href="#un-exemple-de-circuit-combinatoire-logique-ladditionneur" title="Permanent link">&num;</a></h3>
+<p>En combinant les portes logiques, on obtient des circuits plus complexes. Par exemple en combinant 2 portes "OU EXCLUSIF", 2 portes "ET" et une porte "OU" on obtient un additionneur représenté ci-dessous</p>
+<figure>
+<p><img alt="additionneur" src="../img/additionneur.png" width="400px" /></p>
+</figure>
+<p>Comme son nom l’indique, l’additionneur permet d’additionner 2 bits (E1 et E2) en tenant compte de la retenue entrante ("Cin" "carry in" en anglais). En sortie on obtient le résultat de l’addition (S) et la retenue sortante ("Cout") (cf TP).</p>
+<p>Donc nous pouvons, à partir des portes logiques de bases (NAND, NOR, XOR, etc...), nous pouvons construire des circuits logiques qui réalisent des opérations mathématiques.</p>
+<h3 id="les-memoires">Les mémoires<a class="headerlink" href="#les-memoires" title="Permanent link">&num;</a></h3>
+<p>On stocke l’information à l’aide de circuit dit de type "bascule". Ce circuit est une combinaison de plusieurs portes logiques.</p>
+<p>Il n’est pas question pour nous d’étudier ce type de circuit, le schéma ci-dessus vous permet juste de vérifier qu’une fois de plus nous avons bien à faire à une combinaison de porte logique.</p>
+<figure>
+<p><img alt="memoire" src="../img/memoire.png" width="400px" /></p>
+</figure>
+<h2 id="architecture-de-von-neumann">Architecture de Von Neumann<a class="headerlink" href="#architecture-de-von-neumann" title="Permanent link">&num;</a></h2>
+<h3 id="vue-globale">Vue globale<a class="headerlink" href="#vue-globale" title="Permanent link">&num;</a></h3>
+<p>Les grands principes de fonctionnement des ordinateurs tels que nous les connaissons aujourd’hui reposent sur des travaux réalisés au milieu des années 1940 par une équipe de chercheurs de l’université de Pennsylvanie.</p>
+<p>Ces travaux concernaient la conception d’un ordinateur dans lequel les programmes à exécuter étaient stockés au même endroit que les données qu’ils devaient manipuler, à savoir dans la mémoire de l’ordinateur. Cette idée d’utiliser une zone de stockage unique est toujours utilisée aujourd’hui. Cette architecture est appelée modèle de Von Neumann, en l’honneur du mathématicien et physicien John Von Neumann qui participa et qui publia en 1945 un rapport sur un ordinateur basé sur ce concept.</p>
+<figure>
+<p><img alt="modèle de Von Neumann" src="../img/modele_Neumann.png" width="300px" /></p>
+</figure>
+<p>Ce modèle décompose l’ordinateur en 4 parties distinctes :</p>
+<ul>
+<li>l’unité arithmétique et logique (UAL ou ALU en anglais) ou unité de traitement : son rôle est d’effectuer les opérations de base ;</li>
+<li>l’unité de contrôle ;</li>
+<li>la mémoire ;</li>
+<li>les dispositifs d’entrée-sortie, qui permettent de communiquer avec le monde extérieur.</li>
+</ul>
+<p>Les différents éléments échangent des informations à l’aide de bus.</p>
+<p>Les deux premières parties sont habituellement rassemblées dans un ensemble de circuits électroniques qu’on appelle Unité Centrale de Traitement ou plus simplement processeur (ou CPU pour Centrale Processing Unit).</p>
+<p>Physiquement,un système informatique est constitué de plusieurs éléments :</p>
+<ul>
+<li>
+<p>Une machine, c’est-à-dire un boîtier contenant une carte mère avec un microprocesseur, des barrettes de mémoire vive, une carte graphique une carte réseau, des ports de communication et des périphériques éloignés comme un disque dur ;</p>
+</li>
+<li>
+<p>des périphériques externes comme un moniteur, un clavier, une souris, des enceintes, une imprimante, etc..</p>
+</li>
+</ul>
+<h3 id="principaux-composants-du-modele-de-neumann">Principaux composants du modèle de Neumann<a class="headerlink" href="#principaux-composants-du-modele-de-neumann" title="Permanent link">&num;</a></h3>
+<h4 id="memoires">Mémoires<a class="headerlink" href="#memoires" title="Permanent link">&num;</a></h4>
+<p>La mémoire de l’ordinateur contient à la fois les programmes et les données. On distingue habituellement deux types de données :</p>
+<ul>
+<li>la mémoire vive ou volatile est celle qui perd son contenu dès que l’ordinateur est éteint. Les données stockées dans la mémoire vive peuvent être lues, effacées ou déplacées comme on le souhaite. Le principal avantage de cette mémoire est la rapidité d’accès aux données. On parle souvent de mémoire RAM (pour l’anglais Random Acces Memory ). Les ordinateurs actuels disposent en général de 8 ou 16 Go de RAM.</li>
+<li>la mémoire non-volatile est celle qui conserve ses données quand on coupe l’alimentation électrique de l’ordinateur. Il existe plusieurs types de telles mémoires. Par exemple, la ROM (pour Read-only Memory) est une mémoire non modifiable qui contient habituellement des données nécessaires au démarrage de l’ordinateur ou tout autre information dont l’ordinateur a besoin pour fonctionner. La mémoire Flash est autre exemple de mémoire non volatile. Contrairement à la ROM, cette mémoire est modifiable. Contrairement à la RAM, ces mémoires sont souvent beaucoup plus lentes.</li>
+</ul>
+<h4 id="lunite-arithmetique-et-logique-ual-ou-alu">L’unité arithmétique et logique UAL (ou ALU)<a class="headerlink" href="#lunite-arithmetique-et-logique-ual-ou-alu" title="Permanent link">&num;</a></h4>
+<p>L’unité arithmétique et logique est le cœur de l’ordinateur. On la représente habituellement par ce schéma (en forme de V) :</p>
+<figure>
+<p><img alt="alu" src="../img/alu.png" width="200px" /></p>
+</figure>
+<ul>
+<li>A et B sont les opérandes (les entrées) ;</li>
+<li>R est le résultat ;</li>
+<li>F est une opération binaire (opération à effectuer) ;</li>
+<li>D est un drapeau indiquant un résultat secondaire de la fonction (signe, erreur, etc.).
+Cette unité est composée de plusieurs registres dits registres de données et d’un registre spécial, appelé accumulateur. Tous les résultats d’une instruction manipulant des registres vont être écrits dans cet accumulateur. De la même manière, toute instruction va aller manipuler le contenu de cet accumulateur. À ces deux types de registres, s’ajoutent de nombreux circuits pour réaliser des opérations logiques, arithmétiques, des comparaisons, des opérations sur les déplacements en mémoire ainsi que des opérations sur des bits.</li>
+</ul>
+<h4 id="unite-de-controle">Unité de contrôle<a class="headerlink" href="#unite-de-controle" title="Permanent link">&num;</a></h4>
+<p>Cette unité joue le rôle de chef d’orchestre de l’ordinateur. C’est ce composant qui est chargé récupérer en mémoire la prochaine instruction à exécuter et les données sur lesquelles elle doit opérer puis les envoie à l’UAL.</p>
+<figure>
+<p><img alt="alu" src="../img/UC.png" width="200px" /></p>
+</figure>
+<h4 id="evolutions-et-limitations">Évolutions et limitations<a class="headerlink" href="#evolutions-et-limitations" title="Permanent link">&num;</a></h4>
+<p>Pendant des années, pour augmenter les performances des ordinateurs, les constructeurs augmentaient la fréquence d’horloge des microprocesseurs : la fréquence d’horloge d’un microprocesseur est liée à sa capacité d’exécuter un nombre plus ou moins important d’instructions machines par seconde. Plus la fréquence d’horloge du CPU est élevée, plus ce CPU est capable d’exécuter un grand nombre d’instructions machines par seconde (en fait, c’est un peu plus compliqué que cela, mais nous nous contenterons de cette explication).</p>
+<figure>
+<p><img alt="MOORE" src="../img/moore.png" width="600px" /></p>
+</figure>
+<p>Comme vous pouvez le remarquer sur le graphique ci-dessus, à partir de 2006 environ, la fréquence d’horloge a cessé d’augmenter, pourquoi ? À cause d’une contrainte physique : en effet plus on augmente la fréquence d’horloge d’un CPU, plus ce dernier chauffe. Il devenait difficile de refroidir le CPU, les constructeurs de microprocesseurs (principalement Intel et AMD) ont décidé d’arrêter la course à l’augmentation de la fréquence d’horloge, ils ont décidé d’adopter une nouvelle tactique.</p>
+<p>On pourrait se dire que l’augmentation du nombre de coeurs entraîne obligatoirement une augmentation des performances du CPU, en fait, c’est plus que complexe que cela : pour une application qui n’aura pas été conçue pour fonctionner avec un microprocesseur multicoeur, le gain de performance sera très faible, voir même nul. En effet, la conception d’applications capables de tirer profit d’un CPU multicoeur demande la mise en place de certaines techniques de programmation (techniques de programmation qui ne seront pas abordées ici). Il faut aussi avoir conscience que les différents coeurs d’un CPU doivent se "partager" l’accès à la mémoire vive : quand un coeur travaille sur une certaine zone de la RAM, cette même zone n’est
+pas accessible aux autres coeurs, ce qui, bien évidemment va brider les performances. De plus, on trouve à l’intérieur des microprocesseurs de la mémoire "ultrarapide" appelée mémoire cache (il ne faut pas confondre mémoire cache et registres). Le CPU peut stocker certaines données dans cette mémoire cache afin de pouvoir y accéder très rapidement dans le futur, en effet, l’accès à la mémoire cache est beaucoup plus rapide que l’accès à la RAM. La mémoire cache ayant un coup assez important, la quantité présente au sein d’un CPU est assez limitée, les différents coeurs vont donc devoir se partager cette mémoire cache, ce qui peut aussi provoquer des ralentissements (en faite il existe plusieurs types de mémoire cache appelés L1, L2 et L3, chaque coeur possède son propre cache L1, alors que les caches L2 et L3 sont partagés par les différents coeurs)</p>
+<h2 id="assembleur">Assembleur<a class="headerlink" href="#assembleur" title="Permanent link">&num;</a></h2>
+<h3 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&num;</a></h3>
+<p>Les programmes situées dans la mémoire d’un ordinateur sont constitués d’instructions de bas niveau, c’est-à-dire directement compréhensibles par le processeur. Il s’agit des instructions du langage machine.</p>
+<p>Lorsqu’elle sont stockées en mémoire, ces instructions ne sont ni plus ni moins que de simples nombres binaires, comme les données manipulées par les programmes.
+Pour progresser dans l’exécution d’un programme, l’unité de contrôle réalise de manière continue, à un rythme imposée par une horloge globale, la boucle suivante appelée cycle d’exécution d’une instruction qui est constituée de trois étapes :</p>
+<ul>
+<li>Chargement. L’unité de contrôle va récupérer l’instruction en mémoire.</li>
+<li>Décodage. L’instruction est décodée afin d’être exécutée. Cette étape peut nécessiter de lire d’autres
+mots binaires depuis la mémoire. C’est également à cette étapes que sont chargées les données (opérandes) sur lesquelles l’opération va porter.</li>
+<li>Exécution. L’instruction est exécutée, soit par l’ALU s’il s’agit d’une opération arithmétique ou logique, soit par l’unité de contrôle s’il s’agit d’une opération de branchement.</li>
+</ul>
+<p>Pour écrire des programmes directement en langage machine, il n’est pas raisonnable de manipuler des 0 et des 1. On utilise plutôt un autre langage appelé langage d’assemblage appelé aussi assembleur qui est le langage du plus bas niveau d’un ordinateur lisible par un humain.</p>
+<p>Ce langage fournit un certain nombre de facilités pour programmer comme des instructions qui sont spécifiques à un processeur.</p>
+<h3 id="le-simulateur">Le simulateur<a class="headerlink" href="#le-simulateur" title="Permanent link">&num;</a></h3>
+<p>On trouve en ligne le simulateur : <a href="https://www.peterhigginson.co.uk/AQA/?F5=27-Jan-25_22:39:50">http://www.peterhigginson.co.uk/AQA/</a>.</p>
+<p><strong>Remarque :</strong> ne pas l’ouvrir avec Firefox car dans ce navigateur, les instructions ne s’affichent pas correctement dans la RAM.</p>
+<p>Il se décompose ainsi :</p>
+<ul>
+<li>Une mémoire vive (à droite) dont chaque case mémoire (cellule) comporte 32 bits . Chaque cellule de
+la mémoire possède une adresse (de 000 à 199), ces adresses sont codées en base 10 ;</li>
+</ul>
+<figure>
+<p><img alt="SIMULATEUR" src="../img/simulateur.png" width="700px" /></p>
+</figure>
+<p>Remarque : vous pouvez vous en assurer en cliquant sur OPTION puis binary.</p>
+<ul>
+<li>Un éditeur (à gauche) pour taper le programme en assembleur ;</li>
+<li>Le processeur (au centre) constitué principalement de l’Unité de Contrôle, de l’Unité Arithmétique et Logique et des registres de R0 à R12 plus un compteur de programme (PC pour Program counter) qui contient en permanence l’adresse de la prochaine instruction à exécuter.</li>
+</ul>
+<h3 id="les-instructions">Les instructions<a class="headerlink" href="#les-instructions" title="Permanent link">&num;</a></h3>
+<p>Pour le processeur précédent, le jeu d’instruction AQA est le suivant :</p>
+<ul>
+<li>LDR Rd, <code>&lt;adresse mémoire&gt;</code>: charge la valeur enregistrée dans l’<code>&lt;adresse mémoire &gt;</code> dans le registe d ;</li>
+<li>STR Rd,<code>&lt;adresse mémoire&gt;</code> : enregistre la valeur du registre d dans la mémoire spécifiée par <code>&lt;adresse mémoire &gt;</code>;</li>
+<li>ADD Rd, Rn, <code>&lt;operand2&gt;</code> : ajoute la valeur spécifiée par <code>&lt;operand2&gt;</code> à la valeur du registre n et enregistre le résultat dans le registre d</li>
+<li>SUB Rd, Rn, <code>&lt;operand2&gt;</code> : soustrait la valeur de <code>&lt;operand2&gt;</code> à la valeur du registre n et enregistre le résultat dans le registre d</li>
+<li>MOV Rd, <code>&lt;operand2&gt;</code> : copie la valeur <code>&lt;operand2&gt;</code> dans le registre d</li>
+<li>CMP Rn, <code>&lt;operand2&gt;</code> : compare la valeur de registre n avec la valeur de <code>&lt;operand2&gt;</code></li>
+<li>B <code>&lt;label&gt;</code>: Branchement inconditionnel jusqu’à la positon <code>&lt;label&gt;</code> dans le programme.</li>
+<li>B<code>&lt;condition&gt;</code> <code>&lt;label&gt;</code> : branchement conditionnel vers la position <code>&lt;label&gt;</code> dans le programme si la dernière comparaison rempli le critère spécifié par <code>&lt;condition&gt;</code>. Les valeurs possibles sont : EQ :égal à ; NE : n’est pas égal à ; GT :Plus grand que ; LT : Moins grand que.</li>
+<li>AND Rd, Rn, <code>&lt;operand2&gt;</code> : effectue l’opération bit à bit logique AND (ET) entre la valeur du registre n et la valeur <code>&lt;operand2&gt;</code> et enregistre le résultat dans le registre d.</li>
+<li>ORR Rd, Rn, <code>&lt;operand2&gt;</code> : effectue l’opération bit à bit logique OR (OU) entre la valeur du
+registre n et la valeur <code>&lt;operand2&gt;</code>et enregistre le résultat dans le registre d.</li>
+<li>EOR Rd, Rn, <code>&lt;operand2&gt;</code> : effectue l’opération bit à bit logique XOR(OU exclusif) entre la valeur du registre n et la valeur <code>&lt;operand2&gt;</code>et enregistre le résultat dans le registre d.</li>
+<li>MVN Rd, <code>&lt;operand2&gt;</code>: effectue l’opération bit à bit logique NOT (NON) sur la valeur <code>&lt;operand2&gt;</code> et enregistre le résultat dans le registre d.</li>
+<li>LSL Rd, Rn, <code>&lt;operand2&gt;</code> : décale de <code>&lt;operand2&gt;</code> bit(s) vers la gauche la valeur du registre n et enregistre le résultat dans le registre d</li>
+<li>LSR Rd, Rn, &lt;<code>operand2&gt;</code> : décale de &lt;<code>operand2&gt;</code> bit(s) vers la droite la valeur du registre n et enregistre le résultat dans le registre d</li>
+<li>HALT : arrête l’exécution du programme.
+<code>&lt;operand2&gt;</code> peut être #n (c’est à dire un nombre, exemple #42) ou bien Rm (c’est à dire le registre m, par exemple R1 est le registre numéro 1)</li>
+</ul>
+<p>Les registres vont de R0 à R12.</p>
+<p>Compléments data, INP et OUT :</p>
+<ul>
+<li>la pseudo instruction DAT vous permet de mettre un nombre dans la mémoire en utilisant l’assembleur.</li>
+<li>Un label peut aussi être pris comme donnée. </li>
+<li>INP Rd,2 lis un nombre dans le registre d. </li>
+<li>OUT Rd,4 retourne en sortie le nombre du registre d Pour OUT, vous pouvez retourner des nombres signés (paramètre 4), des nombres non signés (paramètre 5), des hexadécimaux (paramètre 6) ou des charactères (paramètre 7). Vous pouvez entrer des hexa comme 0xnnn partout où un nombre est attendu</li>
+</ul>
+<h3 id="exemples-et-exercices">Exemples et exercices<a class="headerlink" href="#exemples-et-exercices" title="Permanent link">&num;</a></h3>
+<h4 id="exemple-1">Exemple 1<a class="headerlink" href="#exemple-1" title="Permanent link">&num;</a></h4>
+<table class="language-asm highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div class="language-asm highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nf">MOV</span><span class="w"> </span><span class="no">R0</span><span class="p">,</span><span class="mi">#42</span><span class="w"></span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nf">STR</span><span class="w"> </span><span class="no">R0</span><span class="p">,</span><span class="mi">150</span><span class="w"></span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nf">HALT</span><span class="w"></span>
+</span></code></pre></div>
+</td></tr></table>
+<p>Interprétation :</p>
+<ul>
+<li>On place dans le registre R0 du processeur la valeur 42 ;</li>
+<li>On place le contenu du registre R0 (à savoir 42) dans la mémoire vive à la place 150 ;</li>
+<li>On stoppe le programme</li>
+</ul>
+<p>Taper ce programme dans l’éditeur du simulateur, et le faire fonctionner. Observer.</p>
+<h4 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">&num;</a></h4>
+<table class="language-asm highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div class="language-asm highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">// Programme de l’exercice 3</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nf">MOV</span><span class="w"> </span><span class="no">R0</span><span class="p">,</span><span class="mi">#42</span><span class="w"></span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="nf">MOV</span><span class="w"> </span><span class="no">R1</span><span class="p">,</span><span class="mi">#45</span><span class="w"></span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="nf">ADD</span><span class="w"> </span><span class="no">R0</span><span class="p">,</span><span class="no">R0</span><span class="p">,</span><span class="no">R1</span><span class="w"></span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nf">OUT</span><span class="w"> </span><span class="no">R0</span><span class="p">,</span><span class="mi">4</span><span class="w"></span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="nf">HALT</span><span class="w"></span>
+</span></code></pre></div>
+</td></tr></table>
+<div class="admonition example">
+<p class="admonition-title">Exercice 3 :</p>
+<p>À l’aide des instructions décrites dans le chapitre précédent, dites ce que fait ce programme ligne par ligne, puis l’exécuter. Vérifier ce que vous aviez trouvé.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 4 :</p>
+<p>Écrire un programme qui effectue une soustraction entre 95 et 52, l’enregistre en mémoire (à la place 143) et qui affiche le résultat dans la console Output. Le taper et l’exécuter.</p>
+</div>
+<h4 id="exemple-2">Exemple 2<a class="headerlink" href="#exemple-2" title="Permanent link">&num;</a></h4>
+<p>Cet exemple s’affiche quand on clique sur SELECT puis max dans le simulateur.</p>
+<table class="language-asm highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div class="language-asm highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nf">INP</span><span class="w"> </span><span class="no">R0</span><span class="p">,</span><span class="mi">2</span><span class="w"></span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nf">INP</span><span class="w"> </span><span class="no">R1</span><span class="p">,</span><span class="mi">2</span><span class="w"></span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="nf">CMP</span><span class="w"> </span><span class="no">R1</span><span class="p">,</span><span class="no">R0</span><span class="w"></span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="nf">BGT</span><span class="w"> </span><span class="no">HIGHER</span><span class="w"></span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="nf">OUT</span><span class="w"> </span><span class="no">R0</span><span class="p">,</span><span class="mi">4</span><span class="w"></span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="nf">B</span><span class="w"> </span><span class="no">DONE</span><span class="w"></span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="nl">HIGHER:</span><span class="w"></span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="nf">OUT</span><span class="w"> </span><span class="no">R1</span><span class="p">,</span><span class="mi">4</span><span class="w"></span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="nl">DONE:</span><span class="w"></span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="nf">HALT</span><span class="w"></span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="c1">// Input two numbers and output the higher</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>Interprétation :</p>
+<ul>
+<li>On place deux nombres dans les registres R0 et R1 grâce à la fonction INP ;</li>
+<li>On compare le contenu du registre R1 au contenu du registre R0 ;</li>
+<li>Si le contenu de R1 est plus grand que celui de R0, on effectue un branchement jusqu’au label HIGHER et on affiche le contenu de R1 ;</li>
+<li>Sinon, on affiche le contenu de R0 ;</li>
+<li>On effectue le branchement conditionnel vers done qui stoppe le programme.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exercice 5 :</p>
+<p>Réaliser un programme qui prend deux nombres et qui retourne le plus petit.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 6 :</p>
+<p>Traduire le programme python ci-dessous en assembleur.</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">x</span><span class="o">=</span><span class="mi">0</span>    
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">while</span> <span class="n">x</span><span class="o">&lt;</span><span class="mi">3</span><span class="p">:</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>    <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span></code></pre></div>
+</td></tr></table>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 7</p>
+<p>Traduire le programme python ci-dessous en assembleur.</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</span></code></pre></div>
+</td></tr></table>
+</div>
+<h2 id="ressources">Ressources<a class="headerlink" href="#ressources" title="Permanent link">&num;</a></h2>
+<figure>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/c9pL_3tTW2c?si=VnWHW4xbtuyX6r66" title="YouTube video player" width="560"></iframe>
+</figure>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../IHM/js/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Javascript" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Javascript
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../OS/" class="md-footer__link md-footer__link--next" aria-label="Next: OS" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              OS
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8aa65030.min.js"></script>
+      
+        <script src="../../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
