@@ -118,4 +118,7 @@ nav:
       - Algorithmes :
         - Algorithmes : Terminale/Algo.md
     - 'Logiciels':
+      - liste des logiciels : Logiciels/liste_logiciels.md
       - git : Logiciels/git_github.md
+      - vcode_web : Logiciels/insta_vscode_html.md
+      - vcode_python : Logiciels/insta_vscode_python.md
