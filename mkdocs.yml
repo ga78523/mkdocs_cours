@@ -94,7 +94,9 @@ nav:
         - Gloutons : Premiere/Algorithmique/algo_gloutons.md
         - kppv : Premiere/Algorithmique/kppv.md
     - 'Terminale':
+      - Outils Python : Terminale/outils_python.md
       - Programmation :
+        - Récursivité : Terminale/Programmation/cours_recursivite.md
         - Calculabilité, décidabilité : Terminale/Programmation/decidabilite.md
         - Sécurisation des données : Terminale/Programmation/crypto.md
         - Arbres algos : Terminale/Programmation/algos_arbre.md
@@ -122,3 +124,4 @@ nav:
       - git : Logiciels/git_github.md
       - vcode_web : Logiciels/insta_vscode_html.md
       - vcode_python : Logiciels/insta_vscode_python.md
+      - thonny : Logiciels/thonny_tutorial.md

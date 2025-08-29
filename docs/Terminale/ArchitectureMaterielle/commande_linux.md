@@ -6,7 +6,7 @@
 
 En informatique, les contenus sont généralement stockés dans des fichiers.
 
-Comme ceux-ci sont vite très nombreux, pour s'y retrouver on a conçu les systèmes de fichiers comme des arborescences : les fichiers sont stockés dans des répertoires), et en plus des fichiers chacun de ces répertoires peut lui-même contenir plusieurs autres répertoires.
+Comme ceux-ci sont vite très nombreux, pour s'y retrouver on a conçu les systèmes de fichiers comme des arborescences : les fichiers sont stockés dans des répertoires, et en plus des fichiers chacun de ces répertoires peut lui-même contenir plusieurs autres répertoires.
 
 La référence à une ressource (fichier ou répertoire) s'appelle un chemin d'accès (en anglais : path). Dans ce chemin, sous Linux, les noms des répertoires et éventuel fichier sont séparés par un slash / (alors qu'on utilise un antislash \ sous Windows).
 
