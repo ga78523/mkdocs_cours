@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://example.com/Terminale/Struct_donnees/graphe/">
+        <link rel="canonical" href="https://example.com/Terminale/Programmation/cours_recursivite/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
     
     
       
-        <title>Graphes - Site de cours</title>
+        <title>Récursivité - Site de cours</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#les-graphes" class="md-skip">
+        <a href="#recursivite" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Graphes
+              Récursivité
             
           </span>
         </div>
@@ -823,12 +823,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" checked>
       
       
       
@@ -849,11 +851,133 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Programmation/cours_recursivite/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Récursivité
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Récursivité
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contexte-la-somme-des-premiers-entiers" class="md-nav__link">
+    Contexte : la somme des premiers entiers
+  </a>
+  
+    <nav class="md-nav" aria-label="Contexte : la somme des premiers entiers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice-1" class="md-nav__link">
+    Exercice 1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursivite_1" class="md-nav__link">
+    Récursivité
+  </a>
+  
+    <nav class="md-nav" aria-label="Récursivité">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    Définition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonctionnement-dune-fonction-recursive" class="md-nav__link">
+    Fonctionnement d'une fonction récursive
+  </a>
+  
+    <nav class="md-nav" aria-label="Fonctionnement d'une fonction récursive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#autre-representation-sous-forme-de-pile-dexecution" class="md-nav__link">
+    Autre Représentation : sous forme de pile d'exécution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursivite-ou-iterativite" class="md-nav__link">
+    Récursivité ou itérativité ?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursivite-croisee" class="md-nav__link">
+    Récursivité croisée
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursivite-multiple" class="md-nav__link">
+    Récursivité multiple
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    Exercices
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -865,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Programmation/decidabilite/" class="md-nav__link">
+      <a href="../decidabilite/" class="md-nav__link">
         Calculabilité, décidabilité
       </a>
     </li>
@@ -879,7 +1003,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Programmation/crypto/" class="md-nav__link">
+      <a href="../crypto/" class="md-nav__link">
         Sécurisation des données
       </a>
     </li>
@@ -893,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Programmation/algos_arbre/" class="md-nav__link">
+      <a href="../algos_arbre/" class="md-nav__link">
         Arbres algos
       </a>
     </li>
@@ -907,7 +1031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Programmation/graphes/" class="md-nav__link">
+      <a href="../graphes/" class="md-nav__link">
         Graphes algos
       </a>
     </li>
@@ -921,7 +1045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Programmation/recherche_textuelle/" class="md-nav__link">
+      <a href="../recherche_textuelle/" class="md-nav__link">
         Recherche textuelle
       </a>
     </li>
@@ -935,7 +1059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Programmation/diviser_regner/" class="md-nav__link">
+      <a href="../diviser_regner/" class="md-nav__link">
         Diviser pour régner
       </a>
     </li>
@@ -949,7 +1073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Programmation/prog_dynamique/" class="md-nav__link">
+      <a href="../prog_dynamique/" class="md-nav__link">
         Programmation dynamique
       </a>
     </li>
@@ -963,7 +1087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Programmation/dijkstra/" class="md-nav__link">
+      <a href="../dijkstra/" class="md-nav__link">
         Plus court chemin
       </a>
     </li>
@@ -977,7 +1101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Programmation/API/" class="md-nav__link">
+      <a href="../API/" class="md-nav__link">
         Modularité
       </a>
     </li>
@@ -996,14 +1120,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
       
       
       
@@ -1024,235 +1146,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Graphes
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Struct_donnees/graphe/" class="md-nav__link">
         Graphes
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graphe-non-orientes" class="md-nav__link">
-    Graphe non-orientés
-  </a>
-  
-    <nav class="md-nav" aria-label="Graphe non-orientés">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#un-premier-exemple" class="md-nav__link">
-    Un premier exemple
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vocabulaire-des-graphes-non-orientes" class="md-nav__link">
-    Vocabulaire des graphes non-orientés
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#les-graphes-orientes" class="md-nav__link">
-    Les graphes orientés
-  </a>
-  
-    <nav class="md-nav" aria-label="Les graphes orientés">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#un-premier-exemple_1" class="md-nav__link">
-    Un premier exemple
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vocabulaire" class="md-nav__link">
-    Vocabulaire
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#les-graphes-ponderes" class="md-nav__link">
-    Les graphes pondérés
-  </a>
-  
-    <nav class="md-nav" aria-label="Les graphes pondérés">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exemple" class="md-nav__link">
-    Exemple
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implementation-dun-graphe-a-laide-dune-matrice-dadjacence" class="md-nav__link">
-    Implémentation d’un graphe à l’aide d’une matrice d’adjacence
-  </a>
-  
-    <nav class="md-nav" aria-label="Implémentation d’un graphe à l’aide d’une matrice d’adjacence">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#definition-dune-matrice" class="md-nav__link">
-    Définition d’une matrice
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exemple_1" class="md-nav__link">
-    Exemple
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#comment-construire-une-matrice-dadjacence" class="md-nav__link">
-    Comment construire une matrice d’adjacence ?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#matrice-dadjacence-pour-un-graphe-oriente" class="md-nav__link">
-    Matrice d’adjacence pour un graphe orienté
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#matrice-dadjacence-dun-graphe-pondere" class="md-nav__link">
-    Matrice d’adjacence d’un graphe pondéré
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#les-listes-dadjacences" class="md-nav__link">
-    Les listes d’adjacences
-  </a>
-  
-    <nav class="md-nav" aria-label="Les listes d’adjacences">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pour-les-graphes-non-orientes" class="md-nav__link">
-    Pour les graphes non-orientés
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pour-les-graphes-orientes" class="md-nav__link">
-    Pour les graphes orientés
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercices" class="md-nav__link">
-    Exercices
-  </a>
-  
-    <nav class="md-nav" aria-label="Exercices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exercice-1" class="md-nav__link">
-    Exercice 1 :
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercice-2" class="md-nav__link">
-    Exercice 2 :
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercice-3" class="md-nav__link">
-    Exercice 3 :
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1613,30 +1511,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
+  <a href="#contexte-la-somme-des-premiers-entiers" class="md-nav__link">
+    Contexte : la somme des premiers entiers
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graphe-non-orientes" class="md-nav__link">
-    Graphe non-orientés
-  </a>
-  
-    <nav class="md-nav" aria-label="Graphe non-orientés">
+    <nav class="md-nav" aria-label="Contexte : la somme des premiers entiers">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#un-premier-exemple" class="md-nav__link">
-    Un premier exemple
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vocabulaire-des-graphes-non-orientes" class="md-nav__link">
-    Vocabulaire des graphes non-orientés
+  <a href="#exercice-1" class="md-nav__link">
+    Exercice 1
   </a>
   
 </li>
@@ -1647,23 +1531,31 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#les-graphes-orientes" class="md-nav__link">
-    Les graphes orientés
+  <a href="#recursivite_1" class="md-nav__link">
+    Récursivité
   </a>
   
-    <nav class="md-nav" aria-label="Les graphes orientés">
+    <nav class="md-nav" aria-label="Récursivité">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#un-premier-exemple_1" class="md-nav__link">
-    Un premier exemple
+  <a href="#definition" class="md-nav__link">
+    Définition
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#vocabulaire" class="md-nav__link">
-    Vocabulaire
+  <a href="#fonctionnement-dune-fonction-recursive" class="md-nav__link">
+    Fonctionnement d'une fonction récursive
+  </a>
+  
+    <nav class="md-nav" aria-label="Fonctionnement d'une fonction récursive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#autre-representation-sous-forme-de-pile-dexecution" class="md-nav__link">
+    Autre Représentation : sous forme de pile d'exécution
   </a>
   
 </li>
@@ -1672,93 +1564,24 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#les-graphes-ponderes" class="md-nav__link">
-    Les graphes pondérés
-  </a>
-  
-    <nav class="md-nav" aria-label="Les graphes pondérés">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#exemple" class="md-nav__link">
-    Exemple
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#implementation-dun-graphe-a-laide-dune-matrice-dadjacence" class="md-nav__link">
-    Implémentation d’un graphe à l’aide d’une matrice d’adjacence
-  </a>
-  
-    <nav class="md-nav" aria-label="Implémentation d’un graphe à l’aide d’une matrice d’adjacence">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#definition-dune-matrice" class="md-nav__link">
-    Définition d’une matrice
+  <a href="#recursivite-ou-iterativite" class="md-nav__link">
+    Récursivité ou itérativité ?
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exemple_1" class="md-nav__link">
-    Exemple
+  <a href="#recursivite-croisee" class="md-nav__link">
+    Récursivité croisée
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#comment-construire-une-matrice-dadjacence" class="md-nav__link">
-    Comment construire une matrice d’adjacence ?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#matrice-dadjacence-pour-un-graphe-oriente" class="md-nav__link">
-    Matrice d’adjacence pour un graphe orienté
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#matrice-dadjacence-dun-graphe-pondere" class="md-nav__link">
-    Matrice d’adjacence d’un graphe pondéré
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#les-listes-dadjacences" class="md-nav__link">
-    Les listes d’adjacences
-  </a>
-  
-    <nav class="md-nav" aria-label="Les listes d’adjacences">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pour-les-graphes-non-orientes" class="md-nav__link">
-    Pour les graphes non-orientés
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pour-les-graphes-orientes" class="md-nav__link">
-    Pour les graphes orientés
+  <a href="#recursivite-multiple" class="md-nav__link">
+    Récursivité multiple
   </a>
   
 </li>
@@ -1772,33 +1595,6 @@
   <a href="#exercices" class="md-nav__link">
     Exercices
   </a>
-  
-    <nav class="md-nav" aria-label="Exercices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exercice-1" class="md-nav__link">
-    Exercice 1 :
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercice-2" class="md-nav__link">
-    Exercice 2 :
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercice-3" class="md-nav__link">
-    Exercice 3 :
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1816,305 +1612,250 @@
                 
 
 
-<h1 id="les-graphes">Les Graphes<a class="headerlink" href="#les-graphes" title="Permanent link">&num;</a></h1>
-<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&num;</a></h2>
-<p>Au milieu du XXème siècle, le physicien hongrois Eugène Wigner parle de "la déraisonnable efficacité des mathématiques dans les sciences de la nature". La modélisation mathématique facilite la compréhension d’un problème car elle détermine un seul vocabulaire formel pour différentes situations, et elle permet de trouver une méthode de résolution automatique via un programme informatique.</p>
-<p>Le modèle mathématique que nous allons voir dans ce chapitre est le graphe.
-On utilise les graphes dans de nombreuses situations :</p>
-<ul>
-<li>les réseaux de communication ( internet, téléphonie) ;</li>
-<li>les réseaux sociaux ;</li>
-<li>les circuits électriques ;</li>
-<li>les bases de données relationnelles ;</li>
-<li>le codage ;</li>
-<li>la hiérarchie des fichiers informatiques ;</li>
-<li>la représentation des molécules ;</li>
-<li>en biologie pour la représentation de la séquence ARN.</li>
-</ul>
-<h2 id="graphe-non-orientes">Graphe non-orientés<a class="headerlink" href="#graphe-non-orientes" title="Permanent link">&num;</a></h2>
-<h3 id="un-premier-exemple">Un premier exemple<a class="headerlink" href="#un-premier-exemple" title="Permanent link">&num;</a></h3>
-<p>Imaginez un réseau social ayant 6 abonnés : Jules, Simon, Arthur, Jean, Lucien, et Maxime où :</p>
-<ul>
-<li>Jules est ami avec Simon, Arthur et Jean</li>
-<li>Simon est ami avec Jules et Jean</li>
-<li>Arthur est ami avec Jules, Lucien et Jean</li>
-<li>Jean est ami avec tous les autres abonnés</li>
-<li>Lucien est ami avec Arthur, Jean et Maxime</li>
-<li>Maxime est ami avec Lucien et Jean</li>
-</ul>
-<p>La description de ce réseau social, malgré son faible nombre d’abonnés, est déjà quelque peu rébarbative, alors imaginez cette même description avec un réseau social comportant des millions d’abonnés !</p>
-<p>Il existe un moyen plus "visuel" pour représenter ce réseau social : on peut représenter chaque abonné par un cercle (avec le nom de l’abonné situé dans le cercle) et chaque relation "X est ami avec Y" par un segment de droite reliant X et Y ("X est ami avec Y" et "Y est ami avec X" étant représenté par le même
-segment de droite).</p>
-<p>En modélisant ces prénoms par A,B,C,D,E et F, on obtient avec le réseau social décrit ci-dessus :</p>
-<figure>
-<p><img alt="graphe1" src="../data/graphe1.png" width="200px" /></p>
-</figure>
-<p>Ce genre de figure s’appelle un graphe non orientés. Les graphes sont des objets mathématiques très utilisés, notamment en informatique. Les cercles sont appelés des sommets et les segments de droites qui
-relient 2 sommets des arêtes.
-Plus formellement on dira qu’un graphe G est un couple G = (V, E) avec V un ensemble de sommets et
-E un ensemble d’arêtes</p>
+<h1 id="recursivite">Récursivité<a class="headerlink" href="#recursivite" title="Permanent link">&num;</a></h1>
+<h2 id="contexte-la-somme-des-premiers-entiers">Contexte : la somme des premiers entiers<a class="headerlink" href="#contexte-la-somme-des-premiers-entiers" title="Permanent link">&num;</a></h2>
+<p>Pour définir la somme des n premiers entiers, on a l'habitude d'écrire la formule suivante :</p>
+<div class="arithmatex">\[0 + 1 + 2 + 3 + ... + n\]</div>
+<p>Cette formulation peut nous apparaître simple et intuitive.</p>
+<h3 id="exercice-1">Exercice 1<a class="headerlink" href="#exercice-1" title="Permanent link">&num;</a></h3>
 <div class="admonition example">
-<p class="admonition-title">Exercice 1 :</p>
-<p>Construisez un graphe de réseau social à partir des informations suivantes :</p>
-<ul>
-<li>A est ami avec B et E</li>
-<li>B est ami avec A et C</li>
-<li>C est ami avec B,F et D</li>
-<li>D est ami avec C,F et E</li>
-<li>E est ami avec A,D et F</li>
-<li>F est ami avec C, D et E</li>
-</ul>
+<p class="admonition-title">Exercice 1</p>
+<p>Écrire une fonction <code>somme(n)</code> qui retourne la somme des <span class="arithmatex">\(n\)</span> premiers entiers.</p>
 </div>
-<h3 id="vocabulaire-des-graphes-non-orientes">Vocabulaire des graphes non-orientés<a class="headerlink" href="#vocabulaire-des-graphes-non-orientes" title="Permanent link">&num;</a></h3>
-<ul>
-<li>On note x-y l’arête (x-y) dans un graphe non orienté où x et y sont les deux extrémités.</li>
-<li>Deux arêtes d’un graphe sont dites adjacentes si elles ont au moins un sommet en commun.</li>
-<li>deux sommets d’un graphe non-orienté sont dits adjacents s’il existe une arête les joignants.</li>
-<li>dans un graphe non-orienté, on appelle degré d’un sommet x le nombre d’arête dont x est une
-extrémité.</li>
-<li>dans un graphe non-orienté, on appelle chaîne toute suite de sommets consécutifs reliés par des arêtes.</li>
-<li>une chaîne est dite élémentaire si elle ne comporte pas plusieurs fois le même sommet.</li>
-<li>une chaîne dont le sommet de début est le même que le sommet de fin est appelé cycle.</li>
-<li>un graphe non-orienté est dit connexe lorsqu’il existe une chaîne pour toute paire de sommet.</li>
-</ul>
-<figure>
-<p><img alt="graphe1" src="../data/graphe2.png" width="600px" /></p>
-</figure>
-<h2 id="les-graphes-orientes">Les graphes orientés<a class="headerlink" href="#les-graphes-orientes" title="Permanent link">&num;</a></h2>
-<h3 id="un-premier-exemple_1">Un premier exemple<a class="headerlink" href="#un-premier-exemple_1" title="Permanent link">&num;</a></h3>
-<p>Les logiciels de cartographie permettant, connaissant votre position grâce à un récepteur GPS, d’indiquer la route à suivre pour se rendre à endroit B. Comment modéliser l’ensemble des lieux et des routes ?
-Simplement à l’aide d’un graphe !</p>
-<p>Chaque lieu est un sommet et les routes qui relient les lieux entre eux
-sont des arêtes.</p>
-<p>Soit les lieux suivants : A, B, C, D, E, F et G.</p>
-<p>Les différents lieux sont reliés par les routes suivantes :</p>
-<ul>
-<li>il existe une route entre A et C ;</li>
-<li>il existe une route entre A et B ;</li>
-<li>il existe une route entre A et D ;</li>
-<li>il existe une route entre B et F ;</li>
-<li>il existe une route entre B et E ;</li>
-<li>il existe une route entre B et G ;</li>
-<li>il existe une route entre D et G ;</li>
-<li>il existe une route entre E et F.</li>
-</ul>
-<p>Ici aussi, la représentation sous forme de graphe s’impose :</p>
-<figure>
-<p><img alt="graphe1" src="../data/graphe3.png" width="300px" /></p>
-</figure>
-<p><strong>Problème :</strong> avec cette représentation du réseau routier sous forme de graphe, il est impossible de tenir compte des routes en sens unique (par exemple il est possible d’aller de A vers D mais pas de D vers A)</p>
-<p>Voici de nouvelles contraintes :</p>
-<ul>
-<li>il existe une route entre A et C (double sens) ;</li>
-<li>il existe une route entre A et B (sens unique B-&gt;A) ;</li>
-<li>il existe une route entre A et D (sens unique A-&gt;D) ;</li>
-<li>il existe une route entre B et F (sens unique B-&gt;F) ;</li>
-<li>il existe une route entre B et E (sens unique E-&gt;B) ;</li>
-<li>il existe une route entre B et G (double sens) ;</li>
-<li>il existe une route entre D et G (double sens) ;</li>
-<li>il existe une route entre E et F (double).</li>
-</ul>
-<p>Pour tenir compte de ces nouvelles contraintes, on utilisera un graphe orienté :</p>
-<figure>
-<p><img alt="graphe1" src="../data/graphe4.png" width="300px" /></p>
-</figure>
-<p>Dans un graphe orienté, les arêtes possèdent une orientation. Ces "arêtes orientées" sont souvent appelées "arcs". On dira qu’un graphe orienté G est un couple G = (V,A) avec V un ensemble de sommets et A un
-ensemble d’arcs.</p>
-<h3 id="vocabulaire">Vocabulaire<a class="headerlink" href="#vocabulaire" title="Permanent link">&num;</a></h3>
-<ul>
-<li>On note x→ y l’arc (x,y) dans un graph orienté où x est son extrémité initiale et y son extrémité
-finale. y est le successeur de x et x est le prédécesseur de y.</li>
-<li>deux arcs d’un graphe sont adjacents s’ils possèdent au moins une extrémité commune ;</li>
-<li>Deux sommets d’un graphe orienté sont dits adjacents s’il existe un arc les joignant.</li>
-<li>Dans un graphe orienté, on appelle degré d’un sommet x le nombre d’arcs dont x est une extrémité.</li>
-<li>Dans un graphe orienté, on appelle chemin toute suite de sommet consécutifs relié par des arcs.</li>
-<li>Un chemin est dit éléméntaire s’il ne comporte pas plusieurs fois le même sommet.</li>
-<li>Un chemin dont le somme de début est le même que le sommet de fin est appelé circuit.</li>
-</ul>
-<h2 id="les-graphes-ponderes">Les graphes pondérés<a class="headerlink" href="#les-graphes-ponderes" title="Permanent link">&num;</a></h2>
-<h3 id="exemple">Exemple<a class="headerlink" href="#exemple" title="Permanent link">&num;</a></h3>
-<p>Parfois il est intéressant d’associer aux arrêtes ou aux arcs des valeurs, on parle alors de graphes pondérés.</p>
-<p>Si nous revenons à notre "graphe cartographie", il est possible d’associer à chaque arête la distance en Km entre les 2 lieux</p>
-<figure>
-<p><img alt="graphe1" src="../data/graphe5.png" width="300px" /></p>
-</figure>
-<p>Il est aussi possible d’associer à chaque arête la durée du trajet entre 2 points :</p>
-<figure>
-<p><img alt="graphe1" src="../data/graphe6.png" width="300px" /></p>
-</figure>
-<p>En fonction du choix fait par le conducteur (trajet le plus court "en distance" ou trajet le plus court "en temps"), l’algorithme permettant de déterminer le "chemin le plus court entre 2 points" travaillera sur le graphe "graphe pondéré (Km)cartographie" ou sur le graphe "graphe pondéré (minutes) cartographie". À noter que le "graphe pondéré (minutes) cartographie" peut évoluer au cours du temps en fonction du trafic routier : une application comme Waze utilise les données en en provenance des utilisateurs de l’application afin de mettre à jour en temps réél leur "graphe pondéré (minutes) cartographie".</p>
-<p>Un graphe est pondéré (ou valué) si on attribue à chaque arête une valeur numérique (la plupart du temps positive), qu'on appelle mesure, poids, coût ou valuation.</p>
-<h2 id="implementation-dun-graphe-a-laide-dune-matrice-dadjacence">Implémentation d’un graphe à l’aide d’une matrice d’adjacence<a class="headerlink" href="#implementation-dun-graphe-a-laide-dune-matrice-dadjacence" title="Permanent link">&num;</a></h2>
-<p>Il existe deux méthodes permettant d’implémenter un graphe : les matrices d’adjacences et les listes
-d’adjacences.</p>
-<h3 id="definition-dune-matrice">Définition d’une matrice<a class="headerlink" href="#definition-dune-matrice" title="Permanent link">&num;</a></h3>
-<p>Une matrice est un tableau à double entrée. Exemple, la matrice A ci-dessous.</p>
-<div class="arithmatex">\[
-A =
-\begin{pmatrix}
-  1  &amp; 2   &amp; 3   &amp; 8  &amp; 10  \\
-  4  &amp; 5   &amp; 6   &amp; 6  &amp; 9  \\
-  7  &amp; 8  &amp; 9  &amp; 6  &amp; 5 \\
-\end{pmatrix}
+<p>Or ce code n'est pas directement lié à la formule précédente. En effet, il n'y a rien dans cette formule qui laisse penser qu'il faille une variable intermédiaire pour calculer cette somme.</p>
+<p>C'est pourquoi, nous allons formuler autrement cette fonction :</p>
+<div class="arithmatex">\[somme(n)= \left \{
+   \begin{array}{l l l}
+      0  &amp; si &amp;n=0 \\
+     n+somme(n-1)   &amp; si &amp; n&gt;0 
+   \end{array}
+   \right .
 \]</div>
-<p>La matrice A ci-dessus est constitué de 3 lignes et 5 colonnes. On appelle matrice carrée une matrice qui
-comporte le même nombre de lignes et de colonnes. Les matrices d’adjacences sont des matrices carrées.</p>
-<h3 id="exemple_1">Exemple<a class="headerlink" href="#exemple_1" title="Permanent link">&num;</a></h3>
-<figure>
-<p><img alt="graphe1" src="../data/graphe8.png" width="200px" /></p>
-</figure>
-<p>Voici la matrice d’adjacence de ce graphe :</p>
-<div class="arithmatex">\[
-A =
-\begin{pmatrix}
-0 &amp; 1 &amp; 1 &amp; 1  &amp; 0 &amp; 0 &amp; 0  \\
-1 &amp; 0 &amp; 0 &amp; 0  &amp; 0 &amp; 0 &amp; 0  \\
-1 &amp; 0 &amp; 0 &amp; 0  &amp; 0 &amp; 0 &amp; 0  \\ 
-1 &amp; 0 &amp; 0 &amp; 0  &amp; 0 &amp; 0 &amp; 1 \\
-0 &amp; 1 &amp; 0 &amp; 0  &amp; 1 &amp; 0 &amp; 0 \\
-0 &amp; 1 &amp; 0 &amp;1  &amp; 0 &amp; 0 &amp; 0  \\
-\end{pmatrix}
-\]</div>
-<h3 id="comment-construire-une-matrice-dadjacence">Comment construire une matrice d’adjacence ?<a class="headerlink" href="#comment-construire-une-matrice-dadjacence" title="Permanent link">&num;</a></h3>
-<figure>
-<p><img alt="graphe1" src="../data/graphe9.png" width="200px" /></p>
-</figure>
-<p>Il faut savoir qu’à chaque ligne correspond un sommet du graphe et qu’à chaque colonne correspond aussi
-un sommet du graphe. À chaque intersection ligne i-colonne j (ligne i correspond au sommet i et colonne j
-correspond au sommet j), on place un 1 s’il existe une arête entre le sommet i et le sommet j, et un zéro s’il n’existe pas d’arête entre le sommet i et le sommet j.</p>
+<p>Cette formulation récursive nous indique ce que vaut <code>somme(n)</code> pour un entier n quelconque, selon que n soit égal à 0 ou strictement positif. Ainsi, pour le cas où <span class="arithmatex">\(n = 0\)</span>, la valeur de <code>somme(n)</code> vaut 0, et dans le cas où n est strictement positif, la valeur de <code>somme(n)</code> est <code>n + somme(n - 1)</code>.</p>
+<p>Par exemple, voici ci-dessous les valeurs de <code>somme(n)</code>, pour n valant 0, 1, 2 et 3 :</p>
 <ul>
-<li>Il existe une arête entre le sommet E et le sommet F, nous avons donc placé un 1 à l’intersection de
-la ligne E et de la colonne F (il en est de même à l’intersection de la ligne F et de la colonne E)</li>
-<li>Il n’existe pas d’arête entre le sommet D et le sommet C, nous avons donc placé un 0 à l’intersection
-de la ligne D et de la colonne C (il en est de même à l’intersection de la ligne C et de la colonne D)</li>
+<li><code>somme(0) = 0</code></li>
+<li><code>somme(1) = 1 + somme(0) = 1 + 0 = 1</code></li>
+<li><code>somme(2) = 2 + somme(1) = 2 + 1 = 3</code></li>
 </ul>
+<p>L'intérêt de cette formulation est qu'elle est directement programmable. En Python, cela donne le programme suivant :</p>
+<div class="language-python highlight"><span class="filename">Version récursive de la fonction somme</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span> <span class="nf">somme</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="k">return</span> <span class="mi">0</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="k">return</span> <span class="n">n</span> <span class="o">+</span> <span class="n">somme</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="recursivite_1">Récursivité<a class="headerlink" href="#recursivite_1" title="Permanent link">&num;</a></h2>
+<h3 id="definition">Définition<a class="headerlink" href="#definition" title="Permanent link">&num;</a></h3>
+<p><strong>On dit qu'un sous-programme (procédure ou fonction) est récursif s'il s'appelle lui-même.</strong></p>
+<p>Il est indispensable de prévoir une condition d'arrêt à la récursion sinon la fonction va s'appeler une infinité de fois. Dans la pratique, la pile qui stocke les appels récursifs est de taille finie. Une fois qu'elle est pleine, le programme ne répondra plus.</p>
 <div class="admonition example">
-<p class="admonition-title">Exercice 2 :</p>
-<p>Vérifiez que la matrice d’adjacence proposée ci-dessus correspond bien au graphe "cartographie".</p>
+<p class="admonition-title">Exercice 2</p>
+<p>Donner une définition récursive qui correspond au calcul de la fonction factorielle <code>n!</code> définie par <code>n! = 1×2×3×...×n</code> si <code>n &gt; 0</code> et <code>0! = 1</code>. Écrire également le code d'une fonction <code>facto</code> qui implémente cette définition. Écrire également la version itérative.</p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exercice 3 :</p>
-<p>Établissez la matrice d’adjacence du graphe ci-dessous.</p>
+<p class="admonition-title">Exercice 3</p>
+<p>Écrire une fonction récursive <code>boucle(i,k)</code> qui affiche les entiers entre <code>i</code> et <code>k</code>. Par exemple, <code>boucle(0,3)</code> affiche 0,1,2,3. Pour les plus rapides, écrire la version itérative.</p>
 </div>
-<figure>
-<p><img alt="graphe1" src="../data/graphe10.png" width="200px" /></p>
-</figure>
-<h3 id="matrice-dadjacence-pour-un-graphe-oriente">Matrice d’adjacence pour un graphe orienté<a class="headerlink" href="#matrice-dadjacence-pour-un-graphe-oriente" title="Permanent link">&num;</a></h3>
-<p>Le principe reste le même : si le sommet i (ligne) est lié au sommet j (colonne), nous avons un 1 à
-l’intersection (0 dans le cas contraire).</p>
-<p><strong>Exemple :</strong></p>
-<figure>
-<p><img alt="graphe1" src="../data/graphe11.png" width="300px" /></p>
-</figure>
-<p>La matrice d'adjacence est :</p>
-<div class="arithmatex">\[
-A =
-\begin{pmatrix}
-0 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0  \\
-1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 1  \\
-1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0  \\ 
-0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
-0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
-0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0  \\
-0 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0  \\
-\end{pmatrix}
+<div class="admonition example">
+<p class="admonition-title">Exercice 4</p>
+<p>La méthode du paysan russe est un très vieil algorithme de multiplication de deux nombres entiers déjà décrit, sous forme légèrement différente, sur un papyrus égyptien rédigé autour de 1650 avant J.C. Il s'agissait de la principale méthode de calcul en Europe avant l'introduction des chiffres arabes.
+Les ordinateurs l'ont utilisé avant que la multiplication ne soit directement intégrée dans le processeur. Sous une forme moderne, il peut être décrit par le programme donné dans l'algorithme ci-dessous.</p>
+<p><table class="language-py highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Pseudo-code de la fonction itérative</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">Fonction</span> <span class="n">multiplication</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="n">p</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="n">TANT</span> <span class="n">QUE</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>        <span class="n">Si</span> <span class="n">x</span> <span class="n">est</span> <span class="n">impair</span><span class="p">:</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>            <span class="n">p</span> <span class="o">=</span> <span class="n">p</span> <span class="o">+</span> <span class="n">y</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">//</span> <span class="mi">2</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>        <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">y</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>    <span class="n">Retourner</span> <span class="n">p</span>
+</span></code></pre></div>
+</td></tr></table>
+<strong>1.</strong> Appliquer cette fonction pour effectuer la multiplication de 105 par 253. Détailler les étapes dans le tableau suivant :</p>
+<table>
+<thead>
+<tr>
+<th>x</th>
+<th>y</th>
+<th>p</th>
+<th>ligne</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>105</td>
+<td>253</td>
+<td>...</td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2.</strong> On admet que cet algorithme repose sur les relations suivantes :</p>
+<div class="arithmatex">\[x * y = \left \{
+\begin{array}{l l l}
+  0  &amp; si &amp;n=0 \\
+  (x//2)*(y+y)  &amp; si &amp; x\ est\ pair\\
+  (x//2)*(y+y)+y  &amp; si &amp; x\ est\ impair\\
+\end{array}
+\right .
 \]</div>
-<div class="admonition example">
-<p class="admonition-title">Exercice 4 :</p>
-<p>Vérifiez que la matrice d’adjacence proposée ci-dessus correspond bien au graphe orienté "cartographie".</p>
+<p>Proposer une version récursive de cet algorithme.</p>
 </div>
-<div class="admonition example">
-<p class="admonition-title">Exercice 5 :</p>
-<p>Etablir la matrice du graphe orienté ci-dessous.</p>
-</div>
-<figure>
-<p><img alt="graphe1" src="../data/graphe12.png" width="300px" /></p>
-</figure>
-<h3 id="matrice-dadjacence-dun-graphe-pondere">Matrice d’adjacence d’un graphe pondéré<a class="headerlink" href="#matrice-dadjacence-dun-graphe-pondere" title="Permanent link">&num;</a></h3>
-<p>On remplace les 1 par les valeurs liées à chaque arc</p>
-<figure>
-<p><img alt="graphe1" src="../data/graphe13.png" width="300px" /></p>
-</figure>
-<p>La matrice d'adjacence :</p>
-<div class="arithmatex">\[
-A =
-\begin{pmatrix}
-0 &amp; 4 &amp; 3 &amp; 5 &amp; 0 &amp; 0 &amp; 0  \\
-4 &amp; 0 &amp; 0 &amp; 0 &amp; 5 &amp; 5 &amp; 7  \\
-3 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0  \\ 
-5 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 6 \\
-0 &amp; 5 &amp; 0 &amp; 0 &amp; 0 &amp; 7 &amp; 0 \\
-0 &amp; 5 &amp; 0 &amp; 0 &amp; 7 &amp; 0 &amp; 0  \\
-0 &amp; 7 &amp; 0 &amp; 6 &amp; 0 &amp; 0 &amp; 0  \\
-\end{pmatrix}
+<h3 id="fonctionnement-dune-fonction-recursive">Fonctionnement d'une fonction récursive<a class="headerlink" href="#fonctionnement-dune-fonction-recursive" title="Permanent link">&num;</a></h3>
+<p>Par exemple, l'évaluation de l'appel à <code>somme(3)</code> du programme 1 peut se représenter de la manière suivante, où on indique uniquement pour chaque appel à <code>somme(n)</code> l'instruction qui est exécutée après le test <code>n==0</code> de la conditionnelle. Cette manière de représenter l'exécution d'un programme en indiquant les différents appels effectués est appelée un <strong>arbre d'appels</strong>.</p>
+<p>Ainsi, pour calculer la valeur renvoyée par <code>somme(3)</code>, il faut tout d'abord appeler <code>somme(2)</code>. Cet appel va lui-même déclencher un appel à <code>somme(1)</code>, qui à son tour nécessite un appel à <code>somme(0)</code>. Ce dernier appel se termine en renvoyant la valeur 0. Le calcul de <code>somme(3)</code> se fait donc "à rebours". Une fois que l'appel à <code>somme(0)</code> est terminé, c'est-à-dire que la valeur 0 a été renvoyée, l'arbre d'appels évolue progressivement.</p>
+<p>À cet instant, l'appel à <code>somme(1)</code> peut alors se terminer et renvoyer le résultat de la somme <code>1+0</code>. Enfin, l'appel à <code>somme(2)</code> peut lui-même renvoyer la valeur <code>2+1</code> comme résultat, ce qui permet à <code>somme(3)</code> de se terminer en renvoyant le résultat <code>3+3</code>.</p>
+<p>On obtient bien au final la valeur 6 attendue.</p>
+<h4 id="autre-representation-sous-forme-de-pile-dexecution">Autre Représentation : sous forme de pile d'exécution<a class="headerlink" href="#autre-representation-sous-forme-de-pile-dexecution" title="Permanent link">&num;</a></h4>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>somme(3) = 3 + somme(2)
+</span></code></pre></div>
+↓
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>somme(3) = 3 + somme(2)
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>somme(2) = 2 + somme(1)
+</span></code></pre></div></p>
+<p>↓</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>somme(3) = 3 + somme(2)
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>somme(2) = 2 + somme(1)
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>somme(1) = 1 + somme(0)
+</span></code></pre></div>
+<p>↓</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>somme(1) = 1 + 0 = 1
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>somme(2) = 2 + somme(1)
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>somme(3) = 3 + somme(2)
+</span></code></pre></div>
+<p>↓</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>somme(2) = 2 + 1 = 3
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>somme(3) = 3 + somme(2)
+</span></code></pre></div>
+<p>↓</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>somme(3) = 3 + 3 = 6
+</span></code></pre></div>
+<h3 id="recursivite-ou-iterativite">Récursivité ou itérativité ?<a class="headerlink" href="#recursivite-ou-iterativite" title="Permanent link">&num;</a></h3>
+<p>Lorsque l'on programme des fonctions qui ne s'appellent pas, on dit que l'on programme de manière <strong>itérative</strong>. Il est toujours possible de transformer une fonction itérative en fonction récursive et vice versa. La méthode itérative nous est plus familière et est plus rapide une fois le code implémenté dans un langage de programmation.</p>
+<p>La méthode récursive est plus élégante et lisible et évite d'utiliser de nombreuses structures itératives. Elle est également très utile pour concevoir des structures de données complexes comme les listes, les arbres et les graphes. L'inconvénient le plus important de cette méthode, est qu'une fois implémentée dans un langage de programmation, elle est très gourmande en ressource mémoire. Du fait que l'on empile tous les appels récursifs, des débordements de capacité peuvent se produire lorsque la pile est pleine.</p>
+<h3 id="recursivite-croisee">Récursivité croisée<a class="headerlink" href="#recursivite-croisee" title="Permanent link">&num;</a></h3>
+<p>Dans cette méthode récursive, il arrive qu'une fonction appelle une autre fonction qui appelle elle-même la première, ce cas est appelé <strong>récursivité croisée</strong>. Prenons par exemple deux fonctions ci-dessous permettant de tester si un nombre est pair ou impair :</p>
+<table class="language-python highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Exemple de récursivité croisée</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span></pre></div></td><td class="code"><div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">def</span> <span class="nf">Pair</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a>        <span class="k">return</span> <span class="kc">True</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5"></a>        <span class="k">return</span> <span class="n">Impair</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6"></a>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="k">def</span> <span class="nf">Impair</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9"></a>        <span class="k">return</span> <span class="kc">False</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11"></a>        <span class="k">return</span> <span class="n">Pair</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>Ce n'est évidemment pas la méthode la plus simple mais elle fonctionne. On aurait pu par exemple tester le reste de la division euclidienne de n par deux.</p>
+<h3 id="recursivite-multiple">Récursivité multiple<a class="headerlink" href="#recursivite-multiple" title="Permanent link">&num;</a></h3>
+<p>Il existe un autre cas particulier où la fonction s'appelle plusieurs fois. On parle alors de <strong>récursivité multiple</strong>. C'est le cas par exemple dans le cas du calcul des coefficients binomiaux. On peut donner un rappel mathématique de ces coefficients binomiaux qui sont caractérisés par la définition suivante pour toute valeur entière de <span class="arithmatex">\(n\)</span> et <span class="arithmatex">\(k\)</span> telles que <span class="arithmatex">\(0 ≤ k ≤ n\)</span> :</p>
+<div class="arithmatex">\[\begin{pmatrix}
+   n  \\
+   k  
+\end{pmatrix}= \left \{
+   \begin{array}{l l l}
+      1  &amp; si &amp;k=0 \\
+     1   &amp; si &amp; k=n\\
+     \begin{pmatrix}
+   n-1  \\
+   k-1  
+\end{pmatrix}+\begin{pmatrix}
+   n-1 \\
+   k  
+\end{pmatrix}&amp; sinon
+   \end{array}
+   \right .
 \]</div>
-<div class="admonition example">
-<p class="admonition-title">Exercice 6 :</p>
-<p>Vérifiez que la matrice d’adjacence proposée ci-dessus correspond bien au graphe pondéré (minutes) "cartographie".</p>
-</div>
-<h2 id="les-listes-dadjacences">Les listes d’adjacences<a class="headerlink" href="#les-listes-dadjacences" title="Permanent link">&num;</a></h2>
-<h3 id="pour-les-graphes-non-orientes">Pour les graphes non-orientés<a class="headerlink" href="#pour-les-graphes-non-orientes" title="Permanent link">&num;</a></h3>
-<p>Pour commencer, on définit une liste des sommets du graphe. À chaque élément de cette liste, on associe une autre liste qui contient les sommets lié à cet élément.</p>
-<p>Reprenons l’exemple du "graphe cartographie" :</p>
-<figure>
-<p><img alt="graphe1" src="../data/graphe14.png" width="300px" /></p>
-</figure>
-<p>Voici la liste d'adjacence de ce graphe :</p>
-<figure>
-<p><img alt="graphe1" src="../data/graphe15.png" width="150px" /></p>
-</figure>
-<h3 id="pour-les-graphes-orientes">Pour les graphes orientés<a class="headerlink" href="#pour-les-graphes-orientes" title="Permanent link">&num;</a></h3>
-<p>Pour les graphes orientés, il est nécessaire de définir 2 listes : la liste des successeurs et la liste des prédécesseurs. Soit un arc allant d’un sommet A vers un sommet B (flèche de A vers B). On dira que B est
-un successeur de A et que A est un prédécesseur de B.</p>
-<figure>
-<p><img alt="graphe1" src="../data/graphe16.png" width="300px" /></p>
-</figure>
-<p>Liste d'adjacence successeurs du graphe orienté cartographie</p>
-<figure>
-<p><img alt="graphe1" src="../data/graphe17.png" width="150px" /></p>
-</figure>
-<p>Liste d'adjacence prédécesseurs du graphe orienté cartographie</p>
+<p>Alors on peut donner la fonction algorithmique suivante :</p>
+<table class="language-py highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Coefficient Binomiaux</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">Fonction</span> <span class="n">coeff_binomial</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a>    <span class="n">Si</span> <span class="n">k</span> <span class="o">==</span> <span class="mi">0</span> <span class="n">OU</span> <span class="n">k</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3"></a>        <span class="n">Retourner</span> <span class="mi">1</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4"></a>    <span class="n">Sinon</span><span class="p">:</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5"></a>        <span class="n">Retourner</span> <span class="n">coeff_binomial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">coeff_binomial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+</span></code></pre></div>
+</td></tr></table>
 <h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">&num;</a></h2>
-<h3 id="exercice-1">Exercice 1 :<a class="headerlink" href="#exercice-1" title="Permanent link">&num;</a></h3>
-<p>Tracer les graphes associés aux matrices d’adjacence données. Puis donner sa liste des successeurs et des
-prédecesseurs.</p>
-<div class="arithmatex">\[
-M =
-\begin{pmatrix}
-0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; 1 &amp; 1 &amp; 1 \\
-0 &amp; 1 &amp; 0 &amp; 1 &amp; 0 \\
-0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
-1 &amp; 1 &amp; 0 &amp; 1 &amp; 0 \\
-\end{pmatrix}
-\]</div>
-<h3 id="exercice-2">Exercice 2 :<a class="headerlink" href="#exercice-2" title="Permanent link">&num;</a></h3>
-<p>On souhaite organiser un tournoi de football avec 5 équipes (numérotées de 1 à 5). Chaque
-équipe rencontre une seule fois toutes les autres.</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice 5</p>
+<p>La suite de Fibonacci est une suite d'entiers. Elle doit son nom à Leonardo Fibonacci, dit Leonardo Pisano, un mathématicien italien du XIIIe siècle.</p>
+<p>En mathématiques, la suite de Fibonacci est une suite d'entiers dans laquelle chaque terme est la somme des deux termes qui le précèdent.</p>
+<p>Notée Fn, elle est définie par <code>F₀ = 0</code>, <code>F₁ = 1</code>, et <code>Fₙ = Fₙ₋₁ + Fₙ₋₂</code> pour <code>n &gt; 2</code>.
+Les termes de cette suite sont appelés nombres de Fibonacci et forment la suite A000045 de l'OEIS :</p>
+<table>
+<thead>
+<tr>
+<th>n</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F(n)</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+<td>8</td>
+<td>13</td>
+<td>21</td>
+<td>34</td>
+<td>55</td>
+</tr>
+</tbody>
+</table>
+<p>Cette suite est liée au nombre d'or, φ (phi) : ce nombre intervient dans l'expression du terme général de la suite. Inversement, la suite de Fibonacci intervient dans l'écriture des réduites de l'expression de φ en fraction continue : les quotients de deux termes consécutifs de la suite de Fibonacci sont les meilleures approximations du nombre d'or.</p>
+<p><strong>Question</strong>  </p>
+<p>Écrire la fonction qui donne le <span class="arithmatex">\(n^{ième}\)</span> terme de la suite de Fibonacci de manière récursive et pour les plus rapides de manière itérative.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 6</p>
+<p>L'objectif de cet exercice est de réaliser la fractale de Von Koch à l'aide du module Python turtle. Il faudra lire attentivement la documentation de turtle. Une fractale est une sorte de courbe mathématique un peu complexe riche en détail, et qui possède une propriété intéressante visuellement : lorsque l'on regarde des détails de petite taille, on retrouve des formes correspondant aux détails de plus grande taille (auto-similarité). Cela nous rappelle étrangement la récursivité ! La première courbe à tracer a été imaginée en 1904 par le mathématicien suédois Niels Fabian Helge Von Koch.</p>
+<p>Le principe est simple : on divise un segment initial en trois morceaux, et on construit un triangle équilatéral sans base au-dessus du morceau central. On réitère le processus <span class="arithmatex">\(n\)</span> fois, <span class="arithmatex">\(n\)</span> est appelé l'ordre. Dans la figure suivante, on voit les ordres 0, 1, 2 et 3 de cette fractale.</p>
+<p><strong>Questions :</strong></p>
 <ol>
-<li>Représenter la situation sous la forme d’un graphe.</li>
-<li>Combien d’arêtes possède-t-il ?En déduire le nombre de matchs au total pour ce tournoi ?</li>
-<li>Ce graphe est-il connexe ?</li>
+<li>
+<p>Proposer une fonction récursive permettant de dessiner la fractale de Von Koch en lui donnant comme paramètre l'ordre et la longueur du segment initial.</p>
+</li>
+<li>
+<p>Le flocon de Koch s'obtient de la même façon que la fractale précédente, en partant d'un triangle équilatéral au lieu d'un segment de droite, et en effectuant les modifications en orientant les triangles vers l'extérieur. Proposer une fonction permettant de faire le flocon de Koch complet à partir de la fonction réalisée précédente.</p>
+</li>
 </ol>
-<h3 id="exercice-3">Exercice 3 :<a class="headerlink" href="#exercice-3" title="Permanent link">&num;</a></h3>
-<p>Un club de tennis doit sélectionner deux joueurs parmi quatre pour représenter le club à un tournoi
-national. Les quatre joueurs sont notés A,B,C et D. Pour réaliser la séléction, le club organise des matchs :
-chaque joueur rencontre les trois autres.</p>
-<p><strong>Règle :</strong></p>
-<ul>
-<li>tout match gagné donne un point.</li>
-<li>tout match perdu enlève un point.</li>
-</ul>
-<p>Les joueurs sélectionnés sont les joueurs ayant obtenu le plus grand nombre de points. On donne les
-résultats sous la forme d’un graphe orienté.</p>
-<p>Le sens de l’arc A <span class="arithmatex">\(\to\)</span> B indique que le joueur A a battu B</p>
-<figure>
-<p><img alt="graphe1" src="../data/exo_graphe.png" width="150px" /></p>
-</figure>
-<ol>
-<li>Donner le nombre de points de chaque joueur</li>
-<li>En déduire les joueurs sélectionnés</li>
-</ol>
+</div>
 
               
             </article>
@@ -2128,7 +1869,7 @@ résultats sous la forme d’un graphe orienté.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../Programmation/API/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Modularité" rel="prev">
+        <a href="../../outils_python/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Outils Python" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2137,20 +1878,20 @@ résultats sous la forme d’un graphe orienté.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Modularité
+              Outils Python
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../BDD/bdd/" class="md-footer__link md-footer__link--next" aria-label="Next: Introduction BDD" rel="next">
+        <a href="../decidabilite/" class="md-footer__link md-footer__link--next" aria-label="Next: Calculabilité, décidabilité" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Introduction BDD
+              Calculabilité, décidabilité
             </div>
           </div>
           <div class="md-footer__button md-icon">
