@@ -942,8 +942,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#outil-de-validation" class="md-nav__link">
-    Outil de validation
+  <a href="#outil-de-test-les-assert" class="md-nav__link">
+    Outil de test : les assert
   </a>
   
 </li>
@@ -962,8 +962,70 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sur-les-listes-et-les-chaines-de-caracteres" class="md-nav__link">
-    Sur les listes et les chaines de caractères
+  <a href="#pour-repeter-une-instruction" class="md-nav__link">
+    Pour répéter une instruction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sur-les-listes-tuples" class="md-nav__link">
+    Sur les listes, tuples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#par-elements" class="md-nav__link">
+    Par éléments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#par-indice" class="md-nav__link">
+    Par indice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pour-parcourir-un-dictionnaire" class="md-nav__link">
+    Pour parcourir un dictionnaire
+  </a>
+  
+    <nav class="md-nav" aria-label="Pour parcourir un dictionnaire">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-dun-dictionnaire" class="md-nav__link">
+    Définition d'un dictionnaire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#par-cle" class="md-nav__link">
+    Par clé :
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#par-valeurs" class="md-nav__link">
+    Par valeurs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#par-couple-clevaleur" class="md-nav__link">
+    Par couple clé/valeur
   </a>
   
 </li>
@@ -1647,8 +1709,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#outil-de-validation" class="md-nav__link">
-    Outil de validation
+  <a href="#outil-de-test-les-assert" class="md-nav__link">
+    Outil de test : les assert
   </a>
   
 </li>
@@ -1667,8 +1729,70 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sur-les-listes-et-les-chaines-de-caracteres" class="md-nav__link">
-    Sur les listes et les chaines de caractères
+  <a href="#pour-repeter-une-instruction" class="md-nav__link">
+    Pour répéter une instruction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sur-les-listes-tuples" class="md-nav__link">
+    Sur les listes, tuples
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#par-elements" class="md-nav__link">
+    Par éléments
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#par-indice" class="md-nav__link">
+    Par indice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pour-parcourir-un-dictionnaire" class="md-nav__link">
+    Pour parcourir un dictionnaire
+  </a>
+  
+    <nav class="md-nav" aria-label="Pour parcourir un dictionnaire">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition-dun-dictionnaire" class="md-nav__link">
+    Définition d'un dictionnaire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#par-cle" class="md-nav__link">
+    Par clé :
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#par-valeurs" class="md-nav__link">
+    Par valeurs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#par-couple-clevaleur" class="md-nav__link">
+    Par couple clé/valeur
   </a>
   
 </li>
@@ -1828,6 +1952,38 @@ exemple le cas où l’on souhaite traiter que des nombres positifs :</p>
 </span></code></pre></div>
 </td></tr></table>
 <p>Dans ce cas, lever une exception n’est pas forcement la meilleure solution, on aurait pu utiliser un <code>assert</code>.</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice 1</p>
+<p>Quel message d'exception s'affiche si on tente d'exécuter le code suivant : NameError, IndexError,SyntaxError, IndentationErrror ?</p>
+<p><div class="language-py highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;i = </span><span class="si">{}</span><span class="s2">, a= </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="mi">2</span>
+</span></code></pre></div>
+A quel moment est levée cette exception ?</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 2</p>
+<p>Quel message d'exception s'affiche si on tente d'exécuter le code suivant : NameError, IndexError,SyntaxError, IndentationErrror ?</p>
+<p><div class="language-py highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">v</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">while</span> <span class="n">v</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">:</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    <span class="k">if</span> <span class="n">v</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;v est un multiple de 7&quot;</span><span class="p">)</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>        <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;v n&#39;est pas un multiple de 7&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+A quel moment est levée cette exception ?</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 3</p>
+<p>Le code suivant calcule les dix premiers nombres de la suite de Fibonacci. Quel message s'affiche si on tente de l'exécuter :  NameError, IndexError,SyntaxError, IndentationErrror ?</p>
+<p><div class="language-py highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    <span class="n">f</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">f</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</span></code></pre></div>
+A quel moment est levée cette exception ?</p>
+</div>
 <h3 id="debogueur">Débogueur<a class="headerlink" href="#debogueur" title="Permanent link">&num;</a></h3>
 <p>Le débogueur permet de dérouler un programme pas à pas et de vérifier l’état de chaque variable.
 C’est un outil parfois indispensable pour comprendre les bugs complexes.
@@ -1846,15 +2002,20 @@ chaque mot. <strong>Exemple :</strong> <code>Class NombrePremier</code>.</li>
 <li>nom de fonctions, de méthodes, d’attributs ou de variables en minuscules, les mots séparés par des "_". <strong>Exemple :</strong> <code>def decomposition_facteurs_premiers(...)</code></li>
 <li>les variables utilisés comme constantes sont en majuscules, les mots séparés par des "_". <strong>Exemple :</strong> <code>TOTAL_MAX=10</code></li>
 </ul>
+<div class="admonition example">
+<p class="admonition-title">Exercice 4</p>
+<p>Quel nom, selon la pep8, est le plus appropriépour une fonction qui calcule les éléments de la suite de Fibonacci ? </p>
+<p>f/fibonacci/ Fibonacci ou SuiteFibonacci</p>
+</div>
 <h3 id="espaces-indentations-lignes-blanches">Espaces, indentations, lignes blanches<a class="headerlink" href="#espaces-indentations-lignes-blanches" title="Permanent link">&num;</a></h3>
 <h4 id="indentation">Indentation<a class="headerlink" href="#indentation" title="Permanent link">&num;</a></h4>
 <p>Les blocs Python sont délimités par l’indentation. La PEP 8 propose d’indenter les blocs à l’aide de 4 espaces (la plupart des éditeurs Python utilisent ce réglage).</p>
 <p>Une ligne ne devrait pas excéder 79 caractères (cette règle est parfois transgressée). Lorsqu’une instruction court sur plusieurs lignes, on facilite la lecture en indentant. Exemple tiré de la PEP 8 :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
-<span class="normal"><a href="#__codelineno-10-2">2</a></span>
-<span class="normal"><a href="#__codelineno-10-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="c1">#Aligner avec la parenthèse ouvrante</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">foo</span> <span class="o">=</span> <span class="n">nom_de</span> <span class="n">_fonction_long</span><span class="p">(</span><span class="n">var_one</span><span class="p">,</span> <span class="n">var_two</span><span class="p">,</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a>                            <span class="n">var_three</span><span class="p">,</span> <span class="n">var_four</span><span class="p">)</span>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="c1">#Aligner avec la parenthèse ouvrante</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="n">foo</span> <span class="o">=</span> <span class="n">nom_de</span> <span class="n">_fonction_long</span><span class="p">(</span><span class="n">var_one</span><span class="p">,</span> <span class="n">var_two</span><span class="p">,</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3"></a>                            <span class="n">var_three</span><span class="p">,</span> <span class="n">var_four</span><span class="p">)</span>
 </span></code></pre></div>
 </td></tr></table>
 <p>Enfin, on écrit une seule instruction par ligne.</p>
@@ -1869,30 +2030,217 @@ chaque mot. <strong>Exemple :</strong> <code>Class NombrePremier</code>.</li>
 <li>pas d’espaces autour de " :" dans les slices.</li>
 </ul>
 <p><strong>Exemples</strong></p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
-<span class="normal"><a href="#__codelineno-11-2">2</a></span>
-<span class="normal"><a href="#__codelineno-11-3">3</a></span>
-<span class="normal"><a href="#__codelineno-11-4">4</a></span>
-<span class="normal"><a href="#__codelineno-11-5">5</a></span>
-<span class="normal"><a href="#__codelineno-11-6">6</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1">#espaces autour de =</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">43</span><span class="p">):</span> <span class="c1"># espace après , et pas d&#39;espace avant :</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="mi">2</span> <span class="c1">#espace autour de = et de *</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span> <span class="c1"># espaces après ,</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">6</span><span class="p">])</span> <span class="c1"># pas d&#39;espace autour de :</span>
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="n">dico</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;6&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">:</span> <span class="mi">21</span><span class="p">}</span> <span class="c1"># espace après : et , mais pas avant</span>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span>
+<span class="normal"><a href="#__codelineno-14-5">5</a></span>
+<span class="normal"><a href="#__codelineno-14-6">6</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1">#espaces autour de =</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">43</span><span class="p">):</span> <span class="c1"># espace après , et pas d&#39;espace avant :</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="mi">2</span> <span class="c1">#espace autour de = et de *</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span> <span class="c1"># espaces après ,</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">6</span><span class="p">])</span> <span class="c1"># pas d&#39;espace autour de :</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="n">dico</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;6&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">:</span> <span class="mi">21</span><span class="p">}</span> <span class="c1"># espace après : et , mais pas avant</span>
 </span></code></pre></div>
 </td></tr></table>
 <h4 id="lignes-blanches">Lignes blanches<a class="headerlink" href="#lignes-blanches" title="Permanent link">&num;</a></h4>
 <p>On laisse deux lignes vides entre les différentes fonctions ou classes à l’intérieur d’un module ;
 Au sein d’une classe, les méthodes sont séparées par une seule ligne blanche.</p>
-<h3 id="outil-de-validation">Outil de validation<a class="headerlink" href="#outil-de-validation" title="Permanent link">&num;</a></h3>
-<p>Des outils sont souvent intégrés dans les environnements de développement, mais sont aussi disponibles séparément :</p>
+<h3 id="outil-de-test-les-assert">Outil de test : les assert<a class="headerlink" href="#outil-de-test-les-assert" title="Permanent link">&num;</a></h3>
+<p><code>assert</code> est une instruction de vérification (assertion). Elle sert à tester qu’une condition est vraie pendant l’exécution. Si la condition est fausse (False), Python lève une exception AssertionError. </p>
+<p><strong>Syntaxe</strong></p>
+<p><code>assert condition, "message d'erreur optionnel"</code></p>
+<p>Avec :</p>
 <ul>
-<li>pep8 etflake8 permettent de vérifier la conformité avec la PEP 8 (ainsi que d’autres choses).</li>
-<li>autopep8 etblack peuvent reformater le code en suivant ces règles.</li>
+<li>
+<p>condition → une expression qui doit être vraie.</p>
+</li>
+<li>
+<p>"message d'erreur optionnel" → s’affiche si l’assertion échoue.</p>
+</li>
 </ul>
+<p><strong>Exemple simple</strong></p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="k">assert</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;x doit être positif&quot;</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tout va bien !&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 5</p>
+<p><strong>1</strong> Pour tester une fonction ayant un seul paramètre , choisir une valeur du paramètre et vérifier que le résultat est correct pour cette valeur est toujours suffisant ?
+<strong>2</strong> On considère le code suivant qui, étant donné un terme de la suite de Syracuse, renvoie le terme</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">def</span> <span class="nf">syracuse</span><span class="p">(</span><span class="n">un</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    <span class="k">if</span> <span class="n">un</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>        <span class="k">return</span> <span class="n">un</span> <span class="o">//</span> <span class="mi">2</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>        <span class="k">return</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">un</span> <span class="o">+</span> <span class="mi">1</span>
+</span></code></pre></div>
+<p>Le test suivant est proposé : <code>assert syracuse(32) == 16</code>. Parmi les tests suivants, lequel vous semble le plus urgent à rajouter :</p>
+<div class="language-text highlight"><pre><span></span><code>**a** `assert syracuse(16) == 8&#39;
+
+**b** `assert syracuse(0) == 0&#39;
+
+**c** `assert syracuse(3) == 10&#39;
+</code></pre></div>
+</div>
 <h2 id="les-boucles-for-en-python">Les boucles <code>for</code> en Python<a class="headerlink" href="#les-boucles-for-en-python" title="Permanent link">&num;</a></h2>
-<h3 id="sur-les-listes-et-les-chaines-de-caracteres">Sur les listes et les chaines de caractères<a class="headerlink" href="#sur-les-listes-et-les-chaines-de-caracteres" title="Permanent link">&num;</a></h3>
+<h3 id="pour-repeter-une-instruction">Pour répéter une instruction<a class="headerlink" href="#pour-repeter-une-instruction" title="Permanent link">&num;</a></h3>
+<p>On peut utiliser <code>for _ in range(n)</code>  pour répéter <span class="arithmatex">\(n\)</span> fois le bloc d'instruction indenté qui suit.</p>
+<p><strong>Exemple :</strong></p>
+<table class="language-py highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">for</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;toto&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+</td></tr></table>
+<h3 id="sur-les-listes-tuples">Sur les listes, tuples<a class="headerlink" href="#sur-les-listes-tuples" title="Permanent link">&num;</a></h3>
+<p>et les chaines de caractères</p>
+<h3 id="par-elements">Par éléments<a class="headerlink" href="#par-elements" title="Permanent link">&num;</a></h3>
+<p>Syntaxe et exemple :</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">liste</label><label for="__tabbed_1_2">Chaine de caractère</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">lst</span>  <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="n">chaine</span> <span class="o">=</span> <span class="s1">&#39;coucou&#39;</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">chaine</span><span class="p">:</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>Nous donne :</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">liste</label><label for="__tabbed_2_2">Chaine de caractère</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>3
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>5
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>1
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">c</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="n">o</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="n">u</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="n">c</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="n">o</span>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="n">u</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="par-indice">Par indice<a class="headerlink" href="#par-indice" title="Permanent link">&num;</a></h3>
+<p>Syntaxe et exemple :</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">liste</label><label for="__tabbed_3_2">Chaine de caractère</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">lst</span>  <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)):</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">chaine</span> <span class="o">=</span> <span class="s1">&#39;coucou&#39;</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">)):</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>Nous donne :</p>
+<p>Syntaxe et exemple :</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">liste</label><label for="__tabbed_4_2">Chaine de caractère</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="mi">0</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="mi">1</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="mi">2</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-py highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="mi">0</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="mi">1</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="mi">2</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="mi">3</span>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="mi">4</span>
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="mi">5</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="pour-parcourir-un-dictionnaire">Pour parcourir un dictionnaire<a class="headerlink" href="#pour-parcourir-un-dictionnaire" title="Permanent link">&num;</a></h2>
+<h3 id="definition-dun-dictionnaire">Définition d'un dictionnaire<a class="headerlink" href="#definition-dun-dictionnaire" title="Permanent link">&num;</a></h3>
+<p>Un dictionnaire est une structure de données qui associe des clés à des valeurs (on parle de paires clé–valeur).</p>
+<p>Les clés doivent être uniques et .</p>
+<p>Les valeurs peuvent être de n’importe quel type (nombres, chaînes, listes…). Exemple en Python :</p>
+<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<span class="normal"><a href="#__codelineno-26-2">2</a></span>
+<span class="normal"><a href="#__codelineno-26-3">3</a></span>
+<span class="normal"><a href="#__codelineno-26-4">4</a></span>
+<span class="normal"><a href="#__codelineno-26-5">5</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="n">dico</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2"></a>    <span class="s2">&quot;Terre&quot;</span><span class="p">:</span> <span class="s2">&quot;3ème planète du système solaire&quot;</span><span class="p">,</span>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3"></a>    <span class="s2">&quot;Atmosphère&quot;</span><span class="p">:</span> <span class="s2">&quot;Enveloppe gazeuse entourant la Terre&quot;</span><span class="p">,</span>
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4"></a>    <span class="s2">&quot;Oxygène&quot;</span><span class="p">:</span> <span class="mi">21</span>  
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5"></a><span class="p">}</span>
+</span></code></pre></div>
+</td></tr></table>
+<p>Attention, il ne faut pas que les clés soient :</p>
+<ul>
+<li>list (liste)</li>
+<li>dict (dictionnaire)</li>
+<li>set (ensemble modifiable)</li>
+<li>tout objet mutable en général</li>
+</ul>
+<h3 id="par-cle">Par clé :<a class="headerlink" href="#par-cle" title="Permanent link">&num;</a></h3>
+<p>On peut utiliser la méthode <code>keys</code> pour balayer un dictionnaire selon les clés.</p>
+<p><strong>Exemple :</strong></p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">dico</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span> <span class="p">:</span> <span class="s2">&quot;bonjour&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="s2">&quot;coucou&quot;</span> <span class="p">}</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="k">for</span> <span class="n">cle</span> <span class="ow">in</span> <span class="n">dico</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span> <span class="c1"># nous donne a,b</span>
+</span></code></pre></div>
+<p>Attention : on peut également balayer le dictionnaire de la manière suivante mais je trouve ce balayage moins explicite.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="n">dico</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span> <span class="p">:</span> <span class="s2">&quot;bonjour&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="s2">&quot;coucou&quot;</span> <span class="p">}</span>
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="k">for</span> <span class="n">cle</span> <span class="ow">in</span> <span class="n">dico</span><span class="p">:</span>
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">cle</span><span class="p">)</span> <span class="c1"># nous donne a,b</span>
+</span></code></pre></div>
+<h3 id="par-valeurs">Par valeurs<a class="headerlink" href="#par-valeurs" title="Permanent link">&num;</a></h3>
+<p>On peut utiliser la méthode <code>values</code> pour balayer un dictionnaire selon les valeurs.</p>
+<p><strong>Exemple :</strong></p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">dico</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span> <span class="p">:</span> <span class="s2">&quot;bonjour&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="s2">&quot;coucou&quot;</span> <span class="p">}</span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">dico</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="c1"># nous donne &quot;bonjour&quot; puis &quot;coucou&quot;</span>
+</span></code></pre></div>
+<h3 id="par-couple-clevaleur">Par couple clé/valeur<a class="headerlink" href="#par-couple-clevaleur" title="Permanent link">&num;</a></h3>
+<p>On peut utiliser la méthode `items' pour balayer un dictionnaire selon les valeurs.</p>
+<p><strong>Exemple :</strong></p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">dico</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span> <span class="p">:</span> <span class="s2">&quot;bonjour&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="s2">&quot;coucou&quot;</span> <span class="p">}</span>
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">dico</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="c1"># (&#39;a&#39;, &#39;bonjour&#39;) puis (&#39;b&#39;, &#39;coucou&#39;)</span>
+</span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 6</p>
+<p>Réaliser une fonction qui détermine le nombre d'apparition d'une lettre dans une chaine de caractère. Vous réaliserez les tests nécessaires. </p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 7</p>
+<p>Réaliser une fonction qui réalise la moyenne des éléments d'une liste.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 8</p>
+<p>On dispose des températures à Montelimar à 8h00 dans un dictionnaire.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="err">`</span><span class="n">temp</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;J1&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;J2&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;J3&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;J4&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;J5&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;J6&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s2">&quot;J7&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;J8&quot;</span><span class="p">:</span> <span class="mi">1</span> <span class="p">,</span> <span class="s2">&quot;J9&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mi">2</span><span class="p">}</span> 
+</span></code></pre></div>
+<p><strong>1</strong> Écrire une fonction <code>moyenne</code> qui prend en argument un dictionnaire <code>d</code> du type de celui défini ci-dessus et qui renvoie la valeur moyenne des températures.</p>
+<p><strong>2</strong> Écrire une fonction <code>froid(d,T0)</code> qui prend en argument un dictionnaire <code>d</code>du type de celui défini ci-dessus  et qui renvoie la liste des jours où la température a été inférieure à la température <code>T0</code>.</p>
+</div>
 
               
             </article>
