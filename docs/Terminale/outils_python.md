@@ -153,6 +153,41 @@ if(x < 0):
 
 Dans ce cas, lever une exception n’est pas forcement la meilleure solution, on aurait pu utiliser un `assert`.
 
+!!! example "Exercice 1"
+    Quel message d'exception s'affiche si on tente d'exécuter le code suivant : NameError, IndexError,SyntaxError, IndentationErrror ?
+
+    ``` py
+    a = 1
+    for i in range(3):
+        print("i = {}, a= {}".format(i,a)
+        a = a * 2
+    ```
+    A quel moment est levée cette exception ?
+
+!!! example "Exercice 2"
+    Quel message d'exception s'affiche si on tente d'exécuter le code suivant : NameError, IndexError,SyntaxError, IndentationErrror ?
+    
+    ``` py
+    v = 1
+    while v < 100:
+        if v % 7 == 0:
+            print("v est un multiple de 7")
+            else:
+            print("v n'est pas un multiple de 7")
+    ```
+    A quel moment est levée cette exception ?
+
+!!! example "Exercice 3"
+    Le code suivant calcule les dix premiers nombres de la suite de Fibonacci. Quel message s'affiche si on tente de l'exécuter :  NameError, IndexError,SyntaxError, IndentationErrror ?
+
+    ``` py
+    f = [0, 1, 0, 0, 0, 0, 0 , 0, 0, 0]
+    for i in range(1, 10):
+        f[i + 1] = f[i] + f[i - 1]
+    print(f)
+    ```
+    A quel moment est levée cette exception ?
+
 ### Débogueur
 
 Le débogueur permet de dérouler un programme pas à pas et de vérifier l’état de chaque variable.
@@ -177,6 +212,11 @@ La PEP 8 (guide de style Python accessible sur [https://peps.python.org/pep-0008
 chaque mot. **Exemple :** `Class NombrePremier`.
 * nom de fonctions, de méthodes, d’attributs ou de variables en minuscules, les mots séparés par des "_". **Exemple :** `def decomposition_facteurs_premiers(...)`
 * les variables utilisés comme constantes sont en majuscules, les mots séparés par des "_". **Exemple :** `TOTAL_MAX=10`
+
+!!! example "Exercice 4"
+    Quel nom, selon la pep8, est le plus appropriépour une fonction qui calcule les éléments de la suite de Fibonacci ? 
+
+    f/fibonacci/ Fibonacci ou SuiteFibonacci
 
 ### Espaces, indentations, lignes blanches
 
@@ -221,14 +261,238 @@ dico = {"6": 8, "7": 13, "8": 21} # espace après : et , mais pas avant
 On laisse deux lignes vides entre les différentes fonctions ou classes à l’intérieur d’un module ;
 Au sein d’une classe, les méthodes sont séparées par une seule ligne blanche.
 
-### Outil de validation
+### Outil de test : les assert
 
-Des outils sont souvent intégrés dans les environnements de développement, mais sont aussi disponibles séparément :
+`assert` est une instruction de vérification (assertion). Elle sert à tester qu’une condition est vraie pendant l’exécution. Si la condition est fausse (False), Python lève une exception AssertionError. 
 
-* pep8 etflake8 permettent de vérifier la conformité avec la PEP 8 (ainsi que d’autres choses).
-* autopep8 etblack peuvent reformater le code en suivant ces règles.
+**Syntaxe**
+
+`assert condition, "message d'erreur optionnel"`
+
+Avec :
+
+ * condition → une expression qui doit être vraie.
+
+* "message d'erreur optionnel" → s’affiche si l’assertion échoue.
+
+**Exemple simple**
+
+``` py
+x = 5
+assert x > 0, "x doit être positif"
+print("Tout va bien !")
+```
+
+!!! example "Exercice 5"
+    **1** Pour tester une fonction ayant un seul paramètre , choisir une valeur du paramètre et vérifier que le résultat est correct pour cette valeur est toujours suffisant ?
+    **2** On considère le code suivant qui, étant donné un terme de la suite de Syracuse, renvoie le terme
+
+    ``` py
+    def syracuse(un:int)-> int:
+        if un % 2 == 2:
+            return un // 2
+        else:
+            return 3 * un + 1
+    ```
+
+    Le test suivant est proposé : `assert syracuse(32) == 16`. Parmi les tests suivants, lequel vous semble le plus urgent à rajouter :
+
+        **a** `assert syracuse(16) == 8'
+
+        **b** `assert syracuse(0) == 0'
+
+        **c** `assert syracuse(3) == 10'
+
 
 ## Les boucles `for` en Python
 
-### Sur les listes et les chaines de caractères
+### Pour répéter une instruction
 
+On peut utiliser `for _ in range(n)`  pour répéter $n$ fois le bloc d'instruction indenté qui suit.
+
+**Exemple :**
+
+``` py linenums='1' title='for'
+for _ in range(5):
+    print("toto")
+```
+
+### Sur les listes, tuples
+ et les chaines de caractères
+
+### Par éléments
+
+Syntaxe et exemple :
+
+=== "liste"
+
+    ``` py
+    lst  = [3, 5, 1]
+
+    for i in lst:
+        print(i)
+    ```
+
+=== "Chaine de caractère"
+
+    ``` py
+    chaine = 'coucou'
+    for c in chaine:
+        print(c)
+    ```
+
+
+Nous donne :
+=== "liste"
+
+    ```
+    3
+    5
+    1
+    ```
+
+=== "Chaine de caractère"
+
+    ``` py
+    c
+    o
+    u
+    c
+    o
+    u
+    ```
+
+### Par indice
+
+Syntaxe et exemple :
+
+=== "liste"
+
+    ``` py
+    lst  = [3, 5, 1]
+
+    for i in range(len(lst)):
+        print(i)
+    ```
+
+=== "Chaine de caractère"
+
+    ``` py
+    chaine = 'coucou'
+    for c in range(len(chaine)):
+        print(c)
+    ```
+
+Nous donne :
+
+
+Syntaxe et exemple :
+
+=== "liste"
+
+    ``` py
+    0
+    1
+    2
+    ```
+
+=== "Chaine de caractère"
+
+    ``` py
+    0
+    1
+    2
+    3
+    4
+    5
+    ```
+
+## Pour parcourir un dictionnaire
+
+### Définition d'un dictionnaire
+
+Un dictionnaire est une structure de données qui associe des clés à des valeurs (on parle de paires clé–valeur).
+
+Les clés doivent être uniques et .
+
+Les valeurs peuvent être de n’importe quel type (nombres, chaînes, listes…). Exemple en Python :
+
+``` py linenums='1' 
+dico = {
+    "Terre": "3ème planète du système solaire",
+    "Atmosphère": "Enveloppe gazeuse entourant la Terre",
+    "Oxygène": 21  
+}
+```
+
+Attention, il ne faut pas que les clés soient :
+
+* list (liste)
+* dict (dictionnaire)
+* set (ensemble modifiable)
+* tout objet mutable en général
+
+### Par clé :
+
+On peut utiliser la méthode `keys` pour balayer un dictionnaire selon les clés.
+
+**Exemple :**
+
+``` py
+dico = {"a" : "bonjour", "b": "coucou" }
+
+for cle in dico.keys():
+    print(cle) # nous donne a,b
+```
+
+Attention : on peut également balayer le dictionnaire de la manière suivante mais je trouve ce balayage moins explicite.
+
+``` py
+dico = {"a" : "bonjour", "b": "coucou" }
+
+for cle in dico:
+    print(cle) # nous donne a,b
+```
+
+### Par valeurs
+
+On peut utiliser la méthode `values` pour balayer un dictionnaire selon les valeurs.
+
+**Exemple :**
+
+``` py
+dico = {"a" : "bonjour", "b": "coucou" }
+
+for val in dico.values():
+    print(val) # nous donne "bonjour" puis "coucou"
+```
+
+### Par couple clé/valeur
+
+On peut utiliser la méthode `items' pour balayer un dictionnaire selon les valeurs.
+
+**Exemple :**
+
+``` py
+dico = {"a" : "bonjour", "b": "coucou" }
+
+for val in dico.items():
+    print(val) # ('a', 'bonjour') puis ('b', 'coucou')
+```
+
+!!! example "Exercice 6"
+    Réaliser une fonction qui détermine le nombre d'apparition d'une lettre dans une chaine de caractère. Vous réaliserez les tests nécessaires. 
+
+!!! example "Exercice 7"
+    Réaliser une fonction qui réalise la moyenne des éléments d'une liste.
+
+!!! example "Exercice 8"
+    On dispose des températures à Montelimar à 8h00 dans un dictionnaire.
+
+    ``` py 
+    `temp = {"J1": -10, "J2": -9, "J3": -4, "J4": 0, "J5": -1, "J6": 4, "J7": -5, "J8": 1 , "J9": -2} 
+    ```
+
+    **1** Écrire une fonction `moyenne` qui prend en argument un dictionnaire `d` du type de celui défini ci-dessus et qui renvoie la valeur moyenne des températures.
+
+    **2** Écrire une fonction `froid(d,T0)` qui prend en argument un dictionnaire `d`du type de celui défini ci-dessus  et qui renvoie la liste des jours où la température a été inférieure à la température `T0`.
