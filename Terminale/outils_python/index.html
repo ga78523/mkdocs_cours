@@ -1998,7 +1998,7 @@ lettres, des chiffres, des caractères "_" et ne doivent pas commencer par un ch
 <ul>
 <li>nom de modules courts, en minuscules et de préférence sans "_". <strong>Exemple :</strong> <code>crypto</code>.</li>
 <li>nom de classes ou de types en CamelCase, c’est-à-dire en minuscules, sans "_" avec un majuscule en début de
-chaque mot. <strong>Exemple :</strong> <code>Class NombrePremier</code>.</li>
+chaque mot. <strong>Exemple :</strong> <code>class NombrePremier</code>.</li>
 <li>nom de fonctions, de méthodes, d’attributs ou de variables en minuscules, les mots séparés par des "_". <strong>Exemple :</strong> <code>def decomposition_facteurs_premiers(...)</code></li>
 <li>les variables utilisés comme constantes sont en majuscules, les mots séparés par des "_". <strong>Exemple :</strong> <code>TOTAL_MAX=10</code></li>
 </ul>
@@ -2069,7 +2069,7 @@ Au sein d’une classe, les méthodes sont séparées par une seule ligne blanch
 <p><strong>1</strong> Pour tester une fonction ayant un seul paramètre , choisir une valeur du paramètre et vérifier que le résultat est correct pour cette valeur est toujours suffisant ?
 <strong>2</strong> On considère le code suivant qui, étant donné un terme de la suite de Syracuse, renvoie le terme</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">def</span> <span class="nf">syracuse</span><span class="p">(</span><span class="n">un</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    <span class="k">if</span> <span class="n">un</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    <span class="k">if</span> <span class="n">un</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
 </span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>        <span class="k">return</span> <span class="n">un</span> <span class="o">//</span> <span class="mi">2</span>
 </span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>    <span class="k">else</span><span class="p">:</span>
 </span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>        <span class="k">return</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">un</span> <span class="o">+</span> <span class="mi">1</span>
@@ -2175,8 +2175,7 @@ Au sein d’une classe, les méthodes sont séparées par une seule ligne blanch
 <h2 id="pour-parcourir-un-dictionnaire">Pour parcourir un dictionnaire<a class="headerlink" href="#pour-parcourir-un-dictionnaire" title="Permanent link">&num;</a></h2>
 <h3 id="definition-dun-dictionnaire">Définition d'un dictionnaire<a class="headerlink" href="#definition-dun-dictionnaire" title="Permanent link">&num;</a></h3>
 <p>Un dictionnaire est une structure de données qui associe des clés à des valeurs (on parle de paires clé–valeur).</p>
-<p>Les clés doivent être uniques et .</p>
-<p>Les valeurs peuvent être de n’importe quel type (nombres, chaînes, listes…). Exemple en Python :</p>
+<p>Les clés doivent être uniques. Les valeurs peuvent être de n’importe quel type (nombres, chaînes, listes…). Exemple en Python :</p>
 <table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
 <span class="normal"><a href="#__codelineno-26-2">2</a></span>
 <span class="normal"><a href="#__codelineno-26-3">3</a></span>
