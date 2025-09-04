@@ -1345,6 +1345,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#les-deux-modeles-des-logiciels-de-gestion-de-version-modele-centralise-vs-modele-decentralise" class="md-nav__link">
+    Les deux modèles des logiciels de gestion de version : modèle centralisé vs modèle décentralisé
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sur-votre-ordinateur-git" class="md-nav__link">
     Sur votre ordinateur : git
   </a>
@@ -1361,7 +1368,7 @@
         
           <li class="md-nav__item">
   <a href="#configurer-git" class="md-nav__link">
-    Configurer git :
+    Configurer git
   </a>
   
 </li>
@@ -1422,6 +1429,13 @@
         <li class="md-nav__item">
   <a href="#les-commandes-git-de-bases-wikipedia" class="md-nav__link">
     Les commandes git de bases (wikipedia)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-commandes-unix-utiles" class="md-nav__link">
+    Les commandes Unix utiles
   </a>
   
 </li>
@@ -1517,6 +1531,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#les-deux-modeles-des-logiciels-de-gestion-de-version-modele-centralise-vs-modele-decentralise" class="md-nav__link">
+    Les deux modèles des logiciels de gestion de version : modèle centralisé vs modèle décentralisé
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sur-votre-ordinateur-git" class="md-nav__link">
     Sur votre ordinateur : git
   </a>
@@ -1533,7 +1554,7 @@
         
           <li class="md-nav__item">
   <a href="#configurer-git" class="md-nav__link">
-    Configurer git :
+    Configurer git
   </a>
   
 </li>
@@ -1598,6 +1619,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#les-commandes-unix-utiles" class="md-nav__link">
+    Les commandes Unix utiles
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1616,13 +1644,22 @@
 <h2 id="introduction-wikipedia">Introduction (wikipedia)<a class="headerlink" href="#introduction-wikipedia" title="Permanent link">&num;</a></h2>
 <p>Git est un logiciel de gestion de versions décentralisé. C’est un logiciel libre créé par Linus Torvalds,
 auteur du noyau Linux, et distribué selon les termes de la licence publique générale GNU version 2. En 2016,
-il s’agit du logiciel de gestion de versions le plus populaire.
-GitHub exploité sous le nom de GitHub, Inc.) est un service web d’hébergement et de gestion de développement de logiciels, utilisant le logiciel de gestion de versions Git. Ce site est développé en Ruby on Rails
+il s’agit du logiciel de gestion de versions le plus populaire.</p>
+<p>GitHub exploité sous le nom de GitHub, Inc.) est un service web d’hébergement et de gestion de développement de logiciels, utilisant le logiciel de gestion de versions Git. Ce site est développé en Ruby on Rails
 et Erlang par Chris Wanstrath, PJ Hyett et Tom Preston-Werner. GitHub propose des comptes professionnels payants, ainsi que des comptes gratuits pour les projets de logiciels libres. Le site assure également un
 contrôle d’accès et des fonctionnalités destinées à la collaboration comme le suivi des bugs, les demandes de
 fonctionnalités, la gestion de tâches et un wiki pour chaque projet.
 En avril 2016, GitHub a annoncé avoir dépassé les 14 millions d’utilisateurs et plus de 35 millions de
 dépôts de projets le plaçant comme le plus grand hébergeur de code source au monde.</p>
+<h2 id="les-deux-modeles-des-logiciels-de-gestion-de-version-modele-centralise-vs-modele-decentralise">Les deux modèles des logiciels de gestion de version : modèle centralisé vs modèle décentralisé<a class="headerlink" href="#les-deux-modeles-des-logiciels-de-gestion-de-version-modele-centralise-vs-modele-decentralise" title="Permanent link">&num;</a></h2>
+<p>Les logiciels de gestion de version sont aujourd’hui tous construits sur l’un des deux modèles suivants : le modèle centralisé ou le modèle décentralisé encore appelé modèle distribué.</p>
+<p>Le principe de base d’un modèle centralisé est la centralisation du code source lié au projet : la source du code du projet est hébergé sur un serveur distant central et les différents utilisateurs doivent se connecter à ce serveur pour travailler sur ce code.</p>
+<p>Dans un modèle distribué, le principe de base est opposé : le code source du projet est toujours hébergé sur un serveur distant mais chaque utilisateur est invité à télécharger et à héberger l’intégralité du code source du projet sur sa propre machine.</p>
+<p>Le modèle distribué a été popularisé par Git et présente différents avantages notables par rapport au modèle centralisé :</p>
+<ul>
+<li>Simplicité / flexibilité du travail : Comme chaque utilisateur peut héberger le code du projet, on n’a plus besoin d’être constamment connecté à un serveur central et on peut donc travailler en ligne sur sa propre machine ;</li>
+<li>Sécurité : Comme chaque utilisateur possède le code complet d’un projet, on peut utiliser la copie du projet d’un utilisateur comme back-up en cas de corruption du serveur central</li>
+</ul>
 <h2 id="sur-votre-ordinateur-git">Sur votre ordinateur : git<a class="headerlink" href="#sur-votre-ordinateur-git" title="Permanent link">&num;</a></h2>
 <h3 id="telechargement-installation-et-configuration">Téléchargement, installation et configuration<a class="headerlink" href="#telechargement-installation-et-configuration" title="Permanent link">&num;</a></h3>
 <ol>
@@ -1630,7 +1667,7 @@ dépôts de projets le plaçant comme le plus grand hébergeur de code source au
 <li>Télécharger le logiciel pour le système d’exploitation que vous avez ;</li>
 <li>Se rendre dans la console et taper : <code>git --version</code> pour vous assurer que cela a bien fonctionner.</li>
 </ol>
-<h3 id="configurer-git">Configurer git :<a class="headerlink" href="#configurer-git" title="Permanent link">&num;</a></h3>
+<h3 id="configurer-git">Configurer git<a class="headerlink" href="#configurer-git" title="Permanent link">&num;</a></h3>
 <div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="go">git config --global user.email &quot;you@example.com &quot;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="go">git config --global user.name &quot;your Name&quot;</span>
 </span></code></pre></div>
@@ -1712,7 +1749,7 @@ deux étapes :</li>
 <ul>
 <li><code>git init</code> : crée un nouveau dépôt ;</li>
 <li><code>git clone</code> : clone un dépôt distant ;</li>
-<li><code>git add</code>: ajoute de nouveaux objets blobs dans la base des objets pour chaque fichier modifié depuis
+<li><code>git add</code>: ajoute de nouveaux objets dans la base des objets pour chaque fichier modifié depuis
 le dernier commit. Les objets précédents restent inchangés ;</li>
 <li><code>git commit</code> : intègre la somme de contrôle SHA*1 d’un objet tree et les sommes de contrôle des
 objets commits parents pour créer un nouvel objet commit ;</li>
@@ -1724,6 +1761,16 @@ courante devant les nouveaux commits d’une autre branche ;</li>
 <li><code>git pull</code> : récupère les dernières modifications distantes du projet (depuis le Remote) et les fusionne
 dans la branche courante ;</li>
 <li><code>git stash</code> : stocke de côté un état non commité afin d’effectuer d’autres tâches</li>
+</ul>
+<h2 id="les-commandes-unix-utiles">Les commandes Unix utiles<a class="headerlink" href="#les-commandes-unix-utiles" title="Permanent link">&num;</a></h2>
+<p>A titre d’information, les commandes (UNIX) de base à connaitre sont les suivantes :</p>
+<ul>
+<li>La commande <code>pwd</code> affiche le nom et chemin du répertoire courant. Elle permet de savoir où on se situe sur notre machine ;</li>
+<li>La commande <code>ls</code> affiche la liste des fichiers et répertories dans un répertoire ;</li>
+<li>La commande <code>cd</code> permet de changer de répertoire, c’est-à-dire de se déplacer d’un répertoire à un autre ;</li>
+<li>La commande <code>mkdir</code> permet de créer un nouveau répertoire (ou “dossier”) ;</li>
+<li>La commande <code>touch</code> permet de créer un fichier ;
+La commande <code>mv</code> permet de renommer ou de déplacer des fichiers.</li>
 </ul>
 
               
