@@ -209,7 +209,7 @@ La PEP 8 (guide de style Python accessible sur [https://peps.python.org/pep-0008
 
 * nom de modules courts, en minuscules et de préférence sans "_". **Exemple :** `crypto`.
 * nom de classes ou de types en CamelCase, c’est-à-dire en minuscules, sans "_" avec un majuscule en début de
-chaque mot. **Exemple :** `Class NombrePremier`.
+chaque mot. **Exemple :** `class NombrePremier`.
 * nom de fonctions, de méthodes, d’attributs ou de variables en minuscules, les mots séparés par des "_". **Exemple :** `def decomposition_facteurs_premiers(...)`
 * les variables utilisés comme constantes sont en majuscules, les mots séparés par des "_". **Exemple :** `TOTAL_MAX=10`
 
@@ -289,7 +289,7 @@ print("Tout va bien !")
 
     ``` py
     def syracuse(un:int)-> int:
-        if un % 2 == 2:
+        if un % 2 == 0:
             return un // 2
         else:
             return 3 * un + 1
@@ -341,6 +341,13 @@ Syntaxe et exemple :
         print(c)
     ```
 
+=== "tuple"
+
+    ``` py
+    tup = (3, 5, 1)
+    for c in tup:
+        print(i)
+    ```
 
 Nous donne :
 === "liste"
@@ -361,6 +368,15 @@ Nous donne :
     o
     u
     ```
+
+=== "tuple"
+
+    ```
+    3
+    5
+    1
+    ```
+
 
 ### Par indice
 
@@ -383,10 +399,17 @@ Syntaxe et exemple :
         print(c)
     ```
 
+=== "tuple"
+
+    ``` py
+    tup  = (3, 5, 1)
+
+    for i in range(len(tup)):
+        print(i)
+    ```
+
 Nous donne :
 
-
-Syntaxe et exemple :
 
 === "liste"
 
@@ -407,15 +430,21 @@ Syntaxe et exemple :
     5
     ```
 
+=== "tuple"
+
+    ``` py
+    0
+    1
+    2
+    ```
+
 ## Pour parcourir un dictionnaire
 
 ### Définition d'un dictionnaire
 
 Un dictionnaire est une structure de données qui associe des clés à des valeurs (on parle de paires clé–valeur).
 
-Les clés doivent être uniques et .
-
-Les valeurs peuvent être de n’importe quel type (nombres, chaînes, listes…). Exemple en Python :
+Les clés doivent être uniques. Les valeurs peuvent être de n’importe quel type (nombres, chaînes, listes…). Exemple en Python :
 
 ``` py linenums='1' 
 dico = {
