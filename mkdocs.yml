@@ -72,6 +72,7 @@ nav:
     - 'Première':
       - Données :
         - Représentation des entiers : Premiere/Donnees/representation_entier.md
+        - Représentation des relatifs et des réels : Premiere/Donnees/relatifs_reels.md
         - Données en table : Premiere/Donnees/donnees_table.md
       - Langage Python:
         - Les bases : Premiere/Langage/Bases_Python.md
