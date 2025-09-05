@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://example.com/Premiere/Donnees/donnees_table/">
+        <link rel="canonical" href="https://example.com/Premiere/Donnees/relatifs_reels/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
     
     
       
-        <title>Données en table - Site de cours</title>
+        <title>Représentation des relatifs et des réels - Site de cours</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#traitement-des-donnees-en-table-avec-python" class="md-skip">
+        <a href="#representation-et-codage-des-entiers-relatifs-et-des-nombres-reels" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Données en table
+              Représentation des relatifs et des réels
             
           </span>
         </div>
@@ -400,20 +400,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../relatifs_reels/" class="md-nav__link">
-        Représentation des relatifs et des réels
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -426,12 +412,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Données en table
+          Représentation des relatifs et des réels
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Données en table
+        Représentation des relatifs et des réels
       </a>
       
         
@@ -450,30 +436,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
+  <a href="#les-additions-en-binaire" class="md-nav__link">
+    Les additions en binaire
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#les-donnees-structurees-au-format-csv" class="md-nav__link">
-    Les données structurées au format CSV
+  <a href="#representation-des-entiers-relatifs" class="md-nav__link">
+    Représentation des entiers relatifs
   </a>
   
-    <nav class="md-nav" aria-label="Les données structurées au format CSV">
+    <nav class="md-nav" aria-label="Représentation des entiers relatifs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#open-data" class="md-nav__link">
-    Open data
+  <a href="#contexte" class="md-nav__link">
+    Contexte
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#format-csv" class="md-nav__link">
-    Format csv
+  <a href="#en-binaire-codage-en-complement-a-2" class="md-nav__link">
+    En binaire : codage en complément à 2
   </a>
   
 </li>
@@ -484,57 +470,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#importation-des-donnees" class="md-nav__link">
-    Importation des données
+  <a href="#representation-et-codage-des-nombres-reels" class="md-nav__link">
+    Représentation et codage des nombres réels
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recherche-dans-une-table" class="md-nav__link">
-    Recherche dans une table
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tri-dune-table-suivant-une-colonne" class="md-nav__link">
-    Tri d'une table suivant une colonne
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fusion-de-deux-tables" class="md-nav__link">
-    Fusion de deux tables
-  </a>
-  
-    <nav class="md-nav" aria-label="Fusion de deux tables">
+    <nav class="md-nav" aria-label="Représentation et codage des nombres réels">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#concatenation" class="md-nav__link">
-    Concaténation
+  <a href="#de-la-base-2-vers-la-base-10" class="md-nav__link">
+    De la base 2 vers la base 10
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#jointure" class="md-nav__link">
-    Jointure
+  <a href="#de-la-base-10-vers-la-base-2" class="md-nav__link">
+    De la base 10 vers la base 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codage-en-virgule-flottante" class="md-nav__link">
+    Codage en virgule flottante
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#norme-ieee-754" class="md-nav__link">
+    Norme IEEE 754
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exportation-des-donnees-de-la-table-traitee-au-format-csv" class="md-nav__link">
-    Exportation des données de la table traitée au format csv
-  </a>
   
 </li>
       
@@ -542,6 +514,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../donnees_table/" class="md-nav__link">
+        Données en table
+      </a>
     </li>
   
 
@@ -1526,30 +1512,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
+  <a href="#les-additions-en-binaire" class="md-nav__link">
+    Les additions en binaire
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#les-donnees-structurees-au-format-csv" class="md-nav__link">
-    Les données structurées au format CSV
+  <a href="#representation-des-entiers-relatifs" class="md-nav__link">
+    Représentation des entiers relatifs
   </a>
   
-    <nav class="md-nav" aria-label="Les données structurées au format CSV">
+    <nav class="md-nav" aria-label="Représentation des entiers relatifs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#open-data" class="md-nav__link">
-    Open data
+  <a href="#contexte" class="md-nav__link">
+    Contexte
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#format-csv" class="md-nav__link">
-    Format csv
+  <a href="#en-binaire-codage-en-complement-a-2" class="md-nav__link">
+    En binaire : codage en complément à 2
   </a>
   
 </li>
@@ -1560,57 +1546,43 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#importation-des-donnees" class="md-nav__link">
-    Importation des données
+  <a href="#representation-et-codage-des-nombres-reels" class="md-nav__link">
+    Représentation et codage des nombres réels
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recherche-dans-une-table" class="md-nav__link">
-    Recherche dans une table
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tri-dune-table-suivant-une-colonne" class="md-nav__link">
-    Tri d'une table suivant une colonne
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fusion-de-deux-tables" class="md-nav__link">
-    Fusion de deux tables
-  </a>
-  
-    <nav class="md-nav" aria-label="Fusion de deux tables">
+    <nav class="md-nav" aria-label="Représentation et codage des nombres réels">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#concatenation" class="md-nav__link">
-    Concaténation
+  <a href="#de-la-base-2-vers-la-base-10" class="md-nav__link">
+    De la base 2 vers la base 10
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#jointure" class="md-nav__link">
-    Jointure
+  <a href="#de-la-base-10-vers-la-base-2" class="md-nav__link">
+    De la base 10 vers la base 2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codage-en-virgule-flottante" class="md-nav__link">
+    Codage en virgule flottante
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#norme-ieee-754" class="md-nav__link">
+    Norme IEEE 754
   </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exportation-des-donnees-de-la-table-traitee-au-format-csv" class="md-nav__link">
-    Exportation des données de la table traitée au format csv
-  </a>
   
 </li>
       
@@ -1628,176 +1600,286 @@
                 
 
 
-<h1 id="traitement-des-donnees-en-table-avec-python">Traitement des données en table avec Python<a class="headerlink" href="#traitement-des-donnees-en-table-avec-python" title="Permanent link">&num;</a></h1>
-<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&num;</a></h2>
-<p>L'organisation tabulaires de données (sous forme de tableaux) est très répandue et très ancienne : les tables les plus anciennes sont des tables de comptes de l'Égypte ancienne. </p>
-<p>Aujourd'hui, les données informatiques de plus en plus nombreuses et importantes doivent pouvoir être stockées, gérées, partagées et modifiables à distance. Les recherches sur des systèmes offrant ces possibilités datent du début des années 1960 avec les missions Apollo. Avec l'introduction du modèle relationnel introduit dans les années 1970 par Edgar Franck Codd (employé d'IBM qui travaillait sur un SGBD (Système de Gestion de Base de Données) utilisant le langage SQL (Structured Query Language), les tables de données, stockées dans des bases de données deviennent rapidement le principal moyen de stocker de l'information structurée.</p>
-<h2 id="les-donnees-structurees-au-format-csv">Les données structurées au format CSV<a class="headerlink" href="#les-donnees-structurees-au-format-csv" title="Permanent link">&num;</a></h2>
-<h3 id="open-data">Open data<a class="headerlink" href="#open-data" title="Permanent link">&num;</a></h3>
-<p>Les données ouvertes ou open data sont des données numériques dont l'accès et l'usage sont laissés libres aux usagers. Elles peuvent être d'origine publique ou privée, produites notamment par une collectivité, un service public, un collectif citoyen ou une entreprise.</p>
-<p>Le gouvernement met en ligne des Open data sur le site <a href="https://www.data.gouv.fr/fr/">data.gouv.fr</a>.</p>
-<p>Dans ce <a href="../data_donnee_table/radon.csv">fichier</a>,  les données au format CSV de l'IRSN (Institut de Radioprotection et de Sureté Nucléaire) concernant les émanations de radon, gaz radioactif produit par la désintégration naturelle de l’uranium présent dans les roches. Cancérigène, il peut présenter un risque pour la santé lorsqu’il s’accumule dans les bâtiments. Le fichier classe le potentiel radon des communes du territoire métropolitain en 3 catégories, numérotée de 1 à 3, par risque croissant.</p>
-<h3 id="format-csv">Format csv<a class="headerlink" href="#format-csv" title="Permanent link">&num;</a></h3>
-<p>Le format csv (Comma-separated values) est très répandu sur internet : c'est un format informatique ouvert représentant des données tabulaires sous forme de valeurs séparées par des virgules.</p>
-<p>Un fichier csv est un fichier texte, par opposition aux formats dits « binaires ». Chaque ligne du texte correspond à une ligne du tableau et les virgules correspondent aux séparations entre les colonnes. Les portions de texte séparées par une virgule correspondent ainsi aux contenus des cellules du tableau.</p>
-<p>Ouvrir le fichier csv avec le bloc-note ou VSCode.</p>
-<figure>
-<p><img alt="" src="../data_donnee_table/img3.png" width="450px" /></p>
-</figure>
-<p>La 1ère ligne contient la liste des champs (les noms des colonnes) :
-"nom_comm","nom-dept", "insee_com" ,"classe_potentiel" et "reg" sont appelés des descripteurs.
-"MARCELLOIS", "COTE D'OR", "25377", "1" et "FR" sont les valeurs du descripteur.</p>
-<p>Vous constatez qu'ici le séparateur n'est pas la virgule mais le point-virgule (;). La virgule est effectivement un standard
-pour les données anglo-saxonnes, mais pas pour les données aux normes françaises (où la virgule est déjà utilisée pour
-séparer les chiffres décimaux). Cela peut engendrer quelques problèmes, il faut donc rester vigilants sur le type de séparateur utilisé.</p>
-<p>Ouvrir maintenant le fichier avec le tableur "Calc" (libre Office) ou "Excel" (Windows) et vérifier que les données y sont bien rangées sous forme tabulaire :</p>
-<figure>
-<p><img alt="open_office" src="../data_donnee_table/img2.png" width="450px" /></p>
-</figure>
-<h2 id="importation-des-donnees">Importation des données<a class="headerlink" href="#importation-des-donnees" title="Permanent link">&num;</a></h2>
-<p>L'objectif est d'extraire les données puis de les enregistrer dans une liste de listes ou éventuellement dans une liste de tuples (p-uplets), c’est-à-dire dans une table.</p>
+<h1 id="representation-et-codage-des-entiers-relatifs-et-des-nombres-reels">Représentation et codage des entiers relatifs et des nombres réels<a class="headerlink" href="#representation-et-codage-des-entiers-relatifs-et-des-nombres-reels" title="Permanent link">&num;</a></h1>
+<h2 id="les-additions-en-binaire">Les additions en binaire<a class="headerlink" href="#les-additions-en-binaire" title="Permanent link">&num;</a></h2>
+<p><strong>Rappel (en décimal) :</strong></p>
+<div class="arithmatex">\[
+\begin{align} 
+&amp; 21\\ 
++&amp; 19 \\ \hline
+=    &amp;46  
+\end{align}
+\]</div>
+<p>Dans cet exemple, étant donné que <span class="arithmatex">\(7 + 9 = 16\)</span> et que 16 &gt; 9 (le plus grand chiffre associé à la base 10), nouus positionnons 6 en dessous du 9 et nous reportons une unité au_dessus du 2. Ensuite, nous additionnons les dizaines c'est-à-dire 2 + 1 + 1(la retenue) = 4.</p>
+<p><strong>En binaire :</strong> il faut reproduire exactement le même protocole :</p>
+<div class="arithmatex">\[
+\begin{align}
+ &amp; 010101 \\
++ &amp; 111111 \\ \hline
+= &amp; 1010100
+\end{align}
+\]</div>
+<p><strong>Méthode :</strong></p>
+<ul>
+<li>1 + 1 = 2 &gt; 1 (le plus grand des chiffres associés à la base 2) : on pose 0 et on retient 1</li>
+<li>1 + 0 + 1 = 2 : on pose 0 et on retient 1</li>
+<li>1 + 1 + 1 = 3 : on pose 1 et on retient 1</li>
+<li>Et ainsi de suite…</li>
+</ul>
 <div class="admonition example">
 <p class="admonition-title">Exercice 1</p>
-<p>Télécharger <code>radon.csv</code> puis exécuter le code <code>extraction csv</code> sous Spyder.</p>
-<ol>
-<li>Que font les fonctions <code>readlines()</code> et <code>readline()</code>? </li>
-<li>Que fait la méthode <code>rstrip()</code> ?</li>
-<li>Que fait la méthode <code>split()</code>?</li>
-</ol>
+<p>Effectuer les calculs suivants.</p>
 </div>
-<table class="language-py highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">extraction csv</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span>
-<span class="normal"><a href="#__codelineno-0-5">5</a></span>
-<span class="normal"><a href="#__codelineno-0-6">6</a></span>
-<span class="normal"><a href="#__codelineno-0-7">7</a></span>
-<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">fichier</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;radon.csv&quot;</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">descripteurs</span> <span class="o">=</span> <span class="n">fichier</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">liste_descripteurs</span><span class="o">=</span><span class="n">descripteurs</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="n">valeurs</span> <span class="o">=</span> <span class="n">fichier</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="n">fichier</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</span></code></pre></div>
-</td></tr></table>
+<div class="arithmatex">\[\begin{align}
+  &amp; 1011\\
++ &amp; 0110 \\ \hline
+= &amp; ...................
+\end{align}\]</div>
+<div class="arithmatex">\[
+\begin{align}
+  &amp; 0111\\
++ &amp; 1110\\ \hline
+= &amp; ..................  
+\end{align}
+\]</div>
+<div class="arithmatex">\[
+\begin{align}
+  &amp; 11010101\\
++ &amp; 00000001\\ \hline
+= &amp; ..................  
+\end{align}
+\]</div>
+<div class="arithmatex">\[
+\begin{align}
+  &amp; 11010100\\
++ &amp; 11111111\\ \hline
+= &amp; ..................
+\end{align}
+\]</div>
+<h2 id="representation-des-entiers-relatifs">Représentation des entiers relatifs<a class="headerlink" href="#representation-des-entiers-relatifs" title="Permanent link">&num;</a></h2>
+<h3 id="contexte">Contexte<a class="headerlink" href="#contexte" title="Permanent link">&num;</a></h3>
+<p>Pour coder un entier relatif, il est nécessaire de coder les informations tout en respectant les propriétés mathématiques des entiers signés. Pour cela, il faut :</p>
+<ul>
+<li>S'assurer que : -(-a) = a</li>
+<li>S'assurer que : a + (-a) = 0</li>
+</ul>
+<h3 id="en-binaire-codage-en-complement-a-2">En binaire : codage en complément à 2<a class="headerlink" href="#en-binaire-codage-en-complement-a-2" title="Permanent link">&num;</a></h3>
+<p>On impose le codage sur un certain nombre de bit, par exemple de 8 bits.</p>
+<p>L'opposé d’un nombre est obtenu en 2 étapes :</p>
+<ul>
+<li>Première étape : inverser tous les bits du nombre</li>
+<li>Deuxième étape : ajouter 1 au résultat. On obtient alors l'opposé du nombre.</li>
+</ul>
+<p><strong>Exemple :</strong> prenons le cas de <span class="arithmatex">\(+43\)</span>, nous savons que <span class="arithmatex">\((+43)_{10} = (00101011)_2\)</span>.</p>
+<ul>
+<li>On inverse tous les bits du nombre et l'on obtient : <span class="arithmatex">\((11010100)_2\)</span></li>
+<li>On ajoute 1  </li>
+</ul>
+<div class="arithmatex">\[
+\begin{align}
+ &amp; 11010100 \\
++ &amp; 00000001 \\ \hline
+= &amp; 11010101  
+\end{align}
+\]</div>
 <div class="admonition example">
 <p class="admonition-title">Exercice 2</p>
-<ol>
-<li>Que fait le code <code>radon.py</code> suivant ?</li>
-<li>Que représente la variable <code>i</code> dans la boucle `for i in valeur' ?</li>
-<li>Commenter chacune des lignes du programme. </li>
-</ol>
-</div>
-<table class="language-py highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">radon.py</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span>
-<span class="normal"><a href="#__codelineno-1-11">11</a></span>
-<span class="normal"><a href="#__codelineno-1-12">12</a></span>
-<span class="normal"><a href="#__codelineno-1-13">13</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">fichier</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;radon.csv&quot;</span><span class="p">,</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">descripteurs</span> <span class="o">=</span> <span class="n">fichier</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">liste_descripteurs</span><span class="o">=</span><span class="n">descripteurs</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="n">valeurs</span> <span class="o">=</span> <span class="n">fichier</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="n">table</span> <span class="o">=</span> <span class="p">[]</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">valeurs</span><span class="p">:</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a>     <span class="n">liste</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a>     <span class="n">liste</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">liste</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a>     <span class="n">table</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="n">fichier</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</span></code></pre></div>
-</td></tr></table>
-<h2 id="recherche-dans-une-table">Recherche dans une table<a class="headerlink" href="#recherche-dans-une-table" title="Permanent link">&num;</a></h2>
-<p>La  recherche  dans  une  table  consiste  à  obtenir  les  valeurs  de  certains  descripteurs  (champs)  avec  éventuellement  des critères les concernant.</p>
-<div class="admonition exemple">
-<p class="admonition-title">Exercice 3</p>
-<p>A partir du fichier radon.csv, extraire les informations suivantes :</p>
+<p>Vérifier qu’en binaire :</p>
 <ul>
-<li>Liste des communes de France présentant un potentiel radon de 3. La liste nommée <code>recherche1</code> comportera tous les champs du fichier csv.</li>
-<li>Liste  des  communes  de l'Aude  présentant  un  potentiel  radon de 2 et  dont  le  nom  commence  par  "A".  La liste nommée <code>recherche2</code> comportera uniquement le champ correspondant au nom de la commune. </li>
-<li>Liste des communes de métropole à risque faible ou moyen (présentant un potentiel radon de 1 ou 2). La liste nommée <code>recherche3</code> sera une liste de tuples comprenant respectivement le nom du département, de la commune et du potentiel radon.</li>
-<li>Liste des départements de France dont au moins 1 des communes présente un potentiel radon de 2 ou 3. La liste nommée <code>recheche4</code> sera une liste de tuples comprenant le nom du département et le potentiel radon.</li>
+<li><span class="arithmatex">\((-43) + (43) = 0\)</span></li>
+<li><span class="arithmatex">\(-(-43)=43\)</span>.</li>
 </ul>
 </div>
-<p>Remarque : la méthode index("nomDescripteur") retourne l'indice du descripteur dans la table. Par exemple :</p>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">index_com</span> <span class="o">=</span> <span class="n">list_descripteur</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;nom_comm&quot;</span><span class="p">)</span>
-</span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 3</p>
+<p>Convertir <span class="arithmatex">\((-7)_{10}\)</span> en binaire, ainsi que <span class="arithmatex">\((-35)_{10}\)</span>.</p>
+</div>
+<h2 id="representation-et-codage-des-nombres-reels">Représentation et codage des nombres réels<a class="headerlink" href="#representation-et-codage-des-nombres-reels" title="Permanent link">&num;</a></h2>
+<h3 id="de-la-base-2-vers-la-base-10">De la base 2 vers la base 10<a class="headerlink" href="#de-la-base-2-vers-la-base-10" title="Permanent link">&num;</a></h3>
+<p><strong>Rappel :</strong></p>
+<p>Pour un nombre entier : <span class="arithmatex">\((108)_{10} = 1 × 10^2 + 0 × 10^1 + 8 × 10^0\)</span></p>
+<p>De même, pour un nombre réel :</p>
+<p><span class="arithmatex">\((108,893)_{10} = 1 × 10^2 + 0 × 10^1 + 8 × 10^0 + 8 × 10^{-1} + 9 × 10^{-2} + 3 × 10^{-3}\)</span></p>
+<p>Pour passer un réel de la base 2 vers la base 10 :</p>
+<p><span class="arithmatex">\((10,1011)_2 = 1 × 2^1 + 0 × 2^0 + 1 × 2^{-1} + 0 × 2^{-2} + 1 × 2^{-3} + 1 × 2^{-4}\)</span></p>
+<p><span class="arithmatex">\((10,1011)_2 = 1 × 2 + 0 × 1 + 1 × 0.5 + 0 × 0.25 × 1 × 0.125 + 1 × 0.0625\)</span></p>
+<p><span class="arithmatex">\((10,1011)_2 = (2,6875)_{10}\)</span></p>
 <div class="admonition example">
 <p class="admonition-title">Exercice 4</p>
-<p>Parmi les listes précédentes, y-en-a-t-il qui présentent des doublons. Si oui, lesquelles ? Écrire une fonction nommée <code>sansDoublon(list)</code>, qui prendra en argument une liste et retournera une nouvelle liste sans doublon. Appliquer cette fonction aux listes concernées par les problèmes de doublons.</p>
+<p>Traduire <span class="arithmatex">\((11,101)_2\)</span> de la base 2 vers la base 10 </p>
 </div>
-<h2 id="tri-dune-table-suivant-une-colonne">Tri d'une table suivant une colonne<a class="headerlink" href="#tri-dune-table-suivant-une-colonne" title="Permanent link">&num;</a></h2>
-<p>Le tri dans une table consiste à modifier l’ordre des données pour qu'elles soient présentées dans un ordre croissant ou décroissant selon le choix d’un ou plusieurs critères.</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice 5</p>
-<p>Nous avons établi précédemment une liste des communes à risque faible ou moyen nommée <code>recherche3</code> (liste de tuples comprenant le nom du département, de la communeet le potentiel radon).
- Trier la liste <code>recherche3</code> par ordre alphabétique croissant des communes. Pour effectuer un tri, il est possible de programmer nous même une fonction de tri. Il est aussi possible d'utiliser la fonction <code>sorted()</code>
- ```</p>
+<p>Traduire <span class="arithmatex">\((4B,8)_{16}\)</span> de la base 16 vers la base 10</p>
 </div>
-<h2 id="fusion-de-deux-tables">Fusion de deux tables<a class="headerlink" href="#fusion-de-deux-tables" title="Permanent link">&num;</a></h2>
-<p>On peut distinguer 2 situations:</p>
-<ul>
-<li>La concaténation: on ajoute les enregistrements (c’est-à-dire les lignes de la table) de la table2 dans la table1</li>
-<li>La jointure : on ajoute des champs(c'est-à-dire les colonnes de la table) de la table 2 dans la table 1.</li>
-</ul>
-<p><strong>Remarque :</strong> Il faut bien évidement faire attention à ce que les données soient compatibles entres elles.</p>
-<h3 id="concatenation">Concaténation<a class="headerlink" href="#concatenation" title="Permanent link">&num;</a></h3>
-<p>Si les 2 tables possèdent exactement les mêmes descripteurs (nom de la colonne), dans le même ordre, et que les valeurs sont de même type, la fusion est facile car il suffit de concaténer les 2 tables c'est-à-dire ajouter les enregistrements (lignes) de la tables 2 sous les enregistrements de la tables 1. Il peut être nécessaire de supprimer ensuite d'éventuels doublons. On peut aussi rajouter les éléments de la table 2 à la table 1, un par un, en vérifiant systématiquement qu'ils ne sont pas déjà présents dans la table 1. </p>
-<p>S'il manque un champ à une table, il suffit de le créer dans la table en insérant les valeurs <code>None</code> dans le champ. On peut également décider de ne pas prendre les champs qui n'existent pas dans les 2  tables (s'ils ne sont pas utiles). Dans ce cas il faut les supprimer avant de concaténer.</p>
+<h3 id="de-la-base-10-vers-la-base-2">De la base 10 vers la base 2<a class="headerlink" href="#de-la-base-10-vers-la-base-2" title="Permanent link">&num;</a></h3>
+<p><strong>Méthode :</strong>
+Pour la partie entière, on utilise la méthode des divisions successives vue précédemment. Pour la partie fractionnaire, on utilise la méthode des multiplications successives.</p>
+<p><strong>Exemple :</strong></p>
+<figure>
+<p><img alt="image" src="../img_relatifs_reels/img_conv.png" /></p>
+</figure>
 <div class="admonition example">
 <p class="admonition-title">Exercice 6</p>
-<ul>
-<li>Établir la liste des communes de France à risque moyen (présentant un potentiel radon de 2). La liste nommée <code>recherche5</code> comportera tous les champs du fichier csv.</li>
-<li>Fusionner cette liste avec la liste <code>recherche1</code> des communes de France à risque fort (présentant un potentiel radon de 3) afin de générer une liste des communes de France à risque (moyen ou fort) nommée <code>recherche6</code>.</li>
-</ul>
+<p>Traduire en binaire :
+* <span class="arithmatex">\((8,3125)_{10}\)</span>
+* <span class="arithmatex">\((0,546875)_{10}\)</span>
+* <span class="arithmatex">\((2,921875)_{10}\)</span>.</p>
 </div>
-<h3 id="jointure">Jointure<a class="headerlink" href="#jointure" title="Permanent link">&num;</a></h3>
 <div class="admonition example">
 <p class="admonition-title">Exercice 7</p>
+<p>Problème : traduire en binaire <span class="arithmatex">\((0, 4)_{10}\)</span>.</p>
+</div>
+<h3 id="codage-en-virgule-flottante">Codage en virgule flottante<a class="headerlink" href="#codage-en-virgule-flottante" title="Permanent link">&num;</a></h3>
+<div class="admonition success">
+<p class="admonition-title">Représentation normalisée</p>
+<p>tout nombre binaire (<span class="arithmatex">\(N\)</span>) peut se représenter comme ceci :</p>
+<div class="arithmatex">\[N = 1, mantisse \times 2^{e}\]</div>
+<p>avec e l'exposant du nombre <span class="arithmatex">\(N\)</span> </p>
+</div>
+<p><strong>Exemple :</strong> <span class="arithmatex">\((1011, 101)_2 = 1,0011101 \times 2^3\)</span> et <span class="arithmatex">\((0, 0101)2 = 1, 01 \times 2^{−2}\)</span></p>
+<div class="admonition success">
+<p class="admonition-title">Codage</p>
+<p>Chaque nombre peut se coder de la manière suivante :</p>
+<p><p style="text-align:center;font-weight: bolder; font-size: medium;"> <span style="color:purple">Partie signe (ps) </span> + <span style="color:green">Partie exposant (pe)</span> + <span style="color:rgb(232 137 41)">Partie mantisse (pm)</span></p></p>
+<p><span style="text-align:left;color : purple; font-size: medium;">Partie signe :</span> On utilise la convention 0 pour les nombres positifs et le 1 pour les nombres négatifs. Donc nous n'avons besoin que d'un seul bit pour stocker ce signe.</p>
+<p><span style="color:rgb(232 137 41);font-size: medium;">Partie mantisse : </span>
+À une exception près, tous les nombres ont une représentation normalisée sous la forme : <span class="arithmatex">\(1, mantisse \times 2 ^{exposant}\)</span>
+Par conséquent, il n’est pas nécessaire de stocker le 1 situé à gauche de la virgule. On économise ainsi un précieux bit pouvant être utilisé à meilleur escient.</p>
+<p><span style="color:green;font-size: medium;">Partie exposant</span> Pour stocker l’exposant de la représentation normalisée du nombre, il faut stocker la valeur absolue de l’exposant ainsi que son signe. Pour cela, on applique un décalage à l’exposant trouvé et on stocke cette valeur décalée. La valeur du décalage dépend du nombre <span class="arithmatex">\(n\)</span> de bits utilisés pour cette partie.</p>
+<p>Soit <span class="arithmatex">\(d\)</span> ce décalage :</p>
+<div class="arithmatex">\[ d = 2^{n-1} - 1\]</div>
+<p>De plus, il faudra stocker dans cette partie également l'exposant <span class="arithmatex">\(e\)</span>. </p>
+<p>Donc, la partie exposant <span class="arithmatex">\(pe\)</span> peut s'écrire ainsi comme la somme de l'exposant et du décalage en binaire :</p>
+<div class="arithmatex">\[pe = d + exposant\]</div>
+</div>
+<p>Exemple : pour une partie exposant stockée sur 5 bits :</p>
+<p><span class="arithmatex">\(1011, 101101 = 1, 011101101 \times 2^3\)</span>. Le décalage vaut <span class="arithmatex">\(d = 2{5−1} − 1 = 15\)</span>, l’exposant vaut <span class="arithmatex">\(e = +3\)</span> donc la valeur stockée sur ces 5 bits vaut <span class="arithmatex">\(15 + 3 = 18\)</span>. Il ne reste plus qu'à traduire ce nombre en binaire.</p>
+<p><strong>Remarque :</strong> comme indiqué ci-dessus, il existe une exception : 0 (zéro). Pour cette valeur, il sera nécessaire d’utiliser une combinaison binaire spéciale.</p>
+<div class="admonition quote">
+<p class="admonition-title">Exemple 1</p>
+<p>coder 2007 sur 12 bits repartis de la manière suivante :</p>
 <ul>
-<li>Établir une liste de tuples nommée <code>recherche7</code> de toutes les communes de Métropole comprenant respectivement le nom de la commune, le nom du département et le numéro d'insee.</li>
-<li>Établir une jointure avec la liste <code>recherche3</code> de toutes les communes de métropole à risque faible ou moyen afin d'obtenir une liste de tuples nommée recherche8 comprenant le nom du département, de la commune, le numéro d'insee et le potentiel radon. Cette liste ne sera plus sous la forme d'une liste de tuples mais d'une liste de listes.</li>
+<li>1 bit pour le signe ;</li>
+<li>5 bits pour la partie exposant ;</li>
+<li>6 bits pour la partie mantisse.</li>
+</ul>
+<p><strong>étape 1 :</strong> convertir le nombre en binaire :
+$$ (2007)_{10} = (11111010111)_2 $$</p>
+<p><strong>étape 2 :</strong> on cherche l'écriture normalisée :
+$$ (11111010111)_2 = (1,1111010111 \times 2^{10})_2$$
+Donc l'exposant <span class="arithmatex">\(e\)</span> vaut 10.</p>
+<p><strong>étape 3 :</strong>  on code</p>
+<ul>
+<li><span style="text-align:left;color : purple; font-size: medium;">Partie signe  </span> : 0  car positif</li>
+<li><span style="color:rgb(232 137 41);font-size: medium;">Partie mantisse </span> : 111101</li>
+<li><span style="color:green;font-size: medium;">Partie exposant</span> : le décalage vaut <span class="arithmatex">\(d = 2 ^ {5-1} - 1 = 15\)</span> car on a 5 bits pour coder la partie exposant.  Donc la partie exposant vaut :</li>
+</ul>
+<div class="arithmatex">\[pe = d + e = 15 + 10 = (25)_{10} = (11001)_2\]</div>
+<p><strong>Conclusion</strong> le codage en virgule flottante de 2007 est : <span style="text-align:left;color : purple; font-size: medium;"> 0 </span> <span style="color:green;font-size: medium;">11001</span><span style="color:rgb(232 137 41);font-size: medium;">111101</span></p>
+</div>
+<div class="admonition quote">
+<p class="admonition-title">Exemple 2</p>
+<p>coder <span class="arithmatex">\((−0,28125)_{10}\)</span> sur 12 bits repartis de
+la même manière que dans l’exemple 1.</p>
+<p><strong>étape 1 :</strong> convertir le nombre en binaire :
+$$ (−0, 28125)_{10} = (−0,01001)_2$$</p>
+<p><strong>étape 2 :</strong> on cherche l'écriture normalisée :
+$$ (-0,01001)_2)_2 = (-1,001 \times 2^{-2})2$$
+Donc l'exposant <span class="arithmatex">\(e\)</span> vaut -2.</p>
+<p><strong>étape 3 :</strong>  on code</p>
+<ul>
+<li><span style="text-align:left;color : purple; font-size: medium;">Partie signe  </span> : 1  car négatif</li>
+<li><span style="color:rgb(232 137 41);font-size: medium;">Partie mantisse </span> : 001000</li>
+<li><span style="color:green;font-size: medium;">Partie exposant</span> : le décalage vaut <span class="arithmatex">\(d = 2 ^ {5-1} - 1 = 15\)</span> car on a 5 bits pour coder la partie exposant.  Donc la partie exposant vaut :</li>
+</ul>
+<div class="arithmatex">\[pe = d + e = 15 + (-2) = (13)_{10} = (01101)_2\]</div>
+<p><strong>Conclusion</strong> le codage en virgule flottante de 2007 est : <span style="text-align:left;color : purple; font-size: medium;"> 1 </span> <span style="color:green;font-size: medium;">101101</span><span style="color:rgb(232 137 41);font-size: medium;">01101</span></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercices 8</p>
+<p><strong>1.</strong> Donner la représentation en virgule flottante de (0, 9375)10 sur 11 bits repartis de la manière suivante :</p>
+<ul>
+<li>1 bit pour le signe ;</li>
+<li>4 bits pour la partie exposant ;</li>
+<li>6 bits pour la partie mantisse.</li>
+</ul>
+<p><strong>2</strong> Donner la représentation en virgule flottante de (−3, 625)10 sur 10 bits repartis de la manière suivante :</p>
+<ul>
+<li>1 bit pour le signe ;</li>
+<li>3 bits pour la partie exposant ;</li>
+<li>6 bits pour la partie mantisse.</li>
 </ul>
 </div>
-<p><strong>Remarque :</strong> Vérifier bien que votre liste <code>recherche8</code> ne comporte pas plus d'éléments que la liste recherche3 ! Si c'est le cas, est-ce possible ? Quelle est la cause de ce problème ? y remédier. </p>
-<h2 id="exportation-des-donnees-de-la-table-traitee-au-format-csv">Exportation des données de la table traitée au format csv<a class="headerlink" href="#exportation-des-donnees-de-la-table-traitee-au-format-csv" title="Permanent link">&num;</a></h2>
-<p>Afin d'exporter le fichier au format csv, il faut convertir toutes les valeurs qui ne sont pas déjà au format str.</p>
+<h3 id="norme-ieee-754">Norme IEEE 754<a class="headerlink" href="#norme-ieee-754" title="Permanent link">&num;</a></h3>
+<p>Cette norme définit deux types de nombres en virgule flottante : simple précision (32 bits) et double précision (64 bits).</p>
+<p><strong>Simple précision</strong></p>
+<ul>
+<li>
+<p>taille totale : signe(1 bit) + partie exposant(8 bits) + mantisse(23) = 32 bits</p>
+</li>
+<li>
+<p>exposant sur 8 bits =› décalage = <span class="arithmatex">\(28^{8-1}-1 = 127\)</span></p>
+</li>
+<li>
+<p>Dans de nombreux langages de programmation (C, C++, Java...) le type de donnée associé est nommé float </p>
+</li>
+</ul>
+<p><strong>Double précision</strong></p>
+<ul>
+<li>
+<p>taille totale : signe(1 bit)+partie exposant(11 bits)+mantisse52) =  64 bits</p>
+</li>
+<li>
+<p>exposant sur 11 bits =› décalage = <span class="arithmatex">\(2^{11-1}-1 = 1023\)</span></p>
+</li>
+<li>
+<p>Dans de nombreux langages de programmation (C, C++, Java...) le type de donnée associé est nommé double </p>
+</li>
+</ul>
+<p><strong>Valeurs particulières</strong></p>
+<p>La norme IEEE 754 réserve les exposants 000...000 (uniquement des 0) et 111...111 (uniquement des 1) pour coder des valeurs particulières</p>
+<figure>
+<table>
+<thead>
+<tr>
+<th>Exposant</th>
+<th>Mantisse</th>
+<th>Valeur représentée</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>000...000</td>
+<td>000...000</td>
+<td>0 (zéro)</td>
+</tr>
+<tr>
+<td>000...000</td>
+<td>000.001 à 111...111</td>
+<td>nombre dénormalisé <span class="arithmatex">\(valeur= \pm 0,mantisse\times 2^{-126 ou -1022}\)</span></td>
+</tr>
+<tr>
+<td>111...111</td>
+<td>000...000</td>
+<td><span class="arithmatex">\(\pm \infty\)</span></td>
+</tr>
+<tr>
+<td>111...111</td>
+<td>000.001 à 111...111</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+</figure>
 <div class="admonition example">
-<p class="admonition-title">Exercice 8</p>
-<p>Écrire le script python permettant cette conversion (2 lignes de code devraient suffire).</p>
+<p class="admonition-title">Exercices 9</p>
+<ul>
+<li>Soit le nombre flottant au format simple précision : 00111101110011001100110011001100. Trouvez la représentation en base 10 de ce nombre.</li>
+<li>Déterminez la représentation au format simple précision d'un tiers (1/3) en binaire et en hexadécimal.  </li>
+</ul>
 </div>
-<p>Le code suivant permet ensuite l'exportation des données de la table recherche8 dans le fichier csv nommé <code>fichierE.csv</code> :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-3-10">10</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">descripteurs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;com&quot;</span><span class="p">,</span><span class="s2">&quot;dep&quot;</span><span class="p">,</span><span class="s2">&quot;insee&quot;</span><span class="p">,</span><span class="s2">&quot;potRadon&quot;</span><span class="p">]</span> <span class="c1">#liste des descripteurs</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">fichierE</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;fichierE.csv&quot;</span><span class="p">,</span><span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="c1">#ouverture du fichier en écriture</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">liste_descripteurs</span> <span class="o">=</span> <span class="s2">&quot;;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">descripteurs</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="c1"># création de la chaine de caractère </span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1">#des descripteurs sépararés par des &quot;;&quot;</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">fichierE</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">listeDescripteurs</span><span class="p">)</span> <span class="c1">#écriture dans le fichier</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">recherche8</span> <span class="p">:</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>    <span class="n">valeurs</span> <span class="o">=</span> <span class="s2">&quot;;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="c1">#création de la chaine de caractère d&#39;une ligne de valeurs</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="c1">#séparées par &quot;;&quot;    </span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a>    <span class="n">fichierE</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)</span> <span class="c1">#écriture dans le fichier</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="n">fichierE</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>   <span class="c1">#fermeture du fichier</span>
-</span></code></pre></div>
-</td></tr></table>
+<p>\end{enumerate}</p>
 
               
             </article>
@@ -1811,7 +1893,7 @@ séparer les chiffres décimaux). Cela peut engendrer quelques problèmes, il fa
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../relatifs_reels/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Représentation des relatifs et des réels" rel="prev">
+        <a href="../representation_entier/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Représentation des entiers" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1820,20 +1902,20 @@ séparer les chiffres décimaux). Cela peut engendrer quelques problèmes, il fa
               <span class="md-footer__direction">
                 Previous
               </span>
-              Représentation des relatifs et des réels
+              Représentation des entiers
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../Langage/Bases_Python/" class="md-footer__link md-footer__link--next" aria-label="Next: Les bases" rel="next">
+        <a href="../donnees_table/" class="md-footer__link md-footer__link--next" aria-label="Next: Données en table" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Les bases
+              Données en table
             </div>
           </div>
           <div class="md-footer__button md-icon">
