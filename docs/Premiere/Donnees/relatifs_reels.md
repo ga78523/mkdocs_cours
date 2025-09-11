@@ -259,7 +259,7 @@ Cette norme définit deux types de nombres en virgule flottante : simple précis
 
 * taille totale : signe(1 bit) + partie exposant(8 bits) + mantisse(23) = 32 bits
 
-* exposant sur 8 bits =› décalage = $28^{8-1}-1 = 127$
+* exposant sur 8 bits =› décalage = $2^{8-1}-1 = 127$
 
 * Dans de nombreux langages de programmation (C, C++, Java...) le type de donnée associé est nommé float 
 
