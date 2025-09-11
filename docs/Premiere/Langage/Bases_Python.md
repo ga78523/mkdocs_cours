@@ -2,7 +2,6 @@
 
 ## Présentation de Python
 
-### Python : bref historique
 
 Python est un langage de programmation, dont la première version est sortie en 1991. Créé par [Guido van Rossum](https://fr.wikipedia.org/wiki/Guido_van_Rossum), il a voyagé du Macintosh de son créateur, qui travaillait à cette époque au Centrum voor Wiskunde en Informatica aux Pays-Bas, jusqu'à se voir associer une organisation à but non lucratif particulièrement dévouée, la Python Software Foundation, créée en 2001.
 
@@ -62,61 +61,6 @@ print("Hello world")
     * Python (Microsoft) → support complet pour Python (autocomplétion, linting, debugging).
     * Pylance → autocomplétion plus intelligente et rapide.
     * Jupyter → si tu veux utiliser des notebooks `.ipynb` dans VS Code.
-
-### Tester son programme
-
-Clique sur la flèche verte pour exécuter ton programme.
-
-
-### Installation de Thonny
-
-#### Présentation du logiciel
-
-Thonny est un environnement de développement intégré pour Python conçu pour les débutants. Il prend en charge différentes façons de parcourir le code, l'évaluation d'expression étape par étape, la visualisation détaillée de la pile d'appels et un mode pour expliquer les concepts de références et de tas.
-
-#### Installation
-
-* Aller sur le site : [https://thonny.org/](https://thonny.org/)
-* Cliquer sur Windows (en haut à droite).
-
-<figure markdown>
-![image petit écran](data_bases/thonny.png){width=600px}
-</figure>
-
-* Le télécharger.
-* Se rendre dans le dossier où vous l’avez téléchargé (en général, dans le dossier Téléchargements) et cliquer, pour
-cette version, sur le fichier : thonny-3.3.13.exe
-
-#### Présentation 
-
-<figure markdown>
-![image petit écran](data_bases/ecran_thonny.png){width=§00px}
-</figure>
-
-Avec :
-
-* A : zone d’édition où vous allez taper votre code
-* B : console
-* C : explorateur de variables
-
-### L'édition et l'exécution d'un premier programme
-
-Comme la coutume l’exige, notre premier programme sera l’affichage du texte "Hello World". Pour cela :
-
-*  Créer un répertoire dans votre dossier `NSI`, un autre dossier `Bases`  dans lequel vous y stockerez tous vos programmes de ce chapitre.
-* Dans la barre d'outils cliquer sur $Nouveau Fichier$.
-* Puis dans la zone de saisie, taper :
-
-``` py linenums='1'
-print("hello world")   #affiche le texte entre parenthèses 
-```
-
-*  Enregistrer ce fichier sous le nom de `hello.py` (vous remarquerez que l'extension .py est réservée à python);
-* Cliquer dans la barre d'outils sur la flèche verte ![fleche](data_bases/flecheVerte.png){width=17px} qui signifie Exécuter (ou Ctrl+F9).
-
-Si tout va bien, votre programme s'effectue dans la console.
-
-**Remarque :** il est possible (et fortement conseillé) d'inclure des commentaires dans les lignes de code, ils doivent être précédés de # afin qu'ils ne soient pas interprétés, ce qui sinon provoquerait un message d'erreur.
 
 ## La déclaration et l'affectation du contenu de variables
 
