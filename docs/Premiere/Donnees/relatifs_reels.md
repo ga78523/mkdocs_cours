@@ -6,7 +6,7 @@
 
 $$
 \begin{align} 
-& 21\\ 
+& 27\\ 
 +& 19 \\ \hline
 =    &46  
 \end{align}
@@ -224,7 +224,7 @@ $1011, 101101 = 1, 011101101 \times 2^3$. Le décalage vaut $d = 2{5−1} − 1 
     $$ (−0, 28125)_{10} = (−0,01001)_2$$
 
     **étape 2 :** on cherche l'écriture normalisée :
-    $$ (-0,01001)_2)_2 = (-1,001 \times 2^{-2})2$$
+    $$ (-0,01001)_2 = (-1,001 \times 2^{-2})2$$
     Donc l'exposant $e$ vaut -2.
 
     **étape 3 :**  on code
@@ -235,7 +235,7 @@ $1011, 101101 = 1, 011101101 \times 2^3$. Le décalage vaut $d = 2{5−1} − 1 
 
     $$pe = d + e = 15 + (-2) = (13)_{10} = (01101)_2$$ 
 
-    **Conclusion** le codage en virgule flottante de 2007 est : <span style="text-align:left;color : purple; font-size: medium;"> 1 </span> <span style="color:green;font-size: medium;">101101</span><span style="color:rgb(232 137 41);font-size: medium;">01101</span>
+    **Conclusion** le codage en virgule flottante de 2007 est : <span style="text-align:left;color : purple; font-size: medium;"> 1 </span> <span style="color:green;font-size: medium;">01101</span><span style="color:rgb(232 137 41);font-size: medium;">001000</span>
 
 
 !!! example "Exercices 8"
