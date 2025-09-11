@@ -20,6 +20,54 @@ Il est, en outre, très facile d'étendre les fonctionnalités existantes. Ainsi
 
 Plusieurs bibliothèques peuvent ainsi être installées pour, par exemple, développer des interfaces graphiques en Python.
 
+## Installer VS Code
+
+### Télécharger VSCODE
+
+* Aller sur le site officiel : [https://code.visualstudio.com/](https://code.visualstudio.com/)
+
+* Télécharge la version adaptée à ton système :
+
+    * Windows : .exe
+    * macOS : .dmg
+    * Linux : .deb ou .rpm selon ta distribution
+
+* Installer le programme (suis l’assistant et coche **"Ajouter au PATH"** quand proposé).
+
+### Installer Python
+
+* Télécharger Python depuis le site officiel : [https://www.python.org/downloads/](https://www.python.org/downloads/)
+* Lancer l’installateur et coche **Add Python to PATH** avant d’installer.
+
+### Configurer l’interpréteur Python
+
+* Dans VS Code, taper `Ctrl+Shift+P` (palette de commandes).
+* Chercher Python : Select Interpreter.
+* Choisir l'installation de Python (par ex. Python 3.13.7).
+
+### Tester ton projet Python dans VS Code
+
+* Crée un dossier pour ton projet (par ex. C:\MesProjetsPython\hello).
+* Ouvre VS Code → File → Open Folder → choisis ton dossier.
+* Crée un fichier `hello.py` avec le code suivant : 
+
+``` py
+print("Hello world")
+```
+
+### Installer les extensions utiles
+
+* Clique sur l’icône Extensions (ou Ctrl+Shift+X) et installe :
+
+    * Python (Microsoft) → support complet pour Python (autocomplétion, linting, debugging).
+    * Pylance → autocomplétion plus intelligente et rapide.
+    * Jupyter → si tu veux utiliser des notebooks `.ipynb` dans VS Code.
+
+### Tester son programme
+
+Clique sur la flèche verte pour exécuter ton programme.
+
+
 ### Installation de Thonny
 
 #### Présentation du logiciel

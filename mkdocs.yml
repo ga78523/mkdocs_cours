@@ -126,3 +126,4 @@ nav:
       - vcode_web : Logiciels/insta_vscode_html.md
       - vcode_python : Logiciels/insta_vscode_python.md
       - thonny : Logiciels/thonny_tutorial.md
+      - mkdocs : Logiciels/tuto_mkdocs.md

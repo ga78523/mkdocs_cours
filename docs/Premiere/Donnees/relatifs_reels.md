@@ -144,6 +144,7 @@ Pour la partie entière, on utilise la méthode des divisions successives vue pr
 
 !!! example "Exercice 6"
     Traduire en binaire :
+    
     * $(8,3125)_{10}$
     * $(0,546875)_{10}$
     * $(2,921875)_{10}$.
@@ -154,7 +155,7 @@ Pour la partie entière, on utilise la méthode des divisions successives vue pr
 ### Codage en virgule flottante
 
 !!! success "Représentation normalisée"
-    tout nombre binaire ($N$) peut se représenter comme ceci :
+    Tout nombre binaire ($N$) peut se représenter comme ceci :
 
     $$N = 1, mantisse \times 2^{e}$$
 
