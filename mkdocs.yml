@@ -48,7 +48,6 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 
-
 extra_javascript:
   - javascripts/config.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
@@ -69,6 +68,9 @@ nav:
       - Seconde :
         - TP vitesse : Physique/Seconde/TP_vitesse.md
         - TP verrerie : Physique/Seconde/TPver_eleve.md
+
+    - 'SNT' :
+      - web : SNT/html_css_SNT.md
     - 'Première':
       - Données :
         - Représentation des entiers : Premiere/Donnees/representation_entier.md
@@ -98,6 +100,7 @@ nav:
       - Outils Python : Terminale/outils_python.md
       - Programmation :
         - Récursivité : Terminale/Programmation/cours_recursivite.md
+        - POO : Terminale/Programmation/POO.md
         - Calculabilité, décidabilité : Terminale/Programmation/decidabilite.md
         - Sécurisation des données : Terminale/Programmation/crypto.md
         - Arbres algos : Terminale/Programmation/algos_arbre.md

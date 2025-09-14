@@ -620,7 +620,6 @@ A la fin, notre dictionnaire sera : '{’a’ : None, ’b’ : ’a’, ’c’
 Il nous faudra lire ce dictionnaire pour pouvoir établir le chemin entre a et h. h a pour parent e
 qui a pour parent b et qui a pour parent a. D’où le chemin : a - b - e - g - h.
 
-
 ``` plaintext
 fonction parcours_largeur(G_depart):
     parents <- dict()
@@ -1242,6 +1241,6 @@ def detection_cycle(G, sommet):
 
 ## Bibliographie
 
-* [https://informatique-lycee.forge.apps.education.fr/terminale_nsi/cours-terminale/](pixees)
-* [https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.4_Graphes/cours/](Site de G.Lassus)
-* [https://frederic-zinelli.gitlab.io/algographe/](site très intéressant pour dessiner, et coder un graphe. A voir !)
+* [pixees](https://informatique-lycee.forge.apps.education.fr/terminale_nsi/cours-terminale/)
+* [Site de G.Lassus](https://glassus.github.io/terminale_nsi/T1_Structures_de_donnees/1.4_Graphes/cours/)
+* [site très intéressant pour dessiner, et coder un graphe.A voir !](https://frederic-zinelli.gitlab.io/algographe/)

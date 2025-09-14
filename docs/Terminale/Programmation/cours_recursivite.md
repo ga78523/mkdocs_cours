@@ -152,20 +152,20 @@ La méthode récursive est plus élégante et lisible et évite d'utiliser de no
 Dans cette méthode récursive, il arrive qu'une fonction appelle une autre fonction qui appelle elle-même la première, ce cas est appelé **récursivité croisée**. Prenons par exemple deux fonctions ci-dessous permettant de tester si un nombre est pair ou impair :
 
 ```python linenums='1' title="Exemple de récursivité croisée"
-def Pair(n):
+def pair(n:int)-> bool:
     if n == 0:
         return True
     else:
-        return Impair(n-1)
+        return impair(n-1)
 
-def Impair(n):
+def impair(n:int)->bool:
     if n == 0:
         return False
     else:
-        return Pair(n-1)
+        return pair(n-1)
 ```
 
-Ce n'est évidemment pas la méthode la plus simple mais elle fonctionne. On aurait pu par exemple tester le reste de la division euclidienne de n par deux.
+Ce n'est évidemment pas la méthode la plus simple mais elle fonctionne. On aurait pu par exemple tester le reste de la division euclidienne de `n` par deux.
 
 ### Récursivité multiple
 
@@ -213,14 +213,27 @@ Fonction coeff_binomial(n,k):
     |---|---|---|---|---|---|---|---|---|---|---|-----|
     | F(n) | 0 | 1 | 1 | 2 | 3 | 5 | 8 | 13 | 21 | 34 | 55 |
 
-    Cette suite est liée au nombre d'or, φ (phi) : ce nombre intervient dans l'expression du terme général de la suite. Inversement, la suite de Fibonacci intervient dans l'écriture des réduites de l'expression de φ en fraction continue : les quotients de deux termes consécutifs de la suite de Fibonacci sont les meilleures approximations du nombre d'or.
+    Cette suite est liée au nombre d'or, $\phi$ (phi) : ce nombre intervient dans l'expression du terme général de la suite. Inversement, la suite de Fibonacci intervient dans l'écriture des réduites de l'expression de $\phi $ en fraction continue : les quotients de deux termes consécutifs de la suite de Fibonacci sont les meilleures approximations du nombre d'or.
 
     **Question**  
     
     Écrire la fonction qui donne le $n^{ième}$ terme de la suite de Fibonacci de manière récursive et pour les plus rapides de manière itérative.
 
-!!! example "Exercice 6"
-    L'objectif de cet exercice est de réaliser la fractale de Von Koch à l'aide du module Python turtle. Il faudra lire attentivement la documentation de turtle. Une fractale est une sorte de courbe mathématique un peu complexe riche en détail, et qui possède une propriété intéressante visuellement : lorsque l'on regarde des détails de petite taille, on retrouve des formes correspondant aux détails de plus grande taille (auto-similarité). Cela nous rappelle étrangement la récursivité ! La première courbe à tracer a été imaginée en 1904 par le mathématicien suédois Niels Fabian Helge Von Koch.
+!!! example "Exercice 6 : la suite de Syracuse"
+    Cette suite est définie comme suit : $u_0 > 0$, puis $u_{i+1} = \dfrac{u_i}{2}$ si $u_i$ est pair, $3\times u_i + 1$ sinon.
+
+    1) Définir une fonction récursive qui prend en entrée, deux entiers $u_0$ et $i$ et qui renvoie la valeur de $u_i$.
+
+    2) La conjecture de Syracuse, vérifiée par ordinateur sur tous les entiers inférieurs à $1,25\times 10^{62}$ affirme que toute suite finit par atteindre le nombre 1 et boucler sur 1,4,2,1,4,2... 
+    
+    On appelle "temps de vol" le premier indice de $i$ tel que $u_i = 1$. Sans utiliser de boucle `while`, écrire un programme qui calcule le temps de vol en fonction de de $u_0$
+   
+!!! example "Exercice 7 : les vaches de Narayana"
+    Une vache donne naissance à une autre tous les ans an début de chaque année, qui elle-même donne naissance à une autre chaque année à partir de sa quatrième année.
+    Partant d'une vache qui vient de donner naissance ($v_1$), les termes successifs de la suite $(v_i)_{1\leq i}$ sont donc 1, 1, 1, 2, 3, 4, 6... ($v_6 = 4$, $v_7 = 6$). Écrire une fonction récursive $v_i$ qui renvoie le i-ème terme de la suite.
+
+!!! example "Exercice 8"
+    L'objectif de cet exercice est de réaliser la fractale de Von Koch à l'aide du module Python turtle. Une fractale est une sorte de courbe mathématique un peu complexe riche en détail, et qui possède une propriété intéressante visuellement : lorsque l'on regarde des détails de petite taille, on retrouve des formes correspondant aux détails de plus grande taille (auto-similarité). Cela nous rappelle étrangement la récursivité ! La première courbe à tracer a été imaginée en 1904 par le mathématicien suédois Niels Fabian Helge Von Koch.
 
     Le principe est simple : on divise un segment initial en trois morceaux, et on construit un triangle équilatéral sans base au-dessus du morceau central. On réitère le processus $n$ fois, $n$ est appelé l'ordre. Dans la figure suivante, on voit les ordres 0, 1, 2 et 3 de cette fractale.
 
