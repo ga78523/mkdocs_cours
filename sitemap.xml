@@ -2,257 +2,262 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://example.com/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/about/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Logiciels/git_github/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Logiciels/insta_vscode_html/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Logiciels/insta_vscode_python/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Logiciels/liste_logiciels/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Logiciels/thonny_tutorial/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Logiciels/tuto_mkdocs/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Physique/Seconde/TP_vitesse/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Physique/Seconde/TPver_eleve/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/Algorithmique/algo_gloutons/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/Algorithmique/algo_recherche/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/Algorithmique/kppv/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/Algorithmique/outils/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/Algorithmique/tris/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/ArchitectureMaterielle/OS/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/ArchitectureMaterielle/TP_logic_gates/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/ArchitectureMaterielle/von_neumann/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/Donnees/donnees_table/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/Donnees/relatifs_reels/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/Donnees/representation_entier/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/IHM/formulaires/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/IHM/frameworks/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/IHM/html_css/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/IHM/js/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/Langage/Bases_Python/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/Langage/ControleFlux_Python/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/Langage/dico/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/Langage/fonction_python/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Premiere/Langage/tuples_listes/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/SNT/html_css_SNT/</loc>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/Algo/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/outils_python/</loc>
-         <lastmod>2025-09-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://example.com/Terminale/revision/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/ArchitectureMaterielle/commande_linux/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/ArchitectureMaterielle/processus/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/ArchitectureMaterielle/reseau_routage/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/ArchitectureMaterielle/soc/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/BDD/bdd/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/BDD/sql_python/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/BDD/sql_sqlite/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/Programmation/API/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://example.com/Terminale/Programmation/POO/</loc>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/Programmation/algos_arbre/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/Programmation/cours_recursivite/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/Programmation/crypto/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/Programmation/decidabilite/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/Programmation/dijkstra/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/Programmation/diviser_regner/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/Programmation/graphes/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/Programmation/prog_dynamique/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/Programmation/recherche_textuelle/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://example.com/Terminale/Struct_donnees/graphe/</loc>
-         <lastmod>2025-09-11</lastmod>
+         <lastmod>2025-09-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
