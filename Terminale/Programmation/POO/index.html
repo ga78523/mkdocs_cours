@@ -2509,13 +2509,16 @@ La conception objet possède un aspect intuitif fort dans la mesure ou l’on s�
 Certains champs peuvent être partiellement ou totalement inaccessibles à d’autres objets. C’est alors qu’on parle d’encapsulation.</li>
 </ul>
 <p>On peut représenter graphiquement une classe de la manière représentée ci-dessous :</p>
+<figure>
+<p><img alt="class" src="../img_POO/table.png" /></p>
+</figure>
 <h3 id="classes-et-instances">Classes et instances<a class="headerlink" href="#classes-et-instances" title="Permanent link">&num;</a></h3>
 <p>Quand les objets possèdent une structure et des comportement en commun, on peut les regrouper sous forme de classe.</p>
 <p>Une classe est une sorte de moule à partir duquel sont produits les objets que l’on appelle instances de la classe. Les instances d’une même classes ne diffèrent que par les valeurs de leurs attributs.
 La programmation objet consiste alors à définir les bonnes classes dotées de leurs champs et méthodes, puis à les instancier pour créer des objets et les faire intéragir.</p>
 <h2 id="une-premiere-classe">Une première classe<a class="headerlink" href="#une-premiere-classe" title="Permanent link">&num;</a></h2>
-<p>Supposons que l’on souhaite manipuler des entiers représentant des temps mesurés en heures, minutes et secondes. On appellera la structure correspondante Chrono. Les trois nombres pourront être appelés dans l’ordre heures,minutes et secondes. On peut représenter le temps "21 heures 34 minutes et 55 secondes" de la manière suivante :</p>
-<p>Python permet la définition de cette structure Chrono sous la forme d’une classe avec le code définit dans le programme 1.</p>
+<p>Supposons que l’on souhaite manipuler des entiers représentant des temps mesurés en heures, minutes et secondes. On appellera la structure correspondante Chrono. Les trois nombres pourront être appelés dans l’ordre heures,minutes et secondes. </p>
+<p>Python permet la définition de cette structure <code>Chrono</code> sous la forme d’une classe avec le code définit dans le programme 1.</p>
 <div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Programme 1</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -2569,6 +2572,9 @@ La programmation objet consiste alors à définir les bonnes classes dotées de 
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="fm">__init__</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <p><strong>Remarque 2 :</strong> La variable <code>t</code> ne contient à strictement parler l’objet qui vient d’être construit mais un pointeur vers le bloc mémoire qui a été alloué à cet objet. La situation correspond donc au schéma suivant.</p>
+<figure>
+<p><img alt="pointeur" src="../img_POO/class_Chrono.png" width="200px" /></p>
+</figure>
 <p><strong>Remarque 3 :</strong> </p>
 <p>En fait, plutôt que d’utiliser cette méthode <code>display()</code>, on utilise plutôt la méthode suivante :</p>
 <div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Programme 5</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
@@ -2637,7 +2643,7 @@ Pour rendre privé les attributs d’une classe, il faut les faire précéder de
 </span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17"></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">heures</span>
 </span></code></pre></div></td></tr></table></div>
 <h3 id="modifications-controlees-des-valeurs-des-attributs-les-mutateurs-ou-setters">Modifications contrôlées des valeurs des attributs : les mutateurs ou "setters"<a class="headerlink" href="#modifications-controlees-des-valeurs-des-attributs-les-mutateurs-ou-setters" title="Permanent link">&num;</a></h3>
-<p>En cas de besoin, on peut modifier les valeurs attribuées aux attributs. Pour cela, on passe par des méthodes particulières appelées <strong>mutateurs (ou "setters")</strong> qui vont modifier la valeur d’une propriété d’un objet. </p>
+<p>En cas de besoin, on peut modifier les valeurs attribuées aux attributs. Pour cela, on passe par des méthodes particulières appelées <strong>mutateurs (ou "setters")</strong> qui vont modifier la valeur d’une propriété d’un objet.</p>
 <p>Le nom d’un mutateur est généralement : <code>set_NomAttribut()</code>.</p>
 <div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Programme 9</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">def</span> <span class="nf">set_heure</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">h2</span><span class="p">):</span>
@@ -2646,21 +2652,51 @@ Pour rendre privé les attributs d’une classe, il faut les faire précéder de
 <h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">&num;</a></h2>
 <div class="admonition example">
 <p class="admonition-title">Exercice 2</p>
+<p>Réaliser l'exercice de la page suivante : <a href="https://e-nsi.gitlab.io/pratique/N2/700-poo_chien/sujet/">class Chien</a></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 3</p>
+<p>On considère une classe Personnage représentant un personnage de Jeu.</p>
+<p>Le plateau de jeu est représenté par un repère orthonormé à trois axes.
+La position du joueur dans le plateau est repérée par ses attributs x, y, z.</p>
+<p>Écrire un constructeur initialisant les mesures.
+Écrire les méthodes avance, droite et saute permettant respectivement de faire avancer, aller à droite et sauter le personnage, c’est-à-dire d’augmenter de 1 respectivement x, y et z.
+Implémenter une autre méthode coord renvoyant les coordonnées sous forme d’un triplet.
+Tester avec :
+<div class="language-py highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">Laura</span> <span class="o">=</span> <span class="n">Personnage</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</span></code></pre></div></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 4</p>
+<p>On considère une classe <code>Carre</code> admettant la mesure des côtés d’un carré en attribut.</p>
+<ul>
+<li>Écrire un constructeur initialisant les mesures.</li>
+<li>Écrire les méthodes :<ul>
+<li>perimetre , permettant de retourner le périmètre du carré.</li>
+<li>aire permettant de retourner son aire.</li>
+</ul>
+</li>
+<li>Créer des exemples</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 5</p>
+<p>Définir une classe Eleve qui aura comme attribut: </p>
+<ul>
+<li>le nom de l'élève (défini directement dans le constructeur) ;</li>
+<li>un tableau de notes ;</li>
+<li>une moyenne.</li>
+</ul>
+<p>Cette classe devra comporter les méthodes suivantes :</p>
+<ul>
+<li>des accesseurs (voir cours)</li>
+<li>une méthode <code>ajouter_note()</code></li>
+<li>une méthode <code>calculer_moyenne()</code></li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 6</p>
 <p>On souhaite caractériser informatiquement la notion de point telle qu’elle existe en 2 dimensions : aussi bien en coordonnées cartésiennes <span class="arithmatex">\((x, y)\)</span> qu’en coordonnées polaires <span class="arithmatex">\((r, \theta)\)</span>.</p>
-<ol>
-<li>Remplir le modèle de la classe <code>Point</code> ci-dessous en listant les attributs privés et les actions permettant seulement d’y accéder (accesseurs) :</li>
-</ol>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>---
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>config:
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>theme: forest
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>look: handDrawn
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>---
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>classDiagram
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    class Point {
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>        +abs()
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>        +cos()
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>}
-</span></code></pre></div>
 <ol>
 <li>Implémenter cette classe en python. On utilisera le module <code>math</code>. On rappelle que dans le l’intervalle <span class="arithmatex">\(]−\pi, \pi[\)</span>, on a :</li>
 </ol>
@@ -2678,30 +2714,54 @@ Pour rendre privé les attributs d’une classe, il faut les faire précéder de
 <p>A l’aide de classe, on donnera les coordonnées polaires des 4 points suivants : <span class="arithmatex">\(A(-2,5) ; B(5,5) ; C(-2,-2) ; D(5-2)\)</span>.</p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exercice 3</p>
-<p>Définir une classe Angle pour représenter un angle degrés. Cette classe contient un unique attribut, angle qui est un entier. On demande quoi qu’il arrive, que l’égalité <span class="arithmatex">\(0 ≤ angle &lt; 360\)</span> reste vérifiée.</p>
+<p class="admonition-title">Exercice 7</p>
+<p>Définir une classe <code>Angle</code> pour représenter un angle degrés. Cette classe contient un unique attribut, angle qui est un entier. On demande quoi qu’il arrive, que l’égalité <span class="arithmatex">\(0 ≤ angle &lt; 360\)</span> reste vérifiée.</p>
 <ol>
 <li>Écrire le constructeur de cette classe.</li>
-<li>Ajouter une méthode <code>__str__()</code>qui renvoie une chaîne de caractères de la forme “60 degrés”.</li>
+<li>Ajouter une méthode <code>__str__</code>qui renvoie une chaîne de caractères de la forme “60 degrés”.</li>
 <li>Ajouter une méthode <code>ajoute</code>qui reçoit un autre angle en argument (un objet de la classe <code>A</code>ngle et l’ajoute au champ <code>angle</code> de l’objet. Attention à ce que la valeur de l’angle reste bien dans l’intervalle de l’objet.</li>
 <li>Ajouter deux méthodes <code>cosinus</code> et <code>sinus</code> pour calculer respectivement le cosinus et le sinus de l’angle. On utilisera pour cela les fonctions <code>cos</code> et <code>sin</code> de la bibliothèque <code>math</code>. Attention : il faut convertir l’angle en radian avant d’appeler les fonctions cosinus et sinus.</li>
 </ol>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exercice 4</p>
-<p>Définir une classe Date pour représenter une date avec trois attributs jour, mois et annee. Attention, on rentre le mois par son numéro.</p>
+<p class="admonition-title">Exercice 8</p>
+<p>Définir une classe <code>Date</code> pour représenter une date avec trois attributs jour, mois et annee. Attention, on rentre le mois par son numéro.</p>
 <ol>
 <li>Écrire son constructeur</li>
-<li>Ajouter une méthode <code>__str()__</code>()` qui renvoie une chaîne de caractères de la forme “8 mai 45”. On pourra se servir d’un attribut de classe qui est tableau donnant les douzes mois de l’année. Tester en construisant des objets de la classe Date puis en les affichant avec print.</li>
+<li>Ajouter une méthode <code>__str__</code> qui renvoie une chaîne de caractères de la forme “8 mai 45”. On pourra se servir d’un attribut de classe qui est tableau donnant les douzes mois de l’année. Tester en construisant des objets de la classe Date puis en les affichant avec print.</li>
 <li>ajouter une méthode <code>anterieur_a()</code> qui permet de déterminer si une date <code>d1</code> est antérieur à une date <code>d2</code> en écrivant <code>d1 &lt; d2</code>. Cette méthode renvoie un booléen.</li>
 </ol>
 </div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>classDiagram
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    class Point {
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>        +abs()
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>        +cos()
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>}
-</span></code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 9</p>
+<p>Écrire un classe <code>Temps</code> en Python qui permet de définir un horaire au format hh : mm : ss et qui admet les méthodes suivantes :</p>
+<ul>
+<li><code>__str__</code> qui affiche l'horaire au format "12h32m20s" ;</li>
+<li><code>__add__</code> qui ajoute deux horaires de la classe Temps ;</li>
+<li><code>__sub__</code> qui calcule la différence entre deux horaires de la classe Temps .</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 10</p>
+<p>En python, écrire une classe <code>Vecteur</code> admettant trois attributs (ses coordonnées dans l'espace) comportant :</p>
+<ul>
+<li>une méthode permettant d'afficher les coordonnées du vecteur sous la forme (x; y; z) ;</li>
+<li>une méthode <code>__add__</code> renvoyant le vecteur somme de deux vecteurs ;</li>
+<li>une méthode <code>norme</code> renvoyant la norme du vecteur ;</li>
+<li>une méthode <code>__mul__</code> renvoyant le produit scalaire de deux vecteurs ;</li>
+<li>une méthode <code>is_colin</code>permettant de renvoyer si un vecteur est colinéaire à un autre vecteur (passé en attribut);</li>
+<li>une méthode <code>is_ortho</code> permettant de renvoyer si un vecteur est orthogonal à un autre vecteur (passé en argument).</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 11</p>
+<p>Écrire en python, une classe complexe :</p>
+<ul>
+<li>qui définit un nombre complexe (le constructeur devra initialiser un tuple de deux nombres : la partie réelle et la partie imaginaire) ;</li>
+<li>ayant une méthode permettant d'afficher le nombre complexe sous forme d'un tuple de deux éléments ;* permettant d'ajouter, soustraire, multiplier et comparer (en termes d'égalité) deux nombres complexes ;</li>
+<li>permettant de donner la distance de l'origine du repère au point représenté par le point complexe (on appelle cette distance le module, qui est égale à  <span class="arithmatex">\(\sqrt{x^2 + y^2}\)</span></li>
+</ul>
+</div>
 
 
 
