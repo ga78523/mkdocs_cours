@@ -366,8 +366,6 @@ print("Il y a ",x,"nombres entiers dont le carré est inférieur ou égal à ",n
     ```
     Effectuer la trace du programme précédent et préciser le rôle de ce programme.
 
-
-
 !!! example "Exercice 10"
     exercice 6 p 42 du livre
 
@@ -424,7 +422,7 @@ for n in range(1,11):
     print("")
 ```
 
-### Parcours d'une chaîne de caractères
+## Les chaînes de caractères
 
 ### Les énumérables
 
@@ -440,7 +438,7 @@ En informatique, il existe un concept similaire qui va désigner les objets que 
 * la variable [4, 3, 17] (qui est de type List) est énumérable : on peut la décomposer en `4`, `3`, `17`.
 * la variable 5 (qui est de type Int) n'est PAS énumérable : on ne peut pas la décomposer.
 
-#### Solution directe : parcours des éléments
+#### Solution directe : parcours d'une chaine par les éléments
 
 Une chaîne de caractères (type string) est composée de ... caractères ! Il est possible de parcourir ces caractères avec une structure for... in...
 
@@ -452,7 +450,7 @@ for i in chaine:
     print(i, end='.')
 ```
 
-#### Solution indirecte : parcours des indices
+#### Solution indirecte : parcours d'une chaîne à partir des indices
 
 Il est possible d'accéder à chaque caractère d'une chaîne à l'aide de son indice de position. Le premier
 caractère est toujours indexé 0.
@@ -475,8 +473,6 @@ for i in range(len(chaine)):
 ```
 
 **Remarque :** le fonction `len()` retourne la longueur de la chaîne.
-
-
 
 !!! example  "Exercice 14"
     Réaliser un programme qui demande une chaîne de caractères et une lettre et indiquera le nombre de fois que la lettre à été rencontrée dans la chaîne de caractères.

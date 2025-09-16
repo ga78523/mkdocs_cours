@@ -191,7 +191,7 @@ Il existe un autre cas particulier où la fonction s'appelle plusieurs fois. On 
 
 Alors on peut donner la fonction algorithmique suivante :
 
-``` py linenums='1' title="Coefficient Binomiaux"
+```py linenums="1" title="Coefficient Binomiaux"
 Fonction coeff_binomial(n,k):
     Si k == 0 OU k == n:
         Retourner 1
@@ -201,7 +201,7 @@ Fonction coeff_binomial(n,k):
 
 ## Exercices
 
-!!! example "Exercice 5"
+!!! example "Exercice 5 : suite de Fibonacci"
     La suite de Fibonacci est une suite d'entiers. Elle doit son nom à Leonardo Fibonacci, dit Leonardo Pisano, un mathématicien italien du XIIIe siècle.
 
     En mathématiques, la suite de Fibonacci est une suite d'entiers dans laquelle chaque terme est la somme des deux termes qui le précèdent.
@@ -219,7 +219,30 @@ Fonction coeff_binomial(n,k):
     
     Écrire la fonction qui donne le $n^{ième}$ terme de la suite de Fibonacci de manière récursive et pour les plus rapides de manière itérative.
 
-!!! example "Exercice 6 : la suite de Syracuse"
+!!! example "Exercice 6 : les vaches de Narayana"
+    Une vache donne naissance à une autre tous les ans an début de chaque année, qui elle-même donne naissance à une autre chaque année à partir de sa quatrième année.
+    Partant d'une vache qui vient de donner naissance ($v_1$), les termes successifs de la suite $(v_i)_{1\leq i}$ sont donc 1, 1, 1, 2, 3, 4, 6... ($v_6 = 4$, $v_7 = 6$). Écrire une fonction récursive $v_i$ qui renvoie le i-ème terme de la suite.
+
+!!! example "Exercice 7 : frise"
+    Le dessin de la frise ci-dessous est constitué de la répétition d'un motif de base (en rouge).
+
+    <figure markdown>
+    ![frise](Recursivite/data_recursivite/frise.png){width=200px}
+    </figure>
+
+    **1.** Ecrire une fonction `motif()` qui dessine le motif de base (les dimensions sont indiquées sur l'illustration ci-dessous)
+
+    <figure markdown>
+    ![frise](Recursivite/data_recursivite/motif.png){width=300px}
+    </figure>
+
+    **2.** A l'aide d'un programme itératif, construire la frise.
+
+    **3.** Donner une définition récursive de la frise
+
+    **4.** Ecrire une fonction récursive permettant de construire la frise.
+
+!!! example "Exercice 8 : suite de Syracuse"
     Cette suite est définie comme suit : $u_0 > 0$, puis $u_{i+1} = \dfrac{u_i}{2}$ si $u_i$ est pair, $3\times u_i + 1$ sinon.
 
     1) Définir une fonction récursive qui prend en entrée, deux entiers $u_0$ et $i$ et qui renvoie la valeur de $u_i$.
@@ -227,18 +250,23 @@ Fonction coeff_binomial(n,k):
     2) La conjecture de Syracuse, vérifiée par ordinateur sur tous les entiers inférieurs à $1,25\times 10^{62}$ affirme que toute suite finit par atteindre le nombre 1 et boucler sur 1,4,2,1,4,2... 
     
     On appelle "temps de vol" le premier indice de $i$ tel que $u_i = 1$. Sans utiliser de boucle `while`, écrire un programme qui calcule le temps de vol en fonction de de $u_0$
-   
-!!! example "Exercice 7 : les vaches de Narayana"
-    Une vache donne naissance à une autre tous les ans an début de chaque année, qui elle-même donne naissance à une autre chaque année à partir de sa quatrième année.
-    Partant d'une vache qui vient de donner naissance ($v_1$), les termes successifs de la suite $(v_i)_{1\leq i}$ sont donc 1, 1, 1, 2, 3, 4, 6... ($v_6 = 4$, $v_7 = 6$). Écrire une fonction récursive $v_i$ qui renvoie le i-ème terme de la suite.
 
-!!! example "Exercice 8"
+!!! example "Exercice 9 : fractale de Von Koch"
     L'objectif de cet exercice est de réaliser la fractale de Von Koch à l'aide du module Python turtle. Une fractale est une sorte de courbe mathématique un peu complexe riche en détail, et qui possède une propriété intéressante visuellement : lorsque l'on regarde des détails de petite taille, on retrouve des formes correspondant aux détails de plus grande taille (auto-similarité). Cela nous rappelle étrangement la récursivité ! La première courbe à tracer a été imaginée en 1904 par le mathématicien suédois Niels Fabian Helge Von Koch.
 
     Le principe est simple : on divise un segment initial en trois morceaux, et on construit un triangle équilatéral sans base au-dessus du morceau central. On réitère le processus $n$ fois, $n$ est appelé l'ordre. Dans la figure suivante, on voit les ordres 0, 1, 2 et 3 de cette fractale.
+
+    <figure markdown>
+    ![flocon](Recursivite/data_recursivite/courbe_VonKoch.png){width=100px}
+    </figure>
 
     **Questions :**
 
     1. Proposer une fonction récursive permettant de dessiner la fractale de Von Koch en lui donnant comme paramètre l'ordre et la longueur du segment initial.
 
     2. Le flocon de Koch s'obtient de la même façon que la fractale précédente, en partant d'un triangle équilatéral au lieu d'un segment de droite, et en effectuant les modifications en orientant les triangles vers l'extérieur. Proposer une fonction permettant de faire le flocon de Koch complet à partir de la fonction réalisée précédente.
+
+
+    <figure markdown>
+    ![flocon](Recursivite/data_recursivite/flocon_Koch.png)
+    </figure>

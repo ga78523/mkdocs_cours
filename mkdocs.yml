@@ -17,14 +17,13 @@ theme:
   search:
         indexing: 'full'
 
-
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.arithmatex:
       generic: true
       smart_dollar: false
-  - pymdownx.superfences
+  #- pymdownx.superfences
   - attr_list
   - pymdownx.tabbed:
       alternate_style: true
@@ -43,10 +42,10 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+  #    custom_fences:
+  #      - name: mermaid
+  #        class: mermaid
+  #        format: !!python/name:pymdownx.superfences.fence_code_format
 
 extra_javascript:
   - javascripts/config.js
@@ -59,7 +58,6 @@ extra_javascript:
 
 extra_css:
   - stylesheets/extra.css 
-  
   
 nav:
     - Home: index.md
@@ -90,6 +88,7 @@ nav:
       - Architecture Matérielle:
         - Von Neumann : Premiere/ArchitectureMaterielle/von_neumann.md
         - OS : Premiere/ArchitectureMaterielle/OS.md
+        - Portes logiques : Premiere/ArchitectureMaterielle/TP_logic_gates.md
       - Algorithmique :
         - Outils : Premiere/Algorithmique/outils.md
         - Tris : Premiere/Algorithmique/tris.md

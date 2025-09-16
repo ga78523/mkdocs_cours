@@ -8,7 +8,7 @@ Un voyageur se fixe un certain nombre de villes à visiter impérativement : Par
 
 Il devra élaborer un trajet en partant d'une des villes de la liste (ville de départ), devra organiser son trajet pour visiter une seule fois toutes les autres villes de la liste et revenir en fin de parcours à la ville de départ. Pour des raisons budgétaires, il souhaite optimiser la longueur de son trajet
 
-A l'aide du site [https://geoportail.gouv.fr](géoportail), il détermine les distances minimales entres ces différentes villes :
+A l'aide du site [https://www.geoportail.gouv.fr](géoportail), il détermine les distances minimales entres ces différentes villes :
 
 |distance |	Nancy | Metz | Paris | Reims | Troyes|
 |:-------:|:-----:|:----:|:-----:|:-----:|:-----:|

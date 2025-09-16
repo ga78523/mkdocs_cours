@@ -41,7 +41,7 @@ Pour créer des pages Web, on peut utiliser:
 </html>
 ```
 
-*	Entre les balises `<body>`et `</body>` insérer la ligne de code html suivante : 
+* Entre les balises `<body>`et `</body>` insérer la ligne de code html suivante : 
 
 ``` html linenums="1"
 <p> Bonjour tout le monde </p> 
