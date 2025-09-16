@@ -270,3 +270,5 @@ Fonction coeff_binomial(n,k):
     <figure markdown>
     ![flocon](Recursivite/data_recursivite/flocon_Koch.png)
     </figure>
+
+  

@@ -25,6 +25,10 @@ Certains champs peuvent être partiellement ou totalement inaccessibles à d’a
 
 On peut représenter graphiquement une classe de la manière représentée ci-dessous :
 
+<figure markdown>
+![class](img_POO/table.png)
+</figure>
+
 ### Classes et instances
 
 Quand les objets possèdent une structure et des comportement en commun, on peut les regrouper sous forme de classe.
@@ -34,9 +38,9 @@ La programmation objet consiste alors à définir les bonnes classes dotées de 
 
 ## Une première classe
 
-Supposons que l’on souhaite manipuler des entiers représentant des temps mesurés en heures, minutes et secondes. On appellera la structure correspondante Chrono. Les trois nombres pourront être appelés dans l’ordre heures,minutes et secondes. On peut représenter le temps "21 heures 34 minutes et 55 secondes" de la manière suivante :
+Supposons que l’on souhaite manipuler des entiers représentant des temps mesurés en heures, minutes et secondes. On appellera la structure correspondante Chrono. Les trois nombres pourront être appelés dans l’ordre heures,minutes et secondes. 
 
-Python permet la définition de cette structure Chrono sous la forme d’une classe avec le code définit dans le programme 1.
+Python permet la définition de cette structure `Chrono` sous la forme d’une classe avec le code définit dans le programme 1.
 
 ``` py linenums="1" title="Programme 1"
 class Chrono:
@@ -87,6 +91,10 @@ print(t.__init__.__doc__)
 
 **Remarque 2 :** La variable `t` ne contient à strictement parler l’objet qui vient d’être construit mais un pointeur vers le bloc mémoire qui a été alloué à cet objet. La situation correspond donc au schéma suivant.
 
+<figure markdown>
+![pointeur](img_POO/class_Chrono.png){width=200px}
+</figure>
+
 **Remarque 3 :** 
 
 En fait, plutôt que d’utiliser cette méthode `display()`, on utilise plutôt la méthode suivante :
@@ -113,6 +121,7 @@ print(t)    # affiche 21h34m55s
     * sa vitesse maximale
 
     Vous construirez l’instance triceratops avec comme caractéristiques : 9 m de longueur, 3 m de hauteur, une masse de 9 tonnes environ, et une vitesse maximale donnée à 32 km/h. Puis l’instance Tyrannosaurus Rex. Celui-ci mesurait 13 m de longueur, pesait 8 t environ, 6 m de haut et devait courir à 27 km/h.
+
 
 ## Encapsulation
 
@@ -153,7 +162,7 @@ class Chrono:
 
 ### Modifications contrôlées des valeurs des attributs : les mutateurs ou "setters"
 
-En cas de besoin, on peut modifier les valeurs attribuées aux attributs. Pour cela, on passe par des méthodes particulières appelées **mutateurs (ou "setters")** qui vont modifier la valeur d’une propriété d’un objet. 
+En cas de besoin, on peut modifier les valeurs attribuées aux attributs. Pour cela, on passe par des méthodes particulières appelées **mutateurs (ou "setters")** qui vont modifier la valeur d’une propriété d’un objet.
 
 Le nom d’un mutateur est généralement : `set_NomAttribut()`.
 
@@ -165,24 +174,49 @@ def set_heure(self, h2):
 ## Exercices
 
 !!! example "Exercice 2"
-    On souhaite caractériser informatiquement la notion de point telle qu’elle existe en 2 dimensions : aussi bien en coordonnées cartésiennes $(x, y)$ qu’en coordonnées polaires $(r, \theta)$.
-    
-    1. Remplir le modèle de la classe `Point` ci-dessous en listant les attributs privés et les actions permettant seulement d’y accéder (accesseurs) :
-    
-    ```mermaid
-    ---
-    config:
-    theme: forest
-    look: handDrawn
-    ---
-    classDiagram
-        class Point {
-	        +abs()
-	        +cos()
-    }
+    Réaliser l'exercice de la page suivante : [class Chien](https://e-nsi.gitlab.io/pratique/N2/700-poo_chien/sujet/)
+
+!!! example "Exercice 3"
+    On considère une classe Personnage représentant un personnage de Jeu.
+
+    Le plateau de jeu est représenté par un repère orthonormé à trois axes.
+    La position du joueur dans le plateau est repérée par ses attributs x, y, z.
+
+    Écrire un constructeur initialisant les mesures.
+    Écrire les méthodes avance, droite et saute permettant respectivement de faire avancer, aller à droite et sauter le personnage, c’est-à-dire d’augmenter de 1 respectivement x, y et z.
+    Implémenter une autre méthode coord renvoyant les coordonnées sous forme d’un triplet.
+    Tester avec :
+    ``` py
+    Laura = Personnage(0, 0, 0)
     ```
 
-    2. Implémenter cette classe en python. On utilisera le module `math`. On rappelle que dans le l’intervalle $]−\pi, \pi[$, on a :
+!!! example "Exercice 4"
+    On considère une classe `Carre` admettant la mesure des côtés d’un carré en attribut.
+
+    * Écrire un constructeur initialisant les mesures.
+    * Écrire les méthodes :
+        * perimetre , permettant de retourner le périmètre du carré.
+        * aire permettant de retourner son aire.
+    * Créer des exemples
+
+!!! example "Exercice 5"
+    Définir une classe Eleve qui aura comme attribut: 
+
+    * le nom de l'élève (défini directement dans le constructeur) ;
+    * un tableau de notes ;
+    * une moyenne.
+
+    Cette classe devra comporter les méthodes suivantes :
+
+    * des accesseurs (voir cours)
+    * une méthode `ajouter_note()`
+    * une méthode `calculer_moyenne()`
+
+
+!!! example "Exercice 6"
+    On souhaite caractériser informatiquement la notion de point telle qu’elle existe en 2 dimensions : aussi bien en coordonnées cartésiennes $(x, y)$ qu’en coordonnées polaires $(r, \theta)$.
+    
+    1. Implémenter cette classe en python. On utilisera le module `math`. On rappelle que dans le l’intervalle $]−\pi, \pi[$, on a :
 
     $$ \theta(rad)= \left \{
      \begin{array}{lll}
@@ -198,25 +232,42 @@ def set_heure(self, h2):
 
     A l’aide de classe, on donnera les coordonnées polaires des 4 points suivants : $A(-2,5) ; B(5,5) ; C(-2,-2) ; D(5-2)$.
 
-!!! example "Exercice 3"
-    Définir une classe Angle pour représenter un angle degrés. Cette classe contient un unique attribut, angle qui est un entier. On demande quoi qu’il arrive, que l’égalité $0 ≤ angle < 360$ reste vérifiée.
+!!! example "Exercice 7"
+    Définir une classe `Angle` pour représenter un angle degrés. Cette classe contient un unique attribut, angle qui est un entier. On demande quoi qu’il arrive, que l’égalité $0 ≤ angle < 360$ reste vérifiée.
 
     1. Écrire le constructeur de cette classe.
-    2. Ajouter une méthode `__str__()`qui renvoie une chaîne de caractères de la forme “60 degrés”.
+    2. Ajouter une méthode `__str__`qui renvoie une chaîne de caractères de la forme “60 degrés”.
     3. Ajouter une méthode `ajoute`qui reçoit un autre angle en argument (un objet de la classe `A`ngle et l’ajoute au champ `angle` de l’objet. Attention à ce que la valeur de l’angle reste bien dans l’intervalle de l’objet.
     4. Ajouter deux méthodes `cosinus` et `sinus` pour calculer respectivement le cosinus et le sinus de l’angle. On utilisera pour cela les fonctions `cos` et `sin` de la bibliothèque `math`. Attention : il faut convertir l’angle en radian avant d’appeler les fonctions cosinus et sinus.
 
-!!! example  "Exercice 4"
-    Définir une classe Date pour représenter une date avec trois attributs jour, mois et annee. Attention, on rentre le mois par son numéro.
+!!! example  "Exercice 8"
+    Définir une classe `Date` pour représenter une date avec trois attributs jour, mois et annee. Attention, on rentre le mois par son numéro.
 
     1. Écrire son constructeur
-    2. Ajouter une méthode `__str()__`()` qui renvoie une chaîne de caractères de la forme “8 mai 45”. On pourra se servir d’un attribut de classe qui est tableau donnant les douzes mois de l’année. Tester en construisant des objets de la classe Date puis en les affichant avec print.
+    2. Ajouter une méthode `__str__` qui renvoie une chaîne de caractères de la forme “8 mai 45”. On pourra se servir d’un attribut de classe qui est tableau donnant les douzes mois de l’année. Tester en construisant des objets de la classe Date puis en les affichant avec print.
     3. ajouter une méthode `anterieur_a()` qui permet de déterminer si une date `d1` est antérieur à une date `d2` en écrivant `d1 < d2`. Cette méthode renvoie un booléen.
 
-``` mermaid
-classDiagram
-    class Point {
-	    +abs()
-	    +cos()
-}
-```
+!!! example "Exercice 9"
+    Écrire un classe `Temps` en Python qui permet de définir un horaire au format hh : mm : ss et qui admet les méthodes suivantes :
+
+    * `__str__` qui affiche l'horaire au format "12h32m20s" ;
+    * `__add__` qui ajoute deux horaires de la classe Temps ;
+    * `__sub__` qui calcule la différence entre deux horaires de la classe Temps .
+
+!!! example "Exercice 10"
+
+    En python, écrire une classe `Vecteur` admettant trois attributs (ses coordonnées dans l'espace) comportant :
+
+    * une méthode permettant d'afficher les coordonnées du vecteur sous la forme (x; y; z) ;
+    * une méthode `__add__` renvoyant le vecteur somme de deux vecteurs ;
+    * une méthode `norme` renvoyant la norme du vecteur ;
+    * une méthode `__mul__` renvoyant le produit scalaire de deux vecteurs ;
+    * une méthode `is_colin`permettant de renvoyer si un vecteur est colinéaire à un autre vecteur (passé en attribut);
+    * une méthode `is_ortho` permettant de renvoyer si un vecteur est orthogonal à un autre vecteur (passé en argument).
+
+!!! example "Exercice 11"
+    Écrire en python, une classe complexe :
+    
+    * qui définit un nombre complexe (le constructeur devra initialiser un tuple de deux nombres : la partie réelle et la partie imaginaire) ;
+    * ayant une méthode permettant d'afficher le nombre complexe sous forme d'un tuple de deux éléments ;* permettant d'ajouter, soustraire, multiplier et comparer (en termes d'égalité) deux nombres complexes ;
+    * permettant de donner la distance de l'origine du repère au point représenté par le point complexe (on appelle cette distance le module, qui est égale à  $\sqrt{x^2 + y^2}$
