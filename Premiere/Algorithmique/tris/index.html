@@ -10,8 +10,15 @@
       
         <link rel="canonical" href="https://example.com/Premiere/Algorithmique/tris/">
       
+      
+        <link rel="prev" href="../outils/">
+      
+      
+        <link rel="next" href="../algo_recherche/">
+      
+      
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
       
@@ -19,29 +26,35 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.e8d9bf0c.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e53b48f4.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
         
-      
-    
-    
-    
-      
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -54,11 +67,8 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -78,16 +88,19 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="Site de cours" class="md-header__button md-logo" aria-label="Site de cours" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -106,62 +119,76 @@
       </div>
     </div>
     
-      <form class="md-header__option" data-md-component="palette">
-        
-          
-          
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
-          
-            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
-            </label>
-          
-        
-          
-          
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
-          
-            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
-            </label>
-          
-        
-      </form>
+      
+        <form class="md-header__option" data-md-component="palette">
+  
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
   </div>
 </div>
+      
     
     
   </nav>
@@ -186,12 +213,13 @@
                     
 
 
+
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Site de cours" class="md-nav__button md-logo" aria-label="Site de cours" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     Site de cours
@@ -201,14 +229,21 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
-        Home
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
       </a>
     </li>
   
@@ -216,14 +251,21 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../about/" class="md-nav__link">
-        About
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
       </a>
     </li>
   
@@ -231,569 +273,880 @@
     
       
       
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Physique
+    
+  </span>
+  
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Physique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3">
-          Physique
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Physique" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Physique
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_1">
-          Seconde
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Seconde" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_1">
-          <span class="md-nav__icon md-icon"></span>
-          Seconde
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
           
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Seconde
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Seconde
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Physique/Seconde/TP_vitesse/" class="md-nav__link">
-        TP vitesse
+        
+  
+  
+  <span class="md-ellipsis">
+    TP vitesse
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Physique/Seconde/TPver_eleve/" class="md-nav__link">
-        TP verrerie
+        
+  
+  
+  <span class="md-ellipsis">
+    TP verrerie
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
   
+  
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4">
-          SNT
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="SNT" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          SNT
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
           
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SNT
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            SNT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../SNT/html_css_SNT/" class="md-nav__link">
-        web
+        
+  
+  
+  <span class="md-ellipsis">
+    web
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
     
   
   
+  
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5">
-          Première
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Première" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          Première
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
           
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Première
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Première
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_1">
-          Données
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Données" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_1">
-          <span class="md-nav__icon md-icon"></span>
-          Données
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
           
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Données
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Donnees/representation_entier/" class="md-nav__link">
-        Représentation des entiers
+        
+  
+  
+  <span class="md-ellipsis">
+    Représentation des entiers
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Donnees/relatifs_reels/" class="md-nav__link">
-        Représentation des relatifs et des réels
+        
+  
+  
+  <span class="md-ellipsis">
+    Représentation des relatifs et des réels
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Donnees/donnees_table/" class="md-nav__link">
-        Données en table
+        
+  
+  
+  <span class="md-ellipsis">
+    Données en table
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_2">
-          Langage Python
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Langage Python" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_2">
-          <span class="md-nav__icon md-icon"></span>
-          Langage Python
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
           
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Langage Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Langage Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Langage/Bases_Python/" class="md-nav__link">
-        Les bases
+        
+  
+  
+  <span class="md-ellipsis">
+    Les bases
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Langage/ControleFlux_Python/" class="md-nav__link">
-        Contrôle du flux d'exécution
+        
+  
+  
+  <span class="md-ellipsis">
+    Contrôle du flux d'exécution
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Langage/fonction_python/" class="md-nav__link">
-        Les fonctions en Python
+        
+  
+  
+  <span class="md-ellipsis">
+    Les fonctions en Python
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Langage/tuples_listes/" class="md-nav__link">
-        Tuples et listes en Python
+        
+  
+  
+  <span class="md-ellipsis">
+    Tuples et listes en Python
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Langage/dico/" class="md-nav__link">
-        Dictionnaires
+        
+  
+  
+  <span class="md-ellipsis">
+    Dictionnaires
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_3">
-          IHM
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="IHM" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_3">
-          <span class="md-nav__icon md-icon"></span>
-          IHM
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
           
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    IHM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            IHM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../IHM/html_css/" class="md-nav__link">
-        web
+        
+  
+  
+  <span class="md-ellipsis">
+    web
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../IHM/frameworks/" class="md-nav__link">
-        Frameworks
+        
+  
+  
+  <span class="md-ellipsis">
+    Frameworks
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../IHM/formulaires/" class="md-nav__link">
-        Formulaire
+        
+  
+  
+  <span class="md-ellipsis">
+    Formulaire
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../IHM/js/" class="md-nav__link">
-        Javascript
+        
+  
+  
+  <span class="md-ellipsis">
+    Javascript
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_4">
-          Architecture Matérielle
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_4">
-          <span class="md-nav__icon md-icon"></span>
-          Architecture Matérielle
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
           
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Architecture Matérielle
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture Matérielle
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../ArchitectureMaterielle/von_neumann/" class="md-nav__link">
-        Von Neumann
+        
+  
+  
+  <span class="md-ellipsis">
+    Von Neumann
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../ArchitectureMaterielle/OS/" class="md-nav__link">
-        OS
+        
+  
+  
+  <span class="md-ellipsis">
+    OS
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArchitectureMaterielle/TP_logic_gates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Portes logiques
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
+              
             
-          
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
             
               
+                
   
   
     
   
   
+  
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_5">
-          Algorithmique
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Algorithmique" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_5">
-          <span class="md-nav__icon md-icon"></span>
-          Algorithmique
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" checked>
+        
           
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Algorithmique
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithmique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../outils/" class="md-nav__link">
-        Outils
+        
+  
+  
+  <span class="md-ellipsis">
+    Outils
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
     
   
   
+  
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Tris
+          
+  
+  
+  <span class="md-ellipsis">
+    Tris
+    
+  </span>
+  
+
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Tris
+        
+  
+  
+  <span class="md-ellipsis">
+    Tris
+    
+  </span>
+  
+
       </a>
       
         
@@ -813,21 +1166,27 @@
       
         <li class="md-nav__item">
   <a href="#pourquoi-trier-les-valeurs" class="md-nav__link">
-    Pourquoi trier les valeurs
+    <span class="md-ellipsis">
+      Pourquoi trier les valeurs
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#travail-preparatoire-sur-les-listes" class="md-nav__link">
-    Travail préparatoire sur les listes
+    <span class="md-ellipsis">
+      Travail préparatoire sur les listes
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#algorithmes-de-tri" class="md-nav__link">
-    Algorithmes de tri
+    <span class="md-ellipsis">
+      Algorithmes de tri
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Algorithmes de tri">
@@ -835,7 +1194,9 @@
         
           <li class="md-nav__item">
   <a href="#tri-par-selection" class="md-nav__link">
-    Tri par sélection
+    <span class="md-ellipsis">
+      Tri par sélection
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Tri par sélection">
@@ -843,21 +1204,27 @@
         
           <li class="md-nav__item">
   <a href="#principe" class="md-nav__link">
-    Principe
+    <span class="md-ellipsis">
+      Principe
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#algorithme" class="md-nav__link">
-    Algorithme
+    <span class="md-ellipsis">
+      Algorithme
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#terminaison" class="md-nav__link">
-    Terminaison
+    <span class="md-ellipsis">
+      Terminaison
+    </span>
   </a>
   
 </li>
@@ -869,7 +1236,9 @@
         
           <li class="md-nav__item">
   <a href="#tri-par-insertion" class="md-nav__link">
-    Tri par insertion
+    <span class="md-ellipsis">
+      Tri par insertion
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Tri par insertion">
@@ -877,28 +1246,36 @@
         
           <li class="md-nav__item">
   <a href="#principe_1" class="md-nav__link">
-    Principe
+    <span class="md-ellipsis">
+      Principe
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#algorithme_1" class="md-nav__link">
-    Algorithme
+    <span class="md-ellipsis">
+      Algorithme
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#trace-de-la-fonction-tri_insertion" class="md-nav__link">
-    Trace de la fonction tri_insertion
+    <span class="md-ellipsis">
+      Trace de la fonction tri_insertion
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#terminaison_1" class="md-nav__link">
-    Terminaison
+    <span class="md-ellipsis">
+      Terminaison
+    </span>
   </a>
   
 </li>
@@ -910,7 +1287,9 @@
         
           <li class="md-nav__item">
   <a href="#tri-a-bulles" class="md-nav__link">
-    Tri à bulles
+    <span class="md-ellipsis">
+      Tri à bulles
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Tri à bulles">
@@ -918,14 +1297,18 @@
         
           <li class="md-nav__item">
   <a href="#principe_2" class="md-nav__link">
-    Principe
+    <span class="md-ellipsis">
+      Principe
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#algorithme_2" class="md-nav__link">
-    algorithme
+    <span class="md-ellipsis">
+      algorithme
+    </span>
   </a>
   
 </li>
@@ -937,7 +1320,9 @@
         
           <li class="md-nav__item">
   <a href="#tri-fusion" class="md-nav__link">
-    Tri fusion
+    <span class="md-ellipsis">
+      Tri fusion
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Tri fusion">
@@ -945,14 +1330,18 @@
         
           <li class="md-nav__item">
   <a href="#principe_3" class="md-nav__link">
-    Principe
+    <span class="md-ellipsis">
+      Principe
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#algorithme_3" class="md-nav__link">
-    Algorithme
+    <span class="md-ellipsis">
+      Algorithme
+    </span>
   </a>
   
 </li>
@@ -969,7 +1358,9 @@
       
         <li class="md-nav__item">
   <a href="#comparaison-du-temps-dexecution-des-differents-algorithmes-de-tri" class="md-nav__link">
-    Comparaison du temps d'exécution des différents algorithmes de tri
+    <span class="md-ellipsis">
+      Comparaison du temps d'exécution des différents algorithmes de tri
+    </span>
   </a>
   
 </li>
@@ -981,670 +1372,1029 @@
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../algo_recherche/" class="md-nav__link">
-        Recherche
+        
+  
+  
+  <span class="md-ellipsis">
+    Recherche
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../algo_gloutons/" class="md-nav__link">
-        Gloutons
+        
+  
+  
+  <span class="md-ellipsis">
+    Gloutons
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../kppv/" class="md-nav__link">
-        kppv
+        
+  
+  
+  <span class="md-ellipsis">
+    kppv
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
   
+  
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6">
-          Terminale
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Terminale" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
-          <span class="md-nav__icon md-icon"></span>
-          Terminale
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
           
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Terminale
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Terminale
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/outils_python/" class="md-nav__link">
-        Outils Python
+        
+  
+  
+  <span class="md-ellipsis">
+    Outils Python
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_2">
-          Programmation
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Programmation" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_2">
-          <span class="md-nav__icon md-icon"></span>
-          Programmation
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
           
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Programmation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Programmation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/cours_recursivite/" class="md-nav__link">
-        Récursivité
+        
+  
+  
+  <span class="md-ellipsis">
+    Récursivité
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/POO/" class="md-nav__link">
-        POO
+        
+  
+  
+  <span class="md-ellipsis">
+    POO
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/decidabilite/" class="md-nav__link">
-        Calculabilité, décidabilité
+        
+  
+  
+  <span class="md-ellipsis">
+    Calculabilité, décidabilité
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/crypto/" class="md-nav__link">
-        Sécurisation des données
+        
+  
+  
+  <span class="md-ellipsis">
+    Sécurisation des données
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/algos_arbre/" class="md-nav__link">
-        Arbres algos
+        
+  
+  
+  <span class="md-ellipsis">
+    Arbres algos
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/graphes/" class="md-nav__link">
-        Graphes algos
+        
+  
+  
+  <span class="md-ellipsis">
+    Graphes algos
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/recherche_textuelle/" class="md-nav__link">
-        Recherche textuelle
+        
+  
+  
+  <span class="md-ellipsis">
+    Recherche textuelle
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/diviser_regner/" class="md-nav__link">
-        Diviser pour régner
+        
+  
+  
+  <span class="md-ellipsis">
+    Diviser pour régner
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/prog_dynamique/" class="md-nav__link">
-        Programmation dynamique
+        
+  
+  
+  <span class="md-ellipsis">
+    Programmation dynamique
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/dijkstra/" class="md-nav__link">
-        Plus court chemin
+        
+  
+  
+  <span class="md-ellipsis">
+    Plus court chemin
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/API/" class="md-nav__link">
-        Modularité
+        
+  
+  
+  <span class="md-ellipsis">
+    Modularité
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_3">
-          Structures de Données
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Structures de Données" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_3">
-          <span class="md-nav__icon md-icon"></span>
-          Structures de Données
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
           
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Structures de Données
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Structures de Données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Struct_donnees/graphe/" class="md-nav__link">
-        Graphes
+        
+  
+  
+  <span class="md-ellipsis">
+    Graphes
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_4">
-          BDD
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="BDD" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_4">
-          <span class="md-nav__icon md-icon"></span>
-          BDD
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
           
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    BDD
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            BDD
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/BDD/bdd/" class="md-nav__link">
-        Introduction BDD
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction BDD
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/BDD/sql_sqlite/" class="md-nav__link">
-        SQL avec SQLITE
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL avec SQLITE
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/BDD/sql_python/" class="md-nav__link">
-        SQL et Python
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL et Python
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" type="checkbox" id="__nav_6_5" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_5">
-          Architecture Matérielle
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_5">
-          <span class="md-nav__icon md-icon"></span>
-          Architecture Matérielle
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
           
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Architecture Matérielle
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture Matérielle
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/ArchitectureMaterielle/reseau_routage/" class="md-nav__link">
-        Routage
+        
+  
+  
+  <span class="md-ellipsis">
+    Routage
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/ArchitectureMaterielle/commande_linux/" class="md-nav__link">
-        Linux
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/ArchitectureMaterielle/processus/" class="md-nav__link">
-        processus
+        
+  
+  
+  <span class="md-ellipsis">
+    processus
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/ArchitectureMaterielle/soc/" class="md-nav__link">
-        SoC
+        
+  
+  
+  <span class="md-ellipsis">
+    SoC
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_6" type="checkbox" id="__nav_6_6" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_6">
-          Algorithmes
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Algorithmes" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_6">
-          <span class="md-nav__icon md-icon"></span>
-          Algorithmes
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
           
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Algorithmes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithmes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Algo/" class="md-nav__link">
-        Algorithmes
+        
+  
+  
+  <span class="md-ellipsis">
+    Algorithmes
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
   
+  
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_7">
-          Logiciels
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Logiciels" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
-          <span class="md-nav__icon md-icon"></span>
-          Logiciels
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
           
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Logiciels
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Logiciels
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Logiciels/liste_logiciels/" class="md-nav__link">
-        liste des logiciels
+        
+  
+  
+  <span class="md-ellipsis">
+    liste des logiciels
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Logiciels/git_github/" class="md-nav__link">
-        git
+        
+  
+  
+  <span class="md-ellipsis">
+    git
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Logiciels/insta_vscode_html/" class="md-nav__link">
-        vcode_web
+        
+  
+  
+  <span class="md-ellipsis">
+    vcode_web
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Logiciels/insta_vscode_python/" class="md-nav__link">
-        vcode_python
+        
+  
+  
+  <span class="md-ellipsis">
+    vcode_python
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Logiciels/thonny_tutorial/" class="md-nav__link">
-        thonny
+        
+  
+  
+  <span class="md-ellipsis">
+    thonny
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Logiciels/tuto_mkdocs/" class="md-nav__link">
-        mkdocs
+        
+  
+  
+  <span class="md-ellipsis">
+    mkdocs
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1677,21 +2427,27 @@
       
         <li class="md-nav__item">
   <a href="#pourquoi-trier-les-valeurs" class="md-nav__link">
-    Pourquoi trier les valeurs
+    <span class="md-ellipsis">
+      Pourquoi trier les valeurs
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#travail-preparatoire-sur-les-listes" class="md-nav__link">
-    Travail préparatoire sur les listes
+    <span class="md-ellipsis">
+      Travail préparatoire sur les listes
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#algorithmes-de-tri" class="md-nav__link">
-    Algorithmes de tri
+    <span class="md-ellipsis">
+      Algorithmes de tri
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Algorithmes de tri">
@@ -1699,7 +2455,9 @@
         
           <li class="md-nav__item">
   <a href="#tri-par-selection" class="md-nav__link">
-    Tri par sélection
+    <span class="md-ellipsis">
+      Tri par sélection
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Tri par sélection">
@@ -1707,21 +2465,27 @@
         
           <li class="md-nav__item">
   <a href="#principe" class="md-nav__link">
-    Principe
+    <span class="md-ellipsis">
+      Principe
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#algorithme" class="md-nav__link">
-    Algorithme
+    <span class="md-ellipsis">
+      Algorithme
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#terminaison" class="md-nav__link">
-    Terminaison
+    <span class="md-ellipsis">
+      Terminaison
+    </span>
   </a>
   
 </li>
@@ -1733,7 +2497,9 @@
         
           <li class="md-nav__item">
   <a href="#tri-par-insertion" class="md-nav__link">
-    Tri par insertion
+    <span class="md-ellipsis">
+      Tri par insertion
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Tri par insertion">
@@ -1741,28 +2507,36 @@
         
           <li class="md-nav__item">
   <a href="#principe_1" class="md-nav__link">
-    Principe
+    <span class="md-ellipsis">
+      Principe
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#algorithme_1" class="md-nav__link">
-    Algorithme
+    <span class="md-ellipsis">
+      Algorithme
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#trace-de-la-fonction-tri_insertion" class="md-nav__link">
-    Trace de la fonction tri_insertion
+    <span class="md-ellipsis">
+      Trace de la fonction tri_insertion
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#terminaison_1" class="md-nav__link">
-    Terminaison
+    <span class="md-ellipsis">
+      Terminaison
+    </span>
   </a>
   
 </li>
@@ -1774,7 +2548,9 @@
         
           <li class="md-nav__item">
   <a href="#tri-a-bulles" class="md-nav__link">
-    Tri à bulles
+    <span class="md-ellipsis">
+      Tri à bulles
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Tri à bulles">
@@ -1782,14 +2558,18 @@
         
           <li class="md-nav__item">
   <a href="#principe_2" class="md-nav__link">
-    Principe
+    <span class="md-ellipsis">
+      Principe
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#algorithme_2" class="md-nav__link">
-    algorithme
+    <span class="md-ellipsis">
+      algorithme
+    </span>
   </a>
   
 </li>
@@ -1801,7 +2581,9 @@
         
           <li class="md-nav__item">
   <a href="#tri-fusion" class="md-nav__link">
-    Tri fusion
+    <span class="md-ellipsis">
+      Tri fusion
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Tri fusion">
@@ -1809,14 +2591,18 @@
         
           <li class="md-nav__item">
   <a href="#principe_3" class="md-nav__link">
-    Principe
+    <span class="md-ellipsis">
+      Principe
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#algorithme_3" class="md-nav__link">
-    Algorithme
+    <span class="md-ellipsis">
+      Algorithme
+    </span>
   </a>
   
 </li>
@@ -1833,7 +2619,9 @@
       
         <li class="md-nav__item">
   <a href="#comparaison-du-temps-dexecution-des-differents-algorithmes-de-tri" class="md-nav__link">
-    Comparaison du temps d'exécution des différents algorithmes de tri
+    <span class="md-ellipsis">
+      Comparaison du temps d'exécution des différents algorithmes de tri
+    </span>
   </a>
   
 </li>
@@ -1846,10 +2634,12 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
+
 
 
 <h1 id="tris">Tris<a class="headerlink" href="#tris" title="Permanent link">&num;</a></h1>
@@ -1862,15 +2652,14 @@
 <li>Les tris rapides parmi lesquels on dénombre : le tri fusion, le tri rapide (Quick Sort) ...</li>
 </ul>
 <p>En Python, on utilise la fonction <code>sort()</code> :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">tab</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">tab</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">tab</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="o">&gt;&gt;&gt;</span> <span class="n">tab</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <p>Nous allons voir dans ce chapitre comment écrire un algorithme de tri et les différentes manières d'écrire un tel algorithme.</p>
 <h2 id="travail-preparatoire-sur-les-listes">Travail préparatoire sur les listes<a class="headerlink" href="#travail-preparatoire-sur-les-listes" title="Permanent link">&num;</a></h2>
 <div class="admonition example">
@@ -2027,21 +2816,20 @@ Voici le fonctionnement de l'algorithme :</p>
 Traitement : tant que la valeur à traiter est inférieure à celle située à sa gauche, on échange ces deux valeurs.</p>
 <h4 id="algorithme_1">Algorithme<a class="headerlink" href="#algorithme_1" title="Permanent link">&num;</a></h4>
 <p>La fonction suivante prend en argument une liste de nombres et la retourne triée suivant un algorithme de tri par insertion : </p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
 <span class="normal"><a href="#__codelineno-1-4">4</a></span>
 <span class="normal"><a href="#__codelineno-1-5">5</a></span>
 <span class="normal"><a href="#__codelineno-1-6">6</a></span>
-<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">def</span> <span class="nf">tri_insertion</span><span class="p">(</span><span class="n">lst</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">def</span> <span class="nf">tri_insertion</span><span class="p">(</span><span class="n">lst</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)):</span>                 
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>        <span class="n">j</span> <span class="o">=</span> <span class="n">i</span>                                    
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>        <span class="k">while</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">lst</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">lst</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="p">:</span>      
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>            <span class="n">lst</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>      
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>            <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1</span> 
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>    <span class="k">return</span> <span class="n">lst</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <h4 id="trace-de-la-fonction-tri_insertion">Trace de la fonction <code>tri_insertion</code><a class="headerlink" href="#trace-de-la-fonction-tri_insertion" title="Permanent link">&num;</a></h4>
 <div class="admonition example">
 <p class="admonition-title">Exercice 10</p>
@@ -2049,28 +2837,28 @@ Traitement : tant que la valeur à traiter est inférieure à celle située à s
 <table>
 <thead>
 <tr>
-<th align="center">L[0]</th>
-<th align="center">L[1]</th>
-<th align="center">L[2]</th>
-<th align="center">L[3]</th>
-<th align="center">L[4]</th>
-<th align="center">i</th>
-<th align="center">j</th>
-<th align="center">elmt</th>
-<th align="center">Commentaires</th>
+<th style="text-align: center;">L[0]</th>
+<th style="text-align: center;">L[1]</th>
+<th style="text-align: center;">L[2]</th>
+<th style="text-align: center;">L[3]</th>
+<th style="text-align: center;">L[4]</th>
+<th style="text-align: center;">i</th>
+<th style="text-align: center;">j</th>
+<th style="text-align: center;">elmt</th>
+<th style="text-align: center;">Commentaires</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
@@ -2112,22 +2900,22 @@ Traitement : tant que la valeur à traiter est inférieure à celle située à s
 <table>
 <thead>
 <tr>
-<th align="center">lst</th>
-<th align="center">10</th>
-<th align="center">2</th>
-<th align="center">8</th>
-<th align="center">3</th>
-<th align="center">1</th>
+<th style="text-align: center;">lst</th>
+<th style="text-align: center;">10</th>
+<th style="text-align: center;">2</th>
+<th style="text-align: center;">8</th>
+<th style="text-align: center;">3</th>
+<th style="text-align: center;">1</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">étape 1</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
+<td style="text-align: center;">étape 1</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
@@ -2146,7 +2934,7 @@ Traitement : tant que la valeur à traiter est inférieure à celle située à s
 </figure>
 <h4 id="algorithme_3">Algorithme<a class="headerlink" href="#algorithme_3" title="Permanent link">&num;</a></h4>
 <p>Cet algorithme n’est pas au programme de 1ère mais à celui de terminale car il fait appel à la récursivité (une fonction qui s’appelle elle-même). Il pourra être copié-collé dans python afin d’être testé puis afin de  comparer les vitesses d’exécution des différents algorithmes de tri. </p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
@@ -2160,7 +2948,7 @@ Traitement : tant que la valeur à traiter est inférieure à celle située à s
 <span class="normal"><a href="#__codelineno-2-12">12</a></span>
 <span class="normal"><a href="#__codelineno-2-13">13</a></span>
 <span class="normal"><a href="#__codelineno-2-14">14</a></span>
-<span class="normal"><a href="#__codelineno-2-15">15</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span> <span class="nf">fusion</span><span class="p">(</span><span class="n">lst1</span><span class="p">:</span><span class="nb">list</span><span class="p">,</span><span class="n">lst2</span><span class="p">:</span><span class="nb">list</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">def</span> <span class="nf">fusion</span><span class="p">(</span><span class="n">lst1</span><span class="p">:</span><span class="nb">list</span><span class="p">,</span><span class="n">lst2</span><span class="p">:</span><span class="nb">list</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="n">i1</span><span class="p">,</span> <span class="n">i2</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst1</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst2</span><span class="p">)</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>    <span class="n">t</span> <span class="o">=</span> <span class="p">[]</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>    <span class="k">while</span> <span class="n">i1</span> <span class="o">&lt;</span> <span class="n">n1</span> <span class="ow">and</span> <span class="n">i2</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">:</span>
@@ -2175,88 +2963,64 @@ Traitement : tant que la valeur à traiter est inférieure à celle située à s
 </span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a>        <span class="k">if</span> <span class="n">i2</span> <span class="o">==</span> <span class="n">n2</span> <span class="ow">and</span> <span class="n">i1</span> <span class="o">&lt;</span> <span class="n">n1</span> <span class="p">:</span>
 </span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a>            <span class="n">t</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">lst1</span><span class="p">[</span><span class="n">i1</span><span class="p">:])</span>
 </span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a>    <span class="k">return</span> <span class="n">t</span>
-</span></code></pre></div>
-</td></tr></table>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+</span></code></pre></div></td></tr></table></div>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
 <span class="normal"><a href="#__codelineno-3-4">4</a></span>
 <span class="normal"><a href="#__codelineno-3-5">5</a></span>
 <span class="normal"><a href="#__codelineno-3-6">6</a></span>
-<span class="normal"><a href="#__codelineno-3-7">7</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">def</span> <span class="nf">tri_fusion</span><span class="p">(</span><span class="n">L</span><span class="p">:</span><span class="nb">list</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">def</span> <span class="nf">tri_fusion</span><span class="p">(</span><span class="n">L</span><span class="p">:</span><span class="nb">list</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>        <span class="k">return</span> <span class="n">L</span>
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="k">else</span><span class="p">:</span>
 </span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a>        <span class="n">m</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">2</span>
 </span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>        <span class="k">return</span> <span class="n">fusion</span><span class="p">(</span><span class="n">tri_fusion</span><span class="p">(</span><span class="n">L</span><span class="p">[:</span><span class="n">m</span><span class="p">]),</span> <span class="n">tri_fusion</span><span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="n">m</span><span class="p">:]))</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <h2 id="comparaison-du-temps-dexecution-des-differents-algorithmes-de-tri">Comparaison du temps d'exécution des différents algorithmes de tri<a class="headerlink" href="#comparaison-du-temps-dexecution-des-differents-algorithmes-de-tri" title="Permanent link">&num;</a></h2>
 <p>Afin de comparer les tems d’exécution des différents algorithmes de tri, nous allons utiliser la fonction time de la bibliothèque time. Cette fonction renvoie l’heure UNIX, c’est-à-dire le nombre de secondes écoulées depuis un instant de référence : le premier janvier 1970 à minuit.</p>
 <p>Cette fonction s’utilise de la manière suivante :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
 <span class="normal"><a href="#__codelineno-4-3">3</a></span>
 <span class="normal"><a href="#__codelineno-4-4">4</a></span>
 <span class="normal"><a href="#__codelineno-4-5">5</a></span>
-<span class="normal"><a href="#__codelineno-4-6">6</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">import</span> <span class="nn">time</span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">import</span> <span class="nn">time</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="c1"># instructions qui appellent la fonction de tri à chronométrer…</span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
 </span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="n">duree</span> <span class="o">=</span> <span class="n">t2</span> <span class="o">-</span><span class="n">t1</span>
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">duree</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <div class="admonition example">
 <p class="admonition-title">Exercice 15</p>
 <p>Réaliser un programme qui génère aléatoirement une liste L de n entiers à trier (dont les valeurs sont comprises entre 0 et 100000).  Cette liste sera dupliquée en 4 listes L1, L2, L3 et L4. Les 4 listes dupliquées seront triées respectivement par sélection, par insertion, par tri à bulles et par fusion et ces 4 tris seront chronométrés.
 <span class="arithmatex">\(n\)</span> prendra les valeurs 100, 1000, 5000, 10000, 20000 et 30000 et on superposera 4 courbes (1 pour chaque tri) représentant le temps de calcul en fonction du nombre d’éléments à trier. Conclure. </p>
 </div>
 
-              
-            </article>
-          </div>
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../outils/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Outils" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Outils
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../algo_recherche/" class="md-footer__link md-footer__link--next" aria-label="Next: Recherche" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Recherche
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2278,10 +3042,14 @@ Traitement : tant que la valeur à traiter est inférieure à celle située à s
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.8aa65030.min.js"></script>
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
         <script src="../../../javascripts/config.js"></script>
       

@@ -10,8 +10,15 @@
       
         <link rel="canonical" href="https://example.com/Premiere/Langage/Bases_Python/">
       
+      
+        <link rel="prev" href="../../Donnees/donnees_table/">
+      
+      
+        <link rel="next" href="../ControleFlux_Python/">
+      
+      
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
       
@@ -19,29 +26,35 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.e8d9bf0c.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e53b48f4.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
         
-      
-    
-    
-    
-      
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -54,11 +67,8 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -78,16 +88,19 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="Site de cours" class="md-header__button md-logo" aria-label="Site de cours" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -106,62 +119,76 @@
       </div>
     </div>
     
-      <form class="md-header__option" data-md-component="palette">
-        
-          
-          
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
-          
-            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
-            </label>
-          
-        
-          
-          
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
-          
-            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
-            </label>
-          
-        
-      </form>
+      
+        <form class="md-header__option" data-md-component="palette">
+  
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
   </div>
 </div>
+      
     
     
   </nav>
@@ -186,12 +213,13 @@
                     
 
 
+
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Site de cours" class="md-nav__button md-logo" aria-label="Site de cours" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     Site de cours
@@ -201,14 +229,21 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
-        Home
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
       </a>
     </li>
   
@@ -216,14 +251,21 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../about/" class="md-nav__link">
-        About
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
       </a>
     </li>
   
@@ -231,302 +273,443 @@
     
       
       
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Physique
+    
+  </span>
+  
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Physique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3">
-          Physique
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Physique" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Physique
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_1">
-          Seconde
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Seconde" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_1">
-          <span class="md-nav__icon md-icon"></span>
-          Seconde
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
           
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Seconde
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Seconde
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Physique/Seconde/TP_vitesse/" class="md-nav__link">
-        TP vitesse
+        
+  
+  
+  <span class="md-ellipsis">
+    TP vitesse
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Physique/Seconde/TPver_eleve/" class="md-nav__link">
-        TP verrerie
+        
+  
+  
+  <span class="md-ellipsis">
+    TP verrerie
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
   
+  
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4">
-          SNT
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="SNT" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          SNT
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
           
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SNT
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            SNT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../SNT/html_css_SNT/" class="md-nav__link">
-        web
+        
+  
+  
+  <span class="md-ellipsis">
+    web
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
     
   
   
+  
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5">
-          Première
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Première" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          Première
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
           
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Première
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Première
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_1">
-          Données
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Données" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_1">
-          <span class="md-nav__icon md-icon"></span>
-          Données
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
           
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Données
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Donnees/representation_entier/" class="md-nav__link">
-        Représentation des entiers
+        
+  
+  
+  <span class="md-ellipsis">
+    Représentation des entiers
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Donnees/relatifs_reels/" class="md-nav__link">
-        Représentation des relatifs et des réels
+        
+  
+  
+  <span class="md-ellipsis">
+    Représentation des relatifs et des réels
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Donnees/donnees_table/" class="md-nav__link">
-        Données en table
+        
+  
+  
+  <span class="md-ellipsis">
+    Données en table
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
     
   
   
+  
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_2">
-          Langage Python
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Langage Python" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_2">
-          <span class="md-nav__icon md-icon"></span>
-          Langage Python
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+        
           
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Langage Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Langage Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
     
+  
   
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Les bases
+          
+  
+  
+  <span class="md-ellipsis">
+    Les bases
+    
+  </span>
+  
+
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Les bases
+        
+  
+  
+  <span class="md-ellipsis">
+    Les bases
+    
+  </span>
+  
+
       </a>
       
         
@@ -546,14 +729,18 @@
       
         <li class="md-nav__item">
   <a href="#presentation-de-python" class="md-nav__link">
-    Présentation de Python
+    <span class="md-ellipsis">
+      Présentation de Python
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#installer-vs-code" class="md-nav__link">
-    Installer VS Code
+    <span class="md-ellipsis">
+      Installer VS Code
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Installer VS Code">
@@ -561,35 +748,45 @@
         
           <li class="md-nav__item">
   <a href="#telecharger-vscode" class="md-nav__link">
-    Télécharger VSCODE
+    <span class="md-ellipsis">
+      Télécharger VSCODE
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#installer-python" class="md-nav__link">
-    Installer Python
+    <span class="md-ellipsis">
+      Installer Python
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#configurer-linterpreteur-python" class="md-nav__link">
-    Configurer l’interpréteur Python
+    <span class="md-ellipsis">
+      Configurer l’interpréteur Python
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#tester-ton-projet-python-dans-vs-code" class="md-nav__link">
-    Tester ton projet Python dans VS Code
+    <span class="md-ellipsis">
+      Tester ton projet Python dans VS Code
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#installer-les-extensions-utiles" class="md-nav__link">
-    Installer les extensions utiles
+    <span class="md-ellipsis">
+      Installer les extensions utiles
+    </span>
   </a>
   
 </li>
@@ -601,36 +798,46 @@
       
         <li class="md-nav__item">
   <a href="#la-declaration-et-laffectation-du-contenu-de-variables" class="md-nav__link">
-    La déclaration et l'affectation du contenu de variables
+    <span class="md-ellipsis">
+      La déclaration et l'affectation du contenu de variables
+    </span>
   </a>
   
-    <nav class="md-nav" aria-label="La déclaration et l'affectation du contenu de variables">
+    <nav class="md-nav" aria-label="La déclaration et l&#39;affectation du contenu de variables">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#la-declaration-dune-variable" class="md-nav__link">
-    La déclaration d'une variable
+    <span class="md-ellipsis">
+      La déclaration d'une variable
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#quel-interet-dutiliser-une-variable" class="md-nav__link">
-    Quel intérêt d'utiliser une variable ?
+    <span class="md-ellipsis">
+      Quel intérêt d'utiliser une variable ?
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#types-des-variables" class="md-nav__link">
-    Types des variables
+    <span class="md-ellipsis">
+      Types des variables
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#affectations-assignations-multiples" class="md-nav__link">
-    Affectations (assignations) multiples
+    <span class="md-ellipsis">
+      Affectations (assignations) multiples
+    </span>
   </a>
   
 </li>
@@ -642,7 +849,9 @@
       
         <li class="md-nav__item">
   <a href="#les-operations" class="md-nav__link">
-    Les opérations
+    <span class="md-ellipsis">
+      Les opérations
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Les opérations">
@@ -650,7 +859,9 @@
         
           <li class="md-nav__item">
   <a href="#arithmetiques" class="md-nav__link">
-    Arithmétiques
+    <span class="md-ellipsis">
+      Arithmétiques
+    </span>
   </a>
   
 </li>
@@ -662,7 +873,9 @@
       
         <li class="md-nav__item">
   <a href="#quelques-fonctions-mathematiques" class="md-nav__link">
-    Quelques fonctions mathématiques
+    <span class="md-ellipsis">
+      Quelques fonctions mathématiques
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Quelques fonctions mathématiques">
@@ -670,7 +883,9 @@
         
           <li class="md-nav__item">
   <a href="#generation-de-nombres-aleatoires" class="md-nav__link">
-    Génération de nombres aléatoires
+    <span class="md-ellipsis">
+      Génération de nombres aléatoires
+    </span>
   </a>
   
 </li>
@@ -682,21 +897,27 @@
       
         <li class="md-nav__item">
   <a href="#les-entrees" class="md-nav__link">
-    Les entrées
+    <span class="md-ellipsis">
+      Les entrées
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#trace-dun-programme" class="md-nav__link">
-    Trace d'un programme
+    <span class="md-ellipsis">
+      Trace d'un programme
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#exercices" class="md-nav__link">
-    Exercices
+    <span class="md-ellipsis">
+      Exercices
+    </span>
   </a>
   
 </li>
@@ -708,937 +929,1466 @@
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../ControleFlux_Python/" class="md-nav__link">
-        Contrôle du flux d'exécution
+        
+  
+  
+  <span class="md-ellipsis">
+    Contrôle du flux d'exécution
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../fonction_python/" class="md-nav__link">
-        Les fonctions en Python
+        
+  
+  
+  <span class="md-ellipsis">
+    Les fonctions en Python
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../tuples_listes/" class="md-nav__link">
-        Tuples et listes en Python
+        
+  
+  
+  <span class="md-ellipsis">
+    Tuples et listes en Python
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../dico/" class="md-nav__link">
-        Dictionnaires
+        
+  
+  
+  <span class="md-ellipsis">
+    Dictionnaires
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_3">
-          IHM
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="IHM" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_3">
-          <span class="md-nav__icon md-icon"></span>
-          IHM
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
           
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    IHM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            IHM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../IHM/html_css/" class="md-nav__link">
-        web
+        
+  
+  
+  <span class="md-ellipsis">
+    web
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../IHM/frameworks/" class="md-nav__link">
-        Frameworks
+        
+  
+  
+  <span class="md-ellipsis">
+    Frameworks
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../IHM/formulaires/" class="md-nav__link">
-        Formulaire
+        
+  
+  
+  <span class="md-ellipsis">
+    Formulaire
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../IHM/js/" class="md-nav__link">
-        Javascript
+        
+  
+  
+  <span class="md-ellipsis">
+    Javascript
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_4">
-          Architecture Matérielle
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_4">
-          <span class="md-nav__icon md-icon"></span>
-          Architecture Matérielle
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
           
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Architecture Matérielle
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture Matérielle
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../ArchitectureMaterielle/von_neumann/" class="md-nav__link">
-        Von Neumann
+        
+  
+  
+  <span class="md-ellipsis">
+    Von Neumann
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../ArchitectureMaterielle/OS/" class="md-nav__link">
-        OS
+        
+  
+  
+  <span class="md-ellipsis">
+    OS
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArchitectureMaterielle/TP_logic_gates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Portes logiques
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
+              
             
-          
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_5">
-          Algorithmique
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Algorithmique" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_5">
-          <span class="md-nav__icon md-icon"></span>
-          Algorithmique
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
           
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Algorithmique
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithmique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Algorithmique/outils/" class="md-nav__link">
-        Outils
+        
+  
+  
+  <span class="md-ellipsis">
+    Outils
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Algorithmique/tris/" class="md-nav__link">
-        Tris
+        
+  
+  
+  <span class="md-ellipsis">
+    Tris
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Algorithmique/algo_recherche/" class="md-nav__link">
-        Recherche
+        
+  
+  
+  <span class="md-ellipsis">
+    Recherche
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Algorithmique/algo_gloutons/" class="md-nav__link">
-        Gloutons
+        
+  
+  
+  <span class="md-ellipsis">
+    Gloutons
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Algorithmique/kppv/" class="md-nav__link">
-        kppv
+        
+  
+  
+  <span class="md-ellipsis">
+    kppv
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
   
+  
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6">
-          Terminale
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Terminale" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
-          <span class="md-nav__icon md-icon"></span>
-          Terminale
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
           
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Terminale
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Terminale
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/outils_python/" class="md-nav__link">
-        Outils Python
+        
+  
+  
+  <span class="md-ellipsis">
+    Outils Python
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_2">
-          Programmation
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Programmation" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_2">
-          <span class="md-nav__icon md-icon"></span>
-          Programmation
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
           
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Programmation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Programmation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/cours_recursivite/" class="md-nav__link">
-        Récursivité
+        
+  
+  
+  <span class="md-ellipsis">
+    Récursivité
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/POO/" class="md-nav__link">
-        POO
+        
+  
+  
+  <span class="md-ellipsis">
+    POO
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/decidabilite/" class="md-nav__link">
-        Calculabilité, décidabilité
+        
+  
+  
+  <span class="md-ellipsis">
+    Calculabilité, décidabilité
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/crypto/" class="md-nav__link">
-        Sécurisation des données
+        
+  
+  
+  <span class="md-ellipsis">
+    Sécurisation des données
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/algos_arbre/" class="md-nav__link">
-        Arbres algos
+        
+  
+  
+  <span class="md-ellipsis">
+    Arbres algos
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/graphes/" class="md-nav__link">
-        Graphes algos
+        
+  
+  
+  <span class="md-ellipsis">
+    Graphes algos
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/recherche_textuelle/" class="md-nav__link">
-        Recherche textuelle
+        
+  
+  
+  <span class="md-ellipsis">
+    Recherche textuelle
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/diviser_regner/" class="md-nav__link">
-        Diviser pour régner
+        
+  
+  
+  <span class="md-ellipsis">
+    Diviser pour régner
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/prog_dynamique/" class="md-nav__link">
-        Programmation dynamique
+        
+  
+  
+  <span class="md-ellipsis">
+    Programmation dynamique
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/dijkstra/" class="md-nav__link">
-        Plus court chemin
+        
+  
+  
+  <span class="md-ellipsis">
+    Plus court chemin
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/API/" class="md-nav__link">
-        Modularité
+        
+  
+  
+  <span class="md-ellipsis">
+    Modularité
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_3">
-          Structures de Données
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Structures de Données" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_3">
-          <span class="md-nav__icon md-icon"></span>
-          Structures de Données
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
           
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Structures de Données
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Structures de Données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Struct_donnees/graphe/" class="md-nav__link">
-        Graphes
+        
+  
+  
+  <span class="md-ellipsis">
+    Graphes
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_4">
-          BDD
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="BDD" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_4">
-          <span class="md-nav__icon md-icon"></span>
-          BDD
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
           
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    BDD
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            BDD
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/BDD/bdd/" class="md-nav__link">
-        Introduction BDD
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction BDD
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/BDD/sql_sqlite/" class="md-nav__link">
-        SQL avec SQLITE
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL avec SQLITE
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/BDD/sql_python/" class="md-nav__link">
-        SQL et Python
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL et Python
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" type="checkbox" id="__nav_6_5" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_5">
-          Architecture Matérielle
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_5">
-          <span class="md-nav__icon md-icon"></span>
-          Architecture Matérielle
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
           
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Architecture Matérielle
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture Matérielle
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/ArchitectureMaterielle/reseau_routage/" class="md-nav__link">
-        Routage
+        
+  
+  
+  <span class="md-ellipsis">
+    Routage
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/ArchitectureMaterielle/commande_linux/" class="md-nav__link">
-        Linux
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/ArchitectureMaterielle/processus/" class="md-nav__link">
-        processus
+        
+  
+  
+  <span class="md-ellipsis">
+    processus
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/ArchitectureMaterielle/soc/" class="md-nav__link">
-        SoC
+        
+  
+  
+  <span class="md-ellipsis">
+    SoC
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_6" type="checkbox" id="__nav_6_6" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_6">
-          Algorithmes
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Algorithmes" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_6">
-          <span class="md-nav__icon md-icon"></span>
-          Algorithmes
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
           
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Algorithmes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithmes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Algo/" class="md-nav__link">
-        Algorithmes
+        
+  
+  
+  <span class="md-ellipsis">
+    Algorithmes
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
   
+  
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_7">
-          Logiciels
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Logiciels" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
-          <span class="md-nav__icon md-icon"></span>
-          Logiciels
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
           
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Logiciels
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Logiciels
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Logiciels/liste_logiciels/" class="md-nav__link">
-        liste des logiciels
+        
+  
+  
+  <span class="md-ellipsis">
+    liste des logiciels
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Logiciels/git_github/" class="md-nav__link">
-        git
+        
+  
+  
+  <span class="md-ellipsis">
+    git
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Logiciels/insta_vscode_html/" class="md-nav__link">
-        vcode_web
+        
+  
+  
+  <span class="md-ellipsis">
+    vcode_web
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Logiciels/insta_vscode_python/" class="md-nav__link">
-        vcode_python
+        
+  
+  
+  <span class="md-ellipsis">
+    vcode_python
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Logiciels/thonny_tutorial/" class="md-nav__link">
-        thonny
+        
+  
+  
+  <span class="md-ellipsis">
+    thonny
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Logiciels/tuto_mkdocs/" class="md-nav__link">
-        mkdocs
+        
+  
+  
+  <span class="md-ellipsis">
+    mkdocs
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1671,14 +2421,18 @@
       
         <li class="md-nav__item">
   <a href="#presentation-de-python" class="md-nav__link">
-    Présentation de Python
+    <span class="md-ellipsis">
+      Présentation de Python
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#installer-vs-code" class="md-nav__link">
-    Installer VS Code
+    <span class="md-ellipsis">
+      Installer VS Code
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Installer VS Code">
@@ -1686,35 +2440,45 @@
         
           <li class="md-nav__item">
   <a href="#telecharger-vscode" class="md-nav__link">
-    Télécharger VSCODE
+    <span class="md-ellipsis">
+      Télécharger VSCODE
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#installer-python" class="md-nav__link">
-    Installer Python
+    <span class="md-ellipsis">
+      Installer Python
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#configurer-linterpreteur-python" class="md-nav__link">
-    Configurer l’interpréteur Python
+    <span class="md-ellipsis">
+      Configurer l’interpréteur Python
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#tester-ton-projet-python-dans-vs-code" class="md-nav__link">
-    Tester ton projet Python dans VS Code
+    <span class="md-ellipsis">
+      Tester ton projet Python dans VS Code
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#installer-les-extensions-utiles" class="md-nav__link">
-    Installer les extensions utiles
+    <span class="md-ellipsis">
+      Installer les extensions utiles
+    </span>
   </a>
   
 </li>
@@ -1726,36 +2490,46 @@
       
         <li class="md-nav__item">
   <a href="#la-declaration-et-laffectation-du-contenu-de-variables" class="md-nav__link">
-    La déclaration et l'affectation du contenu de variables
+    <span class="md-ellipsis">
+      La déclaration et l'affectation du contenu de variables
+    </span>
   </a>
   
-    <nav class="md-nav" aria-label="La déclaration et l'affectation du contenu de variables">
+    <nav class="md-nav" aria-label="La déclaration et l&#39;affectation du contenu de variables">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#la-declaration-dune-variable" class="md-nav__link">
-    La déclaration d'une variable
+    <span class="md-ellipsis">
+      La déclaration d'une variable
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#quel-interet-dutiliser-une-variable" class="md-nav__link">
-    Quel intérêt d'utiliser une variable ?
+    <span class="md-ellipsis">
+      Quel intérêt d'utiliser une variable ?
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#types-des-variables" class="md-nav__link">
-    Types des variables
+    <span class="md-ellipsis">
+      Types des variables
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#affectations-assignations-multiples" class="md-nav__link">
-    Affectations (assignations) multiples
+    <span class="md-ellipsis">
+      Affectations (assignations) multiples
+    </span>
   </a>
   
 </li>
@@ -1767,7 +2541,9 @@
       
         <li class="md-nav__item">
   <a href="#les-operations" class="md-nav__link">
-    Les opérations
+    <span class="md-ellipsis">
+      Les opérations
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Les opérations">
@@ -1775,7 +2551,9 @@
         
           <li class="md-nav__item">
   <a href="#arithmetiques" class="md-nav__link">
-    Arithmétiques
+    <span class="md-ellipsis">
+      Arithmétiques
+    </span>
   </a>
   
 </li>
@@ -1787,7 +2565,9 @@
       
         <li class="md-nav__item">
   <a href="#quelques-fonctions-mathematiques" class="md-nav__link">
-    Quelques fonctions mathématiques
+    <span class="md-ellipsis">
+      Quelques fonctions mathématiques
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Quelques fonctions mathématiques">
@@ -1795,7 +2575,9 @@
         
           <li class="md-nav__item">
   <a href="#generation-de-nombres-aleatoires" class="md-nav__link">
-    Génération de nombres aléatoires
+    <span class="md-ellipsis">
+      Génération de nombres aléatoires
+    </span>
   </a>
   
 </li>
@@ -1807,21 +2589,27 @@
       
         <li class="md-nav__item">
   <a href="#les-entrees" class="md-nav__link">
-    Les entrées
+    <span class="md-ellipsis">
+      Les entrées
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#trace-dun-programme" class="md-nav__link">
-    Trace d'un programme
+    <span class="md-ellipsis">
+      Trace d'un programme
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#exercices" class="md-nav__link">
-    Exercices
+    <span class="md-ellipsis">
+      Exercices
+    </span>
   </a>
   
 </li>
@@ -1834,10 +2622,12 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
+
 
 
 <h1 id="les-bases-en-python">Les bases en Python<a class="headerlink" href="#les-bases-en-python" title="Permanent link">&num;</a></h1>
@@ -1902,9 +2692,8 @@
 <h2 id="la-declaration-et-laffectation-du-contenu-de-variables">La déclaration et l'affectation du contenu de variables<a class="headerlink" href="#la-declaration-et-laffectation-du-contenu-de-variables" title="Permanent link">&num;</a></h2>
 <h3 id="la-declaration-dune-variable">La déclaration d'une variable<a class="headerlink" href="#la-declaration-dune-variable" title="Permanent link">&num;</a></h3>
 <p>Si on écrit dans la zone de saisie maintenant l'instruction :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">texte</span><span class="p">)</span> <span class="c1"># sans les guillemets</span>
-</span></code></pre></div>
-</td></tr></table>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">texte</span><span class="p">)</span> <span class="c1"># sans les guillemets</span>
+</span></code></pre></div></td></tr></table></div>
 <p>L'interpréteur affiche maintenant le message d'erreur suivant :</p>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="o">%</span><span class="n">Run</span> <span class="o">-</span><span class="n">c</span> <span class="err">$</span><span class="n">EDITOR_CONTENT</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
@@ -1913,11 +2702,10 @@
 </span></code></pre></div>
 <p>Le message d'erreur vient du fait que "hello world" était entre guillements alors que texte non. En effet, l'interpreteur Python cherche à afficher la variable <code>texte</code> et que cette variable n'a pas été définie dans ce programme.</p>
 <p>Pour définir cette variable, on rajoute la ligne suivante en début de programme :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">texte</span> <span class="o">=</span> <span class="s2">&quot;Hello world&quot;</span> <span class="c1"># ou encore &quot;Hello world&quot;</span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">texte</span> <span class="o">=</span> <span class="s2">&quot;Hello world&quot;</span> <span class="c1"># ou encore &quot;Hello world&quot;</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">texte</span><span class="p">)</span> <span class="c1"># affiche le contenu de la variable texte</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <p>Nous venons de déclarer une variable nommée <code>texte</code> et de lui affecter (ou assigner) le texte "Hello World". En Python comme dans bien d'autres langages, l'opération d'affectation est représentée par le signe <code>=</code>.</p>
 <h3 id="quel-interet-dutiliser-une-variable">Quel intérêt d'utiliser une variable ?<a class="headerlink" href="#quel-interet-dutiliser-une-variable" title="Permanent link">&num;</a></h3>
 <p>Définition du mot ordinateur d’après le dictionnaire Le Petit Larousse :</p>
@@ -1930,51 +2718,51 @@
 <table>
 <thead>
 <tr>
-<th align="center">Type Python</th>
-<th align="center">Traduction</th>
-<th align="center">Exemple</th>
+<th style="text-align: center;">Type Python</th>
+<th style="text-align: center;">Traduction</th>
+<th style="text-align: center;">Exemple</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><code>int</code></td>
-<td align="center">entier</td>
-<td align="center"><code class="language-python highlight"><span class="mi">42</span></code></td>
+<td style="text-align: center;"><code>int</code></td>
+<td style="text-align: center;">entier</td>
+<td style="text-align: center;"><code class="language-python highlight"><span class="mi">42</span></code></td>
 </tr>
 <tr>
-<td align="center"><code>float</code></td>
-<td align="center">flottant (décimal)</td>
-<td align="center"><code class="language-python highlight"><span class="mf">3.1416</span></code></td>
+<td style="text-align: center;"><code>float</code></td>
+<td style="text-align: center;">flottant (décimal)</td>
+<td style="text-align: center;"><code class="language-python highlight"><span class="mf">3.1416</span></code></td>
 </tr>
 <tr>
-<td align="center"><code>str</code></td>
-<td align="center">chaîne de caractères (string)</td>
-<td align="center"><code class="language-python highlight"><span class="s2">&quot;NSI&quot;</span></code></td>
+<td style="text-align: center;"><code>str</code></td>
+<td style="text-align: center;">chaîne de caractères (string)</td>
+<td style="text-align: center;"><code class="language-python highlight"><span class="s2">&quot;NSI&quot;</span></code></td>
 </tr>
 <tr>
-<td align="center"><code>bool</code></td>
-<td align="center">booléen (True ou False)</td>
-<td align="center"><code class="language-python highlight"><span class="kc">True</span></code></td>
+<td style="text-align: center;"><code>bool</code></td>
+<td style="text-align: center;">booléen (True ou False)</td>
+<td style="text-align: center;"><code class="language-python highlight"><span class="kc">True</span></code></td>
 </tr>
 <tr>
-<td align="center"><code>tuple</code></td>
-<td align="center">p-uplet</td>
-<td align="center"><code class="language-python highlight"><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></code></td>
+<td style="text-align: center;"><code>tuple</code></td>
+<td style="text-align: center;">p-uplet</td>
+<td style="text-align: center;"><code class="language-python highlight"><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">127</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span></code></td>
 </tr>
 <tr>
-<td align="center"><code>list</code></td>
-<td align="center">liste</td>
-<td align="center"><code class="language-python highlight"><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span></code></td>
+<td style="text-align: center;"><code>list</code></td>
+<td style="text-align: center;">liste</td>
+<td style="text-align: center;"><code class="language-python highlight"><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span></code></td>
 </tr>
 <tr>
-<td align="center"><code>dict</code></td>
-<td align="center">dictionnaire</td>
-<td align="center"><code class="language-python highlight"><span class="p">{</span><span class="s1">&#39;Homer&#39;</span><span class="p">:</span><span class="mi">43</span><span class="p">,</span> <span class="s1">&#39;Marge&#39;</span><span class="p">:</span><span class="mi">41</span><span class="p">,</span> <span class="s1">&#39;Bart&#39;</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;Lisa&#39;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;Maggie&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">}</span></code></td>
+<td style="text-align: center;"><code>dict</code></td>
+<td style="text-align: center;">dictionnaire</td>
+<td style="text-align: center;"><code class="language-python highlight"><span class="p">{</span><span class="s1">&#39;Homer&#39;</span><span class="p">:</span><span class="mi">43</span><span class="p">,</span> <span class="s1">&#39;Marge&#39;</span><span class="p">:</span><span class="mi">41</span><span class="p">,</span> <span class="s1">&#39;Bart&#39;</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span> <span class="s1">&#39;Lisa&#39;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;Maggie&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">}</span></code></td>
 </tr>
 <tr>
-<td align="center"><code>function</code></td>
-<td align="center">fonction</td>
-<td align="center"><code class="language-python highlight"><span class="nb">print</span></code></td>
+<td style="text-align: center;"><code>function</code></td>
+<td style="text-align: center;">fonction</td>
+<td style="text-align: center;"><code class="language-python highlight"><span class="nb">print</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -1983,33 +2771,30 @@
 <p>Remarque : L'explorateur de variables permet d'afficher le nom de la variable et sa valeur. Il suffit d'aller dans affichage puis variables.</p>
 <p>La fonction <code>type()</code> vous permet de connaître le type d’une variable.</p>
 <p>Le type d'une variable peut être modifié de manière dynamique en cours de programme. Le vérifier en testant le programme suivant :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
 <span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">8</span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">8</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">2</span> <span class="c1"># ou a += 2</span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <p><strong>Remarque :</strong> L'explorateur de variable affiche uniquement les dernières valeurs et types pris par les variables en fin de programme.</p>
 <h3 id="affectations-assignations-multiples">Affectations (assignations) multiples<a class="headerlink" href="#affectations-assignations-multiples" title="Permanent link">&num;</a></h3>
 <p>Sous Python, on peut assigner une valeur à plusieurs variables simultanément.</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
-<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">7</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x vaut :&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y vaut :&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <p>On peut aussi effectuer des affectations parallèles à l’aide d’un seul operateur = :</p>
-<table class="language-text highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
 <span class="normal"><a href="#__codelineno-6-2">2</a></span>
-<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>x, y = 7, 9.4
+<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a>x, y = 7, 9.4
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a>print(&quot;x vaut :&quot;, x)
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a>print(&quot;y vaut :&quot;, y)
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <p>Les variables <code>x</code> et <code>y</code> prennent simultanément les nouvelles valeurs 7 et 9,4</p>
 <h2 id="les-operations">Les opérations<a class="headerlink" href="#les-operations" title="Permanent link">&num;</a></h2>
 <h3 id="arithmetiques">Arithmétiques<a class="headerlink" href="#arithmetiques" title="Permanent link">&num;</a></h3>
@@ -2068,15 +2853,14 @@
 <div class="admonition example">
 <p class="admonition-title">Exercice 1</p>
 <p>Sans l'exécuter, que fait le programme suivant. Puis le tester
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span>
 <span class="normal"><a href="#__codelineno-7-3">3</a></span>
-<span class="normal"><a href="#__codelineno-7-4">4</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot; chaîne de &quot;</span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot; chaîne de &quot;</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">b</span> <span class="o">=</span> <span class="s2">&quot; caractère &quot;</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="n">monExpression</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="nb">print</span> <span class="p">(</span> <span class="n">monExpression</span> <span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table></p>
+</span></code></pre></div></td></tr></table></div></p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice 2</p>
@@ -2178,18 +2962,17 @@ Votre programme devra afficher le contenu de la variable <code>resultat</code>.<
 </table>
 </figure>
 <p><strong>Exemple complet :</strong></p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
 <span class="normal"><a href="#__codelineno-8-2">2</a></span>
-<span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kn">import</span> <span class="nn">math</span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kn">import</span> <span class="nn">math</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="n">a</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="mf">2.8</span><span class="p">)</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># affiche 256</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <h3 id="generation-de-nombres-aleatoires">Génération de nombres aléatoires<a class="headerlink" href="#generation-de-nombres-aleatoires" title="Permanent link">&num;</a></h3>
 <p>La bibliothèque <code>random</code> permet de générer des nombres aléatoires, la première ligne de code devra commencer par <code>import random</code>.</p>
 <p>Cette bibliothèque inclus entre autres les fonctions suivantes :</p>
 <p><strong>Exemple complet :</strong>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
 <span class="normal"><a href="#__codelineno-9-2">2</a></span>
 <span class="normal"><a href="#__codelineno-9-3">3</a></span>
 <span class="normal"><a href="#__codelineno-9-4">4</a></span>
@@ -2197,7 +2980,7 @@ Votre programme devra afficher le contenu de la variable <code>resultat</code>.<
 <span class="normal"><a href="#__codelineno-9-6">6</a></span>
 <span class="normal"><a href="#__codelineno-9-7">7</a></span>
 <span class="normal"><a href="#__codelineno-9-8">8</a></span>
-<span class="normal"><a href="#__codelineno-9-9">9</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">import</span> <span class="nn">random</span>
+<span class="normal"><a href="#__codelineno-9-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">import</span> <span class="nn">random</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> 
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># affiche 3</span>
 </span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4"></a>
@@ -2206,10 +2989,9 @@ Votre programme devra afficher le contenu de la variable <code>resultat</code>.<
 </span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7"></a>
 </span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="n">c</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
 </span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c1"># affiche 0.28974251561751374</span>
-</span></code></pre></div>
-</td></tr></table></p>
+</span></code></pre></div></td></tr></table></div></p>
 <p><strong>Remarque :</strong> Plutôt que de répéter <code>random</code> avant l'itilisation de chaque fonction, nous pouvons utiliser un alias de la manière suivante :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
 <span class="normal"><a href="#__codelineno-10-2">2</a></span>
 <span class="normal"><a href="#__codelineno-10-3">3</a></span>
 <span class="normal"><a href="#__codelineno-10-4">4</a></span>
@@ -2217,7 +2999,7 @@ Votre programme devra afficher le contenu de la variable <code>resultat</code>.<
 <span class="normal"><a href="#__codelineno-10-6">6</a></span>
 <span class="normal"><a href="#__codelineno-10-7">7</a></span>
 <span class="normal"><a href="#__codelineno-10-8">8</a></span>
-<span class="normal"><a href="#__codelineno-10-9">9</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">import</span> <span class="nn">random</span> <span class="k">as</span> <span class="nn">rd</span>
+<span class="normal"><a href="#__codelineno-10-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">import</span> <span class="nn">random</span> <span class="k">as</span> <span class="nn">rd</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">a</span> <span class="o">=</span> <span class="n">rd</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> 
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># affiche 3</span>
 </span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a>
@@ -2226,25 +3008,22 @@ Votre programme devra afficher le contenu de la variable <code>resultat</code>.<
 </span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7"></a>
 </span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="n">c</span> <span class="o">=</span> <span class="n">rd</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
 </span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c1"># affiche 0.28974251561751374</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <h2 id="les-entrees">Les entrées<a class="headerlink" href="#les-entrees" title="Permanent link">&num;</a></h2>
 <p>On peut alors lire depuis le clavier la valeur d’une chaîne de caractères par la méthode <code>input()</code>.</p>
 <p><strong>Exemple :</strong>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
-<span class="normal"><a href="#__codelineno-11-2">2</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span> <span class="c1">#les parenthèses sont obligatoires .</span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span> <span class="c1">#les parenthèses sont obligatoires .</span>
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot; Nom : &quot;</span><span class="p">)</span> <span class="c1"># le texte dans les parenthèses permet d’indiquer ce que l&#39;on attend</span>
-</span></code></pre></div>
-</td></tr></table></p>
+</span></code></pre></div></td></tr></table></div></p>
 <p>La commande <code>input()</code> renvoie toujours à une chaîne de caractères. Pour affecter un nombre, il faut le convertir grâce aux fonctions <code>int()</code> pour convertir une chaine de caractère en entier et <code>float()</code> pour convertir une chaîne de caractère en flottant.</p>
 <p><strong>Exemple :</strong></p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
 <span class="normal"><a href="#__codelineno-12-2">2</a></span>
-<span class="normal"><a href="#__codelineno-12-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot; Donner une valeur entière : &quot;</span> <span class="p">))</span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot; Donner une valeur entière : &quot;</span> <span class="p">))</span>
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="n">x</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Donner une valeur réelle : &quot;</span> <span class="p">)</span>
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot; L’entier a vaut &quot;</span> <span class="p">,</span> <span class="n">a</span> <span class="p">,</span><span class="s2">&quot; et le réel x vaut &quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <h2 id="trace-dun-programme">Trace d'un programme<a class="headerlink" href="#trace-dun-programme" title="Permanent link">&num;</a></h2>
 <p>Pour représenter l'évolution d'un programme dans en fonction, nous utilisons ce qui s'appelle la trace d'un programme.
 Celle-ci se présente sous la forme d'un tableau avec dans la première ligne :</p>
@@ -2254,55 +3033,54 @@ Celle-ci se présente sous la forme d'un tableau avec dans la première ligne :<
 <li>les commentaires.</li>
 </ul>
 <p><strong><em>Exemple :</em></strong></p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
 <span class="normal"><a href="#__codelineno-13-2">2</a></span>
 <span class="normal"><a href="#__codelineno-13-3">3</a></span>
-<span class="normal"><a href="#__codelineno-13-4">4</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="normal"><a href="#__codelineno-13-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
 </span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">+</span> <span class="n">a</span>
 </span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="n">c</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">b</span>
 </span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <p>On peut donner la trace de ce programme.</p>
 <figure>
 <table>
 <thead>
 <tr>
-<th align="center">N°ligne</th>
-<th align="left">a</th>
-<th align="center">b</th>
-<th align="center">c</th>
-<th align="center">Commentaires</th>
+<th style="text-align: center;">N°ligne</th>
+<th style="text-align: left;">a</th>
+<th style="text-align: center;">b</th>
+<th style="text-align: center;">c</th>
+<th style="text-align: center;">Commentaires</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">1</td>
-<td align="left">5</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center">On affecte la valeur 5 à la variable <code>a</code></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">On affecte la valeur 5 à la variable <code>a</code></td>
 </tr>
 <tr>
-<td align="center">2</td>
-<td align="left">5</td>
-<td align="center">8</td>
-<td align="center"></td>
-<td align="center">a + 3 = 5 + 3 = 8 -&gt; b</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">a + 3 = 5 + 3 = 8 -&gt; b</td>
 </tr>
 <tr>
-<td align="center">3</td>
-<td align="left">5</td>
-<td align="center">8</td>
-<td align="center">16</td>
-<td align="center">2 * b = 2 * 8 = 16 -&gt; c</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">2 * b = 2 * 8 = 16 -&gt; c</td>
 </tr>
 <tr>
-<td align="center">4</td>
-<td align="left">5</td>
-<td align="center">8</td>
-<td align="center">16</td>
-<td align="center">On affiche la valeur contenue dans c</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">5</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">On affiche la valeur contenue dans c</td>
 </tr>
 </tbody>
 </table>
@@ -2310,15 +3088,14 @@ Celle-ci se présente sous la forme d'un tableau avec dans la première ligne :<
 <div class="admonition example">
 <p class="admonition-title">Exercice 5</p>
 <p>Effectuer la trace du programme suivant :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
 <span class="normal"><a href="#__codelineno-14-2">2</a></span>
 <span class="normal"><a href="#__codelineno-14-3">3</a></span>
-<span class="normal"><a href="#__codelineno-14-4">4</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">20</span>
 </span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="n">x</span> <span class="o">+=</span> <span class="mi">5</span>
 </span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="n">y</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">2</span>
 </span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> 
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 </div>
 <h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">&num;</a></h2>
 <div class="admonition example">
@@ -2347,49 +3124,28 @@ Donnée : Loi de Descartes relative à la réfraction : <span class="arithmatex"
 sera affiché sous la forme : "chaque élève recevra 5 bonbons et il en restera 3"</p>
 </div>
 
-              
-            </article>
-          </div>
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../../Donnees/donnees_table/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Données en table" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Données en table
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../ControleFlux_Python/" class="md-footer__link md-footer__link--next" aria-label="Next: Contrôle du flux d&#39;exécution" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Contrôle du flux d'exécution
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2411,10 +3167,14 @@ sera affiché sous la forme : "chaque élève recevra 5 bonbons et il en restera
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.8aa65030.min.js"></script>
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
         <script src="../../../javascripts/config.js"></script>
       

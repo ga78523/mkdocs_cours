@@ -10,8 +10,15 @@
       
         <link rel="canonical" href="https://example.com/Premiere/Langage/tuples_listes/">
       
+      
+        <link rel="prev" href="../fonction_python/">
+      
+      
+        <link rel="next" href="../dico/">
+      
+      
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
       
@@ -19,29 +26,35 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.e8d9bf0c.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e53b48f4.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
         
-      
-    
-    
-    
-      
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -54,11 +67,8 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -78,16 +88,19 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="Site de cours" class="md-header__button md-logo" aria-label="Site de cours" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -106,62 +119,76 @@
       </div>
     </div>
     
-      <form class="md-header__option" data-md-component="palette">
-        
-          
-          
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
-          
-            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
-            </label>
-          
-        
-          
-          
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
-          
-            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
-            </label>
-          
-        
-      </form>
+      
+        <form class="md-header__option" data-md-component="palette">
+  
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
   </div>
 </div>
+      
     
     
   </nav>
@@ -186,12 +213,13 @@
                     
 
 
+
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Site de cours" class="md-nav__button md-logo" aria-label="Site de cours" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     Site de cours
@@ -201,14 +229,21 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
-        Home
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
       </a>
     </li>
   
@@ -216,14 +251,21 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../about/" class="md-nav__link">
-        About
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
       </a>
     </li>
   
@@ -231,344 +273,512 @@
     
       
       
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Physique
+    
+  </span>
+  
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Physique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3">
-          Physique
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Physique" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Physique
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_1">
-          Seconde
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Seconde" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_1">
-          <span class="md-nav__icon md-icon"></span>
-          Seconde
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
           
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Seconde
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Seconde
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Physique/Seconde/TP_vitesse/" class="md-nav__link">
-        TP vitesse
+        
+  
+  
+  <span class="md-ellipsis">
+    TP vitesse
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Physique/Seconde/TPver_eleve/" class="md-nav__link">
-        TP verrerie
+        
+  
+  
+  <span class="md-ellipsis">
+    TP verrerie
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
   
+  
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4">
-          SNT
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="SNT" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          SNT
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
           
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SNT
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            SNT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../SNT/html_css_SNT/" class="md-nav__link">
-        web
+        
+  
+  
+  <span class="md-ellipsis">
+    web
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
     
   
   
+  
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5">
-          Première
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Première" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          Première
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
           
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Première
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Première
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_1">
-          Données
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Données" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_1">
-          <span class="md-nav__icon md-icon"></span>
-          Données
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
           
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Données
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Donnees/representation_entier/" class="md-nav__link">
-        Représentation des entiers
+        
+  
+  
+  <span class="md-ellipsis">
+    Représentation des entiers
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Donnees/relatifs_reels/" class="md-nav__link">
-        Représentation des relatifs et des réels
+        
+  
+  
+  <span class="md-ellipsis">
+    Représentation des relatifs et des réels
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Donnees/donnees_table/" class="md-nav__link">
-        Données en table
+        
+  
+  
+  <span class="md-ellipsis">
+    Données en table
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
     
   
   
+  
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_2">
-          Langage Python
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Langage Python" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_2">
-          <span class="md-nav__icon md-icon"></span>
-          Langage Python
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+        
           
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Langage Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Langage Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../Bases_Python/" class="md-nav__link">
-        Les bases
+        
+  
+  
+  <span class="md-ellipsis">
+    Les bases
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../ControleFlux_Python/" class="md-nav__link">
-        Contrôle du flux d'exécution
+        
+  
+  
+  <span class="md-ellipsis">
+    Contrôle du flux d'exécution
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../fonction_python/" class="md-nav__link">
-        Les fonctions en Python
+        
+  
+  
+  <span class="md-ellipsis">
+    Les fonctions en Python
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
     
   
   
+  
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Tuples et listes en Python
+          
+  
+  
+  <span class="md-ellipsis">
+    Tuples et listes en Python
+    
+  </span>
+  
+
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Tuples et listes en Python
+        
+  
+  
+  <span class="md-ellipsis">
+    Tuples et listes en Python
+    
+  </span>
+  
+
       </a>
       
         
@@ -588,14 +798,18 @@
       
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
-    Introduction
+    <span class="md-ellipsis">
+      Introduction
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#les-tuples" class="md-nav__link">
-    Les tuples
+    <span class="md-ellipsis">
+      Les tuples
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Les tuples">
@@ -603,35 +817,45 @@
         
           <li class="md-nav__item">
   <a href="#definition" class="md-nav__link">
-    Définition
+    <span class="md-ellipsis">
+      Définition
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#afficher-un-element-dun-tuple" class="md-nav__link">
-    Afficher un élément d'un tuple
+    <span class="md-ellipsis">
+      Afficher un élément d'un tuple
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#parcourir-un-tuple" class="md-nav__link">
-    Parcourir un tuple
+    <span class="md-ellipsis">
+      Parcourir un tuple
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#immuabilite-dun-tuple" class="md-nav__link">
-    Immuabilité d'un tuple
+    <span class="md-ellipsis">
+      Immuabilité d'un tuple
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#quel-peut-etre-linteret-dun-tuple" class="md-nav__link">
-    Quel peut être l'intérêt d'un tuple ?
+    <span class="md-ellipsis">
+      Quel peut être l'intérêt d'un tuple ?
+    </span>
   </a>
   
 </li>
@@ -643,7 +867,9 @@
       
         <li class="md-nav__item">
   <a href="#les-listes" class="md-nav__link">
-    Les listes
+    <span class="md-ellipsis">
+      Les listes
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Les listes">
@@ -651,43 +877,55 @@
         
           <li class="md-nav__item">
   <a href="#definition_1" class="md-nav__link">
-    Définition
+    <span class="md-ellipsis">
+      Définition
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#affichage-des-divers-elements-de-la-liste" class="md-nav__link">
-    Affichage des divers éléments de la liste
+    <span class="md-ellipsis">
+      Affichage des divers éléments de la liste
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#ajout-delements-dans-une-liste" class="md-nav__link">
-    Ajout d'éléments dans une liste
+    <span class="md-ellipsis">
+      Ajout d'éléments dans une liste
+    </span>
   </a>
   
-    <nav class="md-nav" aria-label="Ajout d'éléments dans une liste">
+    <nav class="md-nav" aria-label="Ajout d&#39;éléments dans une liste">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#loperateur" class="md-nav__link">
-    L'opérateur +
+    <span class="md-ellipsis">
+      L'opérateur +
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#la-methode-append" class="md-nav__link">
-    La méthode append()
+    <span class="md-ellipsis">
+      La méthode append()
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#la-methode-extend" class="md-nav__link">
-    La méthode extend()
+    <span class="md-ellipsis">
+      La méthode extend()
+    </span>
   </a>
   
 </li>
@@ -704,37 +942,47 @@
       
         <li class="md-nav__item">
   <a href="#test-dappartenance" class="md-nav__link">
-    Test d'appartenance
+    <span class="md-ellipsis">
+      Test d'appartenance
+    </span>
   </a>
   
-    <nav class="md-nav" aria-label="Test d'appartenance">
+    <nav class="md-nav" aria-label="Test d&#39;appartenance">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#suppression-delements-dans-une-liste" class="md-nav__link">
-    Suppression d'éléments dans une liste
+    <span class="md-ellipsis">
+      Suppression d'éléments dans une liste
+    </span>
   </a>
   
-    <nav class="md-nav" aria-label="Suppression d'éléments dans une liste">
+    <nav class="md-nav" aria-label="Suppression d&#39;éléments dans une liste">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#la-commande-del" class="md-nav__link">
-    La commande del
+    <span class="md-ellipsis">
+      La commande del
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#la-methode-remove" class="md-nav__link">
-    La méthode remove()
+    <span class="md-ellipsis">
+      La méthode remove()
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#la-methode-pop" class="md-nav__link">
-    La méthode pop()
+    <span class="md-ellipsis">
+      La méthode pop()
+    </span>
   </a>
   
 </li>
@@ -746,21 +994,27 @@
         
           <li class="md-nav__item">
   <a href="#construction-dune-liste-par-comprehension" class="md-nav__link">
-    Construction d'une liste par compréhension
+    <span class="md-ellipsis">
+      Construction d'une liste par compréhension
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#des-listes-de-listes-pour-representer-des-matrices" class="md-nav__link">
-    Des listes de listes pour représenter des matrices
+    <span class="md-ellipsis">
+      Des listes de listes pour représenter des matrices
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#pour-aller-plus-loin" class="md-nav__link">
-    Pour aller plus loin
+    <span class="md-ellipsis">
+      Pour aller plus loin
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Pour aller plus loin">
@@ -768,21 +1022,27 @@
         
           <li class="md-nav__item">
   <a href="#trancher-des-listes-slices" class="md-nav__link">
-    Trancher des listes (Slices)
+    <span class="md-ellipsis">
+      Trancher des listes (Slices)
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#des-methodes-pour-inverser-et-trier-des-listes" class="md-nav__link">
-    Des méthodes pour inverser et trier des listes
+    <span class="md-ellipsis">
+      Des méthodes pour inverser et trier des listes
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#documentation-en-ligne-python" class="md-nav__link">
-    Documentation en ligne python
+    <span class="md-ellipsis">
+      Documentation en ligne python
+    </span>
   </a>
   
 </li>
@@ -799,14 +1059,18 @@
       
         <li class="md-nav__item">
   <a href="#exemple-de-trace-dune-courbe-en-utilisant-des-listes-et-la-bibliotheque-matplotlibpyplot" class="md-nav__link">
-    Exemple de tracé d'une courbe en utilisant des listes et la bibliothèque matplotlib.pyplot
+    <span class="md-ellipsis">
+      Exemple de tracé d'une courbe en utilisant des listes et la bibliothèque matplotlib.pyplot
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#exercices" class="md-nav__link">
-    Exercices
+    <span class="md-ellipsis">
+      Exercices
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Exercices">
@@ -814,56 +1078,72 @@
         
           <li class="md-nav__item">
   <a href="#exercice-n1" class="md-nav__link">
-    Exercice n°1 :
+    <span class="md-ellipsis">
+      Exercice n°1 :
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#exercice-n2" class="md-nav__link">
-    Exercice n°2 :
+    <span class="md-ellipsis">
+      Exercice n°2 :
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#exercice-n3" class="md-nav__link">
-    Exercice n°3 :
+    <span class="md-ellipsis">
+      Exercice n°3 :
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#exercice-n4" class="md-nav__link">
-    Exercice n°4 :
+    <span class="md-ellipsis">
+      Exercice n°4 :
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#exercice-n5" class="md-nav__link">
-    Exercice n°5 :
+    <span class="md-ellipsis">
+      Exercice n°5 :
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#exercice-n6" class="md-nav__link">
-    Exercice n°6 :
+    <span class="md-ellipsis">
+      Exercice n°6 :
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#exercice-n7" class="md-nav__link">
-    Exercice n°7 :
+    <span class="md-ellipsis">
+      Exercice n°7 :
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#exercice-n8" class="md-nav__link">
-    Exercice n°8 :
+    <span class="md-ellipsis">
+      Exercice n°8 :
+    </span>
   </a>
   
 </li>
@@ -880,895 +1160,1397 @@
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../dico/" class="md-nav__link">
-        Dictionnaires
+        
+  
+  
+  <span class="md-ellipsis">
+    Dictionnaires
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_3">
-          IHM
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="IHM" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_3">
-          <span class="md-nav__icon md-icon"></span>
-          IHM
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
           
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    IHM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            IHM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../IHM/html_css/" class="md-nav__link">
-        web
+        
+  
+  
+  <span class="md-ellipsis">
+    web
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../IHM/frameworks/" class="md-nav__link">
-        Frameworks
+        
+  
+  
+  <span class="md-ellipsis">
+    Frameworks
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../IHM/formulaires/" class="md-nav__link">
-        Formulaire
+        
+  
+  
+  <span class="md-ellipsis">
+    Formulaire
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../IHM/js/" class="md-nav__link">
-        Javascript
+        
+  
+  
+  <span class="md-ellipsis">
+    Javascript
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_4">
-          Architecture Matérielle
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_4">
-          <span class="md-nav__icon md-icon"></span>
-          Architecture Matérielle
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
           
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Architecture Matérielle
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture Matérielle
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../ArchitectureMaterielle/von_neumann/" class="md-nav__link">
-        Von Neumann
+        
+  
+  
+  <span class="md-ellipsis">
+    Von Neumann
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../ArchitectureMaterielle/OS/" class="md-nav__link">
-        OS
+        
+  
+  
+  <span class="md-ellipsis">
+    OS
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArchitectureMaterielle/TP_logic_gates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Portes logiques
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
+              
             
-          
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_5">
-          Algorithmique
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Algorithmique" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_5">
-          <span class="md-nav__icon md-icon"></span>
-          Algorithmique
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
           
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Algorithmique
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithmique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Algorithmique/outils/" class="md-nav__link">
-        Outils
+        
+  
+  
+  <span class="md-ellipsis">
+    Outils
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Algorithmique/tris/" class="md-nav__link">
-        Tris
+        
+  
+  
+  <span class="md-ellipsis">
+    Tris
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Algorithmique/algo_recherche/" class="md-nav__link">
-        Recherche
+        
+  
+  
+  <span class="md-ellipsis">
+    Recherche
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Algorithmique/algo_gloutons/" class="md-nav__link">
-        Gloutons
+        
+  
+  
+  <span class="md-ellipsis">
+    Gloutons
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Algorithmique/kppv/" class="md-nav__link">
-        kppv
+        
+  
+  
+  <span class="md-ellipsis">
+    kppv
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
   
+  
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6">
-          Terminale
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Terminale" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
-          <span class="md-nav__icon md-icon"></span>
-          Terminale
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
           
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Terminale
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Terminale
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/outils_python/" class="md-nav__link">
-        Outils Python
+        
+  
+  
+  <span class="md-ellipsis">
+    Outils Python
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_2">
-          Programmation
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Programmation" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_2">
-          <span class="md-nav__icon md-icon"></span>
-          Programmation
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
           
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Programmation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Programmation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/cours_recursivite/" class="md-nav__link">
-        Récursivité
+        
+  
+  
+  <span class="md-ellipsis">
+    Récursivité
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/POO/" class="md-nav__link">
-        POO
+        
+  
+  
+  <span class="md-ellipsis">
+    POO
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/decidabilite/" class="md-nav__link">
-        Calculabilité, décidabilité
+        
+  
+  
+  <span class="md-ellipsis">
+    Calculabilité, décidabilité
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/crypto/" class="md-nav__link">
-        Sécurisation des données
+        
+  
+  
+  <span class="md-ellipsis">
+    Sécurisation des données
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/algos_arbre/" class="md-nav__link">
-        Arbres algos
+        
+  
+  
+  <span class="md-ellipsis">
+    Arbres algos
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/graphes/" class="md-nav__link">
-        Graphes algos
+        
+  
+  
+  <span class="md-ellipsis">
+    Graphes algos
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/recherche_textuelle/" class="md-nav__link">
-        Recherche textuelle
+        
+  
+  
+  <span class="md-ellipsis">
+    Recherche textuelle
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/diviser_regner/" class="md-nav__link">
-        Diviser pour régner
+        
+  
+  
+  <span class="md-ellipsis">
+    Diviser pour régner
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/prog_dynamique/" class="md-nav__link">
-        Programmation dynamique
+        
+  
+  
+  <span class="md-ellipsis">
+    Programmation dynamique
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/dijkstra/" class="md-nav__link">
-        Plus court chemin
+        
+  
+  
+  <span class="md-ellipsis">
+    Plus court chemin
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Programmation/API/" class="md-nav__link">
-        Modularité
+        
+  
+  
+  <span class="md-ellipsis">
+    Modularité
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_3">
-          Structures de Données
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Structures de Données" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_3">
-          <span class="md-nav__icon md-icon"></span>
-          Structures de Données
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
           
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Structures de Données
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Structures de Données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Struct_donnees/graphe/" class="md-nav__link">
-        Graphes
+        
+  
+  
+  <span class="md-ellipsis">
+    Graphes
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_4">
-          BDD
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="BDD" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_4">
-          <span class="md-nav__icon md-icon"></span>
-          BDD
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
           
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    BDD
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            BDD
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/BDD/bdd/" class="md-nav__link">
-        Introduction BDD
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction BDD
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/BDD/sql_sqlite/" class="md-nav__link">
-        SQL avec SQLITE
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL avec SQLITE
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/BDD/sql_python/" class="md-nav__link">
-        SQL et Python
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL et Python
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" type="checkbox" id="__nav_6_5" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_5">
-          Architecture Matérielle
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_5">
-          <span class="md-nav__icon md-icon"></span>
-          Architecture Matérielle
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
           
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Architecture Matérielle
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture Matérielle
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/ArchitectureMaterielle/reseau_routage/" class="md-nav__link">
-        Routage
+        
+  
+  
+  <span class="md-ellipsis">
+    Routage
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/ArchitectureMaterielle/commande_linux/" class="md-nav__link">
-        Linux
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/ArchitectureMaterielle/processus/" class="md-nav__link">
-        processus
+        
+  
+  
+  <span class="md-ellipsis">
+    processus
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/ArchitectureMaterielle/soc/" class="md-nav__link">
-        SoC
+        
+  
+  
+  <span class="md-ellipsis">
+    SoC
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_6" type="checkbox" id="__nav_6_6" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_6">
-          Algorithmes
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Algorithmes" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_6">
-          <span class="md-nav__icon md-icon"></span>
-          Algorithmes
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
           
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Algorithmes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithmes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Terminale/Algo/" class="md-nav__link">
-        Algorithmes
+        
+  
+  
+  <span class="md-ellipsis">
+    Algorithmes
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
   
+  
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_7">
-          Logiciels
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Logiciels" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
-          <span class="md-nav__icon md-icon"></span>
-          Logiciels
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
           
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Logiciels
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Logiciels
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Logiciels/liste_logiciels/" class="md-nav__link">
-        liste des logiciels
+        
+  
+  
+  <span class="md-ellipsis">
+    liste des logiciels
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Logiciels/git_github/" class="md-nav__link">
-        git
+        
+  
+  
+  <span class="md-ellipsis">
+    git
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Logiciels/insta_vscode_html/" class="md-nav__link">
-        vcode_web
+        
+  
+  
+  <span class="md-ellipsis">
+    vcode_web
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Logiciels/insta_vscode_python/" class="md-nav__link">
-        vcode_python
+        
+  
+  
+  <span class="md-ellipsis">
+    vcode_python
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Logiciels/thonny_tutorial/" class="md-nav__link">
-        thonny
+        
+  
+  
+  <span class="md-ellipsis">
+    thonny
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Logiciels/tuto_mkdocs/" class="md-nav__link">
-        mkdocs
+        
+  
+  
+  <span class="md-ellipsis">
+    mkdocs
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1801,14 +2583,18 @@
       
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
-    Introduction
+    <span class="md-ellipsis">
+      Introduction
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#les-tuples" class="md-nav__link">
-    Les tuples
+    <span class="md-ellipsis">
+      Les tuples
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Les tuples">
@@ -1816,35 +2602,45 @@
         
           <li class="md-nav__item">
   <a href="#definition" class="md-nav__link">
-    Définition
+    <span class="md-ellipsis">
+      Définition
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#afficher-un-element-dun-tuple" class="md-nav__link">
-    Afficher un élément d'un tuple
+    <span class="md-ellipsis">
+      Afficher un élément d'un tuple
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#parcourir-un-tuple" class="md-nav__link">
-    Parcourir un tuple
+    <span class="md-ellipsis">
+      Parcourir un tuple
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#immuabilite-dun-tuple" class="md-nav__link">
-    Immuabilité d'un tuple
+    <span class="md-ellipsis">
+      Immuabilité d'un tuple
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#quel-peut-etre-linteret-dun-tuple" class="md-nav__link">
-    Quel peut être l'intérêt d'un tuple ?
+    <span class="md-ellipsis">
+      Quel peut être l'intérêt d'un tuple ?
+    </span>
   </a>
   
 </li>
@@ -1856,7 +2652,9 @@
       
         <li class="md-nav__item">
   <a href="#les-listes" class="md-nav__link">
-    Les listes
+    <span class="md-ellipsis">
+      Les listes
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Les listes">
@@ -1864,43 +2662,55 @@
         
           <li class="md-nav__item">
   <a href="#definition_1" class="md-nav__link">
-    Définition
+    <span class="md-ellipsis">
+      Définition
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#affichage-des-divers-elements-de-la-liste" class="md-nav__link">
-    Affichage des divers éléments de la liste
+    <span class="md-ellipsis">
+      Affichage des divers éléments de la liste
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#ajout-delements-dans-une-liste" class="md-nav__link">
-    Ajout d'éléments dans une liste
+    <span class="md-ellipsis">
+      Ajout d'éléments dans une liste
+    </span>
   </a>
   
-    <nav class="md-nav" aria-label="Ajout d'éléments dans une liste">
+    <nav class="md-nav" aria-label="Ajout d&#39;éléments dans une liste">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#loperateur" class="md-nav__link">
-    L'opérateur +
+    <span class="md-ellipsis">
+      L'opérateur +
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#la-methode-append" class="md-nav__link">
-    La méthode append()
+    <span class="md-ellipsis">
+      La méthode append()
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#la-methode-extend" class="md-nav__link">
-    La méthode extend()
+    <span class="md-ellipsis">
+      La méthode extend()
+    </span>
   </a>
   
 </li>
@@ -1917,37 +2727,47 @@
       
         <li class="md-nav__item">
   <a href="#test-dappartenance" class="md-nav__link">
-    Test d'appartenance
+    <span class="md-ellipsis">
+      Test d'appartenance
+    </span>
   </a>
   
-    <nav class="md-nav" aria-label="Test d'appartenance">
+    <nav class="md-nav" aria-label="Test d&#39;appartenance">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#suppression-delements-dans-une-liste" class="md-nav__link">
-    Suppression d'éléments dans une liste
+    <span class="md-ellipsis">
+      Suppression d'éléments dans une liste
+    </span>
   </a>
   
-    <nav class="md-nav" aria-label="Suppression d'éléments dans une liste">
+    <nav class="md-nav" aria-label="Suppression d&#39;éléments dans une liste">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#la-commande-del" class="md-nav__link">
-    La commande del
+    <span class="md-ellipsis">
+      La commande del
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#la-methode-remove" class="md-nav__link">
-    La méthode remove()
+    <span class="md-ellipsis">
+      La méthode remove()
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#la-methode-pop" class="md-nav__link">
-    La méthode pop()
+    <span class="md-ellipsis">
+      La méthode pop()
+    </span>
   </a>
   
 </li>
@@ -1959,21 +2779,27 @@
         
           <li class="md-nav__item">
   <a href="#construction-dune-liste-par-comprehension" class="md-nav__link">
-    Construction d'une liste par compréhension
+    <span class="md-ellipsis">
+      Construction d'une liste par compréhension
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#des-listes-de-listes-pour-representer-des-matrices" class="md-nav__link">
-    Des listes de listes pour représenter des matrices
+    <span class="md-ellipsis">
+      Des listes de listes pour représenter des matrices
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#pour-aller-plus-loin" class="md-nav__link">
-    Pour aller plus loin
+    <span class="md-ellipsis">
+      Pour aller plus loin
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Pour aller plus loin">
@@ -1981,21 +2807,27 @@
         
           <li class="md-nav__item">
   <a href="#trancher-des-listes-slices" class="md-nav__link">
-    Trancher des listes (Slices)
+    <span class="md-ellipsis">
+      Trancher des listes (Slices)
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#des-methodes-pour-inverser-et-trier-des-listes" class="md-nav__link">
-    Des méthodes pour inverser et trier des listes
+    <span class="md-ellipsis">
+      Des méthodes pour inverser et trier des listes
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#documentation-en-ligne-python" class="md-nav__link">
-    Documentation en ligne python
+    <span class="md-ellipsis">
+      Documentation en ligne python
+    </span>
   </a>
   
 </li>
@@ -2012,14 +2844,18 @@
       
         <li class="md-nav__item">
   <a href="#exemple-de-trace-dune-courbe-en-utilisant-des-listes-et-la-bibliotheque-matplotlibpyplot" class="md-nav__link">
-    Exemple de tracé d'une courbe en utilisant des listes et la bibliothèque matplotlib.pyplot
+    <span class="md-ellipsis">
+      Exemple de tracé d'une courbe en utilisant des listes et la bibliothèque matplotlib.pyplot
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#exercices" class="md-nav__link">
-    Exercices
+    <span class="md-ellipsis">
+      Exercices
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Exercices">
@@ -2027,56 +2863,72 @@
         
           <li class="md-nav__item">
   <a href="#exercice-n1" class="md-nav__link">
-    Exercice n°1 :
+    <span class="md-ellipsis">
+      Exercice n°1 :
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#exercice-n2" class="md-nav__link">
-    Exercice n°2 :
+    <span class="md-ellipsis">
+      Exercice n°2 :
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#exercice-n3" class="md-nav__link">
-    Exercice n°3 :
+    <span class="md-ellipsis">
+      Exercice n°3 :
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#exercice-n4" class="md-nav__link">
-    Exercice n°4 :
+    <span class="md-ellipsis">
+      Exercice n°4 :
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#exercice-n5" class="md-nav__link">
-    Exercice n°5 :
+    <span class="md-ellipsis">
+      Exercice n°5 :
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#exercice-n6" class="md-nav__link">
-    Exercice n°6 :
+    <span class="md-ellipsis">
+      Exercice n°6 :
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#exercice-n7" class="md-nav__link">
-    Exercice n°7 :
+    <span class="md-ellipsis">
+      Exercice n°7 :
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#exercice-n8" class="md-nav__link">
-    Exercice n°8 :
+    <span class="md-ellipsis">
+      Exercice n°8 :
+    </span>
   </a>
   
 </li>
@@ -2094,103 +2946,96 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
+
 
 
 <h1 id="tuples-et-listes-avec-python">Tuples et listes avec Python<a class="headerlink" href="#tuples-et-listes-avec-python" title="Permanent link">&num;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&num;</a></h2>
 <p>Il est possible de "stocker" plusieurs grandeurs dans une même structure, ce type de structure est appelé une séquence : ensemble fini et ordonné d'éléments indicés de <span class="arithmatex">\(0\)</span> à <span class="arithmatex">\(n-1\)</span> (si la séquence comporte <span class="arithmatex">\(n\)</span> éléments).</p>
 <p><strong>Rappel :</strong> nous avons vu dans les chapitres précédents qu'il est possible d'accéder à n'importe quel caractère d'une chaîne de caractères à l'aide de son indice de position (le premier caractère étant indexé 0) :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">chaine</span> <span class="o">=</span> <span class="s2">&quot;numérique&quot;</span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">chaine</span> <span class="o">=</span> <span class="s2">&quot;numérique&quot;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;le 1er caractère est &quot;</span><span class="p">,</span> <span class="n">chaine</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;le 5eme caractère est &quot;</span><span class="p">,</span> <span class="n">chaine</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <p>Nous avons vu également qu'il est possible de balayer l'ensemble des caractères de la chaîne de caractères :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">chaine</span> <span class="o">=</span> <span class="s2">&quot;numérique&quot;</span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">chaine</span> <span class="o">=</span> <span class="s2">&quot;numérique&quot;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">))</span> <span class="p">:</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="nb">print</span> <span class="p">(</span><span class="n">chaine</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <p>Une chaîne de caractère est donc bien un type de structure finie et ordonnée d'éléments indexés de <code>0</code> à <code>len(chaine)-1</code>, c'est à dire une séquence.
 Il existe d'autres types de séquences que nous allons découvrir ici, notamment les n-uplets (encore appelés tuples) et les listes.</p>
 <h2 id="les-tuples">Les tuples<a class="headerlink" href="#les-tuples" title="Permanent link">&num;</a></h2>
 <h3 id="definition">Définition<a class="headerlink" href="#definition" title="Permanent link">&num;</a></h3>
 <p>Un tuple est une collection d’éléments séparés par des virgules et généralement entouré de parenthèses même si ce n’est pas une obligation. Cela permet toutefois d’améliorer la lisibilité du code. Le tuple est une séquence immuable (une fois déclaré, le tuple ne peut plus être modifié) d’objets indicés qui peuvent être de tout type : entiers, flottants, chaînes de caractères…</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;tuple = &quot;</span><span class="p">,</span> <span class="n">tup</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <h3 id="afficher-un-element-dun-tuple">Afficher un élément d'un tuple<a class="headerlink" href="#afficher-un-element-dun-tuple" title="Permanent link">&num;</a></h3>
 <p>Pour afficher un élément, il faut s'aider de son indice élément.Comme pour les chaines de caractères, 
 pour un tuple de longueur <span class="arithmatex">\(n\)</span>, le premier élément porte l'indice 0 et le dernier indice porte l'indice $n-1.</p>
 <p>Exemple : pour afficher le deuxième élément, la commande est la suivante :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nb">print</span> <span class="p">(</span><span class="n">tup</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <h3 id="parcourir-un-tuple">Parcourir un tuple<a class="headerlink" href="#parcourir-un-tuple" title="Permanent link">&num;</a></h3>
 <p>Comme pour une chaine de caractères, il est possible de parcourir directement les éléments du tuple à l'aide d'une boucle <code>for</code> :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tup</span> <span class="p">:</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;i prend la valeur : &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <p>Ou bien, Il est possible de parcourir les éléments d'un tuple à l'aide des indices. De plus, comme avec une chaine de caractères, la fonction <code>len()</code> prenant un tuple comme argument renvoie le nombre d'éléments
 (longueur) du tuple.</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
-<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tup</span><span class="p">)):</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a>    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;i prend la valeur : &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot; et tup[i] la valeur :&quot;</span><span class="p">,</span> <span class="n">tup</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <p><strong>Autre possibilité :</strong></p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
 <span class="normal"><a href="#__codelineno-6-2">2</a></span>
 <span class="normal"><a href="#__codelineno-6-3">3</a></span>
 <span class="normal"><a href="#__codelineno-6-4">4</a></span>
-<span class="normal"><a href="#__codelineno-6-5">5</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;mon age est &quot;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;ans&quot;</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;mon age est &quot;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;ans&quot;</span><span class="p">)</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">tup</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a = &quot;</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b = &quot;</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c = &quot;</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <h3 id="immuabilite-dun-tuple">Immuabilité d'un tuple<a class="headerlink" href="#immuabilite-dun-tuple" title="Permanent link">&num;</a></h3>
 <p>Essayons de modifier un tuple prédéfini :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
 <span class="normal"><a href="#__codelineno-7-2">2</a></span>
-<span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;mon age est &quot;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;ans&quot;</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;mon age est &quot;</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;ans&quot;</span><span class="p">)</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">tup</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">19</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;tuple &quot;</span><span class="p">,</span> <span class="n">tup</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <p>On constate que python refuse effectivement la modification d'un élément du tuple :
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
 <span class="normal"><a href="#__codelineno-8-2">2</a></span>
 <span class="normal"><a href="#__codelineno-8-3">3</a></span>
-<span class="normal"><a href="#__codelineno-8-4">4</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="c1"># script executed</span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="c1"># script executed</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;input&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;tuple&#39;</span> <span class="nb">object</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">support</span> <span class="n">item</span> <span class="n">assignment</span>
-</span></code></pre></div>
-</td></tr></table></p>
+</span></code></pre></div></td></tr></table></div></p>
 <h3 id="quel-peut-etre-linteret-dun-tuple">Quel peut être l'intérêt d'un tuple ?<a class="headerlink" href="#quel-peut-etre-linteret-dun-tuple" title="Permanent link">&num;</a></h3>
 <p>Nous souhaitons écrire une fonction qui prend en argument deux nombres entiers et nous renvoie le quotient et le reste de la division euclidienne du premier nombre par le second. Or nous avons vu qu'une fonction ne retourne qu'un seul élément ! </p>
 <p>Il est possible de solutionner ce problème en demandant à la fonction de renvoyer le résultat sous forme d'un tuple (quotient, reste).</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
 <span class="normal"><a href="#__codelineno-9-2">2</a></span>
 <span class="normal"><a href="#__codelineno-9-3">3</a></span>
 <span class="normal"><a href="#__codelineno-9-4">4</a></span>
@@ -2198,7 +3043,7 @@ pour un tuple de longueur <span class="arithmatex">\(n\)</span>, le premier él�
 <span class="normal"><a href="#__codelineno-9-6">6</a></span>
 <span class="normal"><a href="#__codelineno-9-7">7</a></span>
 <span class="normal"><a href="#__codelineno-9-8">8</a></span>
-<span class="normal"><a href="#__codelineno-9-9">9</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">def</span> <span class="nf">division_euclidienne</span> <span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">tuple</span> <span class="p">:</span>
+<span class="normal"><a href="#__codelineno-9-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">def</span> <span class="nf">division_euclidienne</span> <span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="nb">int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">tuple</span> <span class="p">:</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a>    <span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">//</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="o">%</span><span class="n">b</span><span class="p">)</span>
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3"></a>    <span class="k">return</span> <span class="n">tup</span>
 </span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4"></a>
@@ -2207,13 +3052,12 @@ pour un tuple de longueur <span class="arithmatex">\(n\)</span>, le premier él�
 </span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="n">y</span> <span class="o">=</span> <span class="mi">9</span>
 </span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="n">quotient</span><span class="p">,</span> <span class="n">reste</span> <span class="o">=</span> <span class="n">division_euclidienne</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
 </span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="nb">print</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;que divise &quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s2">&quot; donne &quot;</span><span class="p">,</span> <span class="n">quotient</span><span class="p">,</span> <span class="s2">&quot;et il reste &quot;</span><span class="p">,</span> <span class="n">reste</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <h2 id="les-listes">Les listes<a class="headerlink" href="#les-listes" title="Permanent link">&num;</a></h2>
 <h3 id="definition_1">Définition<a class="headerlink" href="#definition_1" title="Permanent link">&num;</a></h3>
 <p>Tout comme un tuple, une liste est une collection d’informations qui peuvent être de même type ou de type différent. Les éléments de la liste sont séparés par des virgules et placés entre des crochets. La grande différence entre une liste et un tuple, c'est que la liste est modifiable.</p>
 <p>Création de listes par affectation :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
@@ -2224,7 +3068,7 @@ pour un tuple de longueur <span class="arithmatex">\(n\)</span>, le premier él�
 <span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-10-10">10</a></span>
 <span class="normal"><a href="#__codelineno-10-11">11</a></span>
-<span class="normal"><a href="#__codelineno-10-12">12</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">list_vide</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">list_vide</span> <span class="o">=</span> <span class="p">[]</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">list_int</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span> <span class="mi">32</span><span class="p">]</span>
 </span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="n">list_float</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3e8</span><span class="p">,</span> <span class="mf">1.6e-19</span><span class="p">,</span> <span class="mf">37.2</span><span class="p">]</span>
 </span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="n">list_str</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;janvier&quot;</span><span class="p">,</span> <span class="s2">&quot;février&quot;</span><span class="p">,</span> <span class="s2">&quot;mars&quot;</span><span class="p">]</span><span class="mf">2.</span>
@@ -2236,124 +3080,108 @@ pour un tuple de longueur <span class="arithmatex">\(n\)</span>, le premier él�
 </span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="nb">print</span> <span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">list_mixte</span><span class="p">))</span>
 </span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="c1"># pour afficher la longueur (nombre d&#39;éléments) de la liste</span>
 </span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list_str</span><span class="p">))</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <h3 id="affichage-des-divers-elements-de-la-liste">Affichage des divers éléments de la liste<a class="headerlink" href="#affichage-des-divers-elements-de-la-liste" title="Permanent link">&num;</a></h3>
 <p>Comme pour les tuples, chaque élément est repéré dans la liste par un indice. Là aussi, l'indexation commence à 0 et non pas à 1.</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
-<span class="normal"><a href="#__codelineno-11-2">2</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">list_mois</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;janvier&quot;</span><span class="p">,</span> <span class="s2">&quot;février&quot;</span><span class="p">,</span> <span class="s2">&quot;mars&quot;</span><span class="p">,</span> <span class="s2">&quot;avril&quot;</span><span class="p">,</span> <span class="s2">&quot;mai&quot;</span><span class="p">,</span> <span class="s2">&quot;juin&quot;</span><span class="p">]</span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">list_mois</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;janvier&quot;</span><span class="p">,</span> <span class="s2">&quot;février&quot;</span><span class="p">,</span> <span class="s2">&quot;mars&quot;</span><span class="p">,</span> <span class="s2">&quot;avril&quot;</span><span class="p">,</span> <span class="s2">&quot;mai&quot;</span><span class="p">,</span> <span class="s2">&quot;juin&quot;</span><span class="p">]</span>
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;1er mois =&quot;</span><span class="p">,</span> <span class="n">list_mois</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <p>Il est donc possible d'afficher un par un l'ensemble des éléments d'une liste grâce à leur indice à l'aide d'une boucle for :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
 <span class="normal"><a href="#__codelineno-12-2">2</a></span>
 <span class="normal"><a href="#__codelineno-12-3">3</a></span>
-<span class="normal"><a href="#__codelineno-12-4">4</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">list_mois</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;janvier&quot;</span><span class="p">,</span> <span class="s2">&quot;février&quot;</span><span class="p">,</span> <span class="s2">&quot;mars&quot;</span><span class="p">,</span> <span class="s2">&quot;avril&quot;</span><span class="p">,</span> <span class="s2">&quot;mai&quot;</span><span class="p">,</span> <span class="s2">&quot;juin&quot;</span><span class="p">]</span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">list_mois</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;janvier&quot;</span><span class="p">,</span> <span class="s2">&quot;février&quot;</span><span class="p">,</span> <span class="s2">&quot;mars&quot;</span><span class="p">,</span> <span class="s2">&quot;avril&quot;</span><span class="p">,</span> <span class="s2">&quot;mai&quot;</span><span class="p">,</span> <span class="s2">&quot;juin&quot;</span><span class="p">]</span>
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="n">numero</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;1er&quot;</span><span class="p">,</span> <span class="s2">&quot;2eme&quot;</span><span class="p">,</span> <span class="s2">&quot;3eme&quot;</span><span class="p">,</span> <span class="s2">&quot;4eme&quot;</span><span class="p">,</span> <span class="s2">&quot;5eme&quot;</span><span class="p">,</span> <span class="s2">&quot;6eme&quot;</span><span class="p">]</span>
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">list_mois</span><span class="p">))</span> <span class="p">:</span>
 </span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4"></a>    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;le =&quot;</span><span class="p">,</span> <span class="n">numero</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s2">&quot; mois de l&#39;année, indexé &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot; est : &quot;</span><span class="p">,</span> <span class="n">list_mois</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <p>Il est possible de balayer directement les éléments d'une liste (comme pour les chaines de caractères):</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
 <span class="normal"><a href="#__codelineno-13-2">2</a></span>
-<span class="normal"><a href="#__codelineno-13-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="n">list_mois</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;janvier&quot;</span><span class="p">,</span> <span class="s2">&quot;février&quot;</span><span class="p">,</span> <span class="s2">&quot;mars&quot;</span><span class="p">,</span> <span class="s2">&quot;avril&quot;</span><span class="p">,</span> <span class="s2">&quot;mai&quot;</span><span class="p">,</span> <span class="s2">&quot;juin&quot;</span><span class="p">]</span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="n">list_mois</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;janvier&quot;</span><span class="p">,</span> <span class="s2">&quot;février&quot;</span><span class="p">,</span> <span class="s2">&quot;mars&quot;</span><span class="p">,</span> <span class="s2">&quot;avril&quot;</span><span class="p">,</span> <span class="s2">&quot;mai&quot;</span><span class="p">,</span> <span class="s2">&quot;juin&quot;</span><span class="p">]</span>
 </span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">list_mois</span> <span class="p">:</span>
 </span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3"></a>    <span class="nb">print</span> <span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <h3 id="ajout-delements-dans-une-liste">Ajout d'éléments dans une liste<a class="headerlink" href="#ajout-delements-dans-une-liste" title="Permanent link">&num;</a></h3>
 <h4 id="loperateur">L'opérateur <code>+</code><a class="headerlink" href="#loperateur" title="Permanent link">&num;</a></h4>
 <p>Une autre méthode consiste à concaténer notre liste existante avec une autre liste. L'intérêt est que plusieurs éléments peuvent être rajoutés en même temps :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="n">list_mois</span> <span class="o">=</span> <span class="n">list_mois</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;juiller &quot;</span><span class="p">,</span> <span class="s2">&quot;août&quot;</span><span class="p">]</span>
-</span></code></pre></div>
-</td></tr></table>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="n">list_mois</span> <span class="o">=</span> <span class="n">list_mois</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;juiller &quot;</span><span class="p">,</span> <span class="s2">&quot;août&quot;</span><span class="p">]</span>
+</span></code></pre></div></td></tr></table></div>
 <p>Attention à l’ordre dans lequel les chaines sont concaténées. Dans l'exemple qui suit le mois d'octobre sera rajouté en début de liste et non en fin de liste :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="n">list_mois</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;octobre&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">list_mois</span>
-</span></code></pre></div>
-</td></tr></table>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="n">list_mois</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;octobre&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">list_mois</span>
+</span></code></pre></div></td></tr></table></div>
 <h4 id="la-methode-append">La méthode <code>append()</code><a class="headerlink" href="#la-methode-append" title="Permanent link">&num;</a></h4>
 <p>Pour rajouter un élément dans une liste, par exemple  <code>septembre</code> à notre liste <code>liste_mois</code>, il est possible d’utiliser la méthode <code>append()</code> (to append signifie « ajouter »). L'élément est ajouté en fin de liste. La méthode <code>append()</code> ne permet <strong>d'ajouter qu'un seul élément à la fois</strong>.</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="n">list_mois</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;septembre&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="n">list_mois</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;septembre&quot;</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
 <h4 id="la-methode-extend">La méthode <code>extend()</code><a class="headerlink" href="#la-methode-extend" title="Permanent link">&num;</a></h4>
 <p>Il est également possible d'utiliser la méthode <code>extend()</code> qui permet de concaténer non pas un seul élément mais une seconde liste.</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="n">lst_mois</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s2">&quot;novembre&quot;</span><span class="p">,</span> <span class="s2">&quot;décembre&quot;</span><span class="p">])</span>
-</span></code></pre></div>
-</td></tr></table>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="n">lst_mois</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s2">&quot;novembre&quot;</span><span class="p">,</span> <span class="s2">&quot;décembre&quot;</span><span class="p">])</span>
+</span></code></pre></div></td></tr></table></div>
 <h2 id="test-dappartenance">Test d'appartenance<a class="headerlink" href="#test-dappartenance" title="Permanent link">&num;</a></h2>
 <p>On peut tester si un élément se trouve dans une liste grâce à l'instruction <code>in</code> :</p>
-<table class="language-python highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
 <span class="normal"><a href="#__codelineno-18-2">2</a></span>
-<span class="normal"><a href="#__codelineno-18-3">3</a></span></pre></div></td><td class="code"><div class="language-python highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="n">list_mois</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;janvier&quot;</span><span class="p">,</span> <span class="s2">&quot;février&quot;</span><span class="p">,</span> <span class="s2">&quot;mars&quot;</span><span class="p">,</span> <span class="s2">&quot;avril&quot;</span><span class="p">,</span> <span class="s2">&quot;mai&quot;</span><span class="p">,</span> <span class="s2">&quot;juin&quot;</span><span class="p">]</span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="n">list_mois</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;janvier&quot;</span><span class="p">,</span> <span class="s2">&quot;février&quot;</span><span class="p">,</span> <span class="s2">&quot;mars&quot;</span><span class="p">,</span> <span class="s2">&quot;avril&quot;</span><span class="p">,</span> <span class="s2">&quot;mai&quot;</span><span class="p">,</span> <span class="s2">&quot;juin&quot;</span><span class="p">]</span>
 </span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="k">if</span> <span class="s2">&quot;Janvier&quot;</span> <span class="ow">in</span> <span class="n">list_mois</span> <span class="p">:</span>
 </span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3"></a>    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Ok&quot;</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <h3 id="suppression-delements-dans-une-liste">Suppression d'éléments dans une liste<a class="headerlink" href="#suppression-delements-dans-une-liste" title="Permanent link">&num;</a></h3>
 <p>Pour supprimer un élément dans une liste, il est possible d'utiliser les trois  suivantes.</p>
 <h4 id="la-commande-del">La commande <code>del</code><a class="headerlink" href="#la-commande-del" title="Permanent link">&num;</a></h4>
 <p>Pour supprimer un élément dans une liste, par exemple l'élément de rang <code>i</code>, il est possible d’utiliser la commande <code>del</code> (del signifie « delete »).</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="k">del</span> <span class="n">lst_mois</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># supprime le 1er élément</span>
-</span></code></pre></div>
-</td></tr></table>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="k">del</span> <span class="n">lst_mois</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># supprime le 1er élément</span>
+</span></code></pre></div></td></tr></table></div>
 <h4 id="la-methode-remove">La méthode <code>remove()</code><a class="headerlink" href="#la-methode-remove" title="Permanent link">&num;</a></h4>
 <p>Il est possible de supprimer un élément dans un tableau à partir non pas de son indice, mais de sa valeur. La méthode <code>remove()</code> supprime uniquement la première occurrence trouvée.</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
 <span class="normal"><a href="#__codelineno-20-2">2</a></span>
-<span class="normal"><a href="#__codelineno-20-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="n">lst</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <p>Si l'élément n'est pas trouvé, un message d'erreur est retourné et le programme s'arrête, donc bien s'assurer auparavant que l'élément à supprimer est présent dans la liste.</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
 <span class="normal"><a href="#__codelineno-21-2">2</a></span>
-<span class="normal"><a href="#__codelineno-21-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="normal"><a href="#__codelineno-21-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="n">lst</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 </span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <p>Nous donne :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
 <span class="normal"><a href="#__codelineno-22-2">2</a></span>
 <span class="normal"><a href="#__codelineno-22-3">3</a></span>
-<span class="normal"><a href="#__codelineno-22-4">4</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="c1"># script executed</span>
+<span class="normal"><a href="#__codelineno-22-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="o">&gt;&gt;&gt;</span> <span class="c1"># script executed</span>
 </span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
 </span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3"></a>  <span class="n">File</span> <span class="s2">&quot;&lt;input&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">2</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 </span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="ne">ValueError</span><span class="p">:</span> <span class="n">lst</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">list</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <p>On peut résoudre le problème en utilisant la fonction <code>in</code> de la manière suivante :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
 <span class="normal"><a href="#__codelineno-23-2">2</a></span>
 <span class="normal"><a href="#__codelineno-23-3">3</a></span>
-<span class="normal"><a href="#__codelineno-23-4">4</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="normal"><a href="#__codelineno-23-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="k">while</span> <span class="mi">5</span> <span class="ow">in</span> <span class="n">lst</span> <span class="p">:</span> <span class="c1"># la fonction in teste l&#39;appartenance d&#39;un élément à une liste</span>
 </span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3"></a>    <span class="n">lst</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <h4 id="la-methode-pop">La méthode <code>pop()</code><a class="headerlink" href="#la-methode-pop" title="Permanent link">&num;</a></h4>
 <p>La méthode <code>pop()</code> utilisée sans argument retire le dernier élément de la liste.</p>
 <p><strong>Exemple :</strong>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
 <span class="normal"><a href="#__codelineno-24-2">2</a></span>
-<span class="normal"><a href="#__codelineno-24-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="normal"><a href="#__codelineno-24-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="n">lst</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
 </span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="c1"># affiche [2, 5, 3, 8, 5]</span>
-</span></code></pre></div>
-</td></tr></table></p>
+</span></code></pre></div></td></tr></table></div></p>
 <p>Quand la méthode <code>pop()</code>possède un argument, celui-ci désigne l'indice de l'élément à supprimer.
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
 <span class="normal"><a href="#__codelineno-25-2">2</a></span>
-<span class="normal"><a href="#__codelineno-25-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="normal"><a href="#__codelineno-25-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="n">lst</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="c1"># affiche [5, 3, 8, 5, 5]</span>
-</span></code></pre></div>
-</td></tr></table></p>
+</span></code></pre></div></td></tr></table></div></p>
 <p><strong>Remarque :</strong> si l'argument donné à la méthode <code>pop()</code> correspond à un indice qui dépasse la longueur de la liste. Il se produit une erreur.</p>
 <h3 id="construction-dune-liste-par-comprehension">Construction d'une liste par compréhension<a class="headerlink" href="#construction-dune-liste-par-comprehension" title="Permanent link">&num;</a></h3>
 <p>Les compréhensions de listes fournissent un moyen de construire des listes de manière très concise. Une compréhension de liste consiste à placer entre crochets une expression suivie par une boucle for (ou plusieurs boucles imbriquées) et éventuellement un test conditionnel pour filtrer.</p>
@@ -2361,22 +3189,20 @@ pour un tuple de longueur <span class="arithmatex">\(n\)</span>, le premier él�
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Classique</label><label for="__tabbed_1_2">Compréhension</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
 <span class="normal"><a href="#__codelineno-26-2">2</a></span>
 <span class="normal"><a href="#__codelineno-26-3">3</a></span>
-<span class="normal"><a href="#__codelineno-26-4">4</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="n">list_carres</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="normal"><a href="#__codelineno-26-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="n">list_carres</span> <span class="o">=</span> <span class="p">[]</span>
 </span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span> <span class="p">:</span>
 </span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3"></a>    <span class="n">list_carres</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 </span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">list_carres</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
-<span class="normal"><a href="#__codelineno-27-2">2</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="n">list_carres</span> <span class="o">=</span><span class="p">[</span> <span class="n">i</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)]</span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
+<span class="normal"><a href="#__codelineno-27-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="n">list_carres</span> <span class="o">=</span><span class="p">[</span> <span class="n">i</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)]</span>
 </span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">list_carres</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
@@ -2384,24 +3210,22 @@ pour un tuple de longueur <span class="arithmatex">\(n\)</span>, le premier él�
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Classique</label><label for="__tabbed_2_2">Compréhension</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
 <span class="normal"><a href="#__codelineno-28-2">2</a></span>
 <span class="normal"><a href="#__codelineno-28-3">3</a></span>
 <span class="normal"><a href="#__codelineno-28-4">4</a></span>
-<span class="normal"><a href="#__codelineno-28-5">5</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="n">list_carres</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="normal"><a href="#__codelineno-28-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="n">list_carres</span> <span class="o">=</span> <span class="p">[]</span>
 </span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span> <span class="p">:</span>
 </span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3"></a>    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
 </span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4"></a>        <span class="n">list_carres</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
 </span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">list_carres</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span>
-<span class="normal"><a href="#__codelineno-29-2">2</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="n">list_carres</span> <span class="o">=</span><span class="p">[</span> <span class="n">i</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span>
+<span class="normal"><a href="#__codelineno-29-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="n">list_carres</span> <span class="o">=</span><span class="p">[</span> <span class="n">i</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
 </span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">list_carres</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
@@ -2409,26 +3233,24 @@ pour un tuple de longueur <span class="arithmatex">\(n\)</span>, le premier él�
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Classique</label><label for="__tabbed_3_2">Compréhension</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
 <span class="normal"><a href="#__codelineno-30-2">2</a></span>
 <span class="normal"><a href="#__codelineno-30-3">3</a></span>
 <span class="normal"><a href="#__codelineno-30-4">4</a></span>
-<span class="normal"><a href="#__codelineno-30-5">5</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;anticonstitutionnellement&quot;</span>
+<span class="normal"><a href="#__codelineno-30-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;anticonstitutionnellement&quot;</span>
 </span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2"></a><span class="nb">list</span> <span class="o">=</span> <span class="p">[]</span>
 </span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">mot</span> <span class="p">:</span>
 </span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4"></a>    <span class="nb">list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5"></a><span class="nb">print</span> <span class="p">(</span><span class="nb">list</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span>
 <span class="normal"><a href="#__codelineno-31-2">2</a></span>
-<span class="normal"><a href="#__codelineno-31-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;anticonstitutionnellement&quot;</span>
+<span class="normal"><a href="#__codelineno-31-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;anticonstitutionnellement&quot;</span>
 </span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2"></a><span class="nb">list</span><span class="o">=</span><span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">mot</span> <span class="p">]</span>
 </span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3"></a><span class="nb">print</span> <span class="p">(</span><span class="nb">list</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
@@ -2436,14 +3258,14 @@ pour un tuple de longueur <span class="arithmatex">\(n\)</span>, le premier él�
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Classique</label><label for="__tabbed_4_2">Compréhension</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
 <span class="normal"><a href="#__codelineno-32-2">2</a></span>
 <span class="normal"><a href="#__codelineno-32-3">3</a></span>
 <span class="normal"><a href="#__codelineno-32-4">4</a></span>
 <span class="normal"><a href="#__codelineno-32-5">5</a></span>
 <span class="normal"><a href="#__codelineno-32-6">6</a></span>
 <span class="normal"><a href="#__codelineno-32-7">7</a></span>
-<span class="normal"><a href="#__codelineno-32-8">8</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;anticonstitutionnellement&quot;</span>
+<span class="normal"><a href="#__codelineno-32-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;anticonstitutionnellement&quot;</span>
 </span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2"></a><span class="n">voyelles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="s2">&quot;u&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">]</span>
 </span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3"></a><span class="n">lst</span> <span class="o">=</span> <span class="p">[]</span>
 </span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">mot</span> <span class="p">:</span>
@@ -2451,58 +3273,51 @@ pour un tuple de longueur <span class="arithmatex">\(n\)</span>, le premier él�
 </span><span id="__span-32-6"><a id="__codelineno-32-6" name="__codelineno-32-6"></a>        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">j</span> <span class="p">:</span>
 </span><span id="__span-32-7"><a id="__codelineno-32-7" name="__codelineno-32-7"></a>            <span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
 </span><span id="__span-32-8"><a id="__codelineno-32-8" name="__codelineno-32-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span>
 <span class="normal"><a href="#__codelineno-33-2">2</a></span>
 <span class="normal"><a href="#__codelineno-33-3">3</a></span>
-<span class="normal"><a href="#__codelineno-33-4">4</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;anticonstitutionnellement&quot;</span>
+<span class="normal"><a href="#__codelineno-33-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="n">mot</span> <span class="o">=</span> <span class="s2">&quot;anticonstitutionnellement&quot;</span>
 </span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2"></a><span class="n">voyelles</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="s2">&quot;u&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">]</span>
 </span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3"></a><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">mot</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">voyelles</span> <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="n">j</span><span class="p">]</span>
 </span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
 <h3 id="des-listes-de-listes-pour-representer-des-matrices">Des listes de listes pour représenter des matrices<a class="headerlink" href="#des-listes-de-listes-pour-representer-des-matrices" title="Permanent link">&num;</a></h3>
 <p>Voici un exemple de liste de listes :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span>
-<span class="normal"><a href="#__codelineno-34-2">2</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="n">matrice</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]]</span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span>
+<span class="normal"><a href="#__codelineno-34-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="n">matrice</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]]</span>
 </span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">matrice</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <p>Pour des raisons de lisibilité, il est cependant plus commode de la représenter de la manière suivante, sous forme matricielle :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span>
 <span class="normal"><a href="#__codelineno-35-2">2</a></span>
 <span class="normal"><a href="#__codelineno-35-3">3</a></span>
-<span class="normal"><a href="#__codelineno-35-4">4</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="n">matrice</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
+<span class="normal"><a href="#__codelineno-35-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="n">matrice</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
 </span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2"></a>          <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span>
 </span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3"></a>          <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]]</span>
 </span><span id="__span-35-4"><a id="__codelineno-35-4" name="__codelineno-35-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">matrice</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <p>Pour cibler un élément de la matrice, on peut utiliser la notation avec des doubles crochets : <code>matrice[ligne][colonne]</code></p>
 <p><strong>Attention :</strong> les numéros de ligne et colonne démarrent à 0.</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">matrice</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># affiche l&#39;élement de le 2eme ligne et 3eme colonne</span>
-</span></code></pre></div>
-</td></tr></table>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">matrice</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># affiche l&#39;élement de le 2eme ligne et 3eme colonne</span>
+</span></code></pre></div></td></tr></table></div>
 <p>Pour affecter à cet élément la valeur 10 :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1">1</a></span>
-<span class="normal"><a href="#__codelineno-37-2">2</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="n">matrice</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1">1</a></span>
+<span class="normal"><a href="#__codelineno-37-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="n">matrice</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
 </span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">matrice</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <p>Pour parcourir l'ensemble des éléments de la matrice, il faut utiliser 2 boucles for imbriquées :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1">1</a></span>
 <span class="normal"><a href="#__codelineno-38-2">2</a></span>
-<span class="normal"><a href="#__codelineno-38-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">:</span> <span class="c1"># 3 = nombre de lignes</span>
+<span class="normal"><a href="#__codelineno-38-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">:</span> <span class="c1"># 3 = nombre de lignes</span>
 </span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2"></a>    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">:</span> <span class="c1"># 3 = nombre de colonnes</span>
 </span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3"></a>        <span class="nb">print</span> <span class="p">(</span><span class="n">matrice</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <h3 id="pour-aller-plus-loin">Pour aller plus loin<a class="headerlink" href="#pour-aller-plus-loin" title="Permanent link">&num;</a></h3>
 <h4 id="trancher-des-listes-slices">Trancher des listes (Slices)<a class="headerlink" href="#trancher-des-listes-slices" title="Permanent link">&num;</a></h4>
 <p>On peut découper une partie de la liste :</p>
@@ -2511,7 +3326,7 @@ pour un tuple de longueur <span class="arithmatex">\(n\)</span>, le premier él�
 <li><code>lst[:a]</code> renvoie la sous-liste des éléments de rang <code>0</code> à <code>a – 1</code> (l'élément de rang <code>a</code> est exclu).</li>
 <li><code>lst[a:]</code> renvoie la sous-liste des éléments de rang <code>a</code> inclus jusqu'au dernier.</li>
 </ul>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1">1</a></span>
 <span class="normal"><a href="#__codelineno-39-2">2</a></span>
 <span class="normal"><a href="#__codelineno-39-3">3</a></span>
 <span class="normal"><a href="#__codelineno-39-4">4</a></span>
@@ -2519,7 +3334,7 @@ pour un tuple de longueur <span class="arithmatex">\(n\)</span>, le premier él�
 <span class="normal"><a href="#__codelineno-39-6">6</a></span>
 <span class="normal"><a href="#__codelineno-39-7">7</a></span>
 <span class="normal"><a href="#__codelineno-39-8">8</a></span>
-<span class="normal"><a href="#__codelineno-39-9">9</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1"></a><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="normal"><a href="#__codelineno-39-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1"></a><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
 </span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2"></a><span class="n">list_centre</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>
 </span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">list_centre</span><span class="p">)</span>
 </span><span id="__span-39-4"><a id="__codelineno-39-4" name="__codelineno-39-4"></a>
@@ -2528,27 +3343,25 @@ pour un tuple de longueur <span class="arithmatex">\(n\)</span>, le premier él�
 </span><span id="__span-39-7"><a id="__codelineno-39-7" name="__codelineno-39-7"></a>
 </span><span id="__span-39-8"><a id="__codelineno-39-8" name="__codelineno-39-8"></a><span class="n">list_moitie_droite</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="mi">5</span><span class="p">:]</span>
 </span><span id="__span-39-9"><a id="__codelineno-39-9" name="__codelineno-39-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">list_moitie_droite</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <h4 id="des-methodes-pour-inverser-et-trier-des-listes">Des méthodes pour inverser et trier des listes<a class="headerlink" href="#des-methodes-pour-inverser-et-trier-des-listes" title="Permanent link">&num;</a></h4>
 <p>La méthode <code>reverse()</code> permet d'inverser une liste et la méthode <code>sort()</code> permet de trier la liste :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-1">1</a></span>
 <span class="normal"><a href="#__codelineno-40-2">2</a></span>
 <span class="normal"><a href="#__codelineno-40-3">3</a></span>
 <span class="normal"><a href="#__codelineno-40-4">4</a></span>
-<span class="normal"><a href="#__codelineno-40-5">5</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1"></a><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;H&quot;</span><span class="p">,</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot;O&quot;</span><span class="p">]</span>
+<span class="normal"><a href="#__codelineno-40-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1"></a><span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;H&quot;</span><span class="p">,</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot;O&quot;</span><span class="p">]</span>
 </span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2"></a><span class="nb">list</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
 </span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3"></a><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
 </span><span id="__span-40-4"><a id="__codelineno-40-4" name="__codelineno-40-4"></a><span class="nb">list</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
 </span><span id="__span-40-5"><a id="__codelineno-40-5" name="__codelineno-40-5"></a><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <h4 id="documentation-en-ligne-python">Documentation en ligne python<a class="headerlink" href="#documentation-en-ligne-python" title="Permanent link">&num;</a></h4>
 <p><a href="https://docs.python.org/fr/3/tutorial/datastructures.html">https://docs.python.org/fr/3/tutorial/datastructures.html</a></p>
 <h2 id="exemple-de-trace-dune-courbe-en-utilisant-des-listes-et-la-bibliotheque-matplotlibpyplot">Exemple de tracé d'une courbe en utilisant des listes et la bibliothèque matplotlib.pyplot<a class="headerlink" href="#exemple-de-trace-dune-courbe-en-utilisant-des-listes-et-la-bibliotheque-matplotlibpyplot" title="Permanent link">&num;</a></h2>
 <p>Le programme suivant trace la courbe <span class="arithmatex">\(y=f(x²)\)</span> en utilisant la bibliothèque <code>matplolib.pyplot</code>.
 Pour cela il est nécessaire de remplir une liste des abscisses des points de la courbe nommée x et une liste des ordonnées nommée y :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1"> 1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-41-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-41-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-41-4"> 4</a></span>
@@ -2562,7 +3375,7 @@ Pour cela il est nécessaire de remplir une liste des abscisses des points de la
 <span class="normal"><a href="#__codelineno-41-12">12</a></span>
 <span class="normal"><a href="#__codelineno-41-13">13</a></span>
 <span class="normal"><a href="#__codelineno-41-14">14</a></span>
-<span class="normal"><a href="#__codelineno-41-15">15</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1"></a><span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="normal"><a href="#__codelineno-41-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1"></a><span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="o">*</span>
 </span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2"></a>
 </span><span id="__span-41-3"><a id="__codelineno-41-3" name="__codelineno-41-3"></a><span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
 </span><span id="__span-41-4"><a id="__codelineno-41-4" name="__codelineno-41-4"></a><span class="n">y</span> <span class="o">=</span> <span class="p">[]</span>
@@ -2577,8 +3390,7 @@ Pour cela il est nécessaire de remplir une liste des abscisses des points de la
 </span><span id="__span-41-13"><a id="__codelineno-41-13" name="__codelineno-41-13"></a><span class="n">plot</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">marker</span> <span class="o">=</span> <span class="s2">&quot;+&quot;</span><span class="p">,</span> <span class="n">markersize</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;-&quot;</span><span class="p">)</span>
 </span><span id="__span-41-14"><a id="__codelineno-41-14" name="__codelineno-41-14"></a><span class="n">grid</span><span class="p">()</span>
 </span><span id="__span-41-15"><a id="__codelineno-41-15" name="__codelineno-41-15"></a><span class="n">show</span><span class="p">()</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <figure>
 <p><img alt="graphe1" src="../data_listes/courbes.png" width="600px" /></p>
 </figure>
@@ -2599,13 +3411,12 @@ stockera toutes les notes dans un tableau qu'il affichera.</p>
 <h3 id="exercice-n3">Exercice n°3 :<a class="headerlink" href="#exercice-n3" title="Permanent link">&num;</a></h3>
 <p>Écrire une fonction qui prend en argument un tableau et qui retourne la somme des différents éléments.</p>
 <p><strong>Exemple :</strong></p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-42-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-42-1">1</a></span>
 <span class="normal"><a href="#__codelineno-42-2">2</a></span>
-<span class="normal"><a href="#__codelineno-42-3">3</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1"></a><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="normal"><a href="#__codelineno-42-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1"></a><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2"></a><span class="n">somme</span> <span class="o">=</span> <span class="n">tab_somme</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
 </span><span id="__span-42-3"><a id="__codelineno-42-3" name="__codelineno-42-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">somme</span><span class="p">)</span> <span class="c1"># doit afficher 31</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <h3 id="exercice-n4">Exercice n°4 :<a class="headerlink" href="#exercice-n4" title="Permanent link">&num;</a></h3>
 <p>Écrire une fonction <code>genere_tab()</code> qui prend en argument la taille du tableau et qui génère un tableau où les nombres
 vont croissant par pas de 1 à partir de 0.</p>
@@ -2613,11 +3424,10 @@ vont croissant par pas de 1 à partir de 0.</p>
 <p><code>lst = genere_tab(10)</code> génère une liste <code>lst</code> telle que : <code>lst = [0, 1 ,2, 3, 4, 5, 6, 7, 8, 9]</code></p>
 <h3 id="exercice-n5">Exercice n°5 :<a class="headerlink" href="#exercice-n5" title="Permanent link">&num;</a></h3>
 <p>On donne les chaînes suivantes :</p>
-<table class="language-py highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-1">1</a></span>
-<span class="normal"><a href="#__codelineno-43-2">2</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1"></a><span class="n">chaine1</span> <span class="o">=</span> <span class="s2">&quot;abc&quot;</span>
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-1">1</a></span>
+<span class="normal"><a href="#__codelineno-43-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1"></a><span class="n">chaine1</span> <span class="o">=</span> <span class="s2">&quot;abc&quot;</span>
 </span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2"></a><span class="n">chaine2</span><span class="o">=</span> <span class="s2">&quot;de&quot;</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <p>Écrire un programme nous permettant de créer la liste suivante :
 <div class="language-py highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ad&#39;</span><span class="p">,</span> <span class="s1">&#39;ae&#39;</span><span class="p">,</span> <span class="s1">&#39;bd&#39;</span><span class="p">,</span> <span class="s1">&#39;be&#39;</span><span class="p">,</span> <span class="s1">&#39;cd&#39;</span><span class="p">,</span> <span class="s1">&#39;ce&#39;</span><span class="p">]</span>
 </span></code></pre></div>
@@ -2629,49 +3439,28 @@ vont croissant par pas de 1 à partir de 0.</p>
 <h3 id="exercice-n8">Exercice n°8 :<a class="headerlink" href="#exercice-n8" title="Permanent link">&num;</a></h3>
 <p>Écrire une fonction <code>genere_tab</code> qui prend en argument 2 entiers et retourne un tableau de longueur égale au 1er argument et dont chaque élément est un nombre entier aléatoire compris entre 0 et le 2nd argument (inclus)</p>
 
-              
-            </article>
-          </div>
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../fonction_python/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Les fonctions en Python" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Les fonctions en Python
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../dico/" class="md-footer__link md-footer__link--next" aria-label="Next: Dictionnaires" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Dictionnaires
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2693,10 +3482,14 @@ vont croissant par pas de 1 à partir de 0.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.8aa65030.min.js"></script>
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
         <script src="../../../javascripts/config.js"></script>
       

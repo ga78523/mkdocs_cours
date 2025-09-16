@@ -10,8 +10,15 @@
       
         <link rel="canonical" href="https://example.com/Terminale/Programmation/cours_recursivite/">
       
+      
+        <link rel="prev" href="../../outils_python/">
+      
+      
+        <link rel="next" href="../POO/">
+      
+      
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
       
@@ -19,29 +26,35 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.e8d9bf0c.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e53b48f4.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
         
-      
-    
-    
-    
-      
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -54,11 +67,8 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -78,16 +88,19 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="Site de cours" class="md-header__button md-logo" aria-label="Site de cours" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -106,62 +119,76 @@
       </div>
     </div>
     
-      <form class="md-header__option" data-md-component="palette">
-        
-          
-          
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
-          
-            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
-            </label>
-          
-        
-          
-          
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
-          
-            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
-            </label>
-          
-        
-      </form>
+      
+        <form class="md-header__option" data-md-component="palette">
+  
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
   </div>
 </div>
+      
     
     
   </nav>
@@ -186,12 +213,13 @@
                     
 
 
+
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Site de cours" class="md-nav__button md-logo" aria-label="Site de cours" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     Site de cours
@@ -201,14 +229,21 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../.." class="md-nav__link">
-        Home
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
       </a>
     </li>
   
@@ -216,14 +251,21 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../about/" class="md-nav__link">
-        About
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
       </a>
     </li>
   
@@ -231,706 +273,1086 @@
     
       
       
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Physique
+    
+  </span>
+  
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Physique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3">
-          Physique
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Physique" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Physique
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_1">
-          Seconde
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Seconde" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_1">
-          <span class="md-nav__icon md-icon"></span>
-          Seconde
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
           
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Seconde
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Seconde
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Physique/Seconde/TP_vitesse/" class="md-nav__link">
-        TP vitesse
+        
+  
+  
+  <span class="md-ellipsis">
+    TP vitesse
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Physique/Seconde/TPver_eleve/" class="md-nav__link">
-        TP verrerie
+        
+  
+  
+  <span class="md-ellipsis">
+    TP verrerie
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
   
+  
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4">
-          SNT
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="SNT" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          SNT
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
           
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SNT
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            SNT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../SNT/html_css_SNT/" class="md-nav__link">
-        web
+        
+  
+  
+  <span class="md-ellipsis">
+    web
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Première
+    
+  </span>
+  
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Première
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
   
   
   
     
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5">
-          Première
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Première" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          Première
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_1">
-          Données
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Données" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_1">
-          <span class="md-nav__icon md-icon"></span>
-          Données
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        
           
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Données
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            Données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Premiere/Donnees/representation_entier/" class="md-nav__link">
-        Représentation des entiers
+        
+  
+  
+  <span class="md-ellipsis">
+    Représentation des entiers
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Premiere/Donnees/relatifs_reels/" class="md-nav__link">
-        Représentation des relatifs et des réels
+        
+  
+  
+  <span class="md-ellipsis">
+    Représentation des relatifs et des réels
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Premiere/Donnees/donnees_table/" class="md-nav__link">
-        Données en table
+        
+  
+  
+  <span class="md-ellipsis">
+    Données en table
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_2">
-          Langage Python
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Langage Python" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_2">
-          <span class="md-nav__icon md-icon"></span>
-          Langage Python
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
           
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Langage Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Langage Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Premiere/Langage/Bases_Python/" class="md-nav__link">
-        Les bases
+        
+  
+  
+  <span class="md-ellipsis">
+    Les bases
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Premiere/Langage/ControleFlux_Python/" class="md-nav__link">
-        Contrôle du flux d'exécution
+        
+  
+  
+  <span class="md-ellipsis">
+    Contrôle du flux d'exécution
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Premiere/Langage/fonction_python/" class="md-nav__link">
-        Les fonctions en Python
+        
+  
+  
+  <span class="md-ellipsis">
+    Les fonctions en Python
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Premiere/Langage/tuples_listes/" class="md-nav__link">
-        Tuples et listes en Python
+        
+  
+  
+  <span class="md-ellipsis">
+    Tuples et listes en Python
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Premiere/Langage/dico/" class="md-nav__link">
-        Dictionnaires
+        
+  
+  
+  <span class="md-ellipsis">
+    Dictionnaires
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_3">
-          IHM
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="IHM" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_3">
-          <span class="md-nav__icon md-icon"></span>
-          IHM
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
           
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    IHM
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            IHM
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Premiere/IHM/html_css/" class="md-nav__link">
-        web
+        
+  
+  
+  <span class="md-ellipsis">
+    web
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Premiere/IHM/frameworks/" class="md-nav__link">
-        Frameworks
+        
+  
+  
+  <span class="md-ellipsis">
+    Frameworks
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Premiere/IHM/formulaires/" class="md-nav__link">
-        Formulaire
+        
+  
+  
+  <span class="md-ellipsis">
+    Formulaire
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Premiere/IHM/js/" class="md-nav__link">
-        Javascript
+        
+  
+  
+  <span class="md-ellipsis">
+    Javascript
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_4">
-          Architecture Matérielle
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_4">
-          <span class="md-nav__icon md-icon"></span>
-          Architecture Matérielle
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
           
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Architecture Matérielle
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture Matérielle
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Premiere/ArchitectureMaterielle/von_neumann/" class="md-nav__link">
-        Von Neumann
+        
+  
+  
+  <span class="md-ellipsis">
+    Von Neumann
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Premiere/ArchitectureMaterielle/OS/" class="md-nav__link">
-        OS
+        
+  
+  
+  <span class="md-ellipsis">
+    OS
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Premiere/ArchitectureMaterielle/TP_logic_gates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Portes logiques
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
+              
             
-          
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_5">
-          Algorithmique
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Algorithmique" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_5">
-          <span class="md-nav__icon md-icon"></span>
-          Algorithmique
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
           
+          <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Algorithmique
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithmique
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Premiere/Algorithmique/outils/" class="md-nav__link">
-        Outils
+        
+  
+  
+  <span class="md-ellipsis">
+    Outils
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Premiere/Algorithmique/tris/" class="md-nav__link">
-        Tris
+        
+  
+  
+  <span class="md-ellipsis">
+    Tris
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Premiere/Algorithmique/algo_recherche/" class="md-nav__link">
-        Recherche
+        
+  
+  
+  <span class="md-ellipsis">
+    Recherche
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Premiere/Algorithmique/algo_gloutons/" class="md-nav__link">
-        Gloutons
+        
+  
+  
+  <span class="md-ellipsis">
+    Gloutons
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Premiere/Algorithmique/kppv/" class="md-nav__link">
-        kppv
+        
+  
+  
+  <span class="md-ellipsis">
+    kppv
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
     
   
   
+  
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6">
-          Terminale
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Terminale" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
-          <span class="md-nav__icon md-icon"></span>
-          Terminale
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
           
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Terminale
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Terminale
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../outils_python/" class="md-nav__link">
-        Outils Python
+        
+  
+  
+  <span class="md-ellipsis">
+    Outils Python
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
   
   
     
   
   
+  
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_2">
-          Programmation
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Programmation" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_2">
-          <span class="md-nav__icon md-icon"></span>
-          Programmation
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" checked>
+        
           
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Programmation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Programmation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
   
   
     
+  
   
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
         
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Récursivité
+          
+  
+  
+  <span class="md-ellipsis">
+    Récursivité
+    
+  </span>
+  
+
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Récursivité
+        
+  
+  
+  <span class="md-ellipsis">
+    Récursivité
+    
+  </span>
+  
+
       </a>
       
         
@@ -950,7 +1372,9 @@
       
         <li class="md-nav__item">
   <a href="#contexte-la-somme-des-premiers-entiers" class="md-nav__link">
-    Contexte : la somme des premiers entiers
+    <span class="md-ellipsis">
+      Contexte : la somme des premiers entiers
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Contexte : la somme des premiers entiers">
@@ -958,7 +1382,9 @@
         
           <li class="md-nav__item">
   <a href="#exercice-1" class="md-nav__link">
-    Exercice 1
+    <span class="md-ellipsis">
+      Exercice 1
+    </span>
   </a>
   
 </li>
@@ -970,7 +1396,9 @@
       
         <li class="md-nav__item">
   <a href="#recursivite_1" class="md-nav__link">
-    Récursivité
+    <span class="md-ellipsis">
+      Récursivité
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Récursivité">
@@ -978,22 +1406,28 @@
         
           <li class="md-nav__item">
   <a href="#definition" class="md-nav__link">
-    Définition
+    <span class="md-ellipsis">
+      Définition
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#fonctionnement-dune-fonction-recursive" class="md-nav__link">
-    Fonctionnement d'une fonction récursive
+    <span class="md-ellipsis">
+      Fonctionnement d'une fonction récursive
+    </span>
   </a>
   
-    <nav class="md-nav" aria-label="Fonctionnement d'une fonction récursive">
+    <nav class="md-nav" aria-label="Fonctionnement d&#39;une fonction récursive">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#autre-representation-sous-forme-de-pile-dexecution" class="md-nav__link">
-    Autre Représentation : sous forme de pile d'exécution
+    <span class="md-ellipsis">
+      Autre Représentation : sous forme de pile d'exécution
+    </span>
   </a>
   
 </li>
@@ -1005,21 +1439,27 @@
         
           <li class="md-nav__item">
   <a href="#recursivite-ou-iterativite" class="md-nav__link">
-    Récursivité ou itérativité ?
+    <span class="md-ellipsis">
+      Récursivité ou itérativité ?
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#recursivite-croisee" class="md-nav__link">
-    Récursivité croisée
+    <span class="md-ellipsis">
+      Récursivité croisée
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#recursivite-multiple" class="md-nav__link">
-    Récursivité multiple
+    <span class="md-ellipsis">
+      Récursivité multiple
+    </span>
   </a>
   
 </li>
@@ -1031,7 +1471,9 @@
       
         <li class="md-nav__item">
   <a href="#exercices" class="md-nav__link">
-    Exercices
+    <span class="md-ellipsis">
+      Exercices
+    </span>
   </a>
   
 </li>
@@ -1043,533 +1485,823 @@
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../POO/" class="md-nav__link">
-        POO
+        
+  
+  
+  <span class="md-ellipsis">
+    POO
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../decidabilite/" class="md-nav__link">
-        Calculabilité, décidabilité
+        
+  
+  
+  <span class="md-ellipsis">
+    Calculabilité, décidabilité
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../crypto/" class="md-nav__link">
-        Sécurisation des données
+        
+  
+  
+  <span class="md-ellipsis">
+    Sécurisation des données
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../algos_arbre/" class="md-nav__link">
-        Arbres algos
+        
+  
+  
+  <span class="md-ellipsis">
+    Arbres algos
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../graphes/" class="md-nav__link">
-        Graphes algos
+        
+  
+  
+  <span class="md-ellipsis">
+    Graphes algos
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../recherche_textuelle/" class="md-nav__link">
-        Recherche textuelle
+        
+  
+  
+  <span class="md-ellipsis">
+    Recherche textuelle
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../diviser_regner/" class="md-nav__link">
-        Diviser pour régner
+        
+  
+  
+  <span class="md-ellipsis">
+    Diviser pour régner
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../prog_dynamique/" class="md-nav__link">
-        Programmation dynamique
+        
+  
+  
+  <span class="md-ellipsis">
+    Programmation dynamique
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../dijkstra/" class="md-nav__link">
-        Plus court chemin
+        
+  
+  
+  <span class="md-ellipsis">
+    Plus court chemin
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../API/" class="md-nav__link">
-        Modularité
+        
+  
+  
+  <span class="md-ellipsis">
+    Modularité
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_3">
-          Structures de Données
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Structures de Données" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_3">
-          <span class="md-nav__icon md-icon"></span>
-          Structures de Données
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
           
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Structures de Données
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Structures de Données
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Struct_donnees/graphe/" class="md-nav__link">
-        Graphes
+        
+  
+  
+  <span class="md-ellipsis">
+    Graphes
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_4">
-          BDD
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="BDD" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_4">
-          <span class="md-nav__icon md-icon"></span>
-          BDD
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
           
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    BDD
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            BDD
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../BDD/bdd/" class="md-nav__link">
-        Introduction BDD
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction BDD
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../BDD/sql_sqlite/" class="md-nav__link">
-        SQL avec SQLITE
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL avec SQLITE
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../BDD/sql_python/" class="md-nav__link">
-        SQL et Python
+        
+  
+  
+  <span class="md-ellipsis">
+    SQL et Python
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" type="checkbox" id="__nav_6_5" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_5">
-          Architecture Matérielle
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Architecture Matérielle" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_5">
-          <span class="md-nav__icon md-icon"></span>
-          Architecture Matérielle
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
           
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Architecture Matérielle
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture Matérielle
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../ArchitectureMaterielle/reseau_routage/" class="md-nav__link">
-        Routage
+        
+  
+  
+  <span class="md-ellipsis">
+    Routage
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../ArchitectureMaterielle/commande_linux/" class="md-nav__link">
-        Linux
+        
+  
+  
+  <span class="md-ellipsis">
+    Linux
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../ArchitectureMaterielle/processus/" class="md-nav__link">
-        processus
+        
+  
+  
+  <span class="md-ellipsis">
+    processus
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../ArchitectureMaterielle/soc/" class="md-nav__link">
-        SoC
+        
+  
+  
+  <span class="md-ellipsis">
+    SoC
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     
+    
+    
+    
+    
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_6" type="checkbox" id="__nav_6_6" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_6">
-          Algorithmes
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Algorithmes" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_6">
-          <span class="md-nav__icon md-icon"></span>
-          Algorithmes
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+        
           
+          <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Algorithmes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_6">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithmes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../Algo/" class="md-nav__link">
-        Algorithmes
+        
+  
+  
+  <span class="md-ellipsis">
+    Algorithmes
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
     
       
       
-      
-
   
   
   
+  
+    
+    
+    
+    
     
     <li class="md-nav__item md-nav__item--nested">
       
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_7">
-          Logiciels
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Logiciels" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
-          <span class="md-nav__icon md-icon"></span>
-          Logiciels
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
           
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Logiciels
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Logiciels
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Logiciels/liste_logiciels/" class="md-nav__link">
-        liste des logiciels
+        
+  
+  
+  <span class="md-ellipsis">
+    liste des logiciels
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Logiciels/git_github/" class="md-nav__link">
-        git
+        
+  
+  
+  <span class="md-ellipsis">
+    git
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Logiciels/insta_vscode_html/" class="md-nav__link">
-        vcode_web
+        
+  
+  
+  <span class="md-ellipsis">
+    vcode_web
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Logiciels/insta_vscode_python/" class="md-nav__link">
-        vcode_python
+        
+  
+  
+  <span class="md-ellipsis">
+    vcode_python
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Logiciels/thonny_tutorial/" class="md-nav__link">
-        thonny
+        
+  
+  
+  <span class="md-ellipsis">
+    thonny
+    
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
       <a href="../../../Logiciels/tuto_mkdocs/" class="md-nav__link">
-        mkdocs
+        
+  
+  
+  <span class="md-ellipsis">
+    mkdocs
+    
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -1602,7 +2334,9 @@
       
         <li class="md-nav__item">
   <a href="#contexte-la-somme-des-premiers-entiers" class="md-nav__link">
-    Contexte : la somme des premiers entiers
+    <span class="md-ellipsis">
+      Contexte : la somme des premiers entiers
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Contexte : la somme des premiers entiers">
@@ -1610,7 +2344,9 @@
         
           <li class="md-nav__item">
   <a href="#exercice-1" class="md-nav__link">
-    Exercice 1
+    <span class="md-ellipsis">
+      Exercice 1
+    </span>
   </a>
   
 </li>
@@ -1622,7 +2358,9 @@
       
         <li class="md-nav__item">
   <a href="#recursivite_1" class="md-nav__link">
-    Récursivité
+    <span class="md-ellipsis">
+      Récursivité
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Récursivité">
@@ -1630,22 +2368,28 @@
         
           <li class="md-nav__item">
   <a href="#definition" class="md-nav__link">
-    Définition
+    <span class="md-ellipsis">
+      Définition
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#fonctionnement-dune-fonction-recursive" class="md-nav__link">
-    Fonctionnement d'une fonction récursive
+    <span class="md-ellipsis">
+      Fonctionnement d'une fonction récursive
+    </span>
   </a>
   
-    <nav class="md-nav" aria-label="Fonctionnement d'une fonction récursive">
+    <nav class="md-nav" aria-label="Fonctionnement d&#39;une fonction récursive">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#autre-representation-sous-forme-de-pile-dexecution" class="md-nav__link">
-    Autre Représentation : sous forme de pile d'exécution
+    <span class="md-ellipsis">
+      Autre Représentation : sous forme de pile d'exécution
+    </span>
   </a>
   
 </li>
@@ -1657,21 +2401,27 @@
         
           <li class="md-nav__item">
   <a href="#recursivite-ou-iterativite" class="md-nav__link">
-    Récursivité ou itérativité ?
+    <span class="md-ellipsis">
+      Récursivité ou itérativité ?
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#recursivite-croisee" class="md-nav__link">
-    Récursivité croisée
+    <span class="md-ellipsis">
+      Récursivité croisée
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#recursivite-multiple" class="md-nav__link">
-    Récursivité multiple
+    <span class="md-ellipsis">
+      Récursivité multiple
+    </span>
   </a>
   
 </li>
@@ -1683,7 +2433,9 @@
       
         <li class="md-nav__item">
   <a href="#exercices" class="md-nav__link">
-    Exercices
+    <span class="md-ellipsis">
+      Exercices
+    </span>
   </a>
   
 </li>
@@ -1696,10 +2448,12 @@
               </div>
             
           
-          <div class="md-content" data-md-component="content">
-            <article class="md-content__inner md-typeset">
-              
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
                 
+                  
+
 
 
 <h1 id="recursivite">Récursivité<a class="headerlink" href="#recursivite" title="Permanent link">&num;</a></h1>
@@ -1751,14 +2505,14 @@
 <p class="admonition-title">Exercice 4</p>
 <p>La méthode du paysan russe est un très vieil algorithme de multiplication de deux nombres entiers déjà décrit, sous forme légèrement différente, sur un papyrus égyptien rédigé autour de 1650 avant J.C. Il s'agissait de la principale méthode de calcul en Europe avant l'introduction des chiffres arabes.
 Les ordinateurs l'ont utilisé avant que la multiplication ne soit directement intégrée dans le processeur. Sous une forme moderne, il peut être décrit par le programme donné dans l'algorithme ci-dessous.</p>
-<p><table class="language-py highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Pseudo-code de la fonction itérative</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<p><div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Pseudo-code de la fonction itérative</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
 <span class="normal"><a href="#__codelineno-1-4">4</a></span>
 <span class="normal"><a href="#__codelineno-1-5">5</a></span>
 <span class="normal"><a href="#__codelineno-1-6">6</a></span>
 <span class="normal"><a href="#__codelineno-1-7">7</a></span>
-<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">Fonction</span> <span class="n">multiplication</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">Fonction</span> <span class="n">multiplication</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="n">p</span> <span class="o">=</span> <span class="mi">0</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="n">TANT</span> <span class="n">QUE</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a>        <span class="n">Si</span> <span class="n">x</span> <span class="n">est</span> <span class="n">impair</span><span class="p">:</span>
@@ -1766,8 +2520,7 @@ Les ordinateurs l'ont utilisé avant que la multiplication ne soit directement i
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">//</span> <span class="mi">2</span>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>        <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">y</span>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>    <span class="n">Retourner</span> <span class="n">p</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <strong>1.</strong> Appliquer cette fonction pour effectuer la multiplication de 105 par 253. Détailler les étapes dans le tableau suivant :</p>
 <table>
 <thead>
@@ -1832,7 +2585,7 @@ Les ordinateurs l'ont utilisé avant que la multiplication ne soit directement i
 <p>La méthode récursive est plus élégante et lisible et évite d'utiliser de nombreuses structures itératives. Elle est également très utile pour concevoir des structures de données complexes comme les listes, les arbres et les graphes. L'inconvénient le plus important de cette méthode, est qu'une fois implémentée dans un langage de programmation, elle est très gourmande en ressource mémoire. Du fait que l'on empile tous les appels récursifs, des débordements de capacité peuvent se produire lorsque la pile est pleine.</p>
 <h3 id="recursivite-croisee">Récursivité croisée<a class="headerlink" href="#recursivite-croisee" title="Permanent link">&num;</a></h3>
 <p>Dans cette méthode récursive, il arrive qu'une fonction appelle une autre fonction qui appelle elle-même la première, ce cas est appelé <strong>récursivité croisée</strong>. Prenons par exemple deux fonctions ci-dessous permettant de tester si un nombre est pair ou impair :</p>
-<table class="language-python highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Exemple de récursivité croisée</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Exemple de récursivité croisée</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
@@ -1842,7 +2595,7 @@ Les ordinateurs l'ont utilisé avant que la multiplication ne soit directement i
 <span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-8-10">10</a></span>
-<span class="normal"><a href="#__codelineno-8-11">11</a></span></pre></div></td><td class="code"><div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">def</span> <span class="nf">pair</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">def</span> <span class="nf">pair</span><span class="p">(</span><span class="n">n</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span><span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a>        <span class="k">return</span> <span class="kc">True</span>
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a>    <span class="k">else</span><span class="p">:</span>
@@ -1853,8 +2606,7 @@ Les ordinateurs l'ont utilisé avant que la multiplication ne soit directement i
 </span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9"></a>        <span class="k">return</span> <span class="kc">False</span>
 </span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10"></a>    <span class="k">else</span><span class="p">:</span>
 </span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11"></a>        <span class="k">return</span> <span class="n">pair</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <p>Ce n'est évidemment pas la méthode la plus simple mais elle fonctionne. On aurait pu par exemple tester le reste de la division euclidienne de <code>n</code> par deux.</p>
 <h3 id="recursivite-multiple">Récursivité multiple<a class="headerlink" href="#recursivite-multiple" title="Permanent link">&num;</a></h3>
 <p>Il existe un autre cas particulier où la fonction s'appelle plusieurs fois. On parle alors de <strong>récursivité multiple</strong>. C'est le cas par exemple dans le cas du calcul des coefficients binomiaux. On peut donner un rappel mathématique de ces coefficients binomiaux qui sont caractérisés par la définition suivante pour toute valeur entière de <span class="arithmatex">\(n\)</span> et <span class="arithmatex">\(k\)</span> telles que <span class="arithmatex">\(0 ≤ k ≤ n\)</span> :</p>
@@ -1876,20 +2628,19 @@ Les ordinateurs l'ont utilisé avant que la multiplication ne soit directement i
    \right .
 \]</div>
 <p>Alors on peut donner la fonction algorithmique suivante :</p>
-<table class="language-py highlighttable"><tr><th colspan="2" class="filename"><div class="highlight"><span class="filename">Coefficient Binomiaux</span></div></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Coefficient Binomiaux</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
 <span class="normal"><a href="#__codelineno-9-2">2</a></span>
 <span class="normal"><a href="#__codelineno-9-3">3</a></span>
 <span class="normal"><a href="#__codelineno-9-4">4</a></span>
-<span class="normal"><a href="#__codelineno-9-5">5</a></span></pre></div></td><td class="code"><div class="language-py highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">Fonction</span> <span class="n">coeff_binomial</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">Fonction</span> <span class="n">coeff_binomial</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
 </span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a>    <span class="n">Si</span> <span class="n">k</span> <span class="o">==</span> <span class="mi">0</span> <span class="n">OU</span> <span class="n">k</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span>
 </span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3"></a>        <span class="n">Retourner</span> <span class="mi">1</span>
 </span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4"></a>    <span class="n">Sinon</span><span class="p">:</span>
 </span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5"></a>        <span class="n">Retourner</span> <span class="n">coeff_binomial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">coeff_binomial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
-</span></code></pre></div>
-</td></tr></table>
+</span></code></pre></div></td></tr></table></div>
 <h2 id="exercices">Exercices<a class="headerlink" href="#exercices" title="Permanent link">&num;</a></h2>
 <div class="admonition example">
-<p class="admonition-title">Exercice 5</p>
+<p class="admonition-title">Exercice 5 : suite de Fibonacci</p>
 <p>La suite de Fibonacci est une suite d'entiers. Elle doit son nom à Leonardo Fibonacci, dit Leonardo Pisano, un mathématicien italien du XIIIe siècle.</p>
 <p>En mathématiques, la suite de Fibonacci est une suite d'entiers dans laquelle chaque terme est la somme des deux termes qui le précèdent.</p>
 <p>Notée Fn, elle est définie par <code>F₀ = 0</code>, <code>F₁ = 1</code>, et <code>Fₙ = Fₙ₋₁ + Fₙ₋₂</code> pour <code>n &gt; 2</code>.
@@ -1933,21 +2684,38 @@ Les termes de cette suite sont appelés nombres de Fibonacci et forment la suite
 <p>Écrire la fonction qui donne le <span class="arithmatex">\(n^{ième}\)</span> terme de la suite de Fibonacci de manière récursive et pour les plus rapides de manière itérative.</p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exercice 6 : la suite de Syracuse</p>
+<p class="admonition-title">Exercice 6 : les vaches de Narayana</p>
+<p>Une vache donne naissance à une autre tous les ans an début de chaque année, qui elle-même donne naissance à une autre chaque année à partir de sa quatrième année.
+Partant d'une vache qui vient de donner naissance (<span class="arithmatex">\(v_1\)</span>), les termes successifs de la suite <span class="arithmatex">\((v_i)_{1\leq i}\)</span> sont donc 1, 1, 1, 2, 3, 4, 6... (<span class="arithmatex">\(v_6 = 4\)</span>, <span class="arithmatex">\(v_7 = 6\)</span>). Écrire une fonction récursive <span class="arithmatex">\(v_i\)</span> qui renvoie le i-ème terme de la suite.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 7 : frise</p>
+<p>Le dessin de la frise ci-dessous est constitué de la répétition d'un motif de base (en rouge).</p>
+<p><figure markdown>
+<img alt="frise" src="../Recursivite/data_recursivite/frise.png" width="200px" />
+</figure></p>
+<p><strong>1.</strong> Ecrire une fonction <code>motif()</code> qui dessine le motif de base (les dimensions sont indiquées sur l'illustration ci-dessous)</p>
+<p><figure markdown>
+<img alt="frise" src="../Recursivite/data_recursivite/motif.png" width="300px" />
+</figure></p>
+<p><strong>2.</strong> A l'aide d'un programme itératif, construire la frise.</p>
+<p><strong>3.</strong> Donner une définition récursive de la frise</p>
+<p><strong>4.</strong> Ecrire une fonction récursive permettant de construire la frise.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 8 : suite de Syracuse</p>
 <p>Cette suite est définie comme suit : <span class="arithmatex">\(u_0 &gt; 0\)</span>, puis <span class="arithmatex">\(u_{i+1} = \dfrac{u_i}{2}\)</span> si <span class="arithmatex">\(u_i\)</span> est pair, <span class="arithmatex">\(3\times u_i + 1\)</span> sinon.</p>
 <p>1) Définir une fonction récursive qui prend en entrée, deux entiers <span class="arithmatex">\(u_0\)</span> et <span class="arithmatex">\(i\)</span> et qui renvoie la valeur de <span class="arithmatex">\(u_i\)</span>.</p>
 <p>2) La conjecture de Syracuse, vérifiée par ordinateur sur tous les entiers inférieurs à <span class="arithmatex">\(1,25\times 10^{62}\)</span> affirme que toute suite finit par atteindre le nombre 1 et boucler sur 1,4,2,1,4,2... </p>
 <p>On appelle "temps de vol" le premier indice de <span class="arithmatex">\(i\)</span> tel que <span class="arithmatex">\(u_i = 1\)</span>. Sans utiliser de boucle <code>while</code>, écrire un programme qui calcule le temps de vol en fonction de de <span class="arithmatex">\(u_0\)</span></p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Exercice 7 : les vaches de Narayana</p>
-<p>Une vache donne naissance à une autre tous les ans an début de chaque année, qui elle-même donne naissance à une autre chaque année à partir de sa quatrième année.
-Partant d'une vache qui vient de donner naissance (<span class="arithmatex">\(v_1\)</span>), les termes successifs de la suite <span class="arithmatex">\((v_i)_{1\leq i}\)</span> sont donc 1, 1, 1, 2, 3, 4, 6... (<span class="arithmatex">\(v_6 = 4\)</span>, <span class="arithmatex">\(v_7 = 6\)</span>). Écrire une fonction récursive <span class="arithmatex">\(v_i\)</span> qui renvoie le i-ème terme de la suite.</p>
-</div>
-<div class="admonition example">
-<p class="admonition-title">Exercice 8</p>
+<p class="admonition-title">Exercice 9 : fractale de Von Koch</p>
 <p>L'objectif de cet exercice est de réaliser la fractale de Von Koch à l'aide du module Python turtle. Une fractale est une sorte de courbe mathématique un peu complexe riche en détail, et qui possède une propriété intéressante visuellement : lorsque l'on regarde des détails de petite taille, on retrouve des formes correspondant aux détails de plus grande taille (auto-similarité). Cela nous rappelle étrangement la récursivité ! La première courbe à tracer a été imaginée en 1904 par le mathématicien suédois Niels Fabian Helge Von Koch.</p>
 <p>Le principe est simple : on divise un segment initial en trois morceaux, et on construit un triangle équilatéral sans base au-dessus du morceau central. On réitère le processus <span class="arithmatex">\(n\)</span> fois, <span class="arithmatex">\(n\)</span> est appelé l'ordre. Dans la figure suivante, on voit les ordres 0, 1, 2 et 3 de cette fractale.</p>
+<p><figure markdown>
+<img alt="flocon" src="../Recursivite/data_recursivite/courbe_VonKoch.png" width="100px" />
+</figure></p>
 <p><strong>Questions :</strong></p>
 <ol>
 <li>
@@ -1957,51 +2725,33 @@ Partant d'une vache qui vient de donner naissance (<span class="arithmatex">\(v_
 <p>Le flocon de Koch s'obtient de la même façon que la fractale précédente, en partant d'un triangle équilatéral au lieu d'un segment de droite, et en effectuant les modifications en orientant les triangles vers l'extérieur. Proposer une fonction permettant de faire le flocon de Koch complet à partir de la fonction réalisée précédente.</p>
 </li>
 </ol>
+<p><figure markdown>
+<img alt="flocon" src="../Recursivite/data_recursivite/flocon_Koch.png" />
+</figure></p>
 </div>
 
-              
-            </article>
-          </div>
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../../outils_python/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Outils Python" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Outils Python
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../POO/" class="md-footer__link md-footer__link--next" aria-label="Next: POO" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              POO
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2023,10 +2773,14 @@ Partant d'une vache qui vient de donner naissance (<span class="arithmatex">\(v_
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.8aa65030.min.js"></script>
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
         <script src="../../../javascripts/config.js"></script>
       
