@@ -3436,15 +3436,14 @@ avec la clé privée.</li>
 <li>B possède une "clé privée" que l’on notera kprB et une "clé publique" que l’on notera kpuB. En aucun cas B ne devra divulguer sa clé privée à quiconque, elle devra rester strictement secrète. En revanche sa clé publique pourra être connue de tout le monde sans aucun problème.</li>
 </ul>
 <p>Si A désire envoyer un message m à B, il va utiliser la clé publique de B afin de réaliser le chiffrement (m est chiffré en m’). Le message chiffré (m') va ensuite pouvoir transiter entre A et B. Une fois le message m’ en sa possession, B va utiliser sa clé privée afin de pouvoir déchiffrer le message m' et ainsi obtenir le message m. Le processus peut être résumé par le schéma suivant :</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sequenceDiagram
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    participant A as A
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    participant B as B
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    A-&gt;&gt;B: message m&#39;
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    B-&gt;&gt;A: réponse (ou accusé de réception)
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    Note left of A: kpuA : clé publique de A&lt;br&gt;kprA : clé privée de A
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    Note right of B: kpuB : clé publique de B&lt;br&gt;kprB : clé privée de B
-</span></code></pre></div>
+<pre class="mermaid"><code>sequenceDiagram
+    participant A as A
+    participant B as B
+    A-&gt;&gt;B: message m'
+    B-&gt;&gt;A: réponse (ou accusé de réception)
+
+    Note left of A: kpuA : clé publique de A&lt;br&gt;kprA : clé privée de A
+    Note right of B: kpuB : clé publique de B&lt;br&gt;kprB : clé privée de B</code></pre>
 <p>Si P intercepte le message m', il sera incapable de déterminer m à partir de m' sans la clé privée de B</p>
 <p>1) KpuB(m) <span class="arithmatex">\(\to\)</span> m'</p>
 <p>2) A <span class="arithmatex">\(\rightarrow{\text{m'}}\)</span> B</p>
