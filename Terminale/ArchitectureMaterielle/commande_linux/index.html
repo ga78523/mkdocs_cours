@@ -2682,6 +2682,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#pour-sexercer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pour s'exercer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#difference-entre-terminalshelllignedecommande" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3232,6 +3243,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#pour-sexercer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pour s'exercer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#difference-entre-terminalshelllignedecommande" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3318,13 +3340,12 @@ utilisent le shell pour leurs interactions, ne peuvent être exécutées en deho
 <h2 id="les-permissions">Les permissions<a class="headerlink" href="#les-permissions" title="Permanent link">&num;</a></h2>
 <h3 id="voir-les-droits">Voir les droits<a class="headerlink" href="#voir-les-droits" title="Permanent link">&num;</a></h3>
 <p>La sécurité sous unix est gérée par la notion de permission.</p>
-<p>Un utilisateur ne peut pas faire ce qu’il veut. </p>
-<p>Le super utilisteur root peut tout faire. Devenir root avec <code>$ su</code>, exécuter une commande comme root avec <code>$ sudo commande</code>.</p>
+<p>Un utilisateur ne peut pas faire ce qu’il veut. Par contre, le super utilisteur root peut tout faire.</p>
 <p>L’affichage détaillé d’un fichier (<code>ls -lah</code>) montre :</p>
 <ul>
-<li>les permissions de l’utilisateur courant</li>
-<li>de son groupe ;</li>
-<li>de tout le monde.</li>
+<li>les permissions de l’utilisateur courant (u)</li>
+<li>de son groupe (g);</li>
+<li>de tout le monde (o).</li>
 </ul>
 <p><strong>Exemple :</strong></p>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>-rwxr-xr-x<span class="w"> </span><span class="m">1</span><span class="w"> </span>eric<span class="w"> </span>eric<span class="w">  </span><span class="m">324</span><span class="w">  </span><span class="m">2</span><span class="w"> </span>déc.<span class="w">  </span><span class="m">21</span>:45<span class="w"> </span>deploy.sh
@@ -3332,18 +3353,16 @@ utilisent le shell pour leurs interactions, ne peuvent être exécutées en deho
 </span></code></pre></div>
 <p>traduction :</p>
 <ul>
-<li>
-<ul>
-<li>: pas activé</li>
-</ul>
-</li>
+<li><span class="arithmatex">\(-\)</span> : pas activé</li>
 <li>d : directory</li>
 <li>r : droit de lecture</li>
 <li>w : droit d'écritude</li>
 <li>x : droit d'exécution</li>
 </ul>
 <h3 id="changer-les-droits">Changer les droits<a class="headerlink" href="#changer-les-droits" title="Permanent link">&num;</a></h3>
-<p>On change les permissions avec <code>chmod</code> soit en ajoutant ou retirant un flag : <code>$ chmod +x inside.log</code> rendra ce fichier exécutable soit en décrivant la permission par 3 chiffres :</p>
+<p>On change les permissions avec <code>chmod</code> soit en ajoutant ou retirant un flag : <code>$ chmod go+x inside.log</code> rendra ce fichier exécutable pour le groupe et les autres. </p>
+<p><strong>Remarque :</strong> + est utilisé pour ajouter des droits et - pour en retirer.</p>
+<p>On peut auusi en décrire la permission par 3 chiffres :</p>
 <ul>
 <li>1 : possibilité d'exécution ;</li>
 <li>2 : possibilité d'écriture ;</li>
@@ -3352,8 +3371,13 @@ utilisent le shell pour leurs interactions, ne peuvent être exécutées en deho
 <p>Il est également possible d'en faire la somme : Ex 7 = 1 + 2 + 4 = tous les droits. Et en fonction de la place de ce chiffre, la permission s'applique à l'utilisateur courant, au groupe, ou à tout le monde.</p>
 <p><strong>Exemple :</strong> <code>$ chmod 764 inside.log</code>. Avec le premier 7 je sais que je peux tout faire (lire, écrire et exécuter), le deuxième 6, je sais que mon groupe ne peut pas exécuter mais il peut lire et écrire dessus. Et enfin le dernier 4, je sais que tout le monde peut lire mais pas lire ni l'exécuter.</p>
 <h2 id="en-bonus">En bonus<a class="headerlink" href="#en-bonus" title="Permanent link">&num;</a></h2>
+<h3 id="pour-sexercer">Pour s'exercer<a class="headerlink" href="#pour-sexercer" title="Permanent link">&num;</a></h3>
+<p><a href="https://distrosea.com/fr/">Distrosea</a> pour tester les diférentes distributions de Linux</p>
+<p>Un émulateur Linux : <a href="https://chinginfo.fr/dossier/weblinux/?user=oW6q1c3reT&amp;cpu=asm&amp;n=1&amp;relayURL=wss%3A%2F%2Frelay.widgetry.org%2F&amp;refresh=okok">Linux</a></p>
 <h3 id="difference-entre-terminalshelllignedecommande">Différence entre terminal/Shell/ligneDeCommande...<a class="headerlink" href="#difference-entre-terminalshelllignedecommande" title="Permanent link">&num;</a></h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8-ZIby5U7LU?si=PdgVXzhIf3GFRxI5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<figure>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/8-ZIby5U7LU?si=PdgVXzhIf3GFRxI5" title="YouTube video player" width="560"></iframe>
+</figure>
 
 
 
