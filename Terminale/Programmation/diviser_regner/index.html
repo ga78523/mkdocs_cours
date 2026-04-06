@@ -801,6 +801,173 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    GPS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SNT/GPS/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SNT/GPS/geoportail/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coordonnées
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SNT/GPS/itineraire/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    itinéraire
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SNT/GPS/trames_NMEA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    trames NMEA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1893,7 +2060,7 @@
   <span class="md-ellipsis">
     
   
-    Calculabilité, décidabilité©
+    Calculabilité, décidabilité
   
 
     
@@ -2131,10 +2298,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#recherche-dicho" class="md-nav__link">
+  <a href="#recherche-dichotomique_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Recherche dicho
+        Recherche dichotomique
       
     </span>
   </a>
@@ -2146,6 +2313,17 @@
     <span class="md-ellipsis">
       
         Autre algorithme qui utilise la dichotomie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complexite-de-la-recherche-dichotomique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complexité de la recherche dichotomique
       
     </span>
   </a>
@@ -3165,10 +3343,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#recherche-dicho" class="md-nav__link">
+  <a href="#recherche-dichotomique_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Recherche dicho
+        Recherche dichotomique
       
     </span>
   </a>
@@ -3180,6 +3358,17 @@
     <span class="md-ellipsis">
       
         Autre algorithme qui utilise la dichotomie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complexite-de-la-recherche-dichotomique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complexité de la recherche dichotomique
       
     </span>
   </a>
@@ -3260,7 +3449,7 @@
 
 <h1 id="diviser-pour-regner">Diviser pour régner<a class="headerlink" href="#diviser-pour-regner" title="Permanent link">&num;</a></h1>
 <h2 id="principe">Principe<a class="headerlink" href="#principe" title="Permanent link">&num;</a></h2>
-<p>Le diviser pour régner est une méthode algorithmique basée sur le principe suivant. On prend un problème (généralement complexe à résoudre), on divise ce problème en une multitude de petits problèmes, l’idée étant que les "petits problèmes" seront plus simples à résoudre que le problème original. Une fois les petits problèmes résolus, on recombine les "petits problèmes résolus" afin d’obtenir la solution du problème de départ.</p>
+<p>Le diviser pour régner est une méthode algorithmique basée sur le principe suivant : on prend un problème (généralement complexe à résoudre) et on divise ce problème en une multitude de petits problèmes. L’idée étant que les "petits problèmes" seront plus simples à résoudre que le problème original. Une fois les petits problèmes résolus, on recombine les "petits problèmes résolus" afin d’obtenir la solution du problème de départ.</p>
 <p>Le paradigme "diviser pour régner" repose donc sur 3 étapes :</p>
 <ul>
 <li>DIVISER : le problème d’origine est divisé en un certain nombre de sous-problèmes indépendants</li>
@@ -3269,15 +3458,20 @@
 </ul>
 <p>Les algorithmes basés sur le paradigme "diviser pour régner" sont très souvent des algorithmes récursifs.</p>
 <h2 id="recherche-dichotomique">Recherche dichotomique<a class="headerlink" href="#recherche-dichotomique" title="Permanent link">&num;</a></h2>
+<p>Le premier algorithme "diviser pour régner" qu'on va étudier est la recherche dichotomique.</p>
 <h3 id="principe_1">Principe<a class="headerlink" href="#principe_1" title="Permanent link">&num;</a></h3>
 <p>La recherche par dichotomie (du grec dikhotomia, « division en deux parties ») est la recherche de la présence (ou non) d'un élément dans une liste triée. Notre fonction renverra donc un booléen.</p>
 <h3 id="recherche-naive">Recherche naïve<a class="headerlink" href="#recherche-naive" title="Permanent link">&num;</a></h3>
 <p>La recherche naïve (élément par élément) est naturellement de complexité linéaire. Nous allons voir que la méthode dichotomique est plus efficace.</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice 1</p>
-<p>Écrire une fonction qui recherche un élement dans une liste triée et qui renvoie un booléen.</p>
+<ol>
+<li>Écrire une fonction qui recherche un élement dans une liste triée et qui renvoie un booléen.</li>
+<li>Est-ce vraiment important que la liste soit triée ou pas ?</li>
+<li>Donner la complexité dans le pire des cas de la recherche naïve.</li>
+</ol>
 </div>
-<h3 id="recherche-dicho">Recherche dicho<a class="headerlink" href="#recherche-dicho" title="Permanent link">&num;</a></h3>
+<h3 id="recherche-dichotomique_1">Recherche dichotomique<a class="headerlink" href="#recherche-dichotomique_1" title="Permanent link">&num;</a></h3>
 <p>On recherche sur une liste triée. On compare le nombre recherché au nombre qui se trouve au centre du tableau.</p>
 <ul>
 <li>Si le nombre recherché est égal au nombre qui se trouve au centre du tableau, c’est terminé.</li>
@@ -3290,7 +3484,7 @@
 <p>Réaliser la fonction <code>recherche_dicho()</code>sur une liste triée.</p>
 </div>
 <h3 id="autre-algorithme-qui-utilise-la-dichotomie">Autre algorithme qui utilise la dichotomie<a class="headerlink" href="#autre-algorithme-qui-utilise-la-dichotomie" title="Permanent link">&num;</a></h3>
-<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Version Récursive</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
 <span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
@@ -3324,8 +3518,30 @@
 </span></code></pre></div></td></tr></table></div>
 <div class="admonition example">
 <p class="admonition-title">Exercice 3</p>
-<p>Comparer ces trois algorithmes. Lequel est le plus rapide ?</p>
+<ol>
+<li>Pourquoi cette fonction est récursive ?</li>
+<li>Faire fonctionner cette fonction.</li>
+<li>Comparer ces trois algorithmes. Lequel est le plus rapide ?</li>
+</ol>
 </div>
+<h3 id="complexite-de-la-recherche-dichotomique">Complexité de la recherche dichotomique<a class="headerlink" href="#complexite-de-la-recherche-dichotomique" title="Permanent link">&num;</a></h3>
+<p>Le principe est de diviser l'espace de recherche par deux à chaque étape. Si on a une liste de taille <span class="arithmatex">\(n\)</span> :</p>
+<ul>
+<li>Étape 1 : Il reste <span class="arithmatex">\(n/2\)</span> éléments à explorer.</li>
+<li>Étape 2 : Il reste <span class="arithmatex">\(n/4\)</span> éléments.</li>
+<li>Étape 3 : Il reste <span class="arithmatex">\(n/8\)</span> éléments....</li>
+<li>Étape <span class="arithmatex">\(k\)</span> : Il reste 1 seul élément.</li>
+</ul>
+<p>Mathématiquement, le nombre d'étapes <span class="arithmatex">\(k\)</span> nécessaires pour arriver à un seul élément est défini par <span class="arithmatex">\(2^k = n\)</span>, ce qui équivaut à <span class="arithmatex">\(k = \log_2(n)\)</span>.</p>
+<p>Donc la complexité est de <span class="arithmatex">\(O(log2(n))\)</span></p>
+<p><strong>Remarque :</strong>
+Le <span class="arithmatex">\(\log_2\)</span> (logarithme binaire) est l'opération inverse de la puissance de 2.</p>
+<p>De manière directe : C'est le nombre de fois que vous devez multiplier 2 par lui-même pour obtenir un nombre <span class="arithmatex">\(x\)</span>. Ou, à l'inverse, cela revient à se poser cette question :</p>
+<p>"Combien de fois puis-je diviser ce nombre par 2 avant d'arriver à 1 ?"</p>
+<p>Exemple : Si nous avons l'équation suivante :</p>
+<div class="arithmatex">\[2^y = x\]</div>
+<p>Alors <span class="arithmatex">\(y\)</span> est le logarithme en base 2 de <span class="arithmatex">\(x\)</span> :</p>
+<div class="arithmatex">\[y = \log_2(x) \]</div>
 <h2 id="tris-fusion">Tris fusion<a class="headerlink" href="#tris-fusion" title="Permanent link">&num;</a></h2>
 <h3 id="presentation">Présentation<a class="headerlink" href="#presentation" title="Permanent link">&num;</a></h3>
 <p>Le tri fusion est un tri récursif basé sur le principe "diviser pour régner". Cet algorithme repose donc sur une fonction auxiliaire, la fonction de fusion, qui prendra en argument deux listes triées et renverra la liste fusionnée.</p>
@@ -3411,7 +3627,7 @@
 </tbody>
 </table>
 </div>
-<p>** Exemple :**
+<p><strong>Exemple :</strong>
 Voici dans la figure ci-dessous une représentation de l’algorithme de tri fusion appliqué à la liste <code>A = [23, 12, 4, 56, 35, 32,42, 57, 3]</code>. Étudiez attentivement le schéma ci-dessous afin de mieux comprendre le principe du tri-fusion (identifiez bien les phases "DIVISER" et "COMBINER").</p>
 <figure>
 <p><img alt="principe" src="../img_divideReign/principe_tri_fusion.png" width="350px" /></p>
@@ -3420,7 +3636,7 @@ Voici dans la figure ci-dessous une représentation de l’algorithme de tri fus
 <p>On définit d’abord une fonction permettant de fusionner deux listes triées au préalable en une seule liste triée.</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice 5</p>
-<p>Écrire la fonction fusion. </p>
+<p>Écrire la fonction <code>fusion</code>.</p>
 </div>
 <div class="admonition example">
 <p class="admonition-title">Exercice 6</p>
