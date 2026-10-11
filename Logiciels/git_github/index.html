@@ -3142,10 +3142,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#les-commandes-git-de-bases-wikipedia" class="md-nav__link">
+  <a href="#pour-travailler-a-deux-sur-github" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Les commandes git de bases (wikipedia)
+        Pour travailler à deux sur Github
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pour travailler à deux sur Github">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mise-en-place-une-seule-fois" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mise en place (une seule fois)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-cycle-de-travail-quotidien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le cycle de travail quotidien
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-regles-qui-evitent-les-problemes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les règles qui évitent les problèmes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-commandes-git-de-bases-wikipedia-et-comprendre-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les commandes git de bases (wikipedia et comprendre git)
       
     </span>
   </a>
@@ -3451,10 +3501,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#les-commandes-git-de-bases-wikipedia" class="md-nav__link">
+  <a href="#pour-travailler-a-deux-sur-github" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Les commandes git de bases (wikipedia)
+        Pour travailler à deux sur Github
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pour travailler à deux sur Github">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mise-en-place-une-seule-fois" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mise en place (une seule fois)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-cycle-de-travail-quotidien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Le cycle de travail quotidien
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-regles-qui-evitent-les-problemes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les règles qui évitent les problèmes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-commandes-git-de-bases-wikipedia-et-comprendre-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les commandes git de bases (wikipedia et comprendre git)
       
     </span>
   </a>
@@ -3593,7 +3693,40 @@ deux étapes :</li>
 <figure>
 <p><img alt="if" src="../img_git/img4.png" width="400px" /></p>
 </figure>
-<h2 id="les-commandes-git-de-bases-wikipedia">Les commandes git de bases (wikipedia)<a class="headerlink" href="#les-commandes-git-de-bases-wikipedia" title="Permanent link">&num;</a></h2>
+<h2 id="pour-travailler-a-deux-sur-github">Pour travailler à deux sur Github<a class="headerlink" href="#pour-travailler-a-deux-sur-github" title="Permanent link">&num;</a></h2>
+<p>Pour deux personnes, le plus simple est un dépôt unique, une branche par fonctionnalité et des pull requests pour fusionner dans main ou master.</p>
+<h3 id="mise-en-place-une-seule-fois">Mise en place (une seule fois)<a class="headerlink" href="#mise-en-place-une-seule-fois" title="Permanent link">&num;</a></h3>
+<p>Le propriétaire du dépôt invite l’autre personne : <code>Settings → Collaborators → Add people</code>. L’invité accepte par mail, puis clone le dépôt :</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/utilisateur/projet.git
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">cd</span><span class="w"> </span>projet
+</span></code></pre></div>
+<p>Ajoutez dès le départ un fichier .gitignore (pour <strong>pycache</strong>/, .venv/, etc.) et un README.md.</p>
+<h3 id="le-cycle-de-travail-quotidien">Le cycle de travail quotidien<a class="headerlink" href="#le-cycle-de-travail-quotidien" title="Permanent link">&num;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>switch<span class="w"> </span>main
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>git<span class="w"> </span>pull<span class="w">                          </span><span class="c1"># 1. récupérer le travail de l&#39;autre</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>git<span class="w"> </span>switch<span class="w"> </span>-c<span class="w"> </span>gravity<span class="w">             </span><span class="c1"># 2. l&#39;option -c permet de créer la branche gravité et de s&#39;y rendre</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1"># ... vous codez ...</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Ajoute la gravité&quot;</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>gravity<span class="w">        </span><span class="c1"># 3. envoyer la branche</span>
+</span></code></pre></div>
+<p>Sur GitHub, vous obtiendrez normalement la fenêtre suivante : </p>
+<figure>
+<p><img alt="if" src="../img_git/compare_pull_request.png" width="400px" /></p>
+</figure>
+<p>cliquez sur Compare &amp; pull request.</p>
+<p>L’autre personne relit, commente, puis clique sur Merge. </p>
+<h3 id="les-regles-qui-evitent-les-problemes">Les règles qui évitent les problèmes<a class="headerlink" href="#les-regles-qui-evitent-les-problemes" title="Permanent link">&num;</a></h3>
+<ul>
+<li>Ne jamais travailler directement sur main : il reste toujours dans un état qui fonctionne.</li>
+<li>Faire <code>git pull</code> avant de commencer à coder, et régulièrement pendant la session.</li>
+<li>Petits commits, avec des messages clairs (« Corrige le saut », pas « modif »).</li>
+<li>Se répartir les fichiers : si vous modifiez le même fichier au même endroit, vous aurez un conflit.</li>
+<li>Prévenir l’autre avant de toucher à un fichier partagé (la carte, par exemple).</li>
+</ul>
+<h2 id="les-commandes-git-de-bases-wikipedia-et-comprendre-git">Les commandes git de bases (wikipedia et comprendre git)<a class="headerlink" href="#les-commandes-git-de-bases-wikipedia-et-comprendre-git" title="Permanent link">&num;</a></h2>
 <ul>
 <li><code>git init</code> : crée un nouveau dépôt ;</li>
 <li><code>git clone</code> : clone un dépôt distant ;</li>
@@ -3609,6 +3742,7 @@ courante devant les nouveaux commits d’une autre branche ;</li>
 <li><code>git pull</code> : récupère les dernières modifications distantes du projet (depuis le Remote) et les fusionne
 dans la branche courante ;</li>
 <li><code>git stash</code> : stocke de côté un état non commité afin d’effectuer d’autres tâches</li>
+<li><code>git status</code> : affiche l’état des fichiers ayant subit des changements entre la copie de travail et le dépôt local. Elle nous indique donc si les fichiers sont nouveaux (non suivis), modifiés, supprimés, les éventuels conflits et si ces modifications ont été ajoutées au stage.</li>
 </ul>
 <h2 id="les-commandes-unix-utiles">Les commandes Unix utiles<a class="headerlink" href="#les-commandes-unix-utiles" title="Permanent link">&num;</a></h2>
 <p>A titre d’information, les commandes (UNIX) de base à connaitre sont les suivantes :</p>
