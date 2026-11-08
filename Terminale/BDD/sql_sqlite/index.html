@@ -2703,17 +2703,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#les-jointures" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Les jointures
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -2727,6 +2716,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Requêtes de mise à jour : INSERT, UPDATE, DELETE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-jointures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les jointures
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3369,17 +3375,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#les-jointures" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Les jointures
-      
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -3393,6 +3388,23 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Requêtes de mise à jour : INSERT, UPDATE, DELETE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-jointures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Les jointures
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3621,41 +3633,136 @@ venons de créer.</p>
 <span class="normal"><a href="#__codelineno-10-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">auteur</span>
 </span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">LIVRES</span>
 </span></code></pre></div></td></tr></table></div>
+<h2 id="requetes-de-mise-a-jour-insert-update-delete">Requêtes de mise à jour : INSERT, UPDATE, DELETE<a class="headerlink" href="#requetes-de-mise-a-jour-insert-update-delete" title="Permanent link">&num;</a></h2>
+<p>Nous allons utiliser une base de données qui contient une seule table. Pour cela,
+on réalise la requête SQL suivante</p>
+<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span>
+<span class="normal"><a href="#__codelineno-11-16">16</a></span>
+<span class="normal"><a href="#__codelineno-11-17">17</a></span>
+<span class="normal"><a href="#__codelineno-11-18">18</a></span>
+<span class="normal"><a href="#__codelineno-11-19">19</a></span>
+<span class="normal"><a href="#__codelineno-11-20">20</a></span>
+<span class="normal"><a href="#__codelineno-11-21">21</a></span>
+<span class="normal"><a href="#__codelineno-11-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">LIVRES</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="n">auteur</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="n">ann_publi</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">));</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="n">Ajoutez</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">données</span><span class="w"> </span><span class="err">à</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"> </span><span class="err">à</span><span class="w"> </span><span class="n">l</span><span class="err">’</span><span class="n">aide</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">requête</span><span class="w"> </span><span class="k">SQL</span><span class="w"> </span><span class="n">suivante</span><span class="w"> </span><span class="p">:</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">LIVRES</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="n">titre</span><span class="p">,</span><span class="n">auteur</span><span class="p">,</span><span class="n">ann_publi</span><span class="p">,</span><span class="n">note</span><span class="p">)</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="k">VALUES</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;1984&#39;</span><span class="p">,</span><span class="s1">&#39;Orwell&#39;</span><span class="p">,</span><span class="mi">1949</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;Dune&#39;</span><span class="p">,</span><span class="s1">&#39;Herbert&#39;</span><span class="p">,</span><span class="mi">1965</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;Fondation&#39;</span><span class="p">,</span><span class="s1">&#39;Asimov&#39;</span><span class="p">,</span><span class="mi">1951</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s1">&#39;Le meilleur des mondes&#39;</span><span class="p">,</span><span class="s1">&#39;Huxley&#39;</span><span class="p">,</span><span class="mi">1931</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;Fahrenheit 451&#39;</span><span class="p">,</span><span class="s1">&#39;Bradbury&#39;</span><span class="p">,</span><span class="mi">1953</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;Ubik&#39;</span><span class="p">,</span><span class="s1">&#39;K.Dick&#39;</span><span class="p">,</span><span class="mi">1969</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="s1">&#39;Chroniques martiennes&#39;</span><span class="p">,</span><span class="s1">&#39;Bradbury&#39;</span><span class="p">,</span><span class="mi">1950</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="s1">&#39;La nuit des temps&#39;</span><span class="p">,</span><span class="s1">&#39;Barjavel&#39;</span><span class="p">,</span><span class="mi">1968</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="s1">&#39;Blade Runner&#39;</span><span class="p">,</span><span class="s1">&#39;K.Dick&#39;</span><span class="p">,</span><span class="mi">1968</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="s1">&#39;Les Robots&#39;</span><span class="p">,</span><span class="s1">&#39;Asimov&#39;</span><span class="p">,</span><span class="mi">1950</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span>
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="s1">&#39;La Planète des singes&#39;</span><span class="p">,</span><span class="s1">&#39;Boulle&#39;</span><span class="p">,</span><span class="mi">1963</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span>
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="s1">&#39;Ravage&#39;</span><span class="p">,</span><span class="s1">&#39;Barjavel&#39;</span><span class="p">,</span><span class="mi">1943</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span>
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="s1">&#39;Le Maître du Haut Château&#39;</span><span class="p">,</span><span class="s1">&#39;K.Dick&#39;</span><span class="p">,</span><span class="mi">1962</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span>
+</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20"></a><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="s1">&#39;Le monde des ¯A&#39;</span><span class="p">,</span><span class="s1">&#39;Van Vogt&#39;</span><span class="p">,</span><span class="mi">1945</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span>
+</span><span id="__span-11-21"><a id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="s1">&#39;La Fin de l’éternité&#39;</span><span class="p">,</span><span class="s1">&#39;Asimov&#39;</span><span class="p">,</span><span class="mi">1955</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span>
+</span><span id="__span-11-22"><a id="__codelineno-11-22" name="__codelineno-11-22"></a><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="s1">&#39;De la Terre à la Lune&#39;</span><span class="p">,</span><span class="s1">&#39;Verne&#39;</span><span class="p">,</span><span class="mi">1865</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Nous avons déjà eu l’occasion de voir la requête permettant d’ajouter une entrée (utilisation d’INSERT)</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice 6 :</p>
+<p>Que va faire cette requête ? Vous pourrez vérifier votre réponse en faisant une requête <code>SELECT * FROM LIVRES</code>.</p>
+</div>
+<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">LIVRES</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="n">titre</span><span class="p">,</span><span class="n">auteur</span><span class="p">,</span><span class="n">ann_publi</span><span class="p">,</span><span class="n">note</span><span class="p">)</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="k">VALUES</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="p">(</span><span class="mi">17</span><span class="p">,</span><span class="s1">&#39;Hypérion&#39;</span><span class="p">,</span><span class="s1">&#39;Simmons&#39;</span><span class="p">,</span><span class="mi">1989</span><span class="p">,</span><span class="mi">8</span><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 7 :</p>
+<p>Écrivez et testez une requête permettant d’ajouter le livre de votre choix à la table <code>LIVRES</code>.</p>
+</div>
+<p><code>UPDATE</code> va permettre de modifier une ou des entrées. Nous utiliserons <code>WHERE</code>, comme
+dans le cas d’un <code>SELECT</code>, pour spécifier les entrées à modifier.</p>
+<p>Voici un exemple de modification :</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice 8 :</p>
+<p>Que va faire cette requête ?  Vous pourrez vérifier votre réponse en faisant une requête <code>SELECT * FROM LIVRES</code>.</p>
+</div>
+<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="k">UPDATE</span><span class="w"> </span><span class="n">LIVRES</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="k">SET</span><span class="w"> </span><span class="n">note</span><span class="o">=</span><span class="mi">7</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Hypérion&#39;</span>
+</span></code></pre></div></td></tr></table></div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 9 :</p>
+<p>Écrivez une requête permettant d’attribuer la note de 10 à tous les livres écrits par Asimov publiés après 1950. Testez cette requête.</p>
+</div>
+<p><code>DELETE</code> est utilisée pour effectuer la suppression d’une (ou de plusieurs) entrée(s). Ici aussi
+c’est le <code>WHERE</code> qui permettra de sélectionner les entrées à supprimer.</p>
+<div class="admonition example">
+<p class="admonition-title">Exercice 10 :</p>
+<p>Que va faire cette requête ? Vérifiez votre réponse en l’exécutant et en faisant une requête <code>SELECT * FROM LIVRES</code>.</p>
+</div>
+<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">LIVRES</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="o">=</span><span class="s1">&#39;Hypérion&#39;</span>
+</span></code></pre></div></td></tr></table></div>
+<div class="admonition example">
+<p class="admonition-title">Exercice 11 :</p>
+<p>Écrivez une requête permettant de supprimer les livres publiés avant 1945. Testez cette requête.</p>
+</div>
 <h3 id="les-jointures">Les jointures<a class="headerlink" href="#les-jointures" title="Permanent link">&num;</a></h3>
 <p>Grâce aux jointures nous allons pouvoir associer 2 tables dans une même requête.</p>
 <p>En général, les jointures consistent à associer des lignes de 2 tables. Elles permettent d’établir un
 lien entre 2 tables. Qui dit lien entre 2 tables dit souvent clef étrangère et clef primaire.</p>
 <p>Créer une nouvelle base de données par exemple db_livres_auteurs.db dans laquelle vous créerez
 deux nouvelles tables : la table <code>AUTEUR</code> et la table <code>LIVRE</code>.</p>
-<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
-<span class="normal"><a href="#__codelineno-11-2">2</a></span>
-<span class="normal"><a href="#__codelineno-11-3">3</a></span>
-<span class="normal"><a href="#__codelineno-11-4">4</a></span>
-<span class="normal"><a href="#__codelineno-11-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">AUTEURS</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="n">ann_naissance</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">langue_ecriture</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">));</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3"></a>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">LIVRES</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="n">id_auteur</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">ann_publi</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">));</span>
+<p><div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span>
+<span class="normal"><a href="#__codelineno-15-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">AUTEURS</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="n">ann_naissance</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">langue_ecriture</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">));</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3"></a>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">LIVRES</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="n">id_auteur</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">ann_publi</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">));</span>
 </span></code></pre></div></td></tr></table></div>
-<p><strong>Remarque :</strong> on aurait pu aussi écrire :</p>
-<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
-<span class="normal"><a href="#__codelineno-12-2">2</a></span>
-<span class="normal"><a href="#__codelineno-12-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">LIVRES</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="n">id_auteur</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">ann_publi</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_auteur</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">AUTEURS</span><span class="p">(</span><span class="n">id</span><span class="p">));</span>
+<strong>Remarque :</strong> on aurait pu aussi écrire :</p>
+<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">LIVRES</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="n">id_auteur</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">ann_publi</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_auteur</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">AUTEURS</span><span class="p">(</span><span class="n">id</span><span class="p">));</span>
 </span></code></pre></div></td></tr></table></div>
 <p>Grâce à cette précision, sqlite sera capable de détecter les anomalies au niveau de clé étrangère :
 essayez par exemple d’ajouter un livre à la table LIVRES avec l’attribut "id_auteur" égal à 11 !</p>
 <div class="admonition example">
-<p class="admonition-title">Exercice 6 :</p>
+<p class="admonition-title">Exercice 12:</p>
 <p>Remplissez les tables avec leurs données (cf cours précédents).</p>
 </div>
 <p>Réalisons maintenant la jointure entre les deux tables :</p>
-<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
-<span class="normal"><a href="#__codelineno-13-2">2</a></span>
-<span class="normal"><a href="#__codelineno-13-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">LIVRES</span>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">LIVRES</span><span class="p">.</span><span class="n">id_auteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AUTEURS</span><span class="p">.</span><span class="n">id</span>
+<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">LIVRES</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">LIVRES</span><span class="p">.</span><span class="n">id_auteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AUTEURS</span><span class="p">.</span><span class="n">id</span>
 </span></code></pre></div></td></tr></table></div>
 <p>Le <code>FROM LIVRES INNER JOIN AUTEURS</code> permet de créer une jointure entre les tables <code>LIVRES</code> et <code>AUTEURS</code> ("rassembler" les tables <code>LIVRES</code> et <code>AUTEURS</code> en une seule grande table).</p>
 <p>Le <code>ON LIVRES.id_auteur = AUTEURS.id</code> signifie qu’une ligne quelconque A de la table LIVRES devra être fusionnée avec la ligne B de la table <code>AUTEURS</code> à condition que l’attribut id de la ligne A soit égal à l’attribut <code>id_auteur</code> de la ligne B.</p>
@@ -3666,159 +3773,63 @@ l’attribut id_auteur de la ligne A est égal à 1 et l’attribut <code>id</co
 ne sera pas fusionnée avec la ligne 2 (id=2) de la table <code>AUTEURS</code> (que l’on nommera dans la suite
 B’) car l’attribut id_auteur de la ligne A est égal à 1 alors que l’attribut id de la ligne B’ est égal à 2.</p>
 <div class="admonition example">
-<p class="admonition-title">Exercice 7 :</p>
-<p>Saisissez et testez la requête SQL suivante :</p>
-</div>
-<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
-<span class="normal"><a href="#__codelineno-14-2">2</a></span>
-<span class="normal"><a href="#__codelineno-14-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">AUTEURS</span>
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">LIVRES</span><span class="p">.</span><span class="n">id_auteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AUTEURS</span><span class="p">.</span><span class="n">id</span>
-</span></code></pre></div></td></tr></table></div>
-<p>Comme vous pouvez le constater, le résultat est différent, cette fois-ci ce sont les lignes de la table <code>LIVRES</code> qui viennent se greffer sur la table AUTEURS.</p>
-<p>Dans le cas d’une jointure, il est tout à fait possible de sélectionner certains attributs et pas d’autres :</p>
-<div class="admonition example">
-<p class="admonition-title">Exercice 8 :</p>
-<p>Saisissez et testez la requête SQL suivante :</p>
-</div>
-<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
-<span class="normal"><a href="#__codelineno-15-2">2</a></span>
-<span class="normal"><a href="#__codelineno-15-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">titre</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">AUTEURS</span>
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">LIVRES</span><span class="p">.</span><span class="n">id_auteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AUTEURS</span><span class="p">.</span><span class="n">id</span>
-</span></code></pre></div></td></tr></table></div>
-<div class="admonition example">
-<p class="admonition-title">Exercice 9 :</p>
-<p>Saisissez et testez la requête SQL suivante :</p>
-</div>
-<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
-<span class="normal"><a href="#__codelineno-16-2">2</a></span>
-<span class="normal"><a href="#__codelineno-16-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span>
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">LIVRES</span>
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">LIVRES</span><span class="p">.</span><span class="n">id_auteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AUTEURS</span><span class="p">.</span><span class="n">id</span>
-</span></code></pre></div></td></tr></table></div>
-<p>Si un même nom d’attribut est présent dans les 2 tables (par exemple ici l’attribut <code>id</code>), il est nécessaire d’ajouter le nom de la table devant afin de pouvoir les distinguer (<code>AUTEURS.id</code> et <code>LIVRES.id</code>)</p>
-<div class="admonition example">
-<p class="admonition-title">Exercice 10 :</p>
-<p>Saisissez et testez la requête SQL suivante :</p>
-</div>
-<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
-<span class="normal"><a href="#__codelineno-17-2">2</a></span>
-<span class="normal"><a href="#__codelineno-17-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="n">AUTEURS</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span>
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">LIVRES</span>
-</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">LIVRES</span><span class="p">.</span><span class="n">id_auteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AUTEURS</span><span class="p">.</span><span class="n">id</span>
-</span></code></pre></div></td></tr></table></div>
-<p>Il est possible d’utiliser la clause <code>WHERE</code> dans le cas d’une jointure :</p>
-<div class="admonition example">
-<p class="admonition-title">Exercice 11 :</p>
+<p class="admonition-title">Exercice 13 :</p>
 <p>Saisissez et testez la requête SQL suivante :</p>
 </div>
 <div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
 <span class="normal"><a href="#__codelineno-18-2">2</a></span>
-<span class="normal"><a href="#__codelineno-18-3">3</a></span>
-<span class="normal"><a href="#__codelineno-18-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span>
-</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">LIVRES</span>
-</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">LIVRES</span><span class="p">.</span><span class="n">id_auteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AUTEURS</span><span class="p">.</span><span class="n">id</span>
-</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">ann_publi</span><span class="o">&gt;</span><span class="mi">1950</span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">AUTEURS</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">LIVRES</span><span class="p">.</span><span class="n">id_auteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AUTEURS</span><span class="p">.</span><span class="n">id</span>
 </span></code></pre></div></td></tr></table></div>
-<p>Enfin, pour terminer avec les jointures, vous devez savoir que nous avons abordé la jointure la plus
-simple (<code>INNER JOIN</code>). Il existe des jointures plus complexes (<code>CROSS JOIN</code>, <code>LEFT JOIN</code>, <code>RIGHT JOIN</code>), ces autres jointures ne seront pas abordées ici.</p>
-<h2 id="requetes-de-mise-a-jour-insert-update-delete">Requêtes de mise à jour : INSERT, UPDATE, DELETE<a class="headerlink" href="#requetes-de-mise-a-jour-insert-update-delete" title="Permanent link">&num;</a></h2>
-<p>Nous allons repartir avec une base de données qui contient une seule table :
-Créez une nouvelle base de données que vous nommerez par exemple db_livres.db
-Créez une table LIVRES à l’aide de la requête SQL suivante :</p>
-<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-19-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-19-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-19-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-19-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-19-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-19-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-19-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-19-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-19-10">10</a></span>
-<span class="normal"><a href="#__codelineno-19-11">11</a></span>
-<span class="normal"><a href="#__codelineno-19-12">12</a></span>
-<span class="normal"><a href="#__codelineno-19-13">13</a></span>
-<span class="normal"><a href="#__codelineno-19-14">14</a></span>
-<span class="normal"><a href="#__codelineno-19-15">15</a></span>
-<span class="normal"><a href="#__codelineno-19-16">16</a></span>
-<span class="normal"><a href="#__codelineno-19-17">17</a></span>
-<span class="normal"><a href="#__codelineno-19-18">18</a></span>
-<span class="normal"><a href="#__codelineno-19-19">19</a></span>
-<span class="normal"><a href="#__codelineno-19-20">20</a></span>
-<span class="normal"><a href="#__codelineno-19-21">21</a></span>
-<span class="normal"><a href="#__codelineno-19-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">LIVRES</span>
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="n">auteur</span><span class="w"> </span><span class="nb">TEXT</span><span class="p">,</span><span class="w"> </span><span class="n">ann_publi</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">note</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">));</span>
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="n">Ajoutez</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">données</span><span class="w"> </span><span class="err">à</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"> </span><span class="err">à</span><span class="w"> </span><span class="n">l</span><span class="err">’</span><span class="n">aide</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">requête</span><span class="w"> </span><span class="k">SQL</span><span class="w"> </span><span class="n">suivante</span><span class="w"> </span><span class="p">:</span>
-</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">LIVRES</span>
-</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="n">titre</span><span class="p">,</span><span class="n">auteur</span><span class="p">,</span><span class="n">ann_publi</span><span class="p">,</span><span class="n">note</span><span class="p">)</span>
-</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6"></a><span class="k">VALUES</span>
-</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7"></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;1984&#39;</span><span class="p">,</span><span class="s1">&#39;Orwell&#39;</span><span class="p">,</span><span class="mi">1949</span><span class="p">,</span><span class="mi">10</span><span class="p">),</span>
-</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8"></a><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;Dune&#39;</span><span class="p">,</span><span class="s1">&#39;Herbert&#39;</span><span class="p">,</span><span class="mi">1965</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span>
-</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9"></a><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;Fondation&#39;</span><span class="p">,</span><span class="s1">&#39;Asimov&#39;</span><span class="p">,</span><span class="mi">1951</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span>
-</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10"></a><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="s1">&#39;Le meilleur des mondes&#39;</span><span class="p">,</span><span class="s1">&#39;Huxley&#39;</span><span class="p">,</span><span class="mi">1931</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span>
-</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11"></a><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;Fahrenheit 451&#39;</span><span class="p">,</span><span class="s1">&#39;Bradbury&#39;</span><span class="p">,</span><span class="mi">1953</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span>
-</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12"></a><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;Ubik&#39;</span><span class="p">,</span><span class="s1">&#39;K.Dick&#39;</span><span class="p">,</span><span class="mi">1969</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span>
-</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13"></a><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="s1">&#39;Chroniques martiennes&#39;</span><span class="p">,</span><span class="s1">&#39;Bradbury&#39;</span><span class="p">,</span><span class="mi">1950</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span>
-</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14"></a><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="s1">&#39;La nuit des temps&#39;</span><span class="p">,</span><span class="s1">&#39;Barjavel&#39;</span><span class="p">,</span><span class="mi">1968</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span>
-</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15"></a><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="s1">&#39;Blade Runner&#39;</span><span class="p">,</span><span class="s1">&#39;K.Dick&#39;</span><span class="p">,</span><span class="mi">1968</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span>
-</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16"></a><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="s1">&#39;Les Robots&#39;</span><span class="p">,</span><span class="s1">&#39;Asimov&#39;</span><span class="p">,</span><span class="mi">1950</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span>
-</span><span id="__span-19-17"><a id="__codelineno-19-17" name="__codelineno-19-17"></a><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="s1">&#39;La Planète des singes&#39;</span><span class="p">,</span><span class="s1">&#39;Boulle&#39;</span><span class="p">,</span><span class="mi">1963</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span>
-</span><span id="__span-19-18"><a id="__codelineno-19-18" name="__codelineno-19-18"></a><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="s1">&#39;Ravage&#39;</span><span class="p">,</span><span class="s1">&#39;Barjavel&#39;</span><span class="p">,</span><span class="mi">1943</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span>
-</span><span id="__span-19-19"><a id="__codelineno-19-19" name="__codelineno-19-19"></a><span class="p">(</span><span class="mi">13</span><span class="p">,</span><span class="s1">&#39;Le Maître du Haut Château&#39;</span><span class="p">,</span><span class="s1">&#39;K.Dick&#39;</span><span class="p">,</span><span class="mi">1962</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span>
-</span><span id="__span-19-20"><a id="__codelineno-19-20" name="__codelineno-19-20"></a><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="s1">&#39;Le monde des ¯A&#39;</span><span class="p">,</span><span class="s1">&#39;Van Vogt&#39;</span><span class="p">,</span><span class="mi">1945</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span>
-</span><span id="__span-19-21"><a id="__codelineno-19-21" name="__codelineno-19-21"></a><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="s1">&#39;La Fin de l’éternité&#39;</span><span class="p">,</span><span class="s1">&#39;Asimov&#39;</span><span class="p">,</span><span class="mi">1955</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span>
-</span><span id="__span-19-22"><a id="__codelineno-19-22" name="__codelineno-19-22"></a><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="s1">&#39;De la Terre à la Lune&#39;</span><span class="p">,</span><span class="s1">&#39;Verne&#39;</span><span class="p">,</span><span class="mi">1865</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span>
-</span></code></pre></div></td></tr></table></div>
-<p>Nous avons déjà eu l’occasion de voir la requête permettant d’ajouter une entrée (utilisation d’INSERT)</p>
-<div class="admonition example">
-<p class="admonition-title">Exercice 12 :</p>
-<p>Que va faire cette requête ? Vous pourrez vérifier votre réponse en faisant une requête <code>SELECT * FROM LIVRES</code>.</p>
-</div>
-<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
-<span class="normal"><a href="#__codelineno-20-2">2</a></span>
-<span class="normal"><a href="#__codelineno-20-3">3</a></span>
-<span class="normal"><a href="#__codelineno-20-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">LIVRES</span>
-</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="n">titre</span><span class="p">,</span><span class="n">auteur</span><span class="p">,</span><span class="n">ann_publi</span><span class="p">,</span><span class="n">note</span><span class="p">)</span>
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="k">VALUES</span>
-</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="p">(</span><span class="mi">17</span><span class="p">,</span><span class="s1">&#39;Hypérion&#39;</span><span class="p">,</span><span class="s1">&#39;Simmons&#39;</span><span class="p">,</span><span class="mi">1989</span><span class="p">,</span><span class="mi">8</span><span class="p">);</span>
-</span></code></pre></div></td></tr></table></div>
-<div class="admonition example">
-<p class="admonition-title">Exercice 13 :</p>
-<p>Écrivez et testez une requête permettant d’ajouter le livre de votre choix à la table <code>LIVRES</code>.</p>
-</div>
-<p><code>UPDATE</code> va permettre de modifier une ou des entrées. Nous utiliserons <code>WHERE</code>, comme
-dans le cas d’un <code>SELECT</code>, pour spécifier les entrées à modifier.</p>
-<p>Voici un exemple de modification :</p>
+<p>Comme vous pouvez le constater, le résultat est différent, cette fois-ci ce sont les lignes de la table <code>LIVRES</code> qui viennent se greffer sur la table AUTEURS.</p>
+<p>Dans le cas d’une jointure, il est tout à fait possible de sélectionner certains attributs et pas d’autres :</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice 14 :</p>
-<p>Que va faire cette requête ?  Vous pourrez vérifier votre réponse en faisant une requête <code>SELECT * FROM LIVRES</code>.</p>
+<p>Saisissez et testez la requête SQL suivante :</p>
 </div>
-<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
-<span class="normal"><a href="#__codelineno-21-2">2</a></span>
-<span class="normal"><a href="#__codelineno-21-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="k">UPDATE</span><span class="w"> </span><span class="n">LIVRES</span>
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="k">SET</span><span class="w"> </span><span class="n">note</span><span class="o">=</span><span class="mi">7</span>
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Hypérion&#39;</span>
+<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">titre</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">AUTEURS</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">LIVRES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">LIVRES</span><span class="p">.</span><span class="n">id_auteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AUTEURS</span><span class="p">.</span><span class="n">id</span>
 </span></code></pre></div></td></tr></table></div>
 <div class="admonition example">
 <p class="admonition-title">Exercice 15 :</p>
-<p>Écrivez une requête permettant d’attribuer la note de 10 à tous les livres écrits par Asimov publiés après 1950. Testez cette requête.</p>
+<p>Saisissez et testez la requête SQL suivante :</p>
 </div>
-<p><code>DELETE</code> est utilisée pour effectuer la suppression d’une (ou de plusieurs) entrée(s). Ici aussi
-c’est le <code>WHERE</code> qui permettra de sélectionner les entrées à supprimer.</p>
+<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">LIVRES</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">LIVRES</span><span class="p">.</span><span class="n">id_auteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AUTEURS</span><span class="p">.</span><span class="n">id</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Si un même nom d’attribut est présent dans les 2 tables (par exemple ici l’attribut <code>id</code>), il est nécessaire d’ajouter le nom de la table devant afin de pouvoir les distinguer (<code>AUTEURS.id</code> et <code>LIVRES.id</code>)</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice 16 :</p>
-<p>Que va faire cette requête ? Vérifiez votre réponse en l’exécutant et en faisant une requête <code>SELECT * FROM LIVRES</code>.</p>
+<p>Saisissez et testez la requête SQL suivante :</p>
 </div>
-<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
-<span class="normal"><a href="#__codelineno-22-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">LIVRES</span>
-</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">titre</span><span class="o">=</span><span class="s1">&#39;Hypérion&#39;</span>
+<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
+<span class="normal"><a href="#__codelineno-21-2">2</a></span>
+<span class="normal"><a href="#__codelineno-21-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="n">AUTEURS</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">LIVRES</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">LIVRES</span><span class="p">.</span><span class="n">id_auteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AUTEURS</span><span class="p">.</span><span class="n">id</span>
 </span></code></pre></div></td></tr></table></div>
+<p>Il est possible d’utiliser la clause <code>WHERE</code> dans le cas d’une jointure :</p>
 <div class="admonition example">
 <p class="admonition-title">Exercice 17 :</p>
-<p>Écrivez une requête permettant de supprimer les livres publiés avant 1945. Testez cette requête.</p>
+<p>Saisissez et testez la requête SQL suivante :</p>
 </div>
+<div class="language-sql highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span>
+<span class="normal"><a href="#__codelineno-22-3">3</a></span>
+<span class="normal"><a href="#__codelineno-22-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">titre</span><span class="p">,</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">LIVRES</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">AUTEURS</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">LIVRES</span><span class="p">.</span><span class="n">id_auteur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AUTEURS</span><span class="p">.</span><span class="n">id</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">ann_publi</span><span class="o">&gt;</span><span class="mi">1950</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Enfin, pour terminer avec les jointures, vous devez savoir que nous avons abordé la jointure la plus
+simple (<code>INNER JOIN</code>). Il existe des jointures plus complexes (<code>CROSS JOIN</code>, <code>LEFT JOIN</code>, <code>RIGHT JOIN</code>), ces autres jointures ne seront pas abordées ici.</p>
 
 
 
